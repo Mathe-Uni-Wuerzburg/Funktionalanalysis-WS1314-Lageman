@@ -1,0 +1,2298 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{amsthm}% http://ctan.org/pkg/amsthm
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+
+\theoremstyle{definition}
+\ifx\thechapter\undefined
+  \newtheorem{examplex}{\protect\examplename}
+\else
+  \newtheorem{examplex}{\protect\examplename}[chapter]
+\fi
+\newenvironment{example}
+  {\pushQED{\qed}\renewcommand{\qedsymbol}{$\triangle$}\examplex}
+  {\popQED\endexamplex}
+\theoremstyle{plain}
+\ifx\thechapter\undefined
+  \newtheorem{factx}{\protect\factname}
+\else
+  \newtheorem{factx}{\protect\factname}[chapter]
+\fi
+\newenvironment{fact}
+  {\pushQED{\qed}\renewcommand{\qedsymbol}{$\blacksquare$}\factx}
+  {\popQED\endfactx}
+\theoremstyle{definition}
+\ifx\thechapter\undefined
+  \newtheorem{defnx}{\protect\definitionname}
+\else
+  \newtheorem{defnx}{\protect\definitionname}[chapter]
+\fi
+\newenvironment{defn}
+  {\pushQED{\qed}\renewcommand{\qedsymbol}{$\Box$}\defnx}
+  {\popQED\enddefnx}
+\theoremstyle{plain}
+\ifx\thechapter\undefined
+  \newtheorem{thmx}{\protect\theoremname}
+\else
+  \newtheorem{thmx}{\protect\theoremname}[chapter]
+\fi
+\newenvironment{thm}
+  {\pushQED{\qed}\renewcommand{\qedsymbol}{$\circ$}\thmx}
+  {\popQED\endthmx}
+
+\providecommand{\definitionname}{Definition}
+\providecommand{\examplename}{Example}
+\providecommand{\factname}{Fact}
+\providecommand{\theoremname}{Theorem}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Einführung in die Funktionalanalysis
+\end_layout
+
+\begin_layout Section
+Organisatorisches
+\end_layout
+
+\begin_layout Description
+Vorlesung Di 12.15 - 13.45 HS4; Mi 14.15 - 15.45 HS4
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+15.10.13
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Übung Do 16.00 - 17.30 HS4
+\end_layout
+
+\begin_layout Description
+Dozent Christian Lageman <christian.lageman@mathematik.uni-wuerzburg.de> Sprechstun
+de: Mi 10.00 - 11.30 Übungsblätter: Abgabe Vorlesung Dienstag
+\end_layout
+
+\begin_layout Description
+Wuecampus 
+\end_layout
+
+\begin_layout Description
+Klausur 5.4.2014, 14:00 HS4
+\end_layout
+
+\begin_layout Description
+Literatur D.
+ Werner, Funktionalanalysis, Springer-Verlag 2011 F.
+ Hirzebruch, W.
+ Scharlau, Einführung in die Funktionalanalysis, Sprektrum Akademischer
+ Verlage, 1991 E.
+ Kreyzig, Introduction Functional Analysis with Applications, John Wiley
+ & Songs, 1989 R.
+ Meise, D.
+ Vogt, Einführung in die Funktionalanalysis, Vieweg + Teubner Verlag, 2011
+\end_layout
+
+\begin_layout Description
+Voraussetzungen Lineare Algebra I und II; Analysis I und II; Veriefung Analysis;
+ insbesondere metrische Räume, Folgen in metrischen Räumen, offene und abgeschlo
+ssene Mengen, Integration im 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Normierte Räume
+\end_layout
+
+\begin_layout Standard
+Sprechen wir von einem 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum, so meinen wir einen 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+- oder 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+-Vektorraum, d.h.
+ die entsprechenden Definitionen und Sätze gelten sowohl für reelle als
+ auch für komplexe Vektorräume.
+ Wir verwenden 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ als Platzhalter für 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+ in den Sätzen und Definitionen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defn}
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum.
+ Wir nennen eine Funktion 
+\begin_inset Formula $\|\cdot\|:X\to[0,\infty)$
+\end_inset
+
+ eine 
+\emph on
+Halbnorm auf 
+\begin_inset Formula $X$
+\end_inset
+
+
+\emph default
+, falls gilt:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall_{v\in X,\lambda\in\mathbb{K}}:$
+\end_inset
+
+
+\begin_inset Formula $\|\lambda v\|=|\lambda|\cdot\|v\|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall_{v,w\in X}:$
+\end_inset
+
+ 
+\begin_inset Formula $\|v+w\|\leq\|v\|+\|w\|$
+\end_inset
+
+ (Dreiecksungleichung)
+\end_layout
+
+\begin_layout Standard
+Gilt zusätzlich noch 
+\begin_inset Formula $\forall v\in X:$
+\end_inset
+
+ 
+\begin_inset Formula $\|v\|=0\implies v=0$
+\end_inset
+
+, so nennen wir 
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+ eine 
+\emph on
+Norm auf 
+\begin_inset Formula $X$
+\end_inset
+
+
+\emph default
+.
+ Ist 
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+ eine Norm auf 
+\begin_inset Formula $X$
+\end_inset
+
+, so bezeichnen wir 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+ als 
+\emph on
+normierten Raum
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Eine Norm 
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+ auf einem 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum 
+\begin_inset Formula $X$
+\end_inset
+
+ induziert durch 
+\begin_inset Formula $d(v,w)=\|v-w\|$
+\end_inset
+
+ eine Metrik 
+\begin_inset Formula $d:X\times X\to[0,\infty)$
+\end_inset
+
+ auf 
+\begin_inset Formula $X$
+\end_inset
+
+, die wir als kanonische Metrik auf 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+ bezeichnen.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ein normierter Raum ist damit auch ein metrischer Raum.
+ Die Begriffe von offenen und abgeschlossenen Mengen, Konvergenz von Folgen,
+ Cauchy-Folgen, Vollständigkeit, Stetigkeit von Abbildungen ergeben sich
+ für normierte Räume aus den entsprechenden Begriffen für metrische Räume.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Sei 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+ ein normierter Raum.
+ Eine Folge 
+\begin_inset Formula $(v_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ heißt konvergent gegen 
+\begin_inset Formula $v^{*}\in X$
+\end_inset
+
+ falls gilt: 
+\begin_inset Formula 
+\[
+\forall_{\varepsilon>0}\exists_{N\in\mathbb{N}}:\|v_{n}-v^{*}\|<\varepsilon
+\]
+
+\end_inset
+
+wobei 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\|v_{n}-v^{*}\|=d(v_{n},v^{*})$
+\end_inset
+
+ mit der kanonischen Metrik 
+\begin_inset Formula $d$
+\end_inset
+
+ ist.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für einen normierten Raum 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+ notieren wir:
+\end_layout
+
+\begin_layout Enumerate
+den Abschluss einer Menge 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+ mit 
+\begin_inset Formula $\overline{M}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+den Rand einer Menge 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+ mit 
+\begin_inset Formula $\partial M$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+das Innere einer Menge 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+ mit 
+\begin_inset Formula $\text{int }M$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+Aus der entsprechenden Definitionen für metrische Räume ergibt sich: eine
+ Folge 
+\begin_inset Formula $(v_{n})$
+\end_inset
+
+ in einem normierten Raum 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+ heißt 
+\emph on
+Cauchy-Folge
+\emph default
+, falls gilt
+\begin_inset Formula 
+\[
+\forall_{\varepsilon>0}\exists_{N\in\mathbb{N}}\forall_{n,m>N}:\|v_{n}-v_{m}\|<\varepsilon.
+\]
+
+\end_inset
+
+ Ein metrischer Raum und entsprechend auch ein normierter Raum, in dem jede
+ Cauchy-Folge konvergiert, nennt man 
+\emph on
+vollständig
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+die offene Kugel um 
+\begin_inset Formula $v\in X$
+\end_inset
+
+ mit Radius 
+\begin_inset Formula $r$
+\end_inset
+
+ mit 
+\begin_inset Formula $U_{r}(v)=\{w\in X:\|v-w\|<r\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defn}
+\end_layout
+
+\end_inset
+
+Einen vollständigen normierten Raum bezeichnet man als 
+\emph on
+Banachraum
+\emph default
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Versehen wir 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ bzw 
+\begin_inset Formula $\mathbb{C}^{n}$
+\end_inset
+
+ mit einer Norm 
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+, so ist der normierte Raum 
+\begin_inset Formula $(\mathbb{R}^{n},\|\cdot\|)$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $(\mathbb{C}^{n},\|\cdot\|)$
+\end_inset
+
+ ein Banachraum.
+ Es sei daran erinnert, dass auf einem endlich-dimensionalen Vektorraum
+ alle Normen äquivalent sind, d.h.
+ sind 
+\begin_inset Formula $\|\cdot\|_{*}$
+\end_inset
+
+, 
+\begin_inset Formula $\|\cdot\|_{+}$
+\end_inset
+
+ Normen auf einem endlichen-dimensionalen 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum 
+\begin_inset Formula $X$
+\end_inset
+
+, so gibt es Konstanten 
+\begin_inset Formula $m,M>0$
+\end_inset
+
+ mit 
+\begin_inset Formula $\forall_{v\in X}:m\|v\|_{*}\leq\|v\|_{+}\leq M\|v\|_{*}$
+\end_inset
+
+.
+ Die Vollständigkeit im 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $\mathbb{C}^{n}$
+\end_inset
+
+ ist damit nur für eine Norm nachzuweisen und aus der Analysis bekannt.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $M$
+\end_inset
+
+ eine nicht-leere Menge.
+ Wir bezeichnen mit 
+\begin_inset Formula $l^{\infty}(M)$
+\end_inset
+
+ den 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum der beschränkten Funktionen 
+\begin_inset Formula $M\to\mathbb{K}$
+\end_inset
+
+.
+ Wir definieren auf 
+\begin_inset Formula $l^{\infty}(M)$
+\end_inset
+
+ die Norm 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+ durch 
+\begin_inset Formula $\|f\|_{\infty}=\sup_{x\in M}|f(x)|$
+\end_inset
+
+ für 
+\begin_inset Formula $f\in l^{\infty}(M)$
+\end_inset
+
+.
+ Die Norm ist wohldefiniert, da 
+\begin_inset Formula $f$
+\end_inset
+
+ beschränkt ist.
+ Man bezeichnet 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+ auch als die sogenannte 
+\emph on
+Supremumsnorm
+\emph default
+.
+ 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+ ist eine Norm, denn: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+für 
+\begin_inset Formula $f\in l^{\infty}(M),\lambda\in\mathbb{K}$
+\end_inset
+
+ gilt: 
+\begin_inset Formula $\|\lambda f\|_{\infty}=\sup_{x\in M}|\lambda f(x)|=\sup_{x\in M}|\lambda||f(x)|=|\lambda|\sup_{x\in M}|f(x)|=|\lambda|\|f\|_{\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+für 
+\begin_inset Formula $f,g\in l^{\infty}(M)$
+\end_inset
+
+ gilt: 
+\begin_inset Formula $\|f+g\|_{\infty}=\sup_{x\in M}|(f+g)(x)|=\sup_{x\in M}|f(x)+g(x)|\leq\sup_{x\in M}|f(x)|+|g(x)|\leq\sup_{x\in M}|f(x)|+\sup_{x\in M}|g(x)|=\|f\|_{\infty}+\|g\|_{\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+für 
+\begin_inset Formula $f\in l^{\infty}(M)$
+\end_inset
+
+ gilt: 
+\begin_inset Formula $\|f\|_{\infty}=0\implies\sup_{x\in M}|f(x)|=0\implies\forall_{x\in M}:|f(x)|=0\implies f\equiv0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(l^{\infty}(M),\|\cdot\|_{\infty})$
+\end_inset
+
+ ist also ein normierter Raum.
+ Wir zeigen nun, dass der Raum vollständig ist.
+ Sei dazu 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ eine Cauchy-Folge in 
+\begin_inset Formula $l^{\infty}(M)$
+\end_inset
+
+.
+ Es gilt also 
+\begin_inset Formula $\forall_{\varepsilon>0}\exists_{N\in\mathbb{N}}\forall_{n,m>N}:\|f_{n}-f_{m}\|<\varepsilon$
+\end_inset
+
+.
+ Es gilt außerdem 
+\begin_inset Formula $\|f_{n}-f_{m}\|=\sup_{x\in M}|f_{n}(x)-f_{m}(x)|$
+\end_inset
+
+.
+ Dies impliziert, dass 
+\begin_inset Formula $\forall_{\varepsilon>0}\exists_{N\in\mathbb{N}}\forall_{n,m>N}\forall_{x\in M}:|f_{n}(x)-f_{m}(x)|<\varepsilon$
+\end_inset
+
+.
+ Insbesondere gilt für alle 
+\begin_inset Formula $x\in M$
+\end_inset
+
+ daher 
+\begin_inset Formula $\forall_{\varepsilon>0}\exists_{N\in M}\forall_{n,m>N}:|f_{n}(x)-f_{m}(x)|<\varepsilon$
+\end_inset
+
+, und also ist 
+\begin_inset Formula $(f_{n}(x))$
+\end_inset
+
+ eine Cauchy-Folge für jedes 
+\begin_inset Formula $x\in M$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ und 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+ vollständig sind, ist für jedes 
+\begin_inset Formula $x\in M$
+\end_inset
+
+ die Folge 
+\begin_inset Formula $(f_{n}(x))$
+\end_inset
+
+ konvergent.
+ 
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+16.10.13
+\end_layout
+
+\end_inset
+
+Wir erhalten die Funktion 
+\begin_inset Formula $f^{*}:M\to\mathbb{K}$
+\end_inset
+
+ durch 
+\begin_inset Formula $\forall_{x\in M}:f^{*}(x)=\lim_{n\to\infty}f_{n}(x)$
+\end_inset
+
+.
+ Wir erhalten eine Funktion 
+\begin_inset Formula $f^{*}:M\to\mathbb{K}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\forall_{x\in M}:f^{*}(x)=\lim_{n\to\infty}f_{n}(x)$
+\end_inset
+
+.
+ Wir hatten uns überlegt, dass 
+\begin_inset Formula 
+\[
+\forall_{\varepsilon>0}\exists_{N\in\mathbb{N}}\forall_{n,m>N}\forall_{x\in M}:|f_{n}(x)-f_{m}(x)|<\varepsilon.
+\]
+
+\end_inset
+
+ Damit gibt es ein 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\forall_{n,m>N}\forall_{x\in M}:|f_{n}(x)-f_{m}(x)|<1$
+\end_inset
+
+.
+ (Dies ist äquivalent zu 
+\begin_inset Formula $f_{m}(x)\in U_{1}(f_{n}(x))$
+\end_inset
+
+.) Also 
+\begin_inset Formula $\forall_{m>N}\forall_{x\in M}:f_{m}(x)\in U_{1}(f_{N+1}(x))$
+\end_inset
+
+.
+ Somit 
+\begin_inset Formula $\forall_{x\in M}:f^{*}(x)\in U_{1}(f_{N+1}(x))$
+\end_inset
+
+.
+ Damit 
+\begin_inset Formula $\forall_{x\in M}:|f_{N+1}(x)-f^{*}(x)|\leq1$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $f_{N+1}\in l^{\infty}(M)$
+\end_inset
+
+, also beschränkt ist, muss auch 
+\begin_inset Formula $f^{*}$
+\end_inset
+
+ beschränkt sein.
+ Wir erhalten 
+\begin_inset Formula $f^{*}\in l^{\infty}(M)$
+\end_inset
+
+.
+ Wir zeigen nun die Konvergenz von 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ gegen 
+\begin_inset Formula $f^{*}$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ gegeben.
+ Dann gibt es sein 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+, so dass 
+\begin_inset Formula $\forall_{n,m>N}\forall_{x\in M}:|f_{n}(x)-f_{m}(x)|<\frac{\varepsilon}{3}$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $\forall_{x\in M}\forall_{n>N}\forall_{m>N}:|f_{n}(x)-f_{m}(x)|<\frac{\varepsilon}{3}$
+\end_inset
+
+.
+ Da es zu jedem 
+\begin_inset Formula $x\in M$
+\end_inset
+
+ und 
+\begin_inset Formula $n>N$
+\end_inset
+
+ ein 
+\begin_inset Formula $m(x,n)\in\mathbb{N},$
+\end_inset
+
+
+\begin_inset Formula $m(x,n)>N$
+\end_inset
+
+ gibt mit 
+\begin_inset Formula 
+\[
+|f_{m(x,n)}(x)-f^{*}(x)|<\underbrace{\frac{\varepsilon}{2}-|f_{n}(x)-f_{m(x,n)}(x)|}_{>\frac{\varepsilon}{2}-\frac{\varepsilon}{3}=\frac{1}{6}\varepsilon}.
+\]
+
+\end_inset
+
+folgt 
+\begin_inset Formula 
+\[
+\forall_{x\in M}\forall_{n>N}:\underbrace{|f_{n}(x)-f_{m(x,n)}(x)|+|f_{m(x,n)}(x)-f^{*}(x)}_{|f_{n}(x)-f^{*}(x)|\leq}<\frac{\varepsilon}{2}-|f_{n}(x)-f_{m(x,n)}(x)|+|f_{n}(x)-f_{m(x,n)}(x)|<\frac{\varepsilon}{2}.
+\]
+
+\end_inset
+
+Also 
+\begin_inset Formula $\forall_{n>N}\forall_{x\in M}:|f_{n}(x)-f^{*}(x)|<\frac{\varepsilon}{2}$
+\end_inset
+
+.
+ Damit 
+\begin_inset Formula $\forall_{n>N}:\|f_{n}-f^{*}\|_{\infty}\leq\frac{\varepsilon}{2}\leq\varepsilon$
+\end_inset
+
+.
+ Damit konvergiert 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ gegen 
+\begin_inset Formula $f^{*}$
+\end_inset
+
+.
+ Somit ist 
+\begin_inset Formula $(l^{\infty}(M),\|\cdot\|_{\infty})$
+\end_inset
+
+ ein Banachraum.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{thm}
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+ ein normierter Raum und 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ein Unterraum von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+ ein Banachraum und 
+\begin_inset Formula $U$
+\end_inset
+
+ eine abgeschlossene Teilmenge von 
+\begin_inset Formula $X$
+\end_inset
+
+, so ist 
+\begin_inset Formula $(U,\|\cdot\|)$
+\end_inset
+
+ ein Banachraum.
+\end_layout
+
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $U$
+\end_inset
+
+ vollständig, so ist 
+\begin_inset Formula $U$
+\end_inset
+
+ eine abgeschlossene Teilmenge von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{thm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $(u_{n})$
+\end_inset
+
+ eine Cauchy-Folge in 
+\begin_inset Formula $(U,\|\cdot\|)$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $(u_{n})$
+\end_inset
+
+ eine Cauchy-Folge in 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+.
+ Also konvergiert 
+\begin_inset Formula $(u_{n})$
+\end_inset
+
+ gegen ein 
+\begin_inset Formula $u^{*}\in X$
+\end_inset
+
+.
+ Damit ist 
+\begin_inset Formula $u^{*}\in\overline{U}$
+\end_inset
+
+, also 
+\begin_inset Formula $u^{*}\in U$
+\end_inset
+
+.
+ Somit ist 
+\begin_inset Formula $U$
+\end_inset
+
+ vollständig.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $U$
+\end_inset
+
+ vollständig.
+ Ist 
+\begin_inset Formula $u^{*}\in\overline{U}\setminus U$
+\end_inset
+
+, so gibt es Folge 
+\begin_inset Formula $(u_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $U$
+\end_inset
+
+ die gegen 
+\begin_inset Formula $u^{*}$
+\end_inset
+
+ konvergiert.
+ Diese Folge ist eine Cauchy-Folge in 
+\begin_inset Formula $U$
+\end_inset
+
+ und konvergiert somit gegen einen Grenzwert 
+\begin_inset Formula $u^{**}\in U$
+\end_inset
+
+.
+ Wegen der Eindeutigkeit von Grenzwerten folgt 
+\begin_inset Formula $u^{*}=u^{**}\in U$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $\overline{U}\setminus U=\emptyset$
+\end_inset
+
+ und 
+\begin_inset Formula $U$
+\end_inset
+
+ abgeschlossen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+Wir verwenden die Notation 
+\begin_inset Formula $l^{\infty}=l^{\infty}(\mathbb{N})$
+\end_inset
+
+.
+ Da eine Folge in 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ eine Funktion 
+\begin_inset Formula $\mathbb{N}\to\mathbb{K}$
+\end_inset
+
+ ist, ist 
+\begin_inset Formula $l^{\infty}$
+\end_inset
+
+ also der Raum aller beschränkten Folgen in 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+.
+ Wir definieren die folgenden Unterräume von 
+\begin_inset Formula $l^{\infty}$
+\end_inset
+
+: 
+\begin_inset Formula $c=\{(x_{n})|x_{n}\in\mathbb{K},(x_{n})\text{ konvergent }\}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{0}=\{(x_{n})|x_{n}\in\mathbb{K},\:\lim_{n\to\infty}x_{n}=0\}$
+\end_inset
+
+, 
+\begin_inset Formula $d=\{(x_{n})|x_{n}\in\mathbb{K},\: x_{n}\:\text{bis auf endlich viele Folgenglieder gleich 0}\}$
+\end_inset
+
+.
+ Da die konvergente Folge in 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+ beschränkt ist, folgt 
+\begin_inset Formula $d\subset c_{0}\subset c\subset l^{\infty}$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+ die Supremumsnorm auf 
+\begin_inset Formula $l^{\infty}$
+\end_inset
+
+.
+ Es sind 
+\begin_inset Formula $(d,\|\cdot\|_{\infty})$
+\end_inset
+
+, 
+\begin_inset Formula $(c_{0},\|\cdot\|_{\infty})$
+\end_inset
+
+, 
+\begin_inset Formula $(c,\|\cdot\|_{\infty})$
+\end_inset
+
+ normierte Räume.
+ Welche dieser Räume sind Banachräume? Mit Satz 1 reicht es zu zeigen, dass
+ der entsprechende Raum abgeschlossen in 
+\begin_inset Formula $l^{\infty}$
+\end_inset
+
+ ist.
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ eine Folge in 
+\begin_inset Formula $c$
+\end_inset
+
+, die konvergent gegen ein 
+\begin_inset Formula $f^{*}\in l^{\infty}$
+\end_inset
+
+ ist.
+ Um Doppelindizes zu vermeiden, verwenden wir die Darstellung von Folgen
+ als Funktionen 
+\begin_inset Formula $\mathbb{N}\to\mathbb{K}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ eine Folge in 
+\begin_inset Formula $c$
+\end_inset
+
+ ist, können wir durch 
+\begin_inset Formula $x_{n}=\lim_{m\to\infty}f_{n}(m)$
+\end_inset
+
+ eine Folge 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ definieren.
+ Es gilt 
+\begin_inset Formula $|x_{n}-x_{l}|\leq\sup_{m\in\mathbb{N}}|f_{n}(m)-f_{l}(m)|=\|f_{n}-f_{l}\|_{\infty}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ eine Cauchy-Folge ist, ist durch diese Abschätzung die Folge 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ eine Cauchy-Folge in 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+.
+ Also konvergiert 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ gegen ein 
+\begin_inset Formula $x^{*}\in\mathbb{K}$
+\end_inset
+
+.
+ Wir wollen nun zeigen, dass 
+\begin_inset Formula $f^{*}$
+\end_inset
+
+ gegen 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ konvergiert.
+ Sei 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+.
+ Wähle 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+, so dass 
+\begin_inset Formula $\|f^{*}-f_{N}\|<\frac{\varepsilon}{3}$
+\end_inset
+
+ und 
+\begin_inset Formula $|x_{N}-x^{*}|<\frac{\varepsilon}{3}$
+\end_inset
+
+.
+ Wähle 
+\begin_inset Formula $M\in\mathbb{N}$
+\end_inset
+
+, so dass für alle 
+\begin_inset Formula $m>M$
+\end_inset
+
+ gilt 
+\begin_inset Formula $|f_{N}(m)-x_{N}|<\frac{\varepsilon}{3}$
+\end_inset
+
+.
+ Dann gilt für alle 
+\begin_inset Formula $m>M$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+|f^{*}(m)-x^{*}|\leq\underbrace{|f^{*}(m)-f_{N}(m)}_{\leq\|f^{*}-f_{N}\|_{\infty}}+|\underbrace{f_{N}(m)-x_{N}}_{<\frac{\varepsilon}{3}}|+|\underbrace{x_{N}-x^{*}}_{<\frac{\varepsilon}{3}}|<\underbrace{\|f^{*}-f_{N}\|_{\infty}}_{<\frac{\varepsilon}{3}}+\frac{2}{3}\varepsilon<\varepsilon.
+\]
+
+\end_inset
+
+Also ist 
+\begin_inset Formula $f^{*}$
+\end_inset
+
+konvergente Folge und 
+\begin_inset Formula $f^{*}\in c$
+\end_inset
+
+.
+ Damit ist 
+\begin_inset Formula $c$
+\end_inset
+
+ abgeschlossen und nach Satz 1 ein Banachraum.
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ eine Folge in 
+\begin_inset Formula $c_{0}$
+\end_inset
+
+ die konvergent gegen ein 
+\begin_inset Formula $f^{*}\in l^{\infty}$
+\end_inset
+
+ ist.
+ Wiederholen wir das obige Argument, so erhalten wir zusätzlich dass 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ kontant 0 ist.
+ Damit ist 
+\begin_inset Formula $x^{*}=0$
+\end_inset
+
+ und 
+\begin_inset Formula $f^{*}\in c_{0}$
+\end_inset
+
+.
+ Somit ist 
+\begin_inset Formula $c_{0}$
+\end_inset
+
+ abgeschlossen und nach Satz 1 ein Banachraum.
+ Der Raum 
+\begin_inset Formula $(d,\|\cdot\|_{\infty})$
+\end_inset
+
+ ist kein Banachraum.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wir definieren nun weitere Folgenräume.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für 
+\begin_inset Formula $p\in\mathbb{R}$
+\end_inset
+
+ mit 
+\begin_inset Formula $1\leq p<\infty$
+\end_inset
+
+ setzen wir 
+\begin_inset Formula $l^{p}=\{(x_{n})|x_{n}\in\mathbb{K},\:\sum_{n=1}^{\infty}|x_{n}|^{p}<\infty\}$
+\end_inset
+
+ und 
+\begin_inset Formula $\|(x_{n})\|_{p}=\left(\sum_{n=1}^{\infty}|x_{n}|^{p}\right)^{\frac{1}{p}}$
+\end_inset
+
+ für 
+\begin_inset Formula $(x_{n})\in l^{p}$
+\end_inset
+
+.
+ Wir wollen im Folgenden zeigen, dass 
+\begin_inset Formula $(l^{p},\|\cdot\|_{p})$
+\end_inset
+
+ Banachräume sind.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+22.10.13
+\end_layout
+
+\end_inset
+
+Hier fehlt noch was, nämlich 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{thm}
+\backslash
+end{thm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{thm}
+\end_layout
+
+\end_inset
+
+Holdesche Ungleichung
+\end_layout
+
+\begin_layout Enumerate
+Sind 
+\begin_inset Formula $(x_{n})\in l'$
+\end_inset
+
+ und 
+\begin_inset Formula $(y_{n})\in l^{\infty}$
+\end_inset
+
+, so ist 
+\begin_inset Formula $(x_{n}y_{n})\in l'$
+\end_inset
+
+ und 
+\begin_inset Formula $\|(x_{n}y_{n})\|_{'}\leq\|(x_{n})\|_{'}\|(y_{n})\|_{\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $1<p<\infty$
+\end_inset
+
+ und 
+\begin_inset Formula $q=\frac{p}{p-1}$
+\end_inset
+
+.
+ Sind 
+\begin_inset Formula $(x_{n})\in l^{p}$
+\end_inset
+
+ und 
+\begin_inset Formula $(y_{n})\in l^{q}$
+\end_inset
+
+, so ist 
+\begin_inset Formula $(x_{n}y_{n})\in l'$
+\end_inset
+
+ und 
+\begin_inset Formula $\|(x_{n}y_{n})\|_{'}\leq\|(x_{n})\|_{p}\|(y_{n})\|_{q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{thm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Es gilt 
+\begin_inset Formula $\underbrace{\sum_{n=1}^{\infty}|x_{n}y_{n}}_{=\|(x_{n}y_{n})\|_{'}}\leq\sum_{n=1}^{\infty}|x_{n}|\|(y_{n})\|_{\infty}=\|(y_{n})\|_{\infty}\sum_{n=1}^{\infty}|x_{n}|=\|(y_{n})\|_{\infty}\|(x_{n})\|_{'}<\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Wir haben 
+\begin_inset Formula $\frac{1}{p}+\frac{1}{q}=1$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $a,b>0$
+\end_inset
+
+ und 
+\begin_inset Formula $A=p\log a$
+\end_inset
+
+ sowie 
+\begin_inset Formula $B=q\log b$
+\end_inset
+
+.
+ Die Funktion 
+\begin_inset Formula $t\mapsto\exp(t)$
+\end_inset
+
+ ist konvenx, also 
+\begin_inset Formula $\exp(\frac{1}{p}A+\frac{1}{q}B)\leq\frac{1}{p}\exp(A)+\frac{1}{q}\exp(B)$
+\end_inset
+
+.
+ Somit 
+\begin_inset Formula 
+\[
+ab=\exp(\underbrace{\log a}_{=\frac{1}{p}A}+\underbrace{\log b}_{=\frac{1}{q}B})\leq\frac{1}{p}\exp(\underbrace{p\log a}_{A})+\frac{1}{q}\exp(\underbrace{q\log b}_{B})=\frac{1}{p}a^{p}+\frac{1}{q}b^{q}.
+\]
+
+\end_inset
+
+Wir haben für 
+\begin_inset Formula $(x_{n})\in l^{p},(y_{n})\in l^{q}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|(x_{n})\|_{p}=1=\|(y_{n})\|_{q}$
+\end_inset
+
+.
+ Es gilt
+\begin_inset Formula 
+\begin{equation}
+\sum_{n=1}^{\infty}|x_{n}||y_{n}|\leq\sum_{n=1}^{\infty}(\frac{1}{p}|x_{n}|^{p}+\frac{1}{q}|y_{n}|^{q})=\frac{1}{p}\underbrace{\sum_{n=1}^{\infty}|x_{n}|^{p}}_{=1}+\frac{1}{q}\underbrace{\sum_{n=1}^{\infty}|y_{n}|^{q}}_{=1}=\frac{1}{p}+\frac{1}{q}=1.\label{eq:beweis-satz-3b-*}
+\end{equation}
+
+\end_inset
+
+Sind 
+\begin_inset Formula $(x_{n})\in l^{p}$
+\end_inset
+
+, 
+\begin_inset Formula $(y_{n})\in l^{q}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|(x_{n})\|_{p}\neq0$
+\end_inset
+
+ und 
+\begin_inset Formula $\|(y_{n})\|_{q}\neq0$
+\end_inset
+
+, so ist mit (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:beweis-satz-3b-*"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\[
+\underbrace{\sum_{n=1}^{\infty}|x_{n}y_{n}|}_{=\|(x_{n}y_{n})\|}=\|(x_{n})\|_{p}\|(y_{n})\|_{q}\sum_{m=1}^{\infty}\frac{|x_{m}|}{\|(x_{n})\|_{p}}\cdot\frac{|y_{m}|}{\|(y_{n})\|_{q}}\leq\|(x_{n})\|_{p}\|(y_{n})\|_{q}\cdot1.
+\]
+
+\end_inset
+
+Sind 
+\begin_inset Formula $(x_{n})\in l^{p}$
+\end_inset
+
+ und 
+\begin_inset Formula $(y_{n})\in l^{q}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|(x_{n})\|_{p}=0$
+\end_inset
+
+ oder 
+\begin_inset Formula $\|(y_{n})\|_{q}=0$
+\end_inset
+
+, so ist 
+\begin_inset Formula $(x_{n}y_{n})\in l^{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $\|(x_{n}y_{n})\|_{'}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{thm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Minkowskische Ungleichung.
+ Sei 
+\begin_inset Formula $1\leq p<\infty$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $(x_{n}),(y_{n})\in l^{p}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\|(x_{n}+y_{n})\|_{p}\leq\|(x_{n})\|_{p}+\|(y_{n})\|_{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{thm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für 
+\begin_inset Formula $p=1$
+\end_inset
+
+ erhalten wir die Ungleichung direkt.
+ Sei 
+\begin_inset Formula $p>1$
+\end_inset
+
+ und 
+\begin_inset Formula $q=\frac{p}{q-1}$
+\end_inset
+
+.
+ Weiterhin seien 
+\begin_inset Formula $(x_{n}),(y_{n})\in l^{p}$
+\end_inset
+
+.
+ Nach Satz 2 ist 
+\begin_inset Formula $(x_{n}+y_{n})\in l^{p}$
+\end_inset
+
+ und 
+\begin_inset Formula $\sum_{n=1}^{\infty}|x_{n}+y_{n}|^{p}=\sum_{n=1}^{\infty}(|x_{n}+y_{n}|^{p-1})^{q}$
+\end_inset
+
+ konvergent
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Nebenrechnung: 
+\begin_inset Formula $(p-1)q=p$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+ Somit ist 
+\begin_inset Formula $(|x_{n}+y_{n}|{}^{p-1})\in l^{q}$
+\end_inset
+
+.
+ Nach Satz 3 ist damit 
+\begin_inset Formula $(|x_{n}||x_{n}+y_{n}|^{p-1})\in l^{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $(|y_{n}||x_{n}+y_{n}|^{p-1})\in l^{1}$
+\end_inset
+
+ und wir erhalten 
+\begin_inset Formula $\sum_{n=1}^{\infty}|x_{n}||x_{n}+y_{n}|^{p-1}=\|(|x_{n}||x_{n}+y_{n}|^{p-1})\|_{1}\leq\|(x_{n})\|_{p}\|(|x_{n}+y_{n}|^{p-1})\|_{q}=$
+\end_inset
+
+
+\begin_inset Formula $\left(\sum_{n=1}^{\infty}|x_{n}|^{p}\right)^{\frac{1}{p}}\left(\sum_{n=1}^{\infty}(|x_{n}+y_{n}|^{p-1})^{q}\right)^{\frac{1}{q}}=\|(x_{n})\|_{p}\left(\|(x_{n}+y_{n})\|_{p}\right)^{p-1}$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $\sum_{n=1}^{\infty}|y_{n}||x_{n}+y_{n}|^{p-1}\leq\|(x_{y})\|_{p}\left(\|(x_{n}+y_{n})\|_{p}\right)^{p-1}$
+\end_inset
+
+.
+ Somit 
+\begin_inset Formula $\|(x_{n}+y_{n})\|_{p}^{p}=\sum_{n=1}^{\infty}\underbrace{|x_{n}+y_{n}|^{p}}_{=|x_{n}+y_{n}|\cdot|x_{n}+y_{n}|^{p-1}}\leq\sum_{n=1}^{\infty}(|x_{n}|+|y_{n}|)\cdot|x_{n}+y_{n}|^{p-1}$
+\end_inset
+
+
+\begin_inset Formula $\leq\sum_{n=1}^{\infty}|x_{n}||x_{n}+y_{n}|^{p-1}+\sum_{n=1}^{\infty}|y_{n}||x_{n}+y_{n}|^{p-1}\leq\|(x_{n})\|_{p}(\|(x_{n}+y_{n})\|_{p})^{p-1}+\|(y_{n})\|_{p}(\|(x_{n}+y_{n})\|_{p})^{p-1}=(\|(x_{n})\|_{p}+\|(y_{n})\|_{p})\|(x_{n}+y_{n})\|_{p}^{p-1}$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $\|(x_{n}+y_{n})\|_{p}\neq0$
+\end_inset
+
+ liefert Divion die Minkowski-Ungleichung.
+ Für 
+\begin_inset Formula $\|(x_{n}+y_{n})\|_{p}=0$
+\end_inset
+
+ ist die Minkowski-Ungleichung trivial.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{thm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für 
+\begin_inset Formula $1\leq p<\infty$
+\end_inset
+
+ ist 
+\begin_inset Formula $(l^{p},\|\cdot\|_{p})$
+\end_inset
+
+ ein Banachraum.
+ Ebenso ist 
+\begin_inset Formula $(l^{\infty},\|\cdot\|_{\infty})$
+\end_inset
+
+ ein Banachraum.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{thm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Behauptung für 
+\begin_inset Formula $l^{\infty}$
+\end_inset
+
+wurde bereits in Beispiel 1 gezeigt.
+ Sei 
+\begin_inset Formula $1\leq p<\infty$
+\end_inset
+
+.
+ Nach Satz 2 ist 
+\begin_inset Formula $l^{p}$
+\end_inset
+
+ ein 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum.
+ Für all 
+\begin_inset Formula $(x_{n})\in l^{p}$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda\in\mathbb{K}$
+\end_inset
+
+ ist 
+\begin_inset Formula $\|(\lambda x_{n})\|_{p}=\left(\sum_{n=1}^{\infty}|\lambda x_{n}|^{p}\right)^{\frac{1}{p}}=|\lambda|\left(\sum_{n=1}^{\infty}|x_{n}|^{p}\right)^{\frac{1}{p}}=|\lambda|\|(x_{n})\|_{p}$
+\end_inset
+
+.
+ Die Dreiecksungleichung gilt für 
+\begin_inset Formula $\|\cdot\|_{p}$
+\end_inset
+
+ nach Satz 4.
+ Ist für 
+\begin_inset Formula $(x_{n})\in l^{p}$
+\end_inset
+
+, 
+\begin_inset Formula $\|(x_{n})\|_{p}=0$
+\end_inset
+
+, so ist 
+\begin_inset Formula $\sum_{n=1}^{\infty}|x_{n}|^{p}=0$
+\end_inset
+
+, also 
+\begin_inset Formula $x_{n}=0$
+\end_inset
+
+ für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ Insgesamt ist 
+\begin_inset Formula $\|\cdot\|_{p}$
+\end_inset
+
+ also eine Norm auf 
+\begin_inset Formula $l^{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ eine Cauchy-Folge in 
+\begin_inset Formula $l^{p}$
+\end_inset
+
+.
+ Wir verwenden für den Rest des Beweises die Schreibweise von Elementen
+ aus 
+\begin_inset Formula $l^{p}$
+\end_inset
+
+ als Funktionen 
+\begin_inset Formula $\mathbb{N}\mapsto\mathbb{K}$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $m,n,k\in\mathbb{N}$
+\end_inset
+
+ gilt 
+\begin_inset Formula 
+\[
+|f_{n}(m)-f_{k}(m)|=(|f_{n}(m)-f_{k}(m)|^{p})^{\frac{1}{p}}\leq\left(\sum_{l=1}^{\infty}|f_{n}(l)-f_{k}(l)|^{p}\right)^{\frac{1}{p}}=\|f_{n}-f_{k}\|_{p}.
+\]
+
+\end_inset
+
+Wie schon für 
+\begin_inset Formula $l^{\infty}$
+\end_inset
+
+ folgt, dass für jedes 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+ die Folge 
+\begin_inset Formula $(f_{n}(m))_{n}$
+\end_inset
+
+ eine Cauchy-Folge in 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ ist.
+ Somit konvergiert für jedes 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+ die Folge 
+\begin_inset Formula $(f_{n}(m))_{n}$
+\end_inset
+
+ und wir erhalten eine Funktion 
+\begin_inset Formula $f^{*}:\mathbb{N}\to\mathbb{K}$
+\end_inset
+
+ mit 
+\begin_inset Formula $f^{*}(m)=\lim_{n\to\infty}f_{n}(m)$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ gegeben.
+ Wähle 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ so dass 
+\begin_inset Formula $\forall_{n,k>N}:\|f_{n}-f_{k}\|<\frac{\varepsilon}{2}$
+\end_inset
+
+.
+ Somit gilt 
+\begin_inset Formula $\forall_{n,k>N}$
+\end_inset
+
+ und alle 
+\begin_inset Formula $M\in\mathbb{N}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\left(\sum_{m=1}^{M}|f_{n}(m)-f_{k}(m)|^{p}\right)^{\frac{1}{p}}\leq\|f_{n}-f_{k}\|_{p}<\frac{\varepsilon}{2}.
+\]
+
+\end_inset
+
+ Für 
+\begin_inset Formula $k\to\infty$
+\end_inset
+
+ erhalten wir 
+\begin_inset Formula $\forall_{n>N}$
+\end_inset
+
+, 
+\begin_inset Formula $\forall_{M\in\mathbb{N}}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\left(\sum_{m=1}^{M}|f_{n}(m)-f^{*}(m)|^{p}\right)^{\frac{1}{p}}\leq\frac{\varepsilon}{2}.
+\]
+
+\end_inset
+
+Also 
+\begin_inset Formula $\forall_{n>N}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\sum_{m=1}^{\infty}|f_{n}(m)-f^{*}(m)|^{p}\right)^{\frac{1}{p}}\leq\frac{\varepsilon}{2}.
+\]
+
+\end_inset
+
+Somit 
+\begin_inset Formula $f_{n}-f^{*}\in l^{p}$
+\end_inset
+
+ für 
+\begin_inset Formula $n>N$
+\end_inset
+
+, also wegen 
+\begin_inset Formula $f^{*}=f_{n}-(f_{n}-f^{*})$
+\end_inset
+
+ auch 
+\begin_inset Formula $f^{*}\in l^{p}$
+\end_inset
+
+.
+ Desweiteren 
+\begin_inset Formula $\forall_{n>N}:\|f_{n}-f^{*}\|_{p}<\varepsilon$
+\end_inset
+
+.
+ Also konvergiert 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ gegen 
+\begin_inset Formula $f^{*}$
+\end_inset
+
+.
+ Damit ist 
+\begin_inset Formula $(l^{p},\|\cdot\|_{p})$
+\end_inset
+
+ ein Banachraum.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

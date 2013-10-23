@@ -43,10 +43,20 @@
 \newenvironment{thm}
   {\pushQED{\qed}\renewcommand{\qedsymbol}{$\circ$}\thmx}
   {\popQED\endthmx}
-
+\theoremstyle{plain}
+\ifx\thechapter\undefined
+  \newtheorem{lemx}{\protect\lemname}
+\else
+  \newtheorem{lemx}{\protect\lemname}[chapter]
+\fi
+\newenvironment{lem}
+  {\pushQED{\qed}\renewcommand{\qedsymbol}{$\blacksquare$}\lemx}
+  {\popQED\endlemx}
+  
 \providecommand{\definitionname}{Definition}
 \providecommand{\examplename}{Example}
 \providecommand{\factname}{Fact}
+\providecommand{\lemname}{Lemma}
 \providecommand{\theoremname}{Theorem}
 \end_preamble
 \use_default_options true
@@ -110,7 +120,7 @@
 Einführung in die Funktionalanalysis
 \end_layout
 
-\begin_layout Section
+\begin_layout Section*
 Organisatorisches
 \end_layout
 
@@ -2392,6 +2402,1023 @@ Somit
 \end_inset
 
  ein Banachraum.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein metrischer Raum mit Metrik 
+\begin_inset Formula $d:X\times X\to[0,\infty)$
+\end_inset
+
+.
+ Wir bezeichnen 
+\begin_inset Formula $C^{b}(X)$
+\end_inset
+
+ den Vektorraum der stetigen, beschränkten Funktionen 
+\begin_inset Formula $X\to\mathbb{K}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $C^{b}(X)$
+\end_inset
+
+ ist ein Unterraum von 
+\begin_inset Formula $l^{\infty}(X)$
+\end_inset
+
+, also ist 
+\begin_inset Formula $C^{b}(X)$
+\end_inset
+
+ versehen mit der Supremumsnorm 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+ ein normierter Raum.
+\begin_inset Newline newline
+\end_inset
+
+Die Konvergenz in 
+\begin_inset Formula $C^{b}(X)$
+\end_inset
+
+ bezüglich 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+ entspricht der gleichmäßigen Konvergenz wie wir sie aus der Analysis kennen.
+\begin_inset Newline newline
+\end_inset
+
+Sei 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ eine Folge in 
+\begin_inset Formula $C^{b}(X)$
+\end_inset
+
+, die gegen ein 
+\begin_inset Formula $f^{*}\in l^{\infty}(X)$
+\end_inset
+
+ konvergiert.
+ Aus der Analysis wissen wir, dass dann 
+\begin_inset Formula $f^{*}$
+\end_inset
+
+ stetig, also 
+\begin_inset Formula $f^{*}\in C^{b}(X)$
+\end_inset
+
+ ist.
+ Also ist 
+\begin_inset Formula $C^{b}(X)$
+\end_inset
+
+ abgeschlossener Unterraum von 
+\begin_inset Formula $l^{\infty}(X)$
+\end_inset
+
+ und 
+\begin_inset Formula $(C^{b}(X),\|\cdot\|_{\infty})$
+\end_inset
+
+ ist ein Banachraum.
+\begin_inset Newline newline
+\end_inset
+
+Ist der Raum 
+\begin_inset Formula $X$
+\end_inset
+
+ kompakt, z.B.
+ eine kompakte Teilmenge des 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ mit der euklidschen Metrik, so sind alle stetigen Funktionen 
+\begin_inset Formula $X\to\mathbb{K}$
+\end_inset
+
+ beschränkt, also 
+\begin_inset Formula $C^{b}(X)=C(X)=\{f:X\to\mathbb{K}|f\:\text{stetig}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $a,b\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $a<b$
+\end_inset
+
+.
+ Wir bezeichnen mit 
+\begin_inset Formula $C^{1}([a,b])$
+\end_inset
+
+ den Vektorraum der stetig differenzierbaren Funktionen 
+\begin_inset Formula $[a,b]\to\mathbb{K}$
+\end_inset
+
+.
+ Es ist 
+\begin_inset Formula $C^{1}([a,b])\subset l^{\infty}([a,b])$
+\end_inset
+
+.
+ Der Raum 
+\begin_inset Formula $(C^{1}([a,b]),\|\cdot\|_{\infty})$
+\end_inset
+
+ ist kein Banachraum (siehe 3.
+ Übungsblatt).
+ Wir können auf 
+\begin_inset Formula $C^{1}([a,b])$
+\end_inset
+
+ jedoch eine andere Norm definieren und zwar 
+\begin_inset Formula $\|f\|:=\|f\|_{\infty}+\|f'\|_{\infty}$
+\end_inset
+
+.
+ Mit dieser Norm versehen ist 
+\begin_inset Formula $C^{1}([a,b])$
+\end_inset
+
+ ein Banachraum.
+ Dies folgt aus dem nächsten Beispiel.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $\Omega\subset\mathbb{R}^{n}$
+\end_inset
+
+ eine offene Menge.
+ Ist 
+\begin_inset Formula $f:\Omega\to\mathbb{K}$
+\end_inset
+
+ eine 
+\begin_inset Formula $r$
+\end_inset
+
+-mal stetig differenzierbare Funktion so verwenden wir die Multiindexschreibweis
+e 
+\begin_inset Formula $D^{\alpha}f$
+\end_inset
+
+ mit 
+\begin_inset Formula $\alpha\in\mathbb{N}_{0}^{n}$
+\end_inset
+
+ für die partielle Ableitung 
+\begin_inset Formula 
+\[
+\dfrac{\partial^{\alpha_{1}}\partial^{\alpha_{2}}\cdots\partial^{\alpha_{n}}}{\partial x_{1}^{\alpha_{1}}\partial x_{2}^{\alpha_{2}}\cdots\partial x_{n}^{\alpha_{n}}}f(x_{1},...,x_{n})
+\]
+
+\end_inset
+
+der Ordnung 
+\begin_inset Formula $|\alpha|=\alpha_{1}+...+\alpha_{n}\leq r$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha=(\alpha_{1},...,\alpha_{n})$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Ist 
+\begin_inset Formula $\Omega\subset\mathbb{R}^{n}$
+\end_inset
+
+ offen und beschränkt, so können wir durch 
+\begin_inset Formula 
+\[
+C^{r}(\overline{\Omega})=\{f:\Omega\to\mathbb{K}:f\text{ ist \ensuremath{r}-mal stetig differenzierbar, für alle Multiindizes \ensuremath{\alpha\in\mathbb{N}_{0}^{n}} mit \ensuremath{0\leq|\alpha|\leq r} ist \ensuremath{D^{\alpha}f} auf \ensuremath{\overline{\Omega}} stetig fortsetzbar}\}
+\]
+
+\end_inset
+
+einen Unterraum von 
+\begin_inset Formula $l^{\infty}(\Omega)$
+\end_inset
+
+ definieren.
+ Durch 
+\begin_inset Formula 
+\[
+\|f\|:=\sum_{\alpha\in\mathbb{N}_{0}^{n},0\leq|\alpha|\leq r}\|D^{\alpha}f\|_{\infty}
+\]
+
+\end_inset
+
+für 
+\begin_inset Formula $f\in C^{r}(\overline{\Omega})$
+\end_inset
+
+ definieren wir eine Norm auf 
+\begin_inset Formula $C^{r}(\overline{\Omega})$
+\end_inset
+
+ (siehe 2.
+ Übungsblatt).
+ Der normierte Raum 
+\begin_inset Formula $(C^{r}(\overline{\Omega}),\|\cdot\|)$
+\end_inset
+
+ ist ein Banachraum.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Eigenschaften normierter Räume
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+ ein normierter Raum.
+ Es gilt
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall_{v,w\in X}:|\|v\|-\|w\||\leq\|v-w\|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Die Abbildung 
+\begin_inset Formula $\|\cdot\|:x\mapsto[0,\infty)$
+\end_inset
+
+ ist stetig.
+\end_layout
+
+\begin_layout Enumerate
+Eine Folge 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ konvergiert genau dann gegen 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ wenn 
+\begin_inset Formula $\lim_{n\to\infty}\|x_{n}-x\|=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für 1 und 2 siehe erstes Übungsblatt.
+ 3 folgt direkt aus der entsprechenden Eigenschaft für metrische Räume.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{thm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+ ein metrischer Raum.
+\end_layout
+
+\begin_layout Enumerate
+Konvergiert die Folge 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ gegen 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ und die Folge 
+\begin_inset Formula $(y_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ gegen 
+\begin_inset Formula $y\in X$
+\end_inset
+
+, so konvergiert für alle 
+\begin_inset Formula $\lambda,\mu\in\mathbb{K}$
+\end_inset
+
+ die Folge 
+\begin_inset Formula $(\lambda x_{n}+\mu y_{n})$
+\end_inset
+
+ gegen 
+\begin_inset Formula $\lambda x+\mu y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $U$
+\end_inset
+
+ ein Unterraum von 
+\begin_inset Formula $X$
+\end_inset
+
+, so ist auch 
+\begin_inset Formula $\overline{U}$
+\end_inset
+
+ ein Unterraum von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{thm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Für alle 
+\begin_inset Formula $\lambda,\mu\in\mathbb{R}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\|\lambda x_{n}+\mu y_{n}-(\lambda x+\mu y)\|\leq\|\lambda x_{n}-\lambda x+\mu y_{n}-\mu y\|\leq|\lambda|\|x_{n}-x\|+|\mu|\|y_{n}-y\|$
+\end_inset
+
+.
+ Mit Lemma 1 (3) folgt dann die Behauptung.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $x,y\in\overline{U}$
+\end_inset
+
+.
+ Dann gibt es Folgen 
+\begin_inset Formula $(x_{n}),(y_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $U$
+\end_inset
+
+ mit 
+\begin_inset Formula $\lim_{n\to\infty}x_{n}=x$
+\end_inset
+
+,
+\begin_inset Formula $\lim_{n\to\infty}y_{n}=y$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $\lambda,\mu\in\mathbb{K}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $U$
+\end_inset
+
+ linearer Unterraum von 
+\begin_inset Formula $X$
+\end_inset
+
+ ist, ist 
+\begin_inset Formula $(\lambda x_{n}+\mu y_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ Nach 1 ist 
+\begin_inset Formula $(\lambda x_{n}+\mu y_{n})$
+\end_inset
+
+ konvergent mit 
+\begin_inset Formula $\lim_{n\to\infty}\lambda x_{n}+\mu y_{n}=\lambda x+\mu y$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $\lambda x+\mu y\in\overline{U}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $U\neq\emptyset$
+\end_inset
+
+ und 
+\bar under
+
+\begin_inset Formula $U\subset\overline{U}$
+\end_inset
+
+ 
+\bar default
+ist 
+\begin_inset Formula $\overline{U}\neq\emptyset$
+\end_inset
+
+.
+ Damit ist 
+\begin_inset Formula $\overline{U}$
+\end_inset
+
+ Unterraum von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum.
+ Zwei Normen 
+\begin_inset Formula $\|\cdot\|_{a}$
+\end_inset
+
+, 
+\begin_inset Formula $\|\cdot\|_{b}$
+\end_inset
+
+ auf 
+\begin_inset Formula $X$
+\end_inset
+
+ heißen äquivalent, falls es 
+\begin_inset Formula $m,M>0$
+\end_inset
+
+ gibt, so dass 
+\begin_inset Formula $\forall_{v\in X}m\|v\|_{a}\leq\|v\|_{b}\leq M\|v\|_{a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Äquivalenz von Normen auf einem 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum 
+\begin_inset Formula $X$
+\end_inset
+
+ definiert eine Äquivalenzrelation auf der Menge der Normen auf 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Siehe 2.
+ Übungsblatt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{thm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum und 
+\begin_inset Formula $\|\cdot\|_{a}$
+\end_inset
+
+, 
+\begin_inset Formula $\|\cdot\|_{b}$
+\end_inset
+
+ Normen auf 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Die folgenden Aussagen sind äquivalent:
+\end_layout
+
+\begin_layout Enumerate
+Die Normen 
+\begin_inset Formula $\|\cdot\|_{a}$
+\end_inset
+
+ und 
+\begin_inset Formula $\|\cdot\|_{b}$
+\end_inset
+
+ sind äquivalent.
+\end_layout
+
+\begin_layout Enumerate
+Eine Folge 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ konvergiert genau dann gegen 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ bzgl.
+ 
+\begin_inset Formula $\|\cdot\|_{a}$
+\end_inset
+
+, wenn sie gegen 
+\begin_inset Formula $x$
+\end_inset
+
+ bzgl.
+ 
+\begin_inset Formula $\|\cdot\|_{b}$
+\end_inset
+
+ konvergiert.
+\end_layout
+
+\begin_layout Enumerate
+Eine Folge 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ konvergiert genau dann gegen 
+\begin_inset Formula $0$
+\end_inset
+
+ bzgl.
+ 
+\begin_inset Formula $\|\cdot\|_{a}$
+\end_inset
+
+, wenn sie gegen 
+\begin_inset Formula $0$
+\end_inset
+
+ bzgl.
+ 
+\begin_inset Formula $\|\cdot\|_{b}$
+\end_inset
+
+ konvergiert.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{thm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $1\implies2$
+\end_inset
+
+: Sei 
+\begin_inset Formula $m,M,\widetilde{m},\widetilde{M}>0$
+\end_inset
+
+ mit 
+\begin_inset Formula $\forall_{v\in X}:m\|v\|_{a}\leq\|v\|_{b}\leq M\|v\|_{a}$
+\end_inset
+
+ und 
+\begin_inset Formula $\forall_{v\in X}:\widetilde{m}\|v\|_{b}\leq\|v\|_{a}\leq\widetilde{M}\|v\|_{b}$
+\end_inset
+
+ (siehe Lemma 2).
+ Dann gilt für Folge 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ und 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ stets 
+\begin_inset Formula $\|x_{n}-x\|_{a}\leq\widetilde{M}\|x_{n}-x\|_{b}$
+\end_inset
+
+ und 
+\begin_inset Formula $\|x_{n}-x\|_{b}\leq M\|x_{n}-x\|_{a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $2\implies3$
+\end_inset
+
+: 3 ist Sonderfall von 2.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $3\implies1$
+\end_inset
+
+: Angenommen 
+\begin_inset Formula $\|\cdot\|_{a}$
+\end_inset
+
+ und 
+\begin_inset Formula $\|\cdot\|_{b}$
+\end_inset
+
+ sind nicht äquivalent.
+ Dann gibt es kein 
+\begin_inset Formula $M>0$
+\end_inset
+
+ oder kein 
+\begin_inset Formula $\widetilde{M}>0$
+\end_inset
+
+ so dass für alle 
+\begin_inset Formula $v\in X$
+\end_inset
+
+: 
+\begin_inset Formula $\|v\|_{b}\leq M\|v\|_{a}$
+\end_inset
+
+ und 
+\begin_inset Formula $\|v\|_{a}\leq\widetilde{M}\|v\|_{b}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard

@@ -1554,7 +1554,10 @@ status open
 
 \end_inset
 
-Hier fehlt noch was, nämlich 
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -1563,8 +1566,121 @@ status open
 
 \backslash
 begin{thm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für 
+\begin_inset Formula $1\leq p<\infty$
+\end_inset
+
+ ist 
+\begin_inset Formula $l^{p}$
+\end_inset
+
+ versehen mit der Addition und Skalarmultiplikation von Folgen ein 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{thm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Offensichtlich ist die konstante Folge 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ 
+\begin_inset Formula $a_{n}=0$
+\end_inset
+
+ in 
+\begin_inset Formula $l^{p}$
+\end_inset
+
+ enthalten.
+ Desweiteren ist für 
+\begin_inset Formula $\lambda\in\mathbb{K}$
+\end_inset
+
+ und 
+\begin_inset Formula $(x_{n})\in l^{p}$
+\end_inset
+
+ auch 
+\begin_inset Formula $(\lambda x_{n})\in l^{p}$
+\end_inset
+
+, da 
+\begin_inset Formula $\sum_{n=1}^{\infty}|\lambda x_{n}|^{p}=|\lambda|^{p}\sum_{n=1}^{\infty}|x_{n}|^{p}$
+\end_inset
+
+ konvergiert.
+ Schließlich, sind 
+\begin_inset Formula $(x_{n}),(y_{n})\in l^{p}$
+\end_inset
+
+, so gilt 
+\begin_inset Formula $\sum_{n=1}^{\infty}|x_{n}+y_{n}|^{p}\leq\sum_{n=1}^{\infty}(|x_{n}|+|y_{n}|)^{p}\leq\sum_{n=1}^{\infty}\left(2\max\{|x_{n}|,|y_{n}|\}\right)^{p}=2^{p}\sum_{n=1}^{\infty}\left(\max\{|x_{n}|,|y_{n}|\}\right)^{p}\leq2^{p}\sum_{n=1}^{\infty}|x_{n}|^{p}+|y_{n}|^{p}=2^{p}\left(\sum_{n=1}^{\infty}|x_{n}|^{p}+\sum_{n=1}^{\infty}|y_{n}|^{p}\right)<\infty$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $(x_{n}+y_{n})\in l^{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
 \end_layout
 
 \end_inset

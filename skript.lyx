@@ -2642,7 +2642,7 @@ Ist
  offen und beschränkt, so können wir durch 
 \begin_inset Formula 
 \[
-C^{r}(\overline{\Omega})=\{f:\Omega\to\mathbb{K}:f\text{ ist \ensuremath{r}-mal stetig differenzierbar, für alle Multiindizes \ensuremath{\alpha\in\mathbb{N}_{0}^{n}} mit \ensuremath{0\leq|\alpha|\leq r} ist \ensuremath{D^{\alpha}f} auf \ensuremath{\overline{\Omega}} stetig fortsetzbar}\}
+C^{r}(\overline{\Omega})=\{f:\Omega\to\mathbb{K}:f\text{ ist \ensuremath{r}-mal stetig differenzierbar, für alle Multiindizes \ensuremath{\alpha\in\mathbb{N}_{0}^{n}}mit \ensuremath{0\leq|\alpha|\leq r}ist \ensuremath{D^{\alpha}f}auf \ensuremath{\overline{\Omega}}stetig fortsetzbar}\}
 \]
 
 \end_inset
@@ -3435,6 +3435,1081 @@ end{proof}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Übungsblätter
+\end_layout
+
+\begin_layout Subsection
+Übungsblatt 1
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 1.1
+\end_layout
+
+\begin_layout Standard
+Zunächst zeigen wir: 
+\begin_inset Formula $\forall_{x,y\in X}:|\|x\|-\|y\||\leq\|x-y\|$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\|x\|-\|y\|=\|x-y+y\|-\|y\|\leq\|x-y\|+\|y\|-\|y\|=\|x-y\|
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\|y\|-\|x\|=\|y-x+x\|-\|x\|\leq\|y-x\|+\|x\|-\|x\|=\|x-y\|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dies impliziert die Ungleichung.
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ gegeben und 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+.
+ Wähle 
+\begin_inset Formula $\delta=\varepsilon$
+\end_inset
+
+.
+ Dann gilt für alle 
+\begin_inset Formula $y\in U_{\delta}(x):$
+\end_inset
+
+
+\begin_inset Formula $|\|x\|-\|y\||\leq\|x-y\|<\delta=\varepsilon$
+\end_inset
+
+.
+ Damit ist die Abbildung 
+\begin_inset Formula $x\mapsto\|x\|$
+\end_inset
+
+ stetig.
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 1.2
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $v\in X$
+\end_inset
+
+ und 
+\begin_inset Formula $r>0$
+\end_inset
+
+.
+ Ist 
+\begin_inset Formula $(w_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $U_{r}(v)$
+\end_inset
+
+, die gegen 
+\begin_inset Formula $w\in X$
+\end_inset
+
+ konvergiert, so folgt wegen der Stetigkiet von 
+\begin_inset Formula $x\mapsto\|x\|$
+\end_inset
+
+, dass 
+\begin_inset Formula $\|w-v\|=\lim_{n\to\infty}\|w_{n}-v\|\leq r$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $\overline{U_{r}(v)}\subset\{w\in X:\|w-v\|\leq r\}$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $w\in X$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|w-v\|=r$
+\end_inset
+
+.
+ Definiere Folge 
+\begin_inset Formula $(w_{n})$
+\end_inset
+
+ durch 
+\begin_inset Formula $w_{n}=v+(1-\frac{1}{n})(w-v)$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $\|w-w_{n}\|=\|w-v-(1-\frac{1}{n})(w-v)\|=\|w-w+\frac{w}{n}-v+v-\frac{v}{n}\|=\|\frac{1}{n}(w-v)\|=\frac{1}{n}\|w-v\|=\frac{1}{n}r\to_{n\to\infty}0$
+\end_inset
+
+ konvergiert 
+\begin_inset Formula $(w_{n})$
+\end_inset
+
+ gegen 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ Weiterhin ist 
+\begin_inset Formula $\|v-w_{n}\|=\|v-v-(1-\frac{1}{n})(w-v)\|=(1-\frac{1}{n})\|w-v\|=(1-\frac{1}{n})r<r$
+\end_inset
+
+ also 
+\begin_inset Formula $(w_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $U_{r}(v)$
+\end_inset
+
+.
+ Damit 
+\begin_inset Formula $\{w\in X|\|w-v\|\leq r\}\subset\overline{U_{r}(v)}$
+\end_inset
+
+ und es folgt die Gleichheit der Mengen.
+ Gegenbeispiel für metrische Räume: Sei 
+\begin_inset Formula $X=\mathbb{Z}$
+\end_inset
+
+ und 
+\begin_inset Formula $d(v,w)=|v-w|$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ ist mit 
+\begin_inset Formula $d$
+\end_inset
+
+ ein metrischer Raum und es gilt 
+\begin_inset Formula $\overline{\{w\in X:d(w,0)<1\}}=\overline{\{0\}}=\{0\}\neq\{-1,0,1\}=\{w\in X:d(w,0)\leq1\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 1.3
+\end_layout
+
+\begin_layout Standard
+Behauptung: Für 
+\begin_inset Formula $1<p<q<\infty$
+\end_inset
+
+ gilt: 
+\begin_inset Formula $l^{1}\subset l^{p}\subset l^{q}\subset l^{\infty}$
+\end_inset
+
+.
+ Beweis: Sei 
+\begin_inset Formula $(x_{n})\in l^{p}$
+\end_inset
+
+ für 
+\begin_inset Formula $1\leq p<\infty$
+\end_inset
+
+.
+ Dann ist die Reihe 
+\begin_inset Formula $\sum_{n=1}^{\infty}|x_{n}|^{p}$
+\end_inset
+
+ konvergent.
+ Damit konvergiert 
+\begin_inset Formula $(|x_{n}|^{p})_{n\in\mathbb{N}}$
+\end_inset
+
+ und somit 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ gegen 0.
+ Also ist 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ beschränkt und 
+\begin_inset Formula $(x_{n})\in l^{\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $q\in\mathbb{R}$
+\end_inset
+
+ mit 
+\begin_inset Formula $p<q$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ gegen 0 konvergiert, gibt es 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+, so dass für alle 
+\begin_inset Formula $n>N$
+\end_inset
+
+: 
+\begin_inset Formula $|x_{n}|<1$
+\end_inset
+
+.
+ Damit ist für alle 
+\begin_inset Formula $n>N$
+\end_inset
+
+: 
+\begin_inset Formula $|x_{n}|^{q}<|x_{n}|^{p}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $\sum_{n=1}^{\infty}|x_{n}|^{p}$
+\end_inset
+
+ konvergiert ist nach dem Majorantenkriterium auch 
+\begin_inset Formula $\sum_{n=1}^{\infty}|x_{n}|^{q}$
+\end_inset
+
+ konvergent und 
+\begin_inset Formula $(x_{n})\in l^{q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Beweis, dass die Inklusionen echt sind: Sei 
+\begin_inset Formula $p\in\mathbb{R}$
+\end_inset
+
+ mit 
+\begin_inset Formula $1\leq p<\infty$
+\end_inset
+
+.
+ Die konstante Folge 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+, 
+\begin_inset Formula $\forall_{n\in\mathbb{N}}a_{n}=1$
+\end_inset
+
+, ist beschränkt, also 
+\begin_inset Formula $(a_{n})\in l^{\infty}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $\sum_{n=1}^{\infty}|1|^{p}$
+\end_inset
+
+ divergent, ist 
+\begin_inset Formula $(a_{n})\notin l^{p}$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $q\in\mathbb{R}$
+\end_inset
+
+ mit 
+\begin_inset Formula $p<q$
+\end_inset
+
+.
+ Wähle 
+\begin_inset Formula $\alpha\in(\frac{1}{q},\frac{1}{p})$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $\alpha p<\frac{1}{p}p=1$
+\end_inset
+
+ und 
+\begin_inset Formula $\alpha q>\frac{1}{q}q=1$
+\end_inset
+
+.
+ Betrachte die Folge 
+\begin_inset Formula $x=\left(\frac{1}{n^{\alpha}}\right)_{n\in\mathbb{N}}$
+\end_inset
+
+.
+ Die Reihe 
+\begin_inset Formula $\sum_{n=1}^{\infty}\left(\frac{1}{n^{\alpha}}\right)^{p}=\sum_{n=1}^{\infty}\frac{1}{n^{\alpha p}}$
+\end_inset
+
+ ist divergent.
+ Die Reihe 
+\begin_inset Formula $\sum_{n=1}^{\infty}\left(\frac{1}{n^{\alpha}}\right)^{p}=\sum_{n=1}^{\infty}\frac{1}{n^{\alpha q}}$
+\end_inset
+
+ ist konvergent.
+ Damit 
+\begin_inset Formula $x\notin l^{p}$
+\end_inset
+
+ und 
+\begin_inset Formula $x\in l^{q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 1.4
+\end_layout
+
+\begin_layout Standard
+Wir verwenden wieder die Schreibweise von Folgen als Funktionen 
+\begin_inset Formula $\mathbb{N}\to\mathbb{K}$
+\end_inset
+
+.
+ Wir definieren 
+\begin_inset Formula $f_{n}:\mathbb{N}\to\mathbb{K}$
+\end_inset
+
+ für 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ durch 
+\begin_inset Formula 
+\[
+f_{n}(m)=\begin{cases}
+\frac{1}{m} & (m<n)\\
+0 & (m\geq n)
+\end{cases}
+\]
+
+\end_inset
+
+(also (0,0,0,...), (1,0,0,0,...), (1,
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+,0,0,0,...), ...) und 
+\begin_inset Formula $f:\mathbb{N}\to\mathbb{K},f(m)=\frac{1}{m}$
+\end_inset
+
+.
+ Es ist 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $d$
+\end_inset
+
+ und 
+\begin_inset Formula $f\in c_{0}\setminus d$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula 
+\[
+(f_{n}-f)(m)=\begin{cases}
+0 & m<n\\
+-\frac{1}{m} & m\geq n
+\end{cases}
+\]
+
+\end_inset
+
+ folgt 
+\begin_inset Formula $\|f_{n}-f\|_{\infty}=\frac{1}{n}$
+\end_inset
+
+.
+ Also konvergiert 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $(c_{0},\|\cdot\|_{\infty})$
+\end_inset
+
+ gegen 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Damit ist 
+\begin_inset Formula $d$
+\end_inset
+
+ nicht abgeschlossen in 
+\begin_inset Formula $(c_{0},\|\cdot\|_{\infty})$
+\end_inset
+
+.
+ Somit ist 
+\begin_inset Formula $(d,\|\cdot\|_{\infty})$
+\end_inset
+
+ nicht vollständig (nach Satz 1).
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 2.1
+\end_layout
+
+\begin_layout Enumerate
+Wir überprüfen die drei Normaxiome.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $\lambda\in\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $f\in C^{r}(\overline{\Omega})$
+\end_inset
+
+.
+ Es gilt 
+\begin_inset Formula $\|\lambda f\|=\sum_{\alpha\in\mathbb{N}_{0}^{n},0\leq|\alpha|\leq r}\|D^{\alpha}(\lambda f)\|_{\infty}=\sum_{\alpha\in\mathbb{N}_{0}^{n},0\leq|\alpha|\leq r}\|\lambda D^{\alpha}f\|_{\infty}=|\lambda|\sum_{\alpha\in\mathbb{N}_{0}^{n},0\leq|\alpha|\leq r}\|D^{\alpha}f\|_{\infty}=|\lambda|\|f\|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Seien 
+\begin_inset Formula $f,g\in C^{r}(\overline{\Omega})$
+\end_inset
+
+.
+ Es gilt 
+\begin_inset Formula $\|f+g\|=\sum_{\alpha\in\mathbb{N}_{0}^{n},0\leq|\alpha|\leq r}\|D^{\alpha}(f+g)\|_{\infty}=\sum_{\alpha\in\mathbb{N}_{0}^{n},0\leq|\alpha|\leq r}\|(D^{\alpha}f)+(D^{\alpha}g)\|_{\infty}\leq\sum_{\alpha\in\mathbb{N}_{0}^{n},0\leq|\alpha|\leq r}\left(\|D^{\alpha}f\|_{\infty}+\|D^{\alpha}g\|_{\infty}\right)=\|f\|+\|g\|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $f\in C^{r}(\overline{\Omega})$
+\end_inset
+
+.
+ Es sei 
+\begin_inset Formula $\|f\|=0$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $\sum_{\alpha\in\mathbb{N}_{0}^{n},0\leq|\alpha|\leq r}\|D^{\alpha}f\|_{\infty}=0$
+\end_inset
+
+.
+ Damit folgt 
+\begin_inset Formula $\|D^{0}f\|_{\infty}=0$
+\end_inset
+
+ und somit 
+\begin_inset Formula $\|f\|_{\infty}=0$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $f\in l^{\infty}(\Omega)$
+\end_inset
+
+, folgt für alle 
+\begin_inset Formula $x\in\Omega$
+\end_inset
+
+ dass 
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Wir zeigen zuerst, dass 
+\begin_inset Formula $f$
+\end_inset
+
+ auf 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ stetig fortsetzbar ist.
+ Konvergiere 
+\begin_inset Formula $(f_{m})$
+\end_inset
+
+ auf 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ gleichmäßig gegen 
+\begin_inset Formula $f$
+\end_inset
+
+, mit 
+\begin_inset Formula $(f_{m})$
+\end_inset
+
+ Folge wie in Aufgabenstellung und 
+\begin_inset Formula $f:\Omega\to\mathbb{R}$
+\end_inset
+
+ stetig.
+ Dann ist für alle 
+\begin_inset Formula $x\in\Omega$
+\end_inset
+
+: 
+\begin_inset Formula $\lim_{n\to\infty}f_{n}(x)=f(x)$
+\end_inset
+
+.
+ Die Folge 
+\begin_inset Formula $\left(f_{m}|_{\Omega}\right)_{m\in\mathbb{N}}$
+\end_inset
+
+ ist konvergent in 
+\begin_inset Formula $\left(l^{\infty}(\Omega),\|\cdot\|_{\infty}\right),$
+\end_inset
+
+ also Cauchy-Folge in 
+\begin_inset Formula $(l^{\infty}(\Omega),\|\cdot\|_{\infty})$
+\end_inset
+
+.
+ Da für alle 
+\begin_inset Formula $k,m\in\mathbb{N}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\underbrace{\sup_{x\in\Omega}\left|f_{k}(x)-f_{m}(x)\right|}_{\|f_{k}|_{\Omega}-f_{m}|_{\Omega}\|_{\infty}}=\underbrace{\sup_{x\in\overline{\Omega}}\left|f_{k}(x)-f_{m}(x)\right|}_{\|f_{k}-f_{m}\|_{\infty}}
+\]
+
+\end_inset
+
+ist 
+\begin_inset Formula $(f_{m})_{m\in\mathbb{N}}$
+\end_inset
+
+ Cauchy-Folge in 
+\begin_inset Formula $(l^{\infty}(\overline{\Omega}),\|\cdot\|_{\infty})$
+\end_inset
+
+.
+ Da dieser Raum ein Banachraum ist, gibt es 
+\begin_inset Formula $\widetilde{f}\in l^{\infty}(\overline{\Omega})$
+\end_inset
+
+ mit 
+\begin_inset Formula $\lim_{k\to\infty}\|f_{k}-\widetilde{f}\|_{\infty}=0$
+\end_inset
+
+.
+ Also konvergiert 
+\begin_inset Formula $(f_{m})$
+\end_inset
+
+ gleichmäßig gegen 
+\begin_inset Formula $\widetilde{f}$
+\end_inset
+
+ und damit ist 
+\begin_inset Formula $\widetilde{f}$
+\end_inset
+
+ stetig.
+ Da für alle 
+\begin_inset Formula $x\in\Omega$
+\end_inset
+
+ gilt:
+\begin_inset Formula 
+\[
+\widetilde{f}(x)=\lim_{m\to\infty}f_{m}(x)=f(x).
+\]
+
+\end_inset
+
+Damit ist 
+\begin_inset Formula $f$
+\end_inset
+
+ stetig fortsetzbar auf 
+\begin_inset Formula $\overline{\Omega}$
+\end_inset
+
+.
+ Analog für 
+\begin_inset Formula $g_{j}$
+\end_inset
+
+.
+ Nun zeigen wir die Differenzierbarkeit von 
+\begin_inset Formula $f$
+\end_inset
+
+ nach 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+: Wir schreiben 
+\begin_inset Formula $f(\_,x_{j},\_)$
+\end_inset
+
+ für 
+\begin_inset Formula $f(x_{1},...,x_{j},...,x_{n})$
+\end_inset
+
+ und 
+\begin_inset Formula $f(\_,x_{j}+h,\_)$
+\end_inset
+
+ für 
+\begin_inset Formula $f(x_{1},...,x_{j-1},x_{j}+h,x_{j+1},...,x_{n})$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $j\in\{1,...,n\}$
+\end_inset
+
+, 
+\begin_inset Formula $x=(x_{1},...,x_{n})\in\Omega$
+\end_inset
+
+.
+ Wähle 
+\begin_inset Formula $r>0$
+\end_inset
+
+, so dass 
+\begin_inset Formula $U_{r}(x)\subset\Omega$
+\end_inset
+
+ mit 
+\begin_inset Formula $U_{r}(x)$
+\end_inset
+
+ bezüglich 
+\begin_inset Formula $\|\cdot\|_{2}$
+\end_inset
+
+-Norm auf 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+.
+ Nach dem Mittelwertsatz gibt es für jedes 
+\begin_inset Formula $h\in(-r,r)$
+\end_inset
+
+ und 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+ ein 
+\begin_inset Formula $\zeta_{h,m}\in[-|h|,|h|]$
+\end_inset
+
+ mit 
+\begin_inset Formula 
+\begin{equation}
+\left|f_{m}(\_,x_{j}+h,\_)-f_{m}(\_,x_{j},\_)-h\frac{d}{dx_{j}}f_{m}(\_,x_{j}+\zeta_{h,m},\_)\right|=0\label{eq:aufgabe-2.1-b-1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $(\zeta_{h,m})_{m\in\mathbb{N}}$
+\end_inset
+
+ ist Folge in 
+\begin_inset Formula $[-|h|,|h|]$
+\end_inset
+
+.
+ Durch Übergang zu einer Teilfolge von 
+\begin_inset Formula $(f_{m})$
+\end_inset
+
+ können wir o.B.d.A.
+ annehmen, dass 
+\begin_inset Formula $(\zeta_{h,m})_{m\in\mathbb{N}}$
+\end_inset
+
+ gegen ein 
+\begin_inset Formula $\zeta_{h}^{*}\in[-|h|,|h|]$
+\end_inset
+
+ konvergiert.
+ Mit der Abschätzung 
+\begin_inset Formula 
+\begin{eqnarray*}
+ &  & \left|\frac{d}{dx_{j}}f_{m}(\_,x_{j}+\zeta_{h,m},\_)-g_{j}(\_,x_{j}+\zeta_{h}^{*},\_)\right|\\
+ & \leq & \left|\frac{d}{dx_{j}}f_{m}(\_,x_{j}+\zeta_{h,m},\_)-g_{j}(\_,x_{j}+\zeta_{h,m},\_)\right|\\
+ &  & +\left|g_{j}(\_,x_{j}+\zeta_{h,m},\_)-g_{j}(\_,x_{j}+\zeta_{h}^{*},\_)\right|\\
+ & \leq & \underbrace{\|\frac{d}{dx_{j}}f_{m}-g_{j}\|_{\infty}}_{\to0}+\underbrace{\left|g_{j}(\_,x_{j}+\zeta_{h,m},\_)-g_{j}(\_,x_{j}+\zeta_{h}^{*},\_)\right|}_{\to0}.
+\end{eqnarray*}
+
+\end_inset
+
+folgt, dass 
+\begin_inset Formula $\left(\frac{d}{dx_{j}}f_{m}(\_,x_{j}+\zeta_{h,m},\_)\right)_{m\in\mathbb{N}}$
+\end_inset
+
+ gegen 
+\begin_inset Formula $g_{j}(\_,x_{j}+\zeta_{h}^{*},\_)$
+\end_inset
+
+ konvergiert.
+ Für 
+\begin_inset Formula $m\to\infty$
+\end_inset
+
+ folgt aus (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:aufgabe-2.1-b-1"
+
+\end_inset
+
+), dass 
+\begin_inset Formula 
+\[
+\left|f(\_,x_{j}+h,\_)-f_{j}(\_,x_{j},\_)-hg_{j}(\_,x_{j}+\zeta_{h}^{*},\_)\right|=0.
+\]
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(h_{k})_{k\in\mathbb{N}}$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $(-r,r)$
+\end_inset
+
+ mit 
+\begin_inset Formula $h_{k}\to0$
+\end_inset
+
+ für 
+\begin_inset Formula $k\to\infty$
+\end_inset
+
+ mit 
+\begin_inset Formula $h_{k}\neq0$
+\end_inset
+
+ für alle 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+.
+ Dann folgt mit (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:aufgabe-2.1-b-1"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray*}
+ &  & \lim_{k\to\infty}\frac{f(\_,x_{j}+h_{k},\_)-f(\_,x_{j},\_)}{h_{k}}\\
+ & = & \lim_{k\to\infty}g_{j}(\_,x_{j}+\underbrace{\zeta_{h_{k}}^{*}}_{\to0\ (k\to\infty)},\_)\\
+ & = & g_{j}(\_,x_{j},\_)
+\end{eqnarray*}
+
+\end_inset
+
+mit 
+\begin_inset Formula $|\zeta_{h_{k}}^{*}|\leq|h_{k}|$
+\end_inset
+
+ und 
+\begin_inset Formula $g_{j}$
+\end_inset
+
+ stetig.
+ Somit ist 
+\begin_inset Formula $f$
+\end_inset
+
+ nach 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ partiell differenzierbar und 
+\begin_inset Formula $\frac{d}{dx_{j}}f(x)=g_{j}(x)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Aufgabe 2.3
+\end_layout
+
+\begin_layout Enumerate
+Seien 
+\begin_inset Formula $p,q\in\mathbb{R}$
+\end_inset
+
+ mit 
+\begin_inset Formula $1\leq p<q$
+\end_inset
+
+.
+ Wähle 
+\begin_inset Formula $\alpha\in(\frac{1}{q},\frac{1}{q})$
+\end_inset
+
+.
+ Dann gilt 
+\begin_inset Formula $\alpha p<1$
+\end_inset
+
+ und 
+\begin_inset Formula $\alpha q>1$
+\end_inset
+
+.
+ Wir schreiben Elemente aus 
+\begin_inset Formula $l^{p}$
+\end_inset
+
+ als Funktionen 
+\begin_inset Formula $\mathbb{N}\to\mathbb{K}$
+\end_inset
+
+.
+ Wir definieren für 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ die Funktionen 
+\begin_inset Formula $f_{n}:\mathbb{N}\to\mathbb{K}$
+\end_inset
+
+ durch 
+\begin_inset Formula 
+\[
+f_{n}(m)=\begin{cases}
+\frac{1}{m^{\alpha}} & m\leq n,\\
+0 & m>n.
+\end{cases}
+\]
+
+\end_inset
+
+Da 
+\begin_inset Formula $f_{n}\in d$
+\end_inset
+
+ für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ ist 
+\begin_inset Formula $f_{n}\in l^{p}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ Es ist die Folge 
+\begin_inset Formula $\left(\|f_{n}\|_{p}^{p}\right)_{n\in\mathbb{N}}$
+\end_inset
+
+ divergent, da 
+\begin_inset Formula $\|f_{n}\|_{p}^{p}=\sum_{m=1}^{n}\frac{1}{m^{\alpha p}}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\alpha p<1$
+\end_inset
+
+.
+ Die Folge 
+\begin_inset Formula $\left(\|f_{n}\|_{q}^{q}\right)_{n\in\mathbb{N}}$
+\end_inset
+
+ ist konvergent, da 
+\begin_inset Formula $\|f_{n}\|_{q}^{q}=\sum_{m=1}^{n}\frac{1}{m^{\alpha q}}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\alpha q>1$
+\end_inset
+
+.
+ Also ist die Folge 
+\begin_inset Formula $\left(\|f_{n}\|_{p}\right)_{n\in\mathbb{N}}$
+\end_inset
+
+ divergent und die Folge 
+\begin_inset Formula $\left(\|f_{n}\|_{q}\right)_{n\in\mathbb{N}}$
+\end_inset
+
+ ist konvergent.
+ Damit können 
+\begin_inset Formula $\|\cdot\|_{p}$
+\end_inset
+
+ und 
+\begin_inset Formula $\|\cdot\|_{q}$
+\end_inset
+
+ nicht äquivalent sein, denn sonst gäbe es 
+\begin_inset Formula $M>0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall_{n\in\mathbb{N}}:\|f_{n}\|_{p}\leq M\|f_{n}\|_{q}$
+\end_inset
+
+.
+ (Unter Verwendung von Aufgabe 2.2.) Widerspruch.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $p\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $1\leq p$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ definieren wir 
+\begin_inset Formula $f_{n}:\mathbb{N}\to\mathbb{K}$
+\end_inset
+
+ durch 
+\begin_inset Formula 
+\[
+f_{n}(m)=\begin{cases}
+1 & m\leq n,\\
+0 & m>n.
+\end{cases}
+\]
+
+\end_inset
+
+Wieder ist für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+: 
+\begin_inset Formula $f_{n}\in d\subset l^{p}$
+\end_inset
+
+, also 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $l^{p}$
+\end_inset
+
+.
+ Es ist 
+\begin_inset Formula $\|f_{n}\|_{\infty}=1$
+\end_inset
+
+ für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ und 
+\begin_inset Formula 
+\[
+\|f_{n}\|_{p}=\left(\sum_{m=1}^{n}1^{p}\right)^{\frac{1}{p}}=n^{\frac{1}{p}}.
+\]
+
+\end_inset
+
+Damit ist 
+\begin_inset Formula $\left(\|f_{n}\|_{\infty}\right)_{n\in\mathbb{N}}$
+\end_inset
+
+ konvergent und 
+\begin_inset Formula $\left(\|f_{n}\|_{p}\right)_{n\in\mathbb{N}}$
+\end_inset
+
+ divergent.
+ Analog zur obigen Aufgabe folgt, dass 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+ und 
+\begin_inset Formula $\|\cdot\|_{p}$
+\end_inset
+
+ nicht äquivalent sind.
 \end_layout
 
 \end_body

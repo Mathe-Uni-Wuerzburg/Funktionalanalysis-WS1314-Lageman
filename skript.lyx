@@ -76,6 +76,17 @@ Einführung in die Funktionalanalysis
 Organisatorisches
 \end_layout
 
+\begin_layout Standard
+
+\lang english
+\begin_inset FormulaMacro
+\newcommand{\span}{\mathrm{{span}}}
+{\mathrm{span}}
+\end_inset
+
+
+\end_layout
+
 \begin_layout Description
 Vorlesung Di 12.15 - 13.45 HS4; Mi 14.15 - 15.45 HS4
 \begin_inset Marginal
@@ -2657,7 +2668,17 @@ Eine Folge
 \begin_inset Formula $3\implies1$
 \end_inset
 
-: Angenommen 
+: 
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+29.10.13
+\end_layout
+
+\end_inset
+
+Angenommen 
 \begin_inset Formula $\|\cdot\|_{a}$
 \end_inset
 
@@ -3214,8 +3235,794 @@ Klar ist
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Theorem
+\begin_inset Marginal
+status open
 
+\begin_layout Plain Layout
+30.10.13
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:9"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+ ein normierter Raum.
+ Die folgenden Aussagen sind äquivalent:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $X$
+\end_inset
+
+ ist endlich-dimensional
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{x\in X:\|x\|\leq1\}$
+\end_inset
+
+ ist kompakt
+\end_layout
+
+\begin_layout Enumerate
+Jede beschränkte Folge besitzt eine konvergente Teilfolge
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Gliederung in folgende Teile:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Formula $1\implies2$
+\end_inset
+
+ Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $2\implies3$
+\end_inset
+
+ Sei 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ beschränkte Folge in 
+\begin_inset Formula $X$
+\end_inset
+
+ und 
+\begin_inset Formula $r>0$
+\end_inset
+
+ mit 
+\begin_inset Formula $\forall_{n\in\mathbb{N}}:\|x_{n}\|<r$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $\left(\frac{1}{r}x_{n}\right)_{n\in\mathbb{N}}$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $B=\{x\in X:\|x\|\leq1\}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $B$
+\end_inset
+
+ kompakt ist besitzt 
+\begin_inset Formula $\left(\frac{1}{r}x_{n}\right)$
+\end_inset
+
+ eine konvergente Teilfolge.
+ Mit Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:6"
+
+\end_inset
+
+ besitzt dann auch 
+\begin_inset Formula $(x_{n})_{n\in\mathbb{N}}=\left(r\cdot\frac{1}{r}x_{n}\right)_{n\in\mathbb{N}}$
+\end_inset
+
+ eine konvergente Teilfolge.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $3\implies1$
+\end_inset
+
+ Beweis per Kontroposition.
+ Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ unendlich-dimensional.
+ Wir konstruieren eine beschränkte Folge 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ wie folgt: Wähle 
+\begin_inset Formula $x_{1}\in X$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|x_{1}\|=1$
+\end_inset
+
+.
+ Wähle 
+\begin_inset Formula $\delta\in(0,1)$
+\end_inset
+
+ fest.
+ Haben wir 
+\begin_inset Formula $x_{1},...,x_{n}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|x_{1}\|=...=\|x_{n}\|=1$
+\end_inset
+
+ gewählt, so sei 
+\begin_inset Formula $U_{n}:=\span\{x_{1},...,x_{n}\}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $\dim U_{n}\leq n$
+\end_inset
+
+ ist 
+\begin_inset Formula $(U_{n},\|\cdot\|)$
+\end_inset
+
+ vollständig (Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:8"
+
+\end_inset
+
+) und nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:1"
+
+\end_inset
+
+ ist 
+\begin_inset Formula $U_{n}$
+\end_inset
+
+ abgeschlossen in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Weiterhin 
+\begin_inset Formula $X\neq U_{n}$
+\end_inset
+
+.
+ Nach Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:3"
+
+\end_inset
+
+ gibt es 
+\begin_inset Formula $x_{n+1}$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|x_{n+1}\|=1$
+\end_inset
+
+ und 
+\begin_inset Formula $\forall_{u\in U_{n}}:\|x_{n+1}-u\|\geq1-\delta$
+\end_inset
+
+.
+ Wir erhalten Folge 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|x_{n}\|=1$
+\end_inset
+
+ für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ Per Konstruktion gilt für 
+\begin_inset Formula $n,m\in\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $n>m$
+\end_inset
+
+ stets 
+\begin_inset Formula $\|x_{n}-x_{m}\|\geq1-\delta$
+\end_inset
+
+.
+ Damit kann es keine Teilfolge von 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ geben, die eine Cauchy-Folge ist.
+ Insbesondere hat 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ keine konvergente Teilfolge (konvergente Folgen sind nämlich Cauchy-Folgen).
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:5"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+ ein normierter Raum.
+ Wir nennen 
+\begin_inset Formula $X$
+\end_inset
+
+ 
+\emph on
+separabel
+\emph default
+, falls es eine abzählbare Menge 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+ gibt mit 
+\begin_inset Formula $\overline{M}=X$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ ist 
+\emph on
+dicht
+\emph default
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:10"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+ ein normierter Raum.
+ Es sind äquivalent:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $X$
+\end_inset
+
+ ist separabel
+\end_layout
+
+\begin_layout Enumerate
+Es gibt abzählbare Teilmenge 
+\begin_inset Formula $M$
+\end_inset
+
+ von 
+\begin_inset Formula $X$
+\end_inset
+
+ mit 
+\begin_inset Formula $X=\overline{\span M}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+In zwei Teilen.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $1\implies2$
+\end_inset
+
+ Sei 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+ abzählbar mit 
+\begin_inset Formula $\overline{M}=X$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $X=\overline{M}\subset\overline{\span M}\subset X$
+\end_inset
+
+ also 
+\begin_inset Formula $\overline{\span M}=X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $2\implies1$
+\end_inset
+
+ Wir betrachten zunächst den Fall 
+\begin_inset Formula $\mathbb{K}=\mathbb{R}$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $B=\{\sum_{j=1}^{n}q_{j}v_{j}|n\in\mathbb{N},q_{j}\in\mathbb{Q},v_{j}\in M\}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\span B\subset\overline{B}$
+\end_inset
+
+ da 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ dicht in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ ist.
+ Somit ist 
+\begin_inset Formula $X=\overline{\span M}\subset\overline{B}\subset X$
+\end_inset
+
+, also 
+\begin_inset Formula $X=\overline{B}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $B$
+\end_inset
+
+ abzählbar ist, ist 
+\begin_inset Formula $X$
+\end_inset
+
+ separabel.
+ 
+\begin_inset Formula $\mathbb{K}=\mathbb{C}$
+\end_inset
+
+ ist analog mit 
+\begin_inset Formula $B=\{\sum_{j=1}^{n}(q_{j}+ip_{j})|n\in\mathbb{N},p_{j},q_{j}\in\mathbb{Q},v_{j}\in M\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset label
+LatexCommand label
+name "ex:5"
+
+\end_inset
+
+Zur Verdeutlichung.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ und 
+\begin_inset Formula $\mathbb{C}^{n}$
+\end_inset
+
+ sind separabel bezüglich jeder Norm, denn 
+\begin_inset Formula $\mathbb{Q}^{n}$
+\end_inset
+
+ und 
+\begin_inset Formula $\mathbb{Q}^{n}+i\mathbb{Q}^{n}$
+\end_inset
+
+ sind dicht in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $\mathbb{C}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(l^{p},\|\cdot\|_{p})$
+\end_inset
+
+ für 
+\begin_inset Formula $1\leq p<\infty$
+\end_inset
+
+ ist separabel: Für 
+\begin_inset Formula $e_{j}:\mathbb{N}\to\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+e_{j}(m):=\begin{cases}
+1 & j=m,\\
+0 & \text{sonst}.
+\end{cases}
+\]
+
+\end_inset
+
+ist 
+\begin_inset Formula $d=\span\{e_{j}:j\in\mathbb{N}\}$
+\end_inset
+
+.
+ Ist nun 
+\begin_inset Formula $f\in l^{p}$
+\end_inset
+
+ so können wir die Folge 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $d$
+\end_inset
+
+ definieren mit 
+\begin_inset Formula 
+\[
+f_{n}(m)=\begin{cases}
+f(m) & m\leq n,\\
+0 & \text{sonst}.
+\end{cases}
+\]
+
+\end_inset
+
+für 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $f$
+\end_inset
+
+ Grenzwert von 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $(l^{p},\|\cdot\|_{p})$
+\end_inset
+
+, denn 
+\begin_inset Formula 
+\[
+\|f-f_{n}\|_{p}=\left(\sum_{j=n+1}^{\infty}|f(j)|^{p}\right)^{\frac{1}{p}}\to0
+\]
+
+\end_inset
+
+ für 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+.
+ Somit 
+\begin_inset Formula $l^{p}=\overline{d}$
+\end_inset
+
+.
+ Nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:10"
+
+\end_inset
+
+ ist 
+\begin_inset Formula $l^{p}$
+\end_inset
+
+ separabel.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(C_{0},\|\cdot\|_{\infty})$
+\end_inset
+
+ ist separabel (Beweis in der Übung).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(l^{\infty},\|\cdot\|_{\infty})$
+\end_inset
+
+ ist nicht separabel.
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+Für 
+\begin_inset Formula $M\subseteq\mathbb{N}$
+\end_inset
+
+ definiere 
+\begin_inset Formula $f_{M}:\mathbb{N}\to\mathbb{K}$
+\end_inset
+
+ durch 
+\begin_inset Formula 
+\[
+f_{M}(m)=\begin{cases}
+1 & m\in M,\\
+0 & m\notin M.
+\end{cases}
+\]
+
+\end_inset
+
+Offensichtlich ist 
+\begin_inset Formula $f_{M}\in l^{\infty}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $M\in\mathbb{N}$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $W:=\{f_{M}|M\subset\mathbb{N}\}$
+\end_inset
+
+ überabzählbar.
+ Weiterhin ist für alle 
+\begin_inset Formula $M,N\subset\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $M\neq N$
+\end_inset
+
+ stets 
+\begin_inset Formula $\|f_{M}-f_{N}\|_{\infty}=1$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $A\subset l^{\infty}$
+\end_inset
+
+ abzählbar mit 
+\begin_inset Formula $\overline{A}=l^{\infty}$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ kann 
+\begin_inset Formula $U_{\frac{1}{4}}(a)$
+\end_inset
+
+ nur höchstens ein Element aus 
+\begin_inset Formula $W$
+\end_inset
+
+ enthalten, denn 
+\begin_inset Formula 
+\[
+x,y\in U_{\frac{1}{4}}(a)\cap W\implies\|x-y\|_{\infty}\leq\|x-a\|_{\infty}+\|y-a\|_{\infty}<\frac{1}{2}\implies x=y
+\]
+
+\end_inset
+
+Widerspruch zu 
+\begin_inset Formula $A$
+\end_inset
+
+ abzählbar und 
+\begin_inset Formula $\overline{A}=l^{\infty}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+Wir wollen zeigen, dass für jedes kompakte, nicht-leere Intervall 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ der Raum 
+\begin_inset Formula $(C([a,b]),\|\cdot\|_{\infty})$
+\end_inset
+
+ separabel ist.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:11"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:weierstrassscher-approximationssatz"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $P([a,b])=\{f:[a,b]\to\mathbb{K}|\exists_{p\in\mathbb{K}[x]}\forall_{x\in[a,b]}:f(x)=p(x)\}$
+\end_inset
+
+ der Raum der Polynomfunktionen 
+\begin_inset Formula $[a,b]\to\mathbb{K}$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $P([a,b])$
+\end_inset
+
+ dicht in 
+\begin_inset Formula $(C([a,b]),\|\cdot\|_{\infty})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Wir betrachten zunächst den Fall 
+\begin_inset Formula $a=0$
+\end_inset
+
+, 
+\begin_inset Formula $b=1$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ definieren wir 
+\begin_inset Formula $C_{n}:=\left(\int(1-s^{2})^{n}ds\right)^{-1}$
+\end_inset
+
+.
+ Wir zeigen zunächst die Abschätzung 
+\begin_inset Formula $C_{n}\leq e\sqrt{n}$
+\end_inset
+
+ für hinreichend große 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ Es gilt 
+\begin_inset Formula 
+\[
+c_{n}^{-1}=\int_{-1}^{1}(1-s^{2})^{n}ds\geq\int_{\frac{-1}{\sqrt{n}}}^{\frac{1}{\sqrt{n}}}(1-s^{2})^{n}ds=2\int_{0}^{\frac{1}{\sqrt{n}}}(1-s^{2})^{n}ds\geq2\int_{0}^{\frac{1}{\sqrt{n}}}(1-\frac{1}{n})^{n}ds=2\sqrt{n}^{-1}(1-\frac{1}{n})^{n}.
+\]
+
+\end_inset
+
+Da 
+\begin_inset Formula $\lim_{n\to\infty}(1-\frac{1}{n})^{n}=\frac{1}{e}$
+\end_inset
+
+ ist für hinreichend große 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ stets 
+\begin_inset Formula $(1-\frac{1}{n})^{n}\geq\frac{1}{2e}$
+\end_inset
+
+.
+ Also für hinreichend große 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ stets 
+\begin_inset Formula $C_{n}^{-1}\geq\frac{1}{\sqrt{n}e}$
+\end_inset
+
+.
+ Wir definieren nun für 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ Polynome 
+\begin_inset Formula $\varphi_{n}(x):=C_{n}(1-x^{2})^{n}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section

@@ -3,62 +3,6 @@
 \begin_document
 \begin_header
 \textclass amsart
-\begin_preamble
-\usepackage{amsthm}% http://ctan.org/pkg/amsthm
-\usepackage{amssymb}% http://ctan.org/pkg/amssymb
-
-\theoremstyle{definition}
-\ifx\thechapter\undefined
-  \newtheorem{examplex}{\protect\examplename}
-\else
-  \newtheorem{examplex}{\protect\examplename}[chapter]
-\fi
-\newenvironment{example}
-  {\pushQED{\qed}\renewcommand{\qedsymbol}{$\triangle$}\examplex}
-  {\popQED\endexamplex}
-\theoremstyle{plain}
-\ifx\thechapter\undefined
-  \newtheorem{factx}{\protect\factname}
-\else
-  \newtheorem{factx}{\protect\factname}[chapter]
-\fi
-\newenvironment{fact}
-  {\pushQED{\qed}\renewcommand{\qedsymbol}{$\blacksquare$}\factx}
-  {\popQED\endfactx}
-\theoremstyle{definition}
-\ifx\thechapter\undefined
-  \newtheorem{defnx}{\protect\definitionname}
-\else
-  \newtheorem{defnx}{\protect\definitionname}[chapter]
-\fi
-\newenvironment{defn}
-  {\pushQED{\qed}\renewcommand{\qedsymbol}{$\Box$}\defnx}
-  {\popQED\enddefnx}
-\theoremstyle{plain}
-\ifx\thechapter\undefined
-  \newtheorem{thmx}{\protect\theoremname}
-\else
-  \newtheorem{thmx}{\protect\theoremname}[chapter]
-\fi
-\newenvironment{thm}
-  {\pushQED{\qed}\renewcommand{\qedsymbol}{$\circ$}\thmx}
-  {\popQED\endthmx}
-\theoremstyle{plain}
-\ifx\thechapter\undefined
-  \newtheorem{lemx}{\protect\lemname}
-\else
-  \newtheorem{lemx}{\protect\lemname}[chapter]
-\fi
-\newenvironment{lem}
-  {\pushQED{\qed}\renewcommand{\qedsymbol}{$\blacksquare$}\lemx}
-  {\popQED\endlemx}
-  
-\providecommand{\definitionname}{Definition}
-\providecommand{\examplename}{Example}
-\providecommand{\factname}{Fact}
-\providecommand{\lemname}{Lemma}
-\providecommand{\theoremname}{Theorem}
-\end_preamble
 \use_default_options true
 \begin_removed_modules
 theorems-ams
@@ -246,7 +190,8 @@ Halbnorm auf
 , falls gilt:
 \end_layout
 
-\begin_layout Definition
+\begin_deeper
+\begin_layout Enumerate
 \begin_inset Formula $\forall_{v\in X,\lambda\in\mathbb{K}}:$
 \end_inset
 
@@ -257,7 +202,7 @@ Halbnorm auf
 
 \end_layout
 
-\begin_layout Definition
+\begin_layout Enumerate
 \begin_inset Formula $\forall_{v,w\in X}:$
 \end_inset
 
@@ -268,6 +213,7 @@ Halbnorm auf
  (Dreiecksungleichung)
 \end_layout
 
+\end_deeper
 \begin_layout Definition
 Gilt zusätzlich noch 
 \begin_inset Formula $\forall v\in X:$
@@ -510,19 +456,7 @@ Banachraum
 \end_layout
 
 \begin_layout Example
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{example}
-\end_layout
-
-\end_inset
-
-
+zur Verdeutlichung.
 \end_layout
 
 \begin_deeper
@@ -913,6 +847,12 @@ Also
 \end_deeper
 \end_deeper
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:1"
+
+\end_inset
+
 Sei 
 \begin_inset Formula $(X,\|\cdot\|)$
 \end_inset
@@ -1371,6 +1311,12 @@ status open
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:2"
+
+\end_inset
+
 Für 
 \begin_inset Formula $1\leq p<\infty$
 \end_inset
@@ -1438,6 +1384,19 @@ Offensichtlich ist die konstante Folge
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:3"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:holdesche-ungleichung"
+
+\end_inset
+
 Holdesche Ungleichung
 \end_layout
 
@@ -1616,6 +1575,19 @@ Sind
 
 \end_deeper
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:4"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:minkowkische-ungleichung"
+
+\end_inset
+
 Minkowskische Ungleichung.
  Sei 
 \begin_inset Formula $1\leq p<\infty$
@@ -1725,6 +1697,12 @@ Nebenrechnung:
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:5"
+
+\end_inset
+
 Für 
 \begin_inset Formula $1\leq p<\infty$
 \end_inset
@@ -2229,6 +2207,12 @@ Eigenschaften normierter Räume
 \end_layout
 
 \begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:1"
+
+\end_inset
+
 Sei 
 \begin_inset Formula $(X,\|\cdot\|)$
 \end_inset
@@ -2278,6 +2262,12 @@ Für 1 und 2 siehe erstes Übungsblatt.
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:6"
+
+\end_inset
+
 Sei 
 \begin_inset Formula $(X,\|\cdot\|)$
 \end_inset
@@ -2485,6 +2475,12 @@ Sei
 \end_layout
 
 \begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:2"
+
+\end_inset
+
 Die Äquivalenz von Normen auf einem 
 \begin_inset Formula $\mathbb{K}$
 \end_inset
@@ -2506,6 +2502,12 @@ Siehe 2.
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:7"
+
+\end_inset
+
 Sei 
 \begin_inset Formula $X$
 \end_inset
@@ -2685,7 +2687,535 @@ Eine Folge
 \end_inset
 
 .
+ Damit gibt es eine Folge 
+\begin_inset Formula $(v_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ so dass für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $v_{n}\neq0$
+\end_inset
+
+ und 
+\begin_inset Formula $\left(\frac{\|v_{n}\|_{b}}{\|v_{n}\|_{a}}\right)_{n\in\mathbb{N}}$
+\end_inset
+
+ ist unbeschränkt.
+ Damit gibt es eine Teilfolge 
+\begin_inset Formula $(v_{n_{m}})_{m\in\mathbb{N}}$
+\end_inset
+
+ von 
+\begin_inset Formula $(v_{n})$
+\end_inset
+
+, so dass 
+\begin_inset Formula $\left(\frac{\|v_{n_{m}}\|_{a}}{\|v_{n_{m}}\|_{b}}\right)_{m\in\mathbb{N}}$
+\end_inset
+
+ gegen 0 konvergiert.
+ Also konvergiert 
+\begin_inset Formula $\left(\|\frac{1}{\|v_{n_{m}}\|_{b}}v_{n_{m}}\|_{a}\right)_{m\in\mathbb{N}}$
+\end_inset
+
+ gegen 0.
+ Damit ist 
+\begin_inset Formula $\left(\frac{1}{\|v_{n_{m}}\|_{b}}v_{n_{m}}\right)_{m\in\mathbb{N}}$
+\end_inset
+
+ konvergent gegen 
+\begin_inset Formula $0\in X$
+\end_inset
+
+ bezüglich 
+\begin_inset Formula $\|\cdot\|_{a}$
+\end_inset
+
+.
+ Da für alle 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+ jedoch gilt 
+\begin_inset Formula 
+\[
+\|\frac{v_{n_{m}}}{\|v_{n_{m}}\|_{b}}\|_{b}=\frac{\|v_{n_{m}}\|_{b}}{\|v_{n_{m}}\|_{b}}=1,
+\]
+
+\end_inset
+
+ist 
+\begin_inset Formula $\left(\frac{1}{\|v_{n_{m}}\|_{b}}v_{n_{m}}\right)_{m\in\mathbb{N}}$
+\end_inset
+
+ nicht konvergent gegen 
+\begin_inset Formula $0\in X$
+\end_inset
+
+ bezüglich 
+\begin_inset Formula $\|\cdot\|_{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:8"
+
+\end_inset
+
+Ist 
+\begin_inset Formula $X$
+\end_inset
+
+ ein endlich-dimensionaler 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum, so sind auf 
+\begin_inset Formula $X$
+\end_inset
+
+ alle Normen äquivalent.
+\end_layout
+
+\begin_layout Proof
+O.B.d.A.
+ ist 
+\begin_inset Formula $X=\mathbb{K}^{n}$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+ eine Norm auf dem 
+\begin_inset Formula $\mathbb{K}^{n}$
+\end_inset
+
+.
+ Bekanntlich ist 
+\begin_inset Formula $\|(x_{1},...,x_{n})\|_{2}=\left(\sum_{j=1}^{n}|x_{j}|^{2}\right)^{\frac{1}{2}}$
+\end_inset
+
+ auch eine Norm auf dem 
+\begin_inset Formula $\mathbb{K}^{n}$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $\{e_{1},...,e_{n}\}$
+\end_inset
+
+ die Standardbasis des 
+\begin_inset Formula $\mathbb{K}^{n}$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $x=(x_{1},...,x_{n})$
+\end_inset
+
+ gilt (mit der Hölderschen Ungleichung) 
+\begin_inset Formula 
+\[
+\|x\|=\|\sum_{j=1}^{n}x_{j}e_{j}\|\leq\sum_{j=1}^{n}|x_{j}|\cdot\|e_{j}\|\leq\left(\sum_{j=1}^{n}|x_{j}|^{2}\right)^{\frac{1}{2}}\underbrace{\left(\sum_{j=1}^{n}\|e_{j}\|^{2}\right)^{\frac{1}{2}}}_{M}=M\cdot\|x\|_{2}.
+\]
+
+\end_inset
+
+Insbesondere gilt für alle 
+\begin_inset Formula $x,y\in\mathbb{K}^{n}$
+\end_inset
+
+ dass 
+\begin_inset Formula $\left|\|x\|-\|y\|\right|\leq\|x-y\|\leq M\|x-y\|_{2}$
+\end_inset
+
+.
+ Damit ist 
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+ stetig bezüglich 
+\begin_inset Formula $\|\cdot\|_{2}$
+\end_inset
+
+.
+ Die Menge 
+\begin_inset Formula $S=\{x\in\mathbb{K}^{n}:\|x\|_{2}=1\}$
+\end_inset
+
+ ist abgeschlossen und beschränkt, also nach Heine-Borel kompakt.
  
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+ nimmt also auf 
+\begin_inset Formula $S$
+\end_inset
+
+ ihr Minimum an.
+ Da 
+\begin_inset Formula $0\notin S$
+\end_inset
+
+, gilt 
+\begin_inset Formula $m=\min_{x\in S}\|x\|>0$
+\end_inset
+
+.
+ Da für alle 
+\begin_inset Formula $x\in\mathbb{K}^{n}\setminus\{0\}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\frac{x}{\|x\|_{2}}\in S$
+\end_inset
+
+ haben wir 
+\begin_inset Formula 
+\[
+\|x\|_{2}m\leq\|x\|_{2}\underbrace{\|\frac{x}{\|x\|_{2}}\|}_{\geq\min_{y\in S}\|y\|}=\|x\|
+\]
+
+\end_inset
+
+für alle 
+\begin_inset Formula $x\in\mathbb{K}^{n}\setminus\{0\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Im unendlich-dimensionalen gilt eine solche allgemeine Äquivalent nicht,
+ wie das folgende Beispiel zeigt.
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset label
+LatexCommand label
+name "ex:4"
+
+\end_inset
+
+Wir betrachten 
+\begin_inset Formula $C([0,1])$
+\end_inset
+
+.
+ Auf diesen Raum können wir durch 
+\begin_inset Formula $\|f\|_{1}=\int_{0}^{1}|f(s)|ds$
+\end_inset
+
+ eine Norm auf 
+\begin_inset Formula $C([0,1])$
+\end_inset
+
+ definieren.
+ Diese Norm ist nicht äquivalent zur Supremumsnorm 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+, denn sei für 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ 
+\begin_inset Formula $f_{n}:[0,1]\to\mathbb{K}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f_{n}(s)=\begin{cases}
+1-ns & s\in[0,\frac{1}{n}],\\
+0 & s\in(\frac{1}{n},1].
+\end{cases}
+\]
+
+\end_inset
+
+Offensichtlich ist 
+\begin_inset Formula $f_{n}\in C([0,1])$
+\end_inset
+
+ für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ Weiterhin ist für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ die Supremumsnorm 
+\begin_inset Formula $\|f_{n}\|_{\infty}=1$
+\end_inset
+
+.
+ Also konvergiert 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ nicht gegen 
+\begin_inset Formula $0\in C([0,1])$
+\end_inset
+
+ bezüglich 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+.
+ Es ist aber für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ stets 
+\begin_inset Formula $\|f_{n}\|_{1}=\int_{0}^{1}|f_{n}(s)|ds=\int_{0}^{\frac{1}{n}}|f_{n}(s)|ds=\int_{0}^{\frac{1}{n}}(1-ns)ds=[s-\frac{1}{n}s^{2}]_{0}^{\frac{1}{n}}=\frac{1}{2n}\to_{n\to\infty}0$
+\end_inset
+
+.
+ Also konvergiert 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ gegen 
+\begin_inset Formula $0\in C([0,1])$
+\end_inset
+
+ bezüglich 
+\begin_inset Formula $\|\cdot\|_{1}$
+\end_inset
+
+.
+ Nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:7"
+
+\end_inset
+
+ sind 
+\begin_inset Formula $\|\cdot\|_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+ nicht äquivalent auf 
+\begin_inset Formula $C([0,1])$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:1"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+ ein endlich-dimensionaler, normierter Raum.
+ Dann sind beschränkte, abgeschlossene Mengen kompakt.
+\end_layout
+
+\begin_layout Proof
+O.B.d.A.
+ 
+\begin_inset Formula $X=\mathbb{K}^{n}$
+\end_inset
+
+.
+ Für die Norm 
+\begin_inset Formula $\|(x_{1},...,x_{n})\|_{2}=\left(\sum_{j=1}^{n}|x_{j}|^{2}\right)^{\frac{1}{2}}$
+\end_inset
+
+ liefert der Satz von Heine-Borel die Behauptung.
+ Da 
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+ zu 
+\begin_inset Formula $\|\cdot\|_{2}$
+\end_inset
+
+ äquivalent ist, stimmen sowohl abgeschlossene beschränkte und kompakte
+ Mengen bezüglich der beiden Normen überein.
+\end_layout
+
+\begin_layout Standard
+Wir werden zeigen, dass die Aussage von Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:1"
+
+\end_inset
+
+ nur im endlich-dimensionalen gilt.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:3"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:rieszsche-lemma"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+ ein normierter Raum und 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ein abgeschlossener Unterraum von 
+\begin_inset Formula $X$
+\end_inset
+
+ mit 
+\begin_inset Formula $U\neq X$
+\end_inset
+
+.
+ Für jedes 
+\begin_inset Formula $\delta\in(0,1)$
+\end_inset
+
+ existiert ein 
+\begin_inset Formula $x_{\delta}\in X$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|x_{\delta}\|=1$
+\end_inset
+
+ und 
+\begin_inset Formula $\|x_{\delta}-u\|\geq1-\delta$
+\end_inset
+
+ für alle 
+\begin_inset Formula $u\in U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Wähle 
+\begin_inset Formula $x\in X\setminus U$
+\end_inset
+
+.
+ Setze 
+\begin_inset Formula $d:=\inf\{\|x-u\|:u\in U\}$
+\end_inset
+
+.
+ Ist 
+\begin_inset Formula $d=0$
+\end_inset
+
+, so gibt es eine Folge 
+\begin_inset Formula $(u_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $U$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|x-u_{n}\|\to0$
+\end_inset
+
+ für 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+, also 
+\begin_inset Formula $\lim_{n\to\infty}u_{n}=x$
+\end_inset
+
+ und 
+\begin_inset Formula $x\in\overline{U}=U$
+\end_inset
+
+.
+ Widerspruch.
+ Damit ist 
+\begin_inset Formula $d>0$
+\end_inset
+
+.
+ Insbesondere ist 
+\begin_inset Formula $\frac{d}{1-\delta}>d$
+\end_inset
+
+.
+ Damit gibt es ein 
+\begin_inset Formula $u_{\delta}\in U$
+\end_inset
+
+ mit 
+\begin_inset Formula $d\leq\|x-u_{\delta}\|<\frac{d}{1-\delta}$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula 
+\[
+x_{\delta}=\frac{x-u_{\delta}}{\|x-u_{\delta}\|}.
+\]
+
+\end_inset
+
+Klar ist 
+\begin_inset Formula $\|x_{\delta}\|=1$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $u\in U$
+\end_inset
+
+ gilt nun 
+\begin_inset Formula 
+\[
+\|x_{\delta}-u\|=\|\frac{x-u_{\delta}}{\|x-u_{\delta}\|}-u\|=\frac{1}{\|x-u_{\delta}\|}\cdot\underbrace{\|x-\overbrace{u_{\delta}+(\|x-u_{\delta}\|u))}^{\in U}\|}_{\geq d}\geq\frac{1}{\|x-u_{\delta}\|}d\geq\frac{1-\delta}{d}d=1-\delta.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Section

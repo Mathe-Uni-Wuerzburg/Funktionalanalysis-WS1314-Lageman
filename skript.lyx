@@ -2,7 +2,7 @@
 \lyxformat 413
 \begin_document
 \begin_header
-\textclass article
+\textclass amsart
 \begin_preamble
 \usepackage{amsthm}% http://ctan.org/pkg/amsthm
 \usepackage{amssymb}% http://ctan.org/pkg/amssymb
@@ -60,6 +60,14 @@
 \providecommand{\theoremname}{Theorem}
 \end_preamble
 \use_default_options true
+\begin_removed_modules
+theorems-ams
+\end_removed_modules
+\begin_modules
+eqs-within-sections
+figs-within-sections
+theorems-bytype
+\end_modules
 \maintain_unincluded_children false
 \language ngerman
 \language_package default
@@ -213,19 +221,7 @@ Sprechen wir von einem
  in den Sätzen und Definitionen.
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{defn}
-\end_layout
-
-\end_inset
-
+\begin_layout Definition
 Sei 
 \begin_inset Formula $X$
 \end_inset
@@ -250,7 +246,7 @@ Halbnorm auf
 , falls gilt:
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Definition
 \begin_inset Formula $\forall_{v\in X,\lambda\in\mathbb{K}}:$
 \end_inset
 
@@ -261,7 +257,7 @@ Halbnorm auf
 
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Definition
 \begin_inset Formula $\forall_{v,w\in X}:$
 \end_inset
 
@@ -272,7 +268,7 @@ Halbnorm auf
  (Dreiecksungleichung)
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 Gilt zusätzlich noch 
 \begin_inset Formula $\forall v\in X:$
 \end_inset
@@ -313,7 +309,7 @@ normierten Raum
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 Eine Norm 
 \begin_inset Formula $\|\cdot\|$
 \end_inset
@@ -344,19 +340,6 @@ Eine Norm
 
  bezeichnen.
  
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{defn}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -366,20 +349,8 @@ Ein normierter Raum ist damit auch ein metrischer Raum.
  für normierte Räume aus den entsprechenden Begriffen für metrische Räume.
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{example}
-\end_layout
-
-\end_inset
-
- Sei 
+\begin_layout Example
+Sei 
 \begin_inset Formula $(X,\|\cdot\|)$
 \end_inset
 
@@ -438,19 +409,6 @@ wobei
 \noun default
 \color inherit
  
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{example}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -543,40 +501,15 @@ die offene Kugel um
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{defn}
-\end_layout
-
-\end_inset
-
+\begin_layout Definition
 Einen vollständigen normierten Raum bezeichnet man als 
 \emph on
 Banachraum
 \emph default
 .
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{defn}
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Example
 \begin_inset ERT
 status open
 
@@ -592,6 +525,7 @@ begin{example}
 
 \end_layout
 
+\begin_deeper
 \begin_layout Enumerate
 Versehen wir 
 \begin_inset Formula $\mathbb{R}^{n}$
@@ -977,35 +911,8 @@ Also
 \end_layout
 
 \end_deeper
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{example}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{thm}
-\end_layout
-
-\end_inset
-
+\end_deeper
+\begin_layout Theorem
 Sei 
 \begin_inset Formula $(X,\|\cdot\|)$
 \end_inset
@@ -1021,7 +928,7 @@ Sei
 .
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Theorem
 Ist 
 \begin_inset Formula $(X,\|\cdot\|)$
 \end_inset
@@ -1041,7 +948,7 @@ Ist
  ein Banachraum.
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Theorem
 Ist 
 \begin_inset Formula $U$
 \end_inset
@@ -1057,36 +964,8 @@ Ist
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{thm}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{proof}
-\end_layout
-
-\end_inset
-
-
+\begin_layout Proof
+Der Beweis gliedert sich in zwei Teile.
 \end_layout
 
 \begin_layout Enumerate
@@ -1181,35 +1060,7 @@ Sei
  abgeschlossen.
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{example}
-\end_layout
-
-\end_inset
-
+\begin_layout Example
 Wir verwenden die Notation 
 \begin_inset Formula $l^{\infty}=l^{\infty}(\mathbb{N})$
 \end_inset
@@ -1297,7 +1148,7 @@ Wir verwenden die Notation
  ist.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 Sei 
 \begin_inset Formula $(f_{n})$
 \end_inset
@@ -1433,7 +1284,7 @@ konvergente Folge und
  abgeschlossen und nach Satz 1 ein Banachraum.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 Sei 
 \begin_inset Formula $(f_{n})$
 \end_inset
@@ -1474,42 +1325,10 @@ Sei
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{example}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Wir definieren nun weitere Folgenräume.
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{defn}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Definition
 Für 
 \begin_inset Formula $p\in\mathbb{R}$
 \end_inset
@@ -1539,22 +1358,6 @@ Für
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{defn}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Marginal
 status open
 
@@ -1567,23 +1370,7 @@ status open
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{thm}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Theorem
 Für 
 \begin_inset Formula $1\leq p<\infty$
 \end_inset
@@ -1599,39 +1386,7 @@ Für
 -Vektorraum.
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{thm}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Proof
 Offensichtlich ist die konstante Folge 
 \begin_inset Formula $(a_{n})$
 \end_inset
@@ -1682,39 +1437,11 @@ Offensichtlich ist die konstante Folge
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{thm}
-\end_layout
-
-\end_inset
-
+\begin_layout Theorem
 Holdesche Ungleichung
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Theorem
 Sind 
 \begin_inset Formula $(x_{n})\in l'$
 \end_inset
@@ -1734,7 +1461,7 @@ Sind
 .
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Theorem
 Sei 
 \begin_inset Formula $1<p<\infty$
 \end_inset
@@ -1763,38 +1490,11 @@ Sei
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{thm}
+\begin_layout Proof
+Der Beweis besteht aus zwei Teilen.
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
+\begin_deeper
 \begin_layout Enumerate
 Es gilt 
 \begin_inset Formula $\underbrace{\sum_{n=1}^{\infty}|x_{n}y_{n}}_{=\|(x_{n}y_{n})\|_{'}}\leq\sum_{n=1}^{\infty}|x_{n}|\|(y_{n})\|_{\infty}=\|(y_{n})\|_{\infty}\sum_{n=1}^{\infty}|x_{n}|=\|(y_{n})\|_{\infty}\|(x_{n})\|_{'}<\infty$
@@ -1914,39 +1614,8 @@ Sind
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{thm}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\end_deeper
+\begin_layout Theorem
 Minkowskische Ungleichung.
  Sei 
 \begin_inset Formula $1\leq p<\infty$
@@ -1964,39 +1633,7 @@ Minkowskische Ungleichung.
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{thm}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Proof
 Für 
 \begin_inset Formula $p=1$
 \end_inset
@@ -2087,39 +1724,7 @@ Nebenrechnung:
  ist die Minkowski-Ungleichung trivial.
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{thm}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Theorem
 Für 
 \begin_inset Formula $1\leq p<\infty$
 \end_inset
@@ -2136,39 +1741,7 @@ Für
  ein Banachraum.
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{thm}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Proof
 Die Behauptung für 
 \begin_inset Formula $l^{\infty}$
 \end_inset
@@ -2238,7 +1811,7 @@ wurde bereits in Beispiel 1 gezeigt.
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 Sei 
 \begin_inset Formula $(f_{n})$
 \end_inset
@@ -2404,38 +1977,11 @@ Somit
  ein Banachraum.
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{proof}
+\begin_layout Example
+zur Verdeutlichung.
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{example}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
+\begin_deeper
 \begin_layout Enumerate
 Sei 
 \begin_inset Formula $X$
@@ -2677,43 +2223,12 @@ für
  ist ein Banachraum.
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{example}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
+\end_deeper
 \begin_layout Subsection
 Eigenschaften normierter Räume
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{lem}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Lemma
 Sei 
 \begin_inset Formula $(X,\|\cdot\|)$
 \end_inset
@@ -2722,14 +2237,14 @@ Sei
  Es gilt
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Lemma
 \begin_inset Formula $\forall_{v,w\in X}:|\|v\|-\|w\||\leq\|v-w\|$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Lemma
 Die Abbildung 
 \begin_inset Formula $\|\cdot\|:x\mapsto[0,\infty)$
 \end_inset
@@ -2737,7 +2252,7 @@ Die Abbildung
  ist stetig.
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Lemma
 Eine Folge 
 \begin_inset Formula $(x_{n})$
 \end_inset
@@ -2757,76 +2272,12 @@ Eine Folge
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{lem}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Proof
 Für 1 und 2 siehe erstes Übungsblatt.
  3 folgt direkt aus der entsprechenden Eigenschaft für metrische Räume.
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{thm}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Theorem
 Sei 
 \begin_inset Formula $(X,\|\cdot\|)$
 \end_inset
@@ -2894,38 +2345,11 @@ Ist
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{thm}
+\begin_layout Proof
+In zwei Teilen.
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
+\begin_deeper
 \begin_layout Enumerate
 Für alle 
 \begin_inset Formula $\lambda,\mu\in\mathbb{R}$
@@ -3026,39 +2450,8 @@ ist
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{defn}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\end_deeper
+\begin_layout Definition
 Sei 
 \begin_inset Formula $X$
 \end_inset
@@ -3091,39 +2484,7 @@ Sei
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{defn}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{lem}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Lemma
 Die Äquivalenz von Normen auf einem 
 \begin_inset Formula $\mathbb{K}$
 \end_inset
@@ -3139,76 +2500,12 @@ Die Äquivalenz von Normen auf einem
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{lem}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Proof
 Siehe 2.
  Übungsblatt.
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{thm}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Theorem
 Sei 
 \begin_inset Formula $X$
 \end_inset
@@ -3233,6 +2530,7 @@ Sei
  Die folgenden Aussagen sind äquivalent:
 \end_layout
 
+\begin_deeper
 \begin_layout Enumerate
 Die Normen 
 \begin_inset Formula $\|\cdot\|_{a}$
@@ -3305,39 +2603,8 @@ Eine Folge
  konvergiert.
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{thm}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
+\end_deeper
+\begin_layout Proof
 \begin_inset Formula $1\implies2$
 \end_inset
 
@@ -3377,14 +2644,14 @@ begin{proof}
 .
 \end_layout
 
-\begin_layout Description
+\begin_layout Proof
 \begin_inset Formula $2\implies3$
 \end_inset
 
 : 3 ist Sonderfall von 2.
 \end_layout
 
-\begin_layout Description
+\begin_layout Proof
 \begin_inset Formula $3\implies1$
 \end_inset
 
@@ -3419,22 +2686,6 @@ begin{proof}
 
 .
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{proof}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section

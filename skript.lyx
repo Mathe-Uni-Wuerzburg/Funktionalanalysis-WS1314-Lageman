@@ -2232,14 +2232,15 @@ Sei
  Es gilt
 \end_layout
 
-\begin_layout Lemma
+\begin_deeper
+\begin_layout Enumerate
 \begin_inset Formula $\forall_{v,w\in X}:|\|v\|-\|w\||\leq\|v-w\|$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Lemma
+\begin_layout Enumerate
 Die Abbildung 
 \begin_inset Formula $\|\cdot\|:x\mapsto[0,\infty)$
 \end_inset
@@ -2247,7 +2248,7 @@ Die Abbildung
  ist stetig.
 \end_layout
 
-\begin_layout Lemma
+\begin_layout Enumerate
 Eine Folge 
 \begin_inset Formula $(x_{n})$
 \end_inset
@@ -2267,6 +2268,7 @@ Eine Folge
 .
 \end_layout
 
+\end_deeper
 \begin_layout Proof
 Für 1 und 2 siehe erstes Übungsblatt.
  3 folgt direkt aus der entsprechenden Eigenschaft für metrische Räume.
@@ -3971,12 +3973,12 @@ Wir betrachten zunächst den Fall
 \end_inset
 
  definieren wir 
-\begin_inset Formula $C_{n}:=\left(\int(1-s^{2})^{n}ds\right)^{-1}$
+\begin_inset Formula $c_{n}:=\left(\int(1-s^{2})^{n}ds\right)^{-1}$
 \end_inset
 
 .
  Wir zeigen zunächst die Abschätzung 
-\begin_inset Formula $C_{n}\leq e\sqrt{n}$
+\begin_inset Formula $c_{n}\leq e\sqrt{n}$
 \end_inset
 
  für hinreichend große 
@@ -4010,7 +4012,7 @@ Da
 \end_inset
 
  stets 
-\begin_inset Formula $C_{n}^{-1}\geq\frac{1}{\sqrt{n}e}$
+\begin_inset Formula $c_{n}^{-1}\geq\frac{1}{\sqrt{n}e}$
 \end_inset
 
 .
@@ -4023,8 +4025,632 @@ Da
 \end_inset
 
 .
+ Es gilt
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+Für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ und 
+\begin_inset Formula $x\in[-1,1]$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\varphi_{n}(x)\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\int_{-1}^{1}\varphi_{n}(x)dx=1$
+\end_inset
+
+ per Definition von 
+\begin_inset Formula $c_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Für alle 
+\begin_inset Formula $\delta\in(0,1]$
+\end_inset
+
+ ist 
+\begin_inset Formula $\lim_{n\to\infty}\sup_{x\in[\delta,1]}\varphi_{n}(x)=0$
+\end_inset
+
+, da 
+\begin_inset Formula $\sup_{x\in[\delta,1]}\varphi_{n}(x)=c_{n}(1-\delta^{2})^{n}$
+\end_inset
+
+ und 
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}\sqrt{n}(1-\delta^{2})^{n}=\lim_{n\to\infty}e^{\frac{1}{2}(\log n)+n\underbrace{\log(\overbrace{1-\delta^{2}}^{\in(0,1)})}_{<0}}=0.
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Sei 
+\begin_inset Formula $f\in C([0,1])$
+\end_inset
+
+.
+ Wir betrachten zuerst den Fall 
+\begin_inset Formula $f(0)=f(1)=0$
+\end_inset
+
+.
+ Wir definieren die stetige Funktion 
+\begin_inset Formula $\widetilde{f}:\mathbb{R}\to\mathbb{K}$
+\end_inset
+
+ durch 
+\begin_inset Formula 
+\[
+\widetilde{f}(x)=\begin{cases}
+f(x) & (x\in[0,1]),\\
+0 & (\text{sonst}).
+\end{cases}
+\]
+
+\end_inset
+
+Da 
+\begin_inset Formula $f$
+\end_inset
+
+ gleichmäßig stetig auf 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ ist, ist 
+\begin_inset Formula $\widetilde{f}$
+\end_inset
+
+ gleichmäßig stetig auf 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ Wir definieren nun Funktionen 
+\begin_inset Formula $p_{n}:\mathbb{R}\to\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{n}(x)=\int_{-1}^{1}\widetilde{f}(x-s)\varphi_{n}(s)ds$
+\end_inset
+
+ für 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $p_{n}$
+\end_inset
+
+ ist für jedes 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ eine Polynomfunktion, denn mit Substitution 
+\begin_inset Formula $s=t+x$
+\end_inset
+
+ ergibt sich 
+\begin_inset Formula 
+\[
+\int_{-1}^{1}\widetilde{f}(x-s)\varphi_{n}(s)ds=\int_{\underbrace{-1-x}_{\in[-2,-1]}}^{\overbrace{1-x}^{\in[0,1]}}\widetilde{f}(-t)\varphi_{n}(t-x)dt=\int_{-1}^{0}\widetilde{f}(-t)\varphi_{n}(t+x)dt,
+\]
+
+\end_inset
+
+denn 
+\begin_inset Formula $\widetilde{f}|_{\mathbb{R}\setminus[0,1]}\equiv0$
+\end_inset
+
+.
+ Dies ergibt dann weiterhin das Polynom 
+\begin_inset Formula 
+\[
+=\int_{-1}^{0}\widetilde{f}(-t)c_{n}(1-(t+x)^{2})^{n}dt.
+\]
+
+\end_inset
+
+Da 
+\begin_inset Formula $\int_{-1}^{1}\varphi_{n}(s)ds=1$
+\end_inset
+
+ ist 
+\begin_inset Formula $p_{n}(x)-\widetilde{f}(x)=\int_{-1}^{1}\left(\widetilde{f}(x-s)-\widetilde{f}(x)\right)\varphi_{n}(s)ds$
+\end_inset
+
+.
+ Also für alle 
+\begin_inset Formula $\delta\in(0,1)$
+\end_inset
+
+ und 
+\begin_inset Formula $x\in[-1,1]$
+\end_inset
+
+ gilt 
+\begin_inset Formula $|p_{n}(x)-\widetilde{f}(x)|\leq\int_{-1}^{1}|\widetilde{f}(x-s)-\widetilde{f}(x)|\varphi_{n}(s)ds=$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray}
+ & = & \int_{-\delta}^{\delta}\underbrace{\left|\widetilde{f}(x-s)-\widetilde{f}(x)\right|}_{\leq\sup_{s\in[-\delta,\delta]}|\widetilde{f}(x-s)-\widetilde{f}(x)|}\varphi_{n}(s)ds+\int_{-1}^{\delta}\underbrace{\left|\widetilde{f}(x-s)-\widetilde{f}(x)\right|}_{\leq2\sup_{y\in[0,1]}|f(y)|}\varphi_{n}(s)ds\nonumber \\
+ &  & +\int_{\delta}^{1}\underbrace{\left|\widetilde{f}(x-s)-\widetilde{f}(x)\right|}_{\leq2\sup_{y\in[0,1]}|f(y)|}\varphi_{n}(s)ds\nonumber \\
+ & \leq & \sup_{s\in[-\delta,\delta]}\left|\widetilde{f}(x-s)-\widetilde{f}(x)\right|\cdot\underbrace{\int_{-\delta}^{\delta}\varphi_{n}(s)ds}_{\leq\int_{-1}^{1}\varphi_{n}(s)ds=1}+4\sup_{y\in[0,1]}|f(y)|\cdot\sup_{s\in[\delta,1]}\varphi_{n}(s)\nonumber \\
+ & \leq & \sup_{s\in[-\delta,\delta]}\left|\widetilde{f}(x-s)-\widetilde{f}(x)\right|+4\sup_{y\in[0,1]}|f(y)|\sup_{s\in[\delta,1]}\varphi_{n}(s)\label{eq:thm-11-**}
+\end{eqnarray}
+
+\end_inset
+
+Sei 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ gegeben.
+ Wähle 
+\begin_inset Formula $\delta\in(0,1)$
+\end_inset
+
+ so dass für alle 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sup_{s\in[-\delta,\delta]}\left|\widetilde{f}(x-s)-\widetilde{f}(x)\right|\leq\frac{\varepsilon}{2}.
+\]
+
+\end_inset
+
+Dies ist möglich, da 
+\begin_inset Formula $\widetilde{f}$
+\end_inset
+
+ gleichmäßig stetig ist.
+ Wähle nun 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ so dass für alle 
+\begin_inset Formula $n>N$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sup_{s\in[\delta,1]}\varphi_{n}(s)<\frac{1}{4\max\{1,\sup_{y\in[0,1]}|f(y)|\}}\frac{\varepsilon}{2}.
+\]
+
+\end_inset
+
+Dies ist möglich, da 
+\begin_inset Formula $\lim_{n\to\infty}\sup_{s\in[\delta,1]}\varphi_{n}(s)=0$
+\end_inset
+
+.
+ Mit (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:thm-11-**"
+
+\end_inset
+
+) folgt für alle 
+\begin_inset Formula $n>N$
+\end_inset
+
+ und 
+\begin_inset Formula $x\in[0,1]$
+\end_inset
+
+ dass 
+\begin_inset Formula $\left|p_{n}(x)-f(x)\right|<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon$
+\end_inset
+
+, also 
+\begin_inset Formula 
+\[
+\|p_{n}|_{[0,1]}-f\|_{\infty}<\varepsilon.
+\]
+
+\end_inset
+
+Damit wird 
+\begin_inset Formula $f$
+\end_inset
+
+ durch 
+\begin_inset Formula $p_{n}$
+\end_inset
+
+ auf 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ approximiert.
+\end_layout
+
+\begin_layout Proof
+Sei 
+\begin_inset Formula $f\in C([0,1])$
+\end_inset
+
+ mit 
+\begin_inset Formula $f(0)\neq f(1)$
+\end_inset
+
+ oder 
+\begin_inset Formula $f(0)\neq0$
+\end_inset
+
+.
+ Konstruiere obige Folge 
+\begin_inset Formula $(p_{n})_{n}$
+\end_inset
+
+ für 
+\begin_inset Formula $\widehat{f}(x)=f(x)-(1-x)f(0)-xf(1)$
+\end_inset
+
+, dann ist 
+\begin_inset Formula $\widehat{f}\in C([0,1])$
+\end_inset
+
+ und 
+\begin_inset Formula $\widehat{f}(0)=\widehat{f}(1)=0$
+\end_inset
+
+.
+ Dann sind 
+\begin_inset Formula $q_{n}(x)=p_{n}(x)+(1-x)f(0)+xf(1)$
+\end_inset
+
+ für 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ Polynomfunktionen und 
+\begin_inset Formula $\|f-q_{n}|_{[0,1]}\|_{\infty}=\sup_{x\in[0,1]}\left|f(x)-p_{n}(x)-(1-x)f(0)-xf(1)\right|=\|\widehat{f}-p_{n}|_{[0,1]}\|_{\infty}\to0$
+\end_inset
+
+ für 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+.
+ Damit wird 
+\begin_inset Formula $\widehat{f}$
+\end_inset
+
+ durch 
+\begin_inset Formula $q_{n}$
+\end_inset
+
+ auf 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ approximiert.
+\end_layout
+
+\begin_layout Proof
+Sei 
+\begin_inset Formula $f\in C([a,b])$
+\end_inset
+
+, 
+\begin_inset Formula $a,b\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $a<b$
+\end_inset
+
+.
+ Dann liefert 
+\begin_inset Formula $\widehat{f}(x)=f(a+(b-a)x)$
+\end_inset
+
+ ein 
+\begin_inset Formula $\widehat{f}\in C([0,1])$
+\end_inset
+
+.
+ Konstruiere 
+\begin_inset Formula $q_{n}$
+\end_inset
+
+ wie oben.
+ Definiere 
+\begin_inset Formula 
+\[
+r_{n}(x)=q_{n}\left(\frac{x-a}{b-a}\right).
+\]
+
+\end_inset
+
+Da 
+\begin_inset Formula 
+\[
+\frac{(a+(b-a)x)-a}{b-a}=x
+\]
+
+\end_inset
+
+ist 
+\begin_inset Formula 
+\begin{eqnarray*}
+\|f-r_{n}\|_{\infty} & = & \sup_{x\in[a,b]}\left|f(x)-r_{n}(x)\right|=\sup_{y\in[0,1]}\left|f(x)-r_{n}(x)\right|\\
+ & = & \sup_{y\in[0,1]}\left|f(a+(b-a)y)-r_{n}(a+(b-a)y)\right|=\|\widehat{f}-q_{n}|_{[0,1]}\|_{\infty}\to0
+\end{eqnarray*}
+
+\end_inset
+
+für 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+.
+ Also wird 
+\begin_inset Formula $f$
+\end_inset
+
+ durch 
+\begin_inset Formula $r_{n}$
+\end_inset
+
+ auf 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ approximiert.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:2"
+
+\end_inset
+
+Für 
+\begin_inset Formula $a,b\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $a<b$
+\end_inset
+
+ ist 
+\begin_inset Formula $(C([a,b]),\|\cdot\|_{\infty})$
+\end_inset
+
+ separabel.
+\end_layout
+
+\begin_layout Proof
+Da 
+\begin_inset Formula $P([a,b])$
+\end_inset
+
+ dicht in 
+\begin_inset Formula $(C([a,b]),\|\cdot\|_{\infty})$
+\end_inset
+
+, ist 
+\begin_inset Formula 
+\[
+C([a,b])=\overline{\span\{t^{n}:n\in\mathbb{N}\}}
+\]
+
+\end_inset
+
+Mit Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:10"
+
+\end_inset
+
+ folgt die Behauptung.
+\end_layout
+
+\begin_layout Subsection
+Quotientenräume und die Räume 
+\begin_inset Formula $L^{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wir übertragen zunächst die Begriffe der Cauchy-Folge und Vollständigkeit
+ auf 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorräume mit einer Halbnorm.
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:6"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum mit Halbnorm 
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+.
+ Wir nennen eine Folge 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ 
+\emph on
+Cauchy-Folge
+\emph default
+, falls 
+\begin_inset Formula $\forall_{\varepsilon>0}\exists_{N\in\mathbb{N}}\forall_{n,m>N}:\|x_{n}-x_{m}\|<\varepsilon$
+\end_inset
+
+.
+ Wir nennen 
+\begin_inset Formula $X$
+\end_inset
+
+ 
+\emph on
+vollständig
+\emph default
+, falls zu jeder Cauchy-Folge in 
+\begin_inset Formula $X$
+\end_inset
+
+ ein 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ existiert mit 
+\begin_inset Formula $\lim_{n\to\infty}\|x_{n}-x\|=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+Man beachte, dass in einem vollständigen 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum 
+\begin_inset Formula $X$
+\end_inset
+
+ mit Halbnorm 
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+, dass 
+\begin_inset Formula $x^{*}\in X$
+\end_inset
+
+ zu einer Cauchy-Folge 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ mit 
+\begin_inset Formula $\lim_{n\to\infty}\|x_{n}-x^{*}\|=0$
+\end_inset
+
+ nicht unbedingt eindeutig ist.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:12"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum mit Halbnorm 
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+.
+ Es gilt
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $N=\{x\in X|\|x\|=0\}$
+\end_inset
+
+ ist ein Unterraum von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\|x+N\|:=\|x\|$
+\end_inset
+
+ definiert eine Norm auf 
+\begin_inset Formula $X/N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $X$
+\end_inset
+
+ vollständig (in Sinne von Definition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "def:6"
+
+\end_inset
+
+), so ist 
+\begin_inset Formula $X/N$
+\end_inset
+
+ mit der Norm 
+\begin_inset Formula $\|x+N\|$
+\end_inset
+
+ vollständig.
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Übungsblätter
 \end_layout

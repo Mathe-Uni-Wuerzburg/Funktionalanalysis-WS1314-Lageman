@@ -34,7 +34,20 @@ theorems-bytype
 \index_command default
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_title "Einführung in die Funktionalanalysis"
+\pdf_author "Nils Wisiol"
+\pdf_subject "Vorlesung Dr. Lageman WS 1314"
+\pdf_keywords "Funktionalanalysis, Einführung"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref section
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry false
 \use_amsmath 1
@@ -53,8 +66,8 @@ theorems-bytype
 \end_index
 \secnumdepth 3
 \tocdepth 3
-\paragraph_separation indent
-\paragraph_indentation default
+\paragraph_separation skip
+\defskip medskip
 \quotes_language english
 \papercolumns 1
 \papersides 1
@@ -72,6 +85,15 @@ theorems-bytype
 Einführung in die Funktionalanalysis
 \end_layout
 
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 Organisatorisches
 \end_layout
@@ -82,6 +104,12 @@ Organisatorisches
 \begin_inset FormulaMacro
 \newcommand{\span}{\mathrm{{span}}}
 {\mathrm{span}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\vol}{\mathrm{{vol}}}
+{\mathrm{vol}}
 \end_inset
 
 
@@ -4651,6 +4679,648 @@ reference "def:6"
 \end_layout
 
 \end_deeper
+\begin_layout Proof
+In drei Teilen.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $0\in N$
+\end_inset
+
+, da 
+\begin_inset Formula $\|0\|=0$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $x,y\in\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda,\mu\in\mathbb{K}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\|\lambda x+\mu y\|\leq|\lambda|\|x\|+|\mu|\|y\|\leq0$
+\end_inset
+
+ und damit 
+\begin_inset Formula $\lambda x+\mu y\in N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+ ist auf 
+\begin_inset Formula $X/N$
+\end_inset
+
+ wohldefiniert, denn für 
+\begin_inset Formula $x+N=y+N$
+\end_inset
+
+ gilt 
+\begin_inset Formula $(x-y)+N=N$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula $x-y\in N$
+\end_inset
+
+, und daher gilt 
+\begin_inset Formula $\left|\|x\|-\|y\|\right|\leq\|x-y\|=0$
+\end_inset
+
+.
+ Es folgt 
+\begin_inset Formula $\|x\|=\|y\|$
+\end_inset
+
+.
+ Überprüfung der Normaxiome:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Für 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda\in\mathbb{K}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\|\lambda x+N\|=\|\lambda x\|=|\lambda|\|x\|=|\lambda|\|x+N\|$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Für 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\|(x+N)+(y+N)\|=\|(x+y)+N\|=\|x+y\|\leq\|x\|+\|y\|=\|x+N\|+\|y+N\|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|x+N\|=0$
+\end_inset
+
+.
+ Damit 
+\begin_inset Formula $\|x\|=0$
+\end_inset
+
+, also 
+\begin_inset Formula $x\in N$
+\end_inset
+
+ und 
+\begin_inset Formula $x+N=N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Somit ist 
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+ eine Norm auf 
+\begin_inset Formula $X/N$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $(x_{k}+N)_{k\in\mathbb{N}}$
+\end_inset
+
+ Cauchy-Folge in 
+\begin_inset Formula $X/N$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $\forall_{k,m\in\mathbb{N}}$
+\end_inset
+
+: 
+\begin_inset Formula $\|\left(x_{k}+N\right)-\left(x_{m}+N\right)\|=\|x_{k}-x_{m}\|$
+\end_inset
+
+ ist 
+\begin_inset Formula $(x_{k})$
+\end_inset
+
+ Cauchy-Folge in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Somit gibt es ein 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ mit 
+\begin_inset Formula $\lim_{k\to\infty}\|x_{k}-x\|=0$
+\end_inset
+
+.
+ Damit ist 
+\begin_inset Formula $\lim_{k\to\infty}\|(x_{k}+N)-(x+N)\|=\lim_{k\to\infty}\|x_{k}-x\|=0$
+\end_inset
+
+.
+ Also konvergiert 
+\begin_inset Formula $(x_{k}+N)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+Sei 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+ ein normierter Raum und 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ein Unterraum.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\|x\|_{d}:=\inf\{\|x-u\||u\in U\}$
+\end_inset
+
+ für 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ definiert eine Halbnorm.
+\end_layout
+
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $U$
+\end_inset
+
+ abgeschlossen, so definiert 
+\begin_inset Formula $\|x+U\|_{q}:=\|x\|_{d}$
+\end_inset
+
+ eine Norm auf 
+\begin_inset Formula $X/U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $X$
+\end_inset
+
+ vollständig und 
+\begin_inset Formula $U$
+\end_inset
+
+ abgeschlossen, so ist 
+\begin_inset Formula $(X/U,\|\cdot\|_{q})$
+\end_inset
+
+ ein Banachraum.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+In drei Teilen.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Nachweis der Halbnormaxiome:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Für 
+\begin_inset Formula $\lambda\in\mathbb{K}$
+\end_inset
+
+ ist 
+\begin_inset Formula $\|\lambda x\|_{d}=\inf\{\|\lambda x-u\||u\in U\}=\inf\{\|\lambda x-\lambda u\||u\in U\}=|\lambda|\|x\|_{d}$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+ ist 
+\begin_inset Formula $\|\lambda x\|_{d}=\inf\{\|u\||u\in U\}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Für 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+ ist 
+\begin_inset Formula $\|x+y\|_{d}=\inf\{\|x+y-u\||u\in U\}=$
+\end_inset
+
+
+\begin_inset Formula $\inf\{\|x+y-u-v\||u,v\in U\}\leq\inf\{\|x-u\|+\|y-v\||u\in U,v\in U\}\leq\inf\{\|x-u\||u\in U\}+\inf\{\|y-v\||v\in U\}=\|x\|_{d}+\|y\|_{d}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $N=\{x\in X|\|x\|_{d}=0\}$
+\end_inset
+
+.
+ Es ist 
+\begin_inset Formula $U\subset N$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $x\in N$
+\end_inset
+
+, also 
+\begin_inset Formula $\|x\|_{d}=0$
+\end_inset
+
+.
+ Dann gibt es eine Folge 
+\begin_inset Formula $(u_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $U$
+\end_inset
+
+ mit 
+\begin_inset Formula $\lim_{n\to\infty}\|u_{n}-x\|=0$
+\end_inset
+
+.
+ Damit 
+\begin_inset Formula $x\in\overline{U}=U$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $U\subset N\subset U$
+\end_inset
+
+ und 
+\begin_inset Formula $U=N$
+\end_inset
+
+.
+ Nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:12"
+
+\end_inset
+
+ ist 
+\begin_inset Formula $\|\cdot\|_{q}$
+\end_inset
+
+ eine Norm auf 
+\begin_inset Formula $X/U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ Cauchy-Folge in 
+\begin_inset Formula $X$
+\end_inset
+
+ bezüglich 
+\begin_inset Formula $\|\cdot\|_{d}$
+\end_inset
+
+.
+ Wähle Teilfolge 
+\begin_inset Formula $(x_{n_{k}})$
+\end_inset
+
+ von 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ mit 
+\begin_inset Formula $\forall_{k\in\mathbb{N}}$
+\end_inset
+
+: 
+\begin_inset Formula $\|x_{n_{k}}-x_{n_{k+1}}\|_{d}<2^{-k}$
+\end_inset
+
+.
+ Wir konstruieren Folge 
+\begin_inset Formula $(u_{k})$
+\end_inset
+
+ in 
+\begin_inset Formula $U$
+\end_inset
+
+, so dass 
+\begin_inset Formula $\forall_{k\in\mathbb{N}}$
+\end_inset
+
+: 
+\begin_inset Formula $\|x_{n_{k}}+u_{k}-(x_{n_{k+1}}+u_{k+1})\|<2^{-k}$
+\end_inset
+
+.
+ Wähle 
+\begin_inset Formula $u_{1}=0$
+\end_inset
+
+.
+ Haben wir 
+\begin_inset Formula $u_{1},...,u_{k}$
+\end_inset
+
+ in 
+\begin_inset Formula $U$
+\end_inset
+
+ für 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+ gewählt, so ist 
+\begin_inset Formula $2^{-k}>\|x_{n_{k}}-x_{n_{k+1}}\|_{d}=\|x_{n_{k}}+u_{k}-x_{n_{k+1}}\|_{d}=\inf\{\|(x_{n_{k}}+u_{k})-(x_{n_{k+1}}+u)\||u\in U\}$
+\end_inset
+
+.
+ Somit haben wir 
+\begin_inset Formula $\widetilde{u}\in U$
+\end_inset
+
+ mit 
+\begin_inset Formula $2^{-k}>\|(x_{n_{k}}+u_{k})-(x_{n_{k+1}}+\widetilde{u})\|$
+\end_inset
+
+.
+ Setze 
+\begin_inset Formula $u_{k+1}=\widetilde{u}$
+\end_inset
+
+.
+ Wir erhalten induktiv die gesuchte Folge 
+\begin_inset Formula $(u_{k})$
+\end_inset
+
+ in 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ Wir definieren die Folge 
+\begin_inset Formula $(z_{k})$
+\end_inset
+
+ durch 
+\begin_inset Formula $z_{k}=x_{n_{k}}+u_{k}$
+\end_inset
+
+.
+ Da für 
+\begin_inset Formula $m,k\in\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $m>k$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\|z_{m}-z_{k}\|\leq\sum_{j=k}^{m-1}\|z_{j}-z_{j+1}\|<\sum_{j=k}^{m-1}2^{-j}$
+\end_inset
+
+ und die Reihe 
+\begin_inset Formula $\sum_{j=1}^{\infty}2^{-j}$
+\end_inset
+
+ konvergiert, ist 
+\begin_inset Formula $(z_{k})$
+\end_inset
+
+ Cauchy-Folge in 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $X$
+\end_inset
+
+ vollständig ist, konvergiert 
+\begin_inset Formula $(z_{k})$
+\end_inset
+
+ gegen 
+\begin_inset Formula $\widetilde{z}\in X$
+\end_inset
+
+ bezüglich 
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+.
+ Da für alle 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula 
+\[
+\|\widetilde{z}-x_{n_{k}}\|_{d}\leq\underbrace{\|\widetilde{z}-z_{k}\|_{d}}_{\leq\|\widetilde{z}-z_{k}\|}+\overbrace{\|\underbrace{z_{k}-x_{n_{k}}}_{x_{n_{k}}+u_{k}-x_{n_{k}}=u_{k}}\|_{d}}^{=0}
+\]
+
+\end_inset
+
+folgt 
+\begin_inset Formula $\|\widetilde{z}-x_{n_{k}}\|_{d}\to0$
+\end_inset
+
+ für 
+\begin_inset Formula $k\to\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sei 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ gegeben.
+ Wähle 
+\begin_inset Formula $K\in\mathbb{N}$
+\end_inset
+
+ so, dass 
+\begin_inset Formula $\forall_{k>K}$
+\end_inset
+
+: 
+\begin_inset Formula $\|\widetilde{z}-x_{n_{k}}\|_{d}<\frac{\varepsilon}{2}$
+\end_inset
+
+ und 
+\begin_inset Formula 
+\[
+\forall_{m,l>\underbrace{\min\{n_{k}\in\mathbb{N}|k>K\}}_{n_{k+1}}}:\|x_{l}-x_{m}\|<\frac{\varepsilon}{2}.
+\]
+
+\end_inset
+
+Dann gilt 
+\begin_inset Formula $\forall_{m\geq\min\{n_{k}\in\mathbb{N}|k>K\}}:\|\widetilde{z}-x_{m}\|_{d}\leq\|\widetilde{z}-x_{n_{k+1}}\|_{d}+\|x_{n_{k+1}}-x_{m}\|_{d}<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $\|x_{k}-\widetilde{z}\|_{d}\to0$
+\end_inset
+
+ für 
+\begin_inset Formula $k\to\infty$
+\end_inset
+
+.
+ Damit ist 
+\begin_inset Formula $X$
+\end_inset
+
+ bezüglich 
+\begin_inset Formula $\|\cdot\|_{d}$
+\end_inset
+
+ vollständig.
+ Nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:12"
+
+\end_inset
+
+ ist 
+\begin_inset Formula $X/U$
+\end_inset
+
+ vollständig.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+Wir kommen nun zu den 
+\begin_inset Formula $L^{p}$
+\end_inset
+
+-Räumen.
+ Dazu wiederholen wir zunächst ein paar Fakten aus der Integrationstheorie.
+ Ist 
+\begin_inset Formula $Q=[a_{1},b_{1}]\times[a_{2},b_{2}]\times\cdots\times[a_{n},b_{n}]\subset\mathbb{R}^{n}$
+\end_inset
+
+ ein nicht-leerer Quader, so definiert man das Volumen 
+\begin_inset Formula $\vol(Q):=\prod_{j=1}^{n}(b_{j}-a_{j})$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+ definiert man das äußere Lebesgue-Maß durch 
+\begin_inset Formula 
+\[
+\lambda^{\alpha}(M)=\inf\{\sum_{j=1}^{\infty}\vol(Q_{j})|Q_{j}\text{ nicht-leere Quader im \ensuremath{\mathbb{R}^{n}}},M\subset\bigcup_{j=1}^{\infty}Q_{j}\}.
+\]
+
+\end_inset
+
+Wir nennen 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+ Lebesgue-Messbar, falls 
+\begin_inset Formula 
+\[
+\forall_{D\subset\mathbb{R}^{n}}:\lambda^{*}(D)=\lambda^{*}(M\cap D)+\lambda^{*}((\mathbb{R}^{n}\setminus M)
+\]
+
+\end_inset
+
+Ist 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+ Lebesgue-messbar, so definieren wir das Lebesgue-Maß von 
+\begin_inset Formula $M$
+\end_inset
+
+ als 
+\begin_inset Formula $\lambda(M):=\lambda^{A}(M)$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Section
 Übungsblätter
 \end_layout

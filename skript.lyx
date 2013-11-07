@@ -5781,6 +5781,10 @@ f_{n}(m)=\begin{cases}
  nicht vollständig (nach Satz 1).
 \end_layout
 
+\begin_layout Subsection
+Übungsblatt 2
+\end_layout
+
 \begin_layout Subsubsection
 Aufgabe 2.1
 \end_layout
@@ -6394,6 +6398,577 @@ Damit ist
 \end_inset
 
  nicht äquivalent sind.
+\end_layout
+
+\begin_layout Subsection
+Übungsblatt 3
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 3.1
+\end_layout
+
+\begin_layout Standard
+Wir betrachten zunächst den Fall 
+\begin_inset Formula $a=-1$
+\end_inset
+
+, 
+\begin_inset Formula $b=1$
+\end_inset
+
+.
+ Wir definieren 
+\begin_inset Formula $f:\mathbb{R}\to\mathbb{R}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f(x)=\begin{cases}
+|x| & |x|>1,\\
+\frac{1}{2}x^{2}+\frac{1}{2} & |x|\leq1.
+\end{cases}
+\]
+
+\end_inset
+
+Es ist 
+\begin_inset Formula $f\in C^{1}(\mathbb{R})$
+\end_inset
+
+.
+ Wir definieren 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ die Funktionen 
+\begin_inset Formula $f_{n}:[-1,1]\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $f_{n}(x):=\frac{1}{n}f(nx)$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $C^{1}([-1,1])$
+\end_inset
+
+.
+ 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ konvergiert in 
+\begin_inset Formula $(C([-1,1]),\|\cdot\|_{\infty})$
+\end_inset
+
+ gegen 
+\begin_inset Formula $g(x)=|x|$
+\end_inset
+
+, denn 
+\begin_inset Formula $\|f_{n}-g\|_{\infty}=\sup_{x\in[-1,1]}|f_{n}(x)-g(x)|$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+ & = & \max\{\underbrace{\sup_{x\in[-1,1]\setminus[-\frac{1}{n},\frac{1}{n}]}|\overbrace{f_{n}(x)}^{=\frac{1}{n}|nx|=|x|}-g(x)|}_{=0},\sup_{x\in[-\frac{1}{n},\frac{1}{n}]}|f_{n}(x)-g(x)|\}\\
+ & = & \sup_{x\in[-\frac{1}{n},\frac{1}{n}]}\left|\frac{1}{n}\left(\frac{1}{2}(nx)^{2}+\frac{1}{2}\right)-\left|x\right|\right|\\
+ & \leq & \frac{1}{n}+\underbrace{\sup_{x\in[-\frac{1}{n},\frac{1}{n}]}\left|\frac{1}{2}n\overbrace{x^{2}}^{\leq\frac{1}{n^{2}}}+\frac{1}{2n}\right|}_{\leq2\frac{1}{2n}=\frac{1}{n}}\\
+ & \leq & \frac{2}{n}\to0
+\end{eqnarray*}
+
+\end_inset
+
+für 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ Cauchy-Folge in 
+\begin_inset Formula $(C^{1}([-1,1]),\|\cdot\|_{\infty})$
+\end_inset
+
+.
+ Aber 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ nicht konvergent in 
+\begin_inset Formula $C^{1}([-1,1])$
+\end_inset
+
+, da für einen Grenzwert 
+\begin_inset Formula $\widetilde{f}$
+\end_inset
+
+ in 
+\begin_inset Formula $C^{1}([-1,1])$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\widetilde{f}=g$
+\end_inset
+
+ gelten müsste.
+ Für 
+\begin_inset Formula $a,b\in\mathbb{R}$
+\end_inset
+
+ sei 
+\begin_inset Formula $h:[a,b]\to[-1,1]$
+\end_inset
+
+ durch 
+\begin_inset Formula $h(x)=2\frac{x-a}{b-a}-1$
+\end_inset
+
+ definiert.
+ Da 
+\begin_inset Formula $\|f_{n}\circ h\|_{\infty}=\|f_{n}\|_{\infty}$
+\end_inset
+
+ ist 
+\begin_inset Formula $(f_{n}\circ h)_{n\in\mathbb{N}}$
+\end_inset
+
+ Cauchy-Folge in 
+\begin_inset Formula $(C^{1}([a,b]),\|\cdot\|_{\infty})$
+\end_inset
+
+ die nicht konvergiert (da Grenzwert 
+\begin_inset Formula $\widetilde{f}\in C^{1}([a,b])$
+\end_inset
+
+ durch 
+\begin_inset Formula $\widetilde{f}\circ h^{-1}$
+\end_inset
+
+ einen Grenzwert von 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $C^{1}([-1,1])$
+\end_inset
+
+ liefert).
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 3.2
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $a,b\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $a<b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\|\cdot\|_{1}$
+\end_inset
+
+ ist Norm:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $f\in C([a,b])$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda\in\mathbb{K}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\|\lambda f\|_{1}=\int_{a}^{b}|\lambda f(s)|ds=\int_{a}^{b}|\lambda||f(s)|ds=|\lambda|\int_{a}^{b}|f(s)|ds=|\lambda|\|f\|_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Seien 
+\begin_inset Formula $f,g\in C([a,b])$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\|f+g\|_{1}=\int_{a}^{b}|f(s)+g(s)|ds\leq\int_{a}^{b}|f(s)+g(s)|ds=\|f\|_{1}+\|g\|_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $f\in C([a,b])$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|f\|_{1}=0$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $\int_{a}^{b}|f(s)|ds=0$
+\end_inset
+
+.
+ Nach Ergebnissen aus der Analysis für stetige Funktionen folgt, dass 
+\begin_inset Formula $f$
+\end_inset
+
+ konstant 
+\begin_inset Formula $0$
+\end_inset
+
+ auf 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ ist.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(C([a,b]),\|\cdot\|_{1})$
+\end_inset
+
+ ist nicht vollständig.
+ Betrachte zunächst 
+\begin_inset Formula $a=0$
+\end_inset
+
+, 
+\begin_inset Formula $b=2$
+\end_inset
+
+.
+ Definiere für 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $f_{n}:[0,2]\to\mathbb{K}$
+\end_inset
+
+ durch 
+\begin_inset Formula 
+\[
+f_{n}(x)=\begin{cases}
+x & x\in[0,1],\\
+1 & x\in[1,2].
+\end{cases}
+\]
+
+\end_inset
+
+Dann ist 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ Cauchy-Folge bezüglich 
+\begin_inset Formula $\|\cdot\|_{1}$
+\end_inset
+
+, denn 
+\begin_inset Formula $\|f_{n}-f_{m}\|_{1}=\int_{0}^{1}|x^{n}-x^{m}|dx\leq\left[\frac{1}{n+1}x^{n+1}+\frac{1}{m+1}x^{m+1}\right]_{0}^{1}=\frac{1}{n+1}+\frac{1}{m+1}\to0$
+\end_inset
+
+ für 
+\begin_inset Formula $n,m\to\infty$
+\end_inset
+
+.
+ Angenommen 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ hat Grenzwert 
+\begin_inset Formula $g\in C([0,2])$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underbrace{\|f_{n}-g\|_{1}}_{\to_{n\to\infty}0} & = & \int_{0}^{1}|f_{n}(x)-g(x)|dx+\int_{1}^{2}|f_{n}(x)-g(x)|dx\\
+ & = & \int_{0}^{1}|x^{n}-g(x)|dx+\int_{1}^{2}|1-g(x)|dx\\
+ & = & \underbrace{\int_{0}^{1}|x^{n}-g(x)|dx}_{\geq0\ \text{und}\ \to_{n\to\infty}0}+\underbrace{\int_{1}^{2}|1-g(x)|dx}_{\geq0\ \text{und}\ \to_{n\to\infty}0}
+\end{eqnarray*}
+
+\end_inset
+
+und also 
+\begin_inset Formula $\|1-g(x)|_{[1,2]}\|_{1}=\int_{1}^{2}|1-g(x)|dx=0$
+\end_inset
+
+ und damit 
+\begin_inset Formula $g(x)|_{[1,2]}\equiv1$
+\end_inset
+
+.
+ Mit der 
+\begin_inset Formula $\|\cdot\|_{1}$
+\end_inset
+
+ Norm auf 
+\begin_inset Formula $C([0,1])$
+\end_inset
+
+ folgt 
+\begin_inset Formula 
+\[
+\int_{0}^{1}|x^{n}-g(x)|dx\geq\left|\underbrace{\int_{0}^{1}|x^{n}|dx}_{\to_{n\to\infty}0}-\int_{0}^{1}|g(x)|dx\right|.
+\]
+
+\end_inset
+
+Es ergibt sich 
+\begin_inset Formula $\|g|_{[0,1]}\|_{1}=0$
+\end_inset
+
+ und also 
+\begin_inset Formula $g(x)=0$
+\end_inset
+
+ für alle 
+\begin_inset Formula $x\in[0,1]$
+\end_inset
+
+.
+ Widerspruch.
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 3.3
+\end_layout
+
+\begin_layout Standard
+Nach Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:3"
+
+\end_inset
+
+ gibt es eine Folge 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ so dass für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\|x_{1}\|=1$
+\end_inset
+
+ und 
+\begin_inset Formula $\forall_{u\in U}:\|u-x_{n}\|>1-\frac{1}{n}$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $S=\{x\in X|\|x\|=1\}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ ist abgeschlossen und beschränkt.
+ Da 
+\begin_inset Formula $X$
+\end_inset
+
+ endlich dimensional ist, ist 
+\begin_inset Formula $S$
+\end_inset
+
+ kompakt ist.
+ Somit gibt es eine konvergente Teilfolge 
+\begin_inset Formula $(y_{k})$
+\end_inset
+
+ von 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ und Folge 
+\begin_inset Formula $\delta_{k}\in(0,1)$
+\end_inset
+
+ mit 
+\begin_inset Formula $\forall_{u\in U}:\|u-y_{k}\|>1-\delta_{k}$
+\end_inset
+
+ und 
+\begin_inset Formula $\delta_{k}\to0$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $y=\lim_{k\to\infty}y_{k}$
+\end_inset
+
+.
+ Ist 
+\begin_inset Formula $u\in U$
+\end_inset
+
+, so ist 
+\begin_inset Formula $\|u-y\|=\lim_{k\to\infty}\|u-y_{k}\|\geq\lim_{k\to\infty}1-\delta_{k}=1$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $1\leq\inf\{\|u-y\||u\in U\}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $\|0-y\|=\|y\|=\lim_{k\to\infty}\|y_{k}\|=1$
+\end_inset
+
+ folgt die Gleichheit und 
+\begin_inset Formula $\|y\|=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 3.4
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $e_{j}\in d$
+\end_inset
+
+, 
+\begin_inset Formula $e_{j}:\mathbb{N}\to\mathbb{K}$
+\end_inset
+
+ definiert durch 
+\begin_inset Formula 
+\[
+e_{j}(m)=\begin{cases}
+1 & j=m,\\
+0 & j\neq m.
+\end{cases}
+\]
+
+\end_inset
+
+Es ist 
+\begin_inset Formula $d=\span\{e_{j}|j\in\mathbb{N}\}$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $f\in c_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $f:\mathbb{N}\to\mathbb{K}$
+\end_inset
+
+.
+ Definiere für 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ die Folge 
+\begin_inset Formula $f_{n}:\mathbb{N}\to\mathbb{K}$
+\end_inset
+
+ durch 
+\begin_inset Formula 
+\[
+f_{n}(m)=\begin{cases}
+f(m) & m\leq n,\\
+0 & m>n.
+\end{cases}
+\]
+
+\end_inset
+
+Dann ist 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $\|f-f_{n}\|_{\infty}=\sup_{m\in\mathbb{N}}|f(m)-f_{n}(m)|=\sup_{m>n}|f(m)|\to0$
+\end_inset
+
+ für 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+ ist 
+\begin_inset Formula $f$
+\end_inset
+
+ Grenzwert von 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $(c_{0},\|\cdot\|_{\infty})$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $c_{0}=\overline{d}=\overline{\span\{e_{j}|j\in\mathbb{N}\}}$
+\end_inset
+
+.
+ Somit ist 
+\begin_inset Formula $c_{0}$
+\end_inset
+
+ separabel.
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 3.5
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body

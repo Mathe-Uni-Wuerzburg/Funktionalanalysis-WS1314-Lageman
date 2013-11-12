@@ -5321,6 +5321,793 @@ Ist
 .
 \end_layout
 
+\begin_layout Remark
+Es gilt:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Offene und abgeschlossene Mengen sind Lebesgue-messbar.
+\end_layout
+
+\begin_layout Enumerate
+Endliche Schnitte, Komplemente und abzählbare Vereinigungen Lebesgue-messbarer
+ Mengen sind Lebesgue-messbar.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Wir nennen eine Funktion 
+\begin_inset Formula $f:M\to\mathbb{K}$
+\end_inset
+
+ mit 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+ 
+\emph on
+Lebesgue-messbar
+\emph default
+, falls für jede offene Menge 
+\begin_inset Formula $U\subset\mathbb{K}$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula $f^{-1}(U)$
+\end_inset
+
+ Lebesgue-messbar ist.
+ Ist 
+\begin_inset Formula $f:M\to\mathbb{K}$
+\end_inset
+
+ Lebesgue-messbar, so ist 
+\begin_inset Formula $M=f^{-1}(\mathbb{K})$
+\end_inset
+
+ Lebesgue-messbar.
+\end_layout
+
+\begin_layout Remark
+Es gilt:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Stetige Funktionen sind stets Lebesgue-messbar.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+ messbar.
+ Dann ist 
+\begin_inset Formula $\mathcal{M}:=\{f:M\to\mathbb{K}|f\:\text{Lebesgue-messbar}\}$
+\end_inset
+
+ ein Unterraum des Raumes der Funktionen 
+\begin_inset Formula $M\to\mathbb{K}$
+\end_inset
+
+.
+ Desweiteren sind Produkte Lebesgue-messbarer Funktionen 
+\begin_inset Formula $M\to\mathbb{K}$
+\end_inset
+
+ wieder Lebesgue-messbar.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Wir nennen eine Lebesgue-messbare Teilmenge 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+ 
+\emph on
+Lebesgue-Nullmenge
+\emph default
+ falls 
+\begin_inset Formula $\lambda(M)=0$
+\end_inset
+
+.
+ Jede Teilmenge einer Lebesgue-Nullmenge ist eine Lebesgue-Nullmenge.
+\end_layout
+
+\begin_layout Standard
+Im Folgenden meinten wir mit 
+\begin_inset Quotes eld
+\end_inset
+
+messbar
+\begin_inset Quotes erd
+\end_inset
+
+ stets 
+\begin_inset Quotes eld
+\end_inset
+
+Lebesgue-messbar
+\begin_inset Quotes erd
+\end_inset
+
+ und mit 
+\begin_inset Quotes eld
+\end_inset
+
+Nullmenge
+\begin_inset Quotes erd
+\end_inset
+
+ stets 
+\begin_inset Quotes eld
+\end_inset
+
+Lebesgue-Nullmenge
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sind 
+\begin_inset Formula $A_{1},...,A_{m}\subset\mathbb{R}^{n}$
+\end_inset
+
+ messbare Mengen, 
+\begin_inset Formula $c_{1},...,c_{m}\in\mathbb{K}$
+\end_inset
+
+ und 
+\begin_inset Formula $\chi_{A_{j}}$
+\end_inset
+
+ die charakteristische Funktion der Menge 
+\begin_inset Formula $A_{j}$
+\end_inset
+
+, so setzen wir 
+\begin_inset Formula 
+\[
+\int_{\mathbb{R}^{n}}\sum_{j=1}^{m}c_{j}\chi_{A_{j}}d\lambda=\sum_{j=1}^{m}c_{j}\lambda(A_{j})
+\]
+
+\end_inset
+
+wobei wir die Rechenregeln 
+\begin_inset Formula $\infty\pm c:=\infty$
+\end_inset
+
+ für 
+\begin_inset Formula $c\in\mathbb{C}\cup\{\infty\}$
+\end_inset
+
+, 
+\begin_inset Formula $\infty\cdot0=0\cdot\infty=0$
+\end_inset
+
+, 
+\begin_inset Formula $\infty\cdot c=c\cdot\infty=\infty$
+\end_inset
+
+ für 
+\begin_inset Formula $c\in(\mathbb{C}\setminus\{0\})\cup\{\infty\}$
+\end_inset
+
+ und die 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ paarweise disjunkt sind.
+ Wir nennen eine Funktion 
+\begin_inset Formula $f:M\to\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+ messbar, 
+\emph on
+Lebesgue-integrierbar
+\emph default
+, falls es eine Folge von Funktionen 
+\begin_inset Formula $\varphi_{k}:\mathbb{R}^{n}\to\mathbb{K}$
+\end_inset
+
+ gibt mit 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\varphi_{k}(x)=\sum_{j=1}^{m_{k}}c_{j,k}\chi_{A_{j,k}}(x)$
+\end_inset
+
+ mit 
+\begin_inset Formula $A_{j,k}\subset M$
+\end_inset
+
+ messbar und 
+\begin_inset Formula $A_{j,k}=\varphi_{k}^{-1}(c_{j,k})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall_{\varepsilon>0}\exists_{N\in\mathbb{N}}\forall_{k.l>N}$
+\end_inset
+
+: 
+\begin_inset Formula $\int_{\mathbb{R}^{n}}|\varphi_{k}-\varphi_{l}|d\lambda<\varepsilon$
+\end_inset
+
+.
+ Der Integrant lässt sich als 
+\begin_inset Formula $\sum_{j=1}^{r_{k.l}}b_{j,kl}\chi_{B_{j,kl}}$
+\end_inset
+
+ mit 
+\begin_inset Formula $B_{j,kl}$
+\end_inset
+
+ messbar, 
+\begin_inset Formula $B_{j,kl}=\{x\in\mathbb{R}^{n}|\:|\varphi_{k}(x)-\varphi_{l}(x)|=b_{j,kl}\}$
+\end_inset
+
+, 
+\begin_inset Formula $b_{j,kl}\neq b_{i,kl}$
+\end_inset
+
+ für 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+ schreiben.
+\end_layout
+
+\begin_layout Itemize
+es gibt Nullmenge 
+\begin_inset Formula $N\subset M$
+\end_inset
+
+ so dass 
+\begin_inset Formula $\forall_{x\in M\setminus N}$
+\end_inset
+
+: 
+\begin_inset Formula $\lim_{k\to\infty}\varphi_{k}(x)=f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ist 
+\begin_inset Formula $f$
+\end_inset
+
+ eine Lebesgue-integrierbar, so ist 
+\begin_inset Formula $f$
+\end_inset
+
+ messbar und wir setzen 
+\begin_inset Formula 
+\[
+\int_{M}f\: d\lambda:=\lim_{k\to\infty}\int_{\mathbb{R}^{n}}\varphi_{k}\: d\lambda.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Sei 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+ messbar, 
+\begin_inset Formula $M\neq\emptyset$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $1\leq p<\infty$
+\end_inset
+
+ sei 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{L}^{p}(M) & = & \{f:M\to\mathbb{K}|f\:\text{messbar},\int_{M}|f|^{p}\: d\lambda<\infty\},\\
+\mathcal{L}^{\infty}(M) & = & \{f:M\to\mathbb{K}|f\:\text{messbar},\\
+ &  & \text{es gibt Nullmenge \ensuremath{N_{f}\subset M} und \ensuremath{c\in\mathbb{R}} mit \ensuremath{\forall_{x\in M\setminus N_{f}}:}\ensuremath{|f(x)|<c}}\}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Für 
+\begin_inset Formula $1\leq p<\infty$
+\end_inset
+
+ und 
+\begin_inset Formula $f\in\mathcal{L}^{p}(M)$
+\end_inset
+
+ definieren wir 
+\begin_inset Formula 
+\[
+\|f\|_{p}=\left(\int_{M}|f|^{p}\: d\lambda\right)^{\frac{1}{p}}
+\]
+
+\end_inset
+
+und für 
+\begin_inset Formula $f\in\mathcal{L}^{\infty}(M)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\|f\|_{\infty}=\inf_{N\subset M}\sup_{x\in M\setminus N}|f(x)|
+\]
+
+\end_inset
+
+ mit 
+\begin_inset Formula $N$
+\end_inset
+
+ Nullmenge.
+ Wir zeigen nun, dass 
+\begin_inset Formula $\mathcal{L}^{p}(M)$
+\end_inset
+
+ ein vollständiger Vektorraum bezüglich der 
+\begin_inset Formula $\|\cdot\|_{p}$
+\end_inset
+
+ Halbnorm ist.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:14"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:hoeldische-ungleichung-Lp"
+
+\end_inset
+
+(Höldische Ungleichung) Sei 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+ messbar und 
+\begin_inset Formula $M\neq\emptyset$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $1<p<\infty$
+\end_inset
+
+ und 
+\begin_inset Formula $q=\frac{p}{p-1}$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $f\in\mathcal{L}^{p}(M)$
+\end_inset
+
+ und 
+\begin_inset Formula $g\in\mathcal{L}^{q}(M)$
+\end_inset
+
+ ist 
+\begin_inset Formula $f\cdot g\in\mathcal{L}^{1}(M)$
+\end_inset
+
+ mit 
+\begin_inset Formula 
+\begin{equation}
+\|f\cdot g\|_{1}\leq\|f\|_{p}\|g\|_{q}.\label{eq:thm-14-1}
+\end{equation}
+
+\end_inset
+
+Für 
+\begin_inset Formula $f\in\mathcal{L}^{1}(M)$
+\end_inset
+
+ und 
+\begin_inset Formula $g\in\mathcal{L}^{\infty}(M)$
+\end_inset
+
+ ist 
+\begin_inset Formula $f\cdot g\in\mathcal{L}^{1}(M)$
+\end_inset
+
+ mit 
+\begin_inset Formula 
+\begin{equation}
+\|f\cdot g\|_{1}\leq\|f\|_{1}\|g\|_{\infty}.\label{eq:thm-14-2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Nach Bemerkung zu messbaren Funktionen ist 
+\begin_inset Formula $f\cdot g$
+\end_inset
+
+ und damit 
+\begin_inset Formula $|f\cdot g|$
+\end_inset
+
+ messbar.
+ In der Übung wird gezeigt, dass für 
+\begin_inset Formula $f\in\mathcal{L}^{p}(M)$
+\end_inset
+
+, 
+\begin_inset Formula $g\in\mathcal{L}^{\frac{p}{p-1}}(M)$
+\end_inset
+
+ gilt 
+\begin_inset Formula 
+\[
+\int_{M}|f\cdot g|\: d\lambda\leq\|f\|_{p}\|g\|_{\frac{p}{p-1}}
+\]
+
+\end_inset
+
+für 
+\begin_inset Formula $1<p<\infty$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $f\in\mathcal{L}^{1}(M)$
+\end_inset
+
+, 
+\begin_inset Formula $g\in\mathcal{L}^{\infty}(M)$
+\end_inset
+
+ wird gezeigt, dass 
+\begin_inset Formula 
+\[
+\int_{M}|f\cdot g|\: d\lambda\leq\|f\|_{1}\|g\|_{\infty}.
+\]
+
+\end_inset
+
+Damit folgt 
+\begin_inset Formula $f\cdot g\in\mathcal{L}^{1}(M)$
+\end_inset
+
+ und (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:thm-14-1"
+
+\end_inset
+
+) bzw.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:thm-14-2"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:15"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:minkowskische-ungleichung-Lp"
+
+\end_inset
+
+(Minkowskische Ungleichung) Sei 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+ messbar, 
+\begin_inset Formula $M\neq\emptyset$
+\end_inset
+
+, und 
+\begin_inset Formula $p\in[1,\infty)\cup\{\infty\}$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $f,g\in\mathcal{L}^{p}(M)$
+\end_inset
+
+ ist 
+\begin_inset Formula $f+g\in\mathcal{L}^{p}(M)$
+\end_inset
+
+ und es gilt 
+\begin_inset Formula 
+\begin{equation}
+\|f+g\|_{p}\leq\|f\|_{g}+\|g\|_{p}.\label{eq:thm-15-3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f+g$
+\end_inset
+
+ ist messbar.
+ Die Ungleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:thm-15-3"
+
+\end_inset
+
+) wird in der Übung gezeigt.
+ Somit ist 
+\begin_inset Formula $f+g\in\mathcal{L}^{p}(M)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:16"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+ messbar, 
+\begin_inset Formula $M\neq\emptyset$
+\end_inset
+
+ und 
+\begin_inset Formula $p\in[1,\infty)\cup\{\infty\}$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $\mathcal{L}^{p}(M)$
+\end_inset
+
+ ein 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum mit Halbnorm 
+\begin_inset Formula $\|\cdot\|_{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Wir zeigen die Halbnorm-Axiome.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $\mu\in\mathbb{K},f\in\mathcal{L}^{p}(M)$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $\mu\cdot f$
+\end_inset
+
+ messbar und für 
+\begin_inset Formula $p<\infty$
+\end_inset
+
+ gilt 
+\begin_inset Formula 
+\[
+\left(\int_{M}|\mu\cdot f|^{p}\: d\lambda\right)^{\frac{1}{p}}=\left(|\mu|^{p}\int_{M}|f|^{p}\: d\lambda\right)^{\frac{1}{p}}=|\mu|\left(\int_{M}|f|^{p}\: d\lambda\right)^{\frac{1}{p}}=|\mu|\|f\|_{p}.
+\]
+
+\end_inset
+
+Für 
+\begin_inset Formula $p=\infty$
+\end_inset
+
+ gilt mit Nullmengen 
+\begin_inset Formula $N$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\inf_{N\subset M}\sup_{x\in M\setminus N}|\mu f(x)|=|\mu|\inf_{N\subset M}\sup_{x\in M\setminus N}|f(x)|=|\mu|\|f\|_{\infty}.
+\]
+
+\end_inset
+
+Also 
+\begin_inset Formula $\mu\cdot f\in\mathcal{L}^{p}(M)$
+\end_inset
+
+ und 
+\begin_inset Formula $\|\mu\cdot f\|_{p}=|\mu|\|f\|_{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $f,g\in\mathcal{L}^{p}(M)$
+\end_inset
+
+.
+ Nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:15"
+
+\end_inset
+
+ ist 
+\begin_inset Formula $f+g\in\mathcal{L}^{p}(M)$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|f+g\|_{p}\leq\|f\|_{p}+\|g\|_{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{L}^{p}(M)\neq0$
+\end_inset
+
+ da 
+\begin_inset Formula $M\neq\emptyset$
+\end_inset
+
+ ist 
+\begin_inset Formula $f(x)\equiv0$
+\end_inset
+
+ konstant in 
+\begin_inset Formula $\mathcal{L}^{p}(M)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:4"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $M\neq\emptyset$
+\end_inset
+
+, 
+\begin_inset Formula $M$
+\end_inset
+
+ messbar.
+ Für 
+\begin_inset Formula $f\in\mathcal{L}^{\infty}(M)$
+\end_inset
+
+ gilt: Es gibt Nullmenge 
+\begin_inset Formula $N_{f}\subset M$
+\end_inset
+
+, so dass 
+\begin_inset Formula $\|f\|_{\infty}=\sup_{x\in M\setminus N_{f}}|f(x)|$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Definiere 
+\begin_inset Formula $N_{f}:=\bigcup_{k\in\mathbb{N}}A_{k}$
+\end_inset
+
+ mit 
+\begin_inset Formula $A_{k}=\{x\in M:|f(x)|>\|f\|_{\infty}+\frac{1}{k}\}$
+\end_inset
+
+.
+ Zu jedem 
+\begin_inset Formula $A_{k}$
+\end_inset
+
+ gibt es eine Nullmenge 
+\begin_inset Formula $N_{k}\subset M$
+\end_inset
+
+ mit 
+\begin_inset Formula $A_{k}\subset N_{k}$
+\end_inset
+
+, da sonst 
+\begin_inset Formula $\sup_{x\in M\setminus N}|f(x)|>\|f\|_{\infty}+\frac{1}{k}$
+\end_inset
+
+ für alle Nullmengen 
+\begin_inset Formula $N\subset M$
+\end_inset
+
+.
+ Also sind die 
+\begin_inset Formula $A_{k}$
+\end_inset
+
+ alle Nullmengen.
+ Die abzählbare Vereinigung von Nullmengen ist eine Nullmenge, also ist
+ 
+\begin_inset Formula $N_{f}$
+\end_inset
+
+ Nullmenge.
+ Per Definition ist 
+\begin_inset Formula 
+\[
+\sup_{x\in M\setminus N_{f}}|f(x)|=\|f\|_{\infty}.
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Übungsblätter
 \end_layout
@@ -6968,7 +7755,41 @@ Aufgabe 3.5
 \end_layout
 
 \begin_layout Standard
+Sei 
+\begin_inset Formula $f\in C^{r}(\overline{\Omega})$
+\end_inset
 
+.
+ Alle Maxima und Summen beziehen sich auf Multiindizies
+\begin_inset Formula $\alpha\in\mathbb{N}_{0}^{n}$
+\end_inset
+
+ mit 
+\begin_inset Formula $0\leq|\alpha|\leq r$
+\end_inset
+
+.
+ Dann gilt 
+\begin_inset Formula 
+\[
+\max\|D^{\alpha}f\|_{\infty}\leq\sum\|D^{\alpha}f\|_{\infty}.
+\]
+
+\end_inset
+
+Umgekehrt gilt 
+\begin_inset Formula 
+\[
+\sum\|D^{\alpha}f\|_{\infty}\leq(r+1)^{n}\max\|D^{\alpha}f\|_{\infty}.
+\]
+
+\end_inset
+
+Also 
+\begin_inset Formula $\forall_{f\in C^{r}(\overline{\Omega})}:\|f\|_{a}\leq\|f\|\leq(r+1)^{n}\|f\|_{a}$
+\end_inset
+
+.
 \end_layout
 
 \end_body

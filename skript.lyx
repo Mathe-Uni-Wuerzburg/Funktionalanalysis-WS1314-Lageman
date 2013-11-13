@@ -6108,6 +6108,380 @@ Definiere
 
 \end_layout
 
+\begin_layout Remark
+Sei 
+\begin_inset Formula $f:M\to\mathbb{R}$
+\end_inset
+
+ messbar, 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $\forall_{x\in M}$
+\end_inset
+
+: 
+\begin_inset Formula $f(x)\geq0$
+\end_inset
+
+.
+ Dann gibt es monoton wachsende Folge 
+\begin_inset Formula $(\varphi_{k})$
+\end_inset
+
+ von messbaren, nicht negativen Funktionen 
+\begin_inset Formula $\varphi_{k}=\sum_{j=1}^{m_{k}}c_{j,k}\chi_{A_{j,k}}(x)$
+\end_inset
+
+, 
+\begin_inset Formula $A_{i,k}$
+\end_inset
+
+ und 
+\begin_inset Formula $A_{j,k}$
+\end_inset
+
+ paarweise disjunkt und 
+\begin_inset Formula $\forall_{x\in M}$
+\end_inset
+
+: 
+\begin_inset Formula $\lim_{k\to\infty}\varphi_{k}(x)=f(x)$
+\end_inset
+
+ und alle 
+\begin_inset Formula $A_{j,k}\subset M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+Es gibt nun zwei Möglichkeiten:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left(\int_{\mathbb{R}^{n}}\varphi_{k}\: d\lambda\right)$
+\end_inset
+
+ ist beschränkte Folge in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ Nach Satz von Beppo Levi ist 
+\begin_inset Formula $f$
+\end_inset
+
+ Lebesgue-integrierbar mit 
+\begin_inset Formula $\int_{\mathbb{R}^{n}}f\: d\lambda=\lim_{k\to\infty}\int_{\mathbb{R}^{n}}\varphi_{k}\: d\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Eins der 
+\begin_inset Formula $\int_{\mathbb{R}^{n}}\varphi_{k}\: d\lambda$
+\end_inset
+
+ ist 
+\begin_inset Formula $\infty$
+\end_inset
+
+ oder 
+\begin_inset Formula $\lim_{k\to\infty}\int_{\mathbb{R}^{n}}\varphi_{k}\: d\lambda=+\infty$
+\end_inset
+
+.
+ Dies gilt für alle solchen Folgen 
+\begin_inset Formula $(\varphi_{k})$
+\end_inset
+
+.
+ Man kann hier 
+\begin_inset Formula $\int_{M}f\: d\lambda=\infty$
+\end_inset
+
+ definieren.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:17"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+ messbar, 
+\begin_inset Formula $M\neq\emptyset$
+\end_inset
+
+ und 
+\begin_inset Formula $p\in[1,\infty)\cup\{\infty\}$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $\mathcal{L}^{p}(M)$
+\end_inset
+
+ bezüglich der Halbnorm 
+\begin_inset Formula $\|\cdot\|_{p}$
+\end_inset
+
+ vollständig.
+\end_layout
+
+\begin_layout Proof
+Wir unterscheiden zwei Fälle.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Im Fall 
+\begin_inset Formula $p=\infty$
+\end_inset
+
+ sei 
+\begin_inset Formula $(f_{k})$
+\end_inset
+
+ Cauchy-Folge in 
+\begin_inset Formula $\mathcal{L}^{\infty}(M)$
+\end_inset
+
+ bezgülich 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+.
+ Nach Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:4"
+
+\end_inset
+
+ gibt es für 
+\begin_inset Formula $k,m\in\mathbb{N}$
+\end_inset
+
+ eine Nullmenge 
+\begin_inset Formula $N_{k,m}\subset M$
+\end_inset
+
+ mit 
+\begin_inset Formula 
+\[
+\|f_{k}-f_{m}\|_{\infty}=\sup_{x\in M\setminus N_{k,m}}|f_{k}(x)-f_{m}(x)|.
+\]
+
+\end_inset
+
+Setze 
+\begin_inset Formula $N_{q}=\bigcup_{k,m\in\mathbb{N}}N_{k,m}\subset M$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $\mathbb{N}\times\mathbb{N}$
+\end_inset
+
+ abzählbar ist, ist 
+\begin_inset Formula $N_{q}$
+\end_inset
+
+ Nullmenge.
+ Da für alle 
+\begin_inset Formula $k,m\in\mathbb{N}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $N_{k,m}\subset N_{q}$
+\end_inset
+
+ folgt für alle 
+\begin_inset Formula $m,k\in\mathbb{N}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\|f_{k}-f_{m}\|_{\infty} & = & \sup_{x\in M\setminus N_{k,m}}|f_{k}(x)-f_{m}(x)|\geq\sup_{x\in M\setminus N_{q}}|f_{k}(x)-f_{m}(x)|\\
+ & \geq & \inf_{N\subset M}\sup_{x\in M\setminus N}...
+\end{eqnarray*}
+
+\end_inset
+
+....
+ fehlt was ....
+ Also 
+\begin_inset Formula $\forall_{m,k\in\mathbb{N}}:$
+\end_inset
+
+ 
+\begin_inset Formula $\sup_{x\in M\setminus N_{q}}|f_{k}(x)-f_{m}(x)|=\|f_{k}-f_{M}\|_{\infty}$
+\end_inset
+
+.
+ Analog erhält man Nullmenge 
+\begin_inset Formula $N_{u}\subset M$
+\end_inset
+
+ mit 
+\begin_inset Formula $\forall_{k\in\mathbb{N}}$
+\end_inset
+
+: 
+\begin_inset Formula $\sup_{x\in M\setminus N_{u}}|f_{k}(x)|=\|f_{k}\|_{\infty}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $N=N_{q}\cup N_{u}\subset M$
+\end_inset
+
+ Nullmenge ist, gilt mit analogen Argument die Aussagen 
+\begin_inset Formula 
+\begin{eqnarray}
+\forall_{k,m\in\mathbb{N}}:\sup_{x\in M\setminus N}|f_{k}(x)-f_{m}(x)| & = & \|f_{k}-f_{m}\|_{\infty},\label{eq:thm-17-A}\\
+\forall_{k\in\mathbb{N}}:\sup_{x\in M\setminus N}|f_{k}(x)| & = & \|f_{k}\|_{\infty}.\label{eq:thm-17-B}
+\end{eqnarray}
+
+\end_inset
+
+Wegen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:thm-17-B"
+
+\end_inset
+
+) ist 
+\begin_inset Formula $(f_{k}|_{M\setminus N})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $l^{\infty}(M\setminus N)$
+\end_inset
+
+.
+ Wegen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:thm-17-A"
+
+\end_inset
+
+) ist 
+\begin_inset Formula $(f_{k}|_{M\setminus N})$
+\end_inset
+
+ Cauchy-Folge in 
+\begin_inset Formula $l^{\infty}(M\setminus N)$
+\end_inset
+
+ bezüglich der Supremumsnorm.
+ Damit konvergiert 
+\begin_inset Formula $(f_{k}|_{M\setminus N})$
+\end_inset
+
+ gegen 
+\begin_inset Formula $f:M\setminus N\to\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $f\in l^{\infty}(M\setminus N)$
+\end_inset
+
+ bezüglich der Supremumsnorm.
+ Sei 
+\begin_inset Formula $\widetilde{f}:M\to\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\widetilde{f}(x)=\begin{cases}
+f(x) & (x\in M\setminus N)\\
+0 & (x\in N)
+\end{cases}
+\]
+
+\end_inset
+
+Da 
+\begin_inset Formula $\widetilde{f}$
+\end_inset
+
+ beschränkt, ist 
+\begin_inset Formula $\widetilde{f}\in\mathcal{L}^{\infty}(M)$
+\end_inset
+
+.
+ Weiterhin gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\lim_{k\to\infty}\|f_{k}-\widetilde{f}\|_{\infty} & \leq & \lim_{k\to\infty}\sup_{x\in M\setminus N}|f_{k}(x)-\widetilde{f}(x)|\\
+ & = & \lim_{k\to\infty}\underbrace{\|f_{k}|_{M\setminus N}-f\|_{\infty}}_{\text{Supremumgsnorm auf }l^{\infty}(M\setminus N)}=0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Im Fall 
+\begin_inset Formula $1\leq p<\infty$
+\end_inset
+
+sei 
+\begin_inset Formula $(f_{k})$
+\end_inset
+
+ eine Cauchy-Folge in 
+\begin_inset Formula $\mathcal{L}^{p}(M)$
+\end_inset
+
+.
+ Wähle Teilfolge 
+\begin_inset Formula $(f_{k_{l}})$
+\end_inset
+
+ von 
+\begin_inset Formula $(f_{k})$
+\end_inset
+
+ mit 
+\begin_inset Formula $\forall_{l\in\mathbb{N}}:\|f_{k_{l+1}}-f_{k_{l}}\|_{p}<2^{-l}$
+\end_inset
+
+.
+ Wir definieren Folgen 
+\begin_inset Formula $(g_{l})$
+\end_inset
+
+ und 
+\begin_inset Formula $(h_{m})$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{L}^{p}(M)$
+\end_inset
+
+ durch 
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Übungsblätter
 \end_layout

@@ -1441,7 +1441,7 @@ Holdesche Ungleichung
 
 \begin_layout Theorem
 Sind 
-\begin_inset Formula $(x_{n})\in l'$
+\begin_inset Formula $(x_{n})\in l^{1}$
 \end_inset
 
  und 
@@ -1449,11 +1449,11 @@ Sind
 \end_inset
 
 , so ist 
-\begin_inset Formula $(x_{n}y_{n})\in l'$
+\begin_inset Formula $(x_{n}y_{n})\in l^{1}$
 \end_inset
 
  und 
-\begin_inset Formula $\|(x_{n}y_{n})\|_{'}\leq\|(x_{n})\|_{'}\|(y_{n})\|_{\infty}$
+\begin_inset Formula $\|(x_{n}y_{n})\|_{1}\leq\|(x_{n})\|_{1}\|(y_{n})\|_{\infty}$
 \end_inset
 
 .
@@ -1478,11 +1478,15 @@ Sei
 \end_inset
 
 , so ist 
-\begin_inset Formula $(x_{n}y_{n})\in l'$
+\begin_inset Formula $(x_{n}y_{n})\in l^{1}$
 \end_inset
 
  und 
-\begin_inset Formula $\|(x_{n}y_{n})\|_{'}\leq\|(x_{n})\|_{p}\|(y_{n})\|_{q}$
+\begin_inset Formula 
+\[
+\|(x_{n}y_{n})\|_{1}\leq\|(x_{n})\|_{p}\|(y_{n})\|_{q}
+\]
+
 \end_inset
 
 .
@@ -1495,7 +1499,7 @@ Der Beweis besteht aus zwei Teilen.
 \begin_deeper
 \begin_layout Enumerate
 Es gilt 
-\begin_inset Formula $\underbrace{\sum_{n=1}^{\infty}|x_{n}y_{n}}_{=\|(x_{n}y_{n})\|_{'}}\leq\sum_{n=1}^{\infty}|x_{n}|\|(y_{n})\|_{\infty}=\|(y_{n})\|_{\infty}\sum_{n=1}^{\infty}|x_{n}|=\|(y_{n})\|_{\infty}\|(x_{n})\|_{'}<\infty$
+\begin_inset Formula $\underbrace{\sum_{n=1}^{\infty}|x_{n}y_{n}|}_{=\|(x_{n}y_{n})\|_{1}}\leq\sum_{n=1}^{\infty}|x_{n}|\|(y_{n})\|_{\infty}=\|(y_{n})\|_{\infty}\sum_{n=1}^{\infty}|x_{n}|=\|(y_{n})\|_{\infty}\|(x_{n})\|_{1}<\infty$
 \end_inset
 
 .
@@ -1606,7 +1610,7 @@ Sind
 \end_inset
 
  und 
-\begin_inset Formula $\|(x_{n}y_{n})\|_{'}=0$
+\begin_inset Formula $\|(x_{n}y_{n})\|_{1}=0$
 \end_inset
 
 .
@@ -1655,7 +1659,7 @@ Für
 \end_inset
 
  und 
-\begin_inset Formula $q=\frac{p}{q-1}$
+\begin_inset Formula $q=\frac{p}{p-1}$
 \end_inset
 
 .
@@ -1701,33 +1705,38 @@ Nebenrechnung:
 \end_inset
 
  und wir erhalten 
-\begin_inset Formula $\sum_{n=1}^{\infty}|x_{n}||x_{n}+y_{n}|^{p-1}=\|(|x_{n}||x_{n}+y_{n}|^{p-1})\|_{1}\leq\|(x_{n})\|_{p}\|(|x_{n}+y_{n}|^{p-1})\|_{q}=$
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{n=1}^{\infty}|x_{n}||x_{n}+y_{n}|^{p-1} & = & \|(|x_{n}||x_{n}+y_{n}|^{p-1})\|_{1}\\
+ & \leq & \|(x_{n})\|_{p}\|(|x_{n}+y_{n}|^{p-1})\|_{q}\\
+ & = & \left(\sum_{n=1}^{\infty}|x_{n}|^{p}\right)^{\frac{1}{p}}\left(\sum_{n=1}^{\infty}(|x_{n}+y_{n}|^{p-1})^{q}\right)^{\frac{1}{q}}\\
+ & = & \|(x_{n})\|_{p}\left(\|(x_{n}+y_{n})\|_{p}\right)^{p-1}.
+\end{eqnarray*}
+
 \end_inset
 
-
-\begin_inset Formula $\left(\sum_{n=1}^{\infty}|x_{n}|^{p}\right)^{\frac{1}{p}}\left(\sum_{n=1}^{\infty}(|x_{n}+y_{n}|^{p-1})^{q}\right)^{\frac{1}{q}}=\|(x_{n})\|_{p}\left(\|(x_{n}+y_{n})\|_{p}\right)^{p-1}$
-\end_inset
-
-.
- Also 
+Also 
 \begin_inset Formula $\sum_{n=1}^{\infty}|y_{n}||x_{n}+y_{n}|^{p-1}\leq\|(x_{y})\|_{p}\left(\|(x_{n}+y_{n})\|_{p}\right)^{p-1}$
 \end_inset
 
 .
  Somit 
-\begin_inset Formula $\|(x_{n}+y_{n})\|_{p}^{p}=\sum_{n=1}^{\infty}\underbrace{|x_{n}+y_{n}|^{p}}_{=|x_{n}+y_{n}|\cdot|x_{n}+y_{n}|^{p-1}}\leq\sum_{n=1}^{\infty}(|x_{n}|+|y_{n}|)\cdot|x_{n}+y_{n}|^{p-1}$
+\begin_inset Formula 
+\begin{eqnarray*}
+\|(x_{n}+y_{n})\|_{p}^{p} & = & \sum_{n=1}^{\infty}\underbrace{|x_{n}+y_{n}|^{p}}_{=|x_{n}+y_{n}|\cdot|x_{n}+y_{n}|^{p-1}}\\
+ & \leq & \sum_{n=1}^{\infty}(|x_{n}|+|y_{n}|)\cdot|x_{n}+y_{n}|^{p-1}\\
+ & \leq & \sum_{n=1}^{\infty}|x_{n}||x_{n}+y_{n}|^{p-1}+\sum_{n=1}^{\infty}|y_{n}||x_{n}+y_{n}|^{p-1}\\
+ & \leq & \|(x_{n})\|_{p}(\|(x_{n}+y_{n})\|_{p})^{p-1}+\|(y_{n})\|_{p}(\|(x_{n}+y_{n})\|_{p})^{p-1}\\
+ & = & (\|(x_{n})\|_{p}+\|(y_{n})\|_{p})\|(x_{n}+y_{n})\|_{p}^{p-1}.
+\end{eqnarray*}
+
 \end_inset
 
-
-\begin_inset Formula $\leq\sum_{n=1}^{\infty}|x_{n}||x_{n}+y_{n}|^{p-1}+\sum_{n=1}^{\infty}|y_{n}||x_{n}+y_{n}|^{p-1}\leq\|(x_{n})\|_{p}(\|(x_{n}+y_{n})\|_{p})^{p-1}+\|(y_{n})\|_{p}(\|(x_{n}+y_{n})\|_{p})^{p-1}=(\|(x_{n})\|_{p}+\|(y_{n})\|_{p})\|(x_{n}+y_{n})\|_{p}^{p-1}$
-\end_inset
-
-.
- Für 
+Für 
 \begin_inset Formula $\|(x_{n}+y_{n})\|_{p}\neq0$
 \end_inset
 
- liefert Divion die Minkowski-Ungleichung.
+ liefert Division die Minkowski-Ungleichung.
  Für 
 \begin_inset Formula $\|(x_{n}+y_{n})\|_{p}=0$
 \end_inset
@@ -4864,6 +4873,12 @@ Sei
 
 \end_deeper
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:13"
+
+\end_inset
+
 Sei 
 \begin_inset Formula $(X,\|\cdot\|)$
 \end_inset
@@ -5625,7 +5640,7 @@ Sei
 \begin{eqnarray*}
 \mathcal{L}^{p}(M) & = & \{f:M\to\mathbb{K}|f\:\text{messbar},\int_{M}|f|^{p}\: d\lambda<\infty\},\\
 \mathcal{L}^{\infty}(M) & = & \{f:M\to\mathbb{K}|f\:\text{messbar},\\
- &  & \text{es gibt Nullmenge \ensuremath{N_{f}\subset M} und \ensuremath{c\in\mathbb{R}} mit \ensuremath{\forall_{x\in M\setminus N_{f}}:}\ensuremath{|f(x)|<c}}\}
+ &  & \text{es gibt Nullmenge \ensuremath{N_{f}\subset M}und \ensuremath{c\in\mathbb{R}}mit \ensuremath{\forall_{x\in M\setminus N_{f}}:}\ensuremath{|f(x)|<c}}\}
 \end{eqnarray*}
 
 \end_inset
@@ -6444,7 +6459,7 @@ Im Fall
 \begin_inset Formula $1\leq p<\infty$
 \end_inset
 
-sei 
+ sei 
 \begin_inset Formula $(f_{k})$
 \end_inset
 
@@ -6479,9 +6494,1286 @@ sei
 \end_inset
 
  durch 
+\begin_inset Formula $g_{l}:=f_{k_{l+1}}-f_{k_{l}}$
+\end_inset
+
+ für 
+\begin_inset Formula $l\in\mathbb{N}$
+\end_inset
+
+ und 
+\begin_inset Formula $h_{m}=\sum_{l=1}^{m}|g_{l}|$
+\end_inset
+
+ für 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+.
+ Wegen der Minkowski-Ungleichung (Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:minkowskische-ungleichung-Lp"
+
+\end_inset
+
+) gilt für 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+ stets 
+\begin_inset Formula 
+\[
+\int_{M}(h_{m})^{p}\: d\lambda=\left(\|\sum_{j=1}^{m}|g_{l}|\|_{p}\right)^{p}\leq\left(\sum_{l=1}^{m}\|g_{l}\|\right)^{p}\leq\left(\sum_{l=1}^{\infty}2^{-l}\right)^{p}=1.
+\]
+
+\end_inset
+
+Die 
+\begin_inset Formula $(h_{m}^{p})_{m\in\mathbb{N}}$
+\end_inset
+
+ ist eine Folge in 
+\begin_inset Formula $\mathcal{L}^{1}(M)$
+\end_inset
+
+ mit 
+\begin_inset Formula $h_{m}^{p}\leq h_{m+1}^{p}$
+\end_inset
+
+ und 
+\begin_inset Formula $(\int_{M}h_{m}^{p}\: d\lambda)$
+\end_inset
+
+ beschränkt Nach dem Satz von Beppo Levi gibt es eine Funktion 
+\begin_inset Formula $h:M\to[0,\infty)$
+\end_inset
+
+, 
+\begin_inset Formula $h^{p}\in\mathcal{L}^{1}(M)$
+\end_inset
+
+ und Nullmenge 
+\begin_inset Formula $N$
+\end_inset
+
+ so dass 
+\begin_inset Formula $\forall_{x\in M\setminus N}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\lim_{m\to\infty}h_{m}^{p}(x)=h^{p}(x)$
+\end_inset
+
+.
+ Insbesondere 
+\begin_inset Formula $h\in\mathcal{L}^{p}(M)$
+\end_inset
+
+.
+ Die Reihe 
+\begin_inset Formula $\sum_{l=1}^{\infty}g_{l}(x)$
+\end_inset
+
+ konvergiert für 
+\begin_inset Formula $x\in M\setminus N$
+\end_inset
+
+ absolut.
+ Also ist die Funktion 
+\begin_inset Formula $g:M\to\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+g(x)=\begin{cases}
+\sum_{l=1}^{\infty}g_{l}(x) & (x\in M\setminus N),\\
+0 & (x\in N)
+\end{cases}
+\]
+
+\end_inset
+
+wohldefiniert und messbar.
+ Es ist 
+\begin_inset Formula $\left(\sum_{l=1}^{m}g_{l}\right)_{m\in\mathbb{N}}$
+\end_inset
+
+ eine Folge in 
+\begin_inset Formula $\mathcal{L}^{p}(M)$
+\end_inset
+
+ mit 
+\begin_inset Formula $\left|\sum_{l=1}^{m}g_{l}(x)\right|^{p}\leq\left(h(x)\right)^{p}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $x\in M$
+\end_inset
+
+, 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $h^{p}\in\mathcal{L}^{1}(M)$
+\end_inset
+
+ folgt nach dem Konvergenzsatz von Lebesgue, dass 
+\begin_inset Formula $g^{p}\in\mathcal{L}^{1}(M)$
+\end_inset
+
+ mit 
+\begin_inset Formula $\lim_{m\to\infty}\int_{M}\left(\sum_{l=1}^{m}g_{l}\right)^{p}\: d\lambda=\int_{M}g^{p}\: d\lambda.$
+\end_inset
+
+ Also 
+\begin_inset Formula $g\in\mathcal{L}^{p}(M)$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $g\in\mathcal{L}^{p}(M)$
+\end_inset
+
+.
+ Es gilt nun
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Denn für Lebesgue-Integrale ist egal, wie der Integrand auf Nullmengen definiert
+ ist
+\end_layout
+
+\end_inset
+
+: 
+\begin_inset Formula $\|g+f_{k_{1}}-f_{k_{m}}\|_{p}=\|g-\sum_{l=1}^{m}g_{l}\|_{p}=\sum_{l=m+1}^{\infty}g_{l}\|_{p}\leq\sum_{l=m+1}^{\infty}\|g_{l}\|_{p}\leq\sum_{l=m+1}^{\infty}2^{-l}=2^{-m}\to0$
+\end_inset
+
+ für 
+\begin_inset Formula $m\to\infty$
+\end_inset
+
+.
+ Nach analogen Argument zum Beweis von Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:13"
+
+\end_inset
+
+ (Teil 3) folgt 
+\begin_inset Formula $\|f_{k}-(g+f_{k_{1}})\|_{p}\to0$
+\end_inset
+
+ für 
+\begin_inset Formula $k\to\infty$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:18"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+ messbar, 
+\begin_inset Formula $M\neq\emptyset$
+\end_inset
+
+, und 
+\begin_inset Formula $p\in[1,\infty)\cup\{\infty\}$
+\end_inset
+
+.
+ Wir definieren 
+\begin_inset Formula 
+\[
+\mathcal{N}_{p}(M):=\{f:M\to\mathbb{K}|f\text{ messbar},\|f\|_{p}=0\}.
+\]
+
+\end_inset
+
+Auf dem Quotientenraum 
+\begin_inset Formula 
+\[
+L^{p}(M):=\mathcal{L}^{p}(M)/\mathcal{N}^{p}(M)
+\]
+
+\end_inset
+
+ist durch 
+\begin_inset Formula $\|f+\mathcal{N}_{p}(M)\|_{p}:=\|f\|_{p}$
+\end_inset
+
+ eine Norm definiert.
+ Der Raum 
+\begin_inset Formula $(L^{p}(M),\|\cdot\|_{p})$
+\end_inset
+
+ ist ein Banachraum.
+\end_layout
+
+\begin_layout Proof
+Nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:16"
+
+\end_inset
+
+ ist 
+\begin_inset Formula $\|\cdot\|_{p}$
+\end_inset
+
+ Halbnorm auf 
+\begin_inset Formula $\mathcal{L}^{p}(M)$
+\end_inset
+
+.
+ Damit folgt mit Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:12"
+
+\end_inset
+
+ dass 
+\begin_inset Formula $\|f+\mathcal{N}_{p}(M)\|_{p}:=\|f\|_{p}$
+\end_inset
+
+ ist Norm auf 
+\begin_inset Formula $L^{p}(M)$
+\end_inset
+
+.
+ Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:17"
+
+\end_inset
+
+ sagt, dass 
+\begin_inset Formula $\mathcal{L}^{p}(M)$
+\end_inset
+
+ vollständig bezüglich 
+\begin_inset Formula $\|\cdot\|_{p}$
+\end_inset
+
+ ist und damit folgt mit Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:12"
+
+\end_inset
+
+ dass 
+\begin_inset Formula $(L^{p}(M),\|\cdot\|)$
+\end_inset
+
+ Banachraum.
+\end_layout
+
+\begin_layout Definition
+TODO
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:19"
+
+\end_inset
+
+Seien 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ und 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ metrische Räume.
+ Sei 
+\begin_inset Formula $T$
+\end_inset
+
+ eine lineare Abbildung von 
+\begin_inset Formula $X$
+\end_inset
+
+ nach 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ Dann sind äquivalent:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ ist stetig.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ ist stetig in 0.
+\end_layout
+
+\begin_layout Enumerate
+Es existiert ein 
+\begin_inset Formula $M>0$
+\end_inset
+
+, so dass für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\|Tx\|_{Y}\leq\|x\|_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ ist gleichmäßig stetig.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+TODO
+\end_layout
+
+\begin_layout Remark
+Man bezeichnet lineare Operatoren/Funktionale auch als beschränkte Operatoren/Fu
+nktionale.
+\end_layout
+
+\begin_layout Definition
+Seien 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ und 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ metrische Räume und 
+\begin_inset Formula $T$
+\end_inset
+
+ ein stetiger linearer Operator von 
+\begin_inset Formula $X$
+\end_inset
+
+ nach 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ Wir definieren die Operatornorm 
+\begin_inset Formula $\|T\|$
+\end_inset
+
+ von 
+\begin_inset Formula $T$
+\end_inset
+
+ als 
+\begin_inset Formula 
+\[
+\|T\|=\sup\{\frac{\|Tx\|_{Y}}{\|x\|_{X}}\,|\, x\in X,x\neq0\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Seien 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ und 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ metrische Räume.
+ 
+\begin_inset Formula $L(X,Y)=\{T:X\to Y\,|\, T\text{ linear und stetig}\}$
+\end_inset
+
+ ist der Raum der stetigen linearen Operatoren.
+ 
+\begin_inset Formula $L(X):=L(X,X)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $L(X,Y)$
+\end_inset
+
+ hängt von den Normen auf 
+\begin_inset Formula $X$
+\end_inset
+
+ und 
+\begin_inset Formula $Y$
+\end_inset
+
+ ab.
+\end_layout
+
+\begin_layout Theorem
+Seien 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+, 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ und 
+\begin_inset Formula $(Z,\|\cdot\|_{Z})$
+\end_inset
+
+ metrische Räume.
+ Es gilt
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Für 
+\begin_inset Formula $T\in L(X,Y)$
+\end_inset
+
+ ist 
+\begin_inset Formula 
+\begin{eqnarray*}
+\|T\| & = & \sup\{\|Tx\|_{Y}\,|\, x\in X,\|x\|_{X}=1\}\\
+ & = & \sup\{\|Tx\|_{Y}\,|\, x\in X,\|x\|_{X}\leq1\}\\
+ & = & \inf\{M\geq0\,|\,\forall_{x\in X}:\|Tx\|_{Y}\leq M\cdot\|x\|_{X}\}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Für 
+\begin_inset Formula $T$
+\end_inset
+
+ aus 
+\begin_inset Formula $L(X,Y)$
+\end_inset
+
+ ist 
+\begin_inset Formula $\|Tx\|_{Y}\leq\|T\|\cdot\|x\|_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $L(X,Y)$
+\end_inset
+
+ ist versehen mit 
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+ ein normierter Raum.
+\end_layout
+
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $Y$
+\end_inset
+
+ vollständig, so ist 
+\begin_inset Formula $(L(X,Y),\|\cdot\|)$
+\end_inset
+
+ ein Banachraum.
+\end_layout
+
+\begin_layout Enumerate
+Für 
+\begin_inset Formula $T\in L(X,Y)$
+\end_inset
+
+, 
+\begin_inset Formula $T\in L(Y,Z)$
+\end_inset
+
+ ist 
+\begin_inset Formula $R\circ T\in L(X,Z)$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|R\circ T\|\leq\|R\|\cdot\|T\|$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+TODO
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:14"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum.
+ Wir bezeichnen den Dualraum von 
+\begin_inset Formula $(X',\|\cdot\|)$
+\end_inset
+
+ als den 
+\emph on
+Bidualraum
+\emph default
+ kurz 
+\begin_inset Formula $X''$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:30"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum.
+ Die kanonische Abbildung 
+\begin_inset Formula $i:X\to X''$
+\end_inset
+
+ (auch 
+\begin_inset Formula $i_{X}$
+\end_inset
+
+ genannt) von 
+\begin_inset Formula $X$
+\end_inset
+
+ in seinen Bidualraum definiert durch 
+\begin_inset Formula 
+\[
+i(x)(y')=y'(x)
+\]
+
+\end_inset
+
+ist eine lineare Isometrie.
+ Insbesondere ist 
+\begin_inset Formula $i$
+\end_inset
+
+ stetig und injektiv.
+\end_layout
+
+\begin_layout Proof
+Wir zeigen
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $i$
+\end_inset
+
+ ist wohldefiniert.
+ Sei dazu 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ und 
+\begin_inset Formula $y',z'\in X'$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha,\beta\in\mathbb{K}$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $i(x)(\alpha y'+\beta z')=(\alpha y'+\beta z')(x)=\alpha y'(x)+\beta z'(x)=\alpha i(x)(y')+\beta i(x)(z')$
+\end_inset
+
+.
+ Also ist 
+\begin_inset Formula $i(x):X'\to\mathbb{K}$
+\end_inset
+
+ linear.
+ 
+\begin_inset Formula $i$
+\end_inset
+
+ ist stetig, denn für 
+\begin_inset Formula $y'\in X'$
+\end_inset
+
+ gilt 
+\begin_inset Formula 
+\[
+|i(x)(y')|=|y'(x)|\leq\|y'\|\cdot\|x\|_{X}=\|x\|_{X}\cdot\|y'\|.
+\]
+
+\end_inset
+
+Somit 
+\begin_inset Formula $i(x)\in X''$
+\end_inset
+
+ für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $i$
+\end_inset
+
+ ist linear.
+ Seien 
+\begin_inset Formula $\alpha,\beta\in\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+, 
+\begin_inset Formula $z'\in X'$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $i(\alpha x+\beta y)(z')=z'(\alpha x+\beta y)=\alpha z'(x)+\beta z'(y)=\alpha i(x)(z')+\beta i(y)(z')$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $i(\alpha x+\beta y)=\alpha i(x)+\beta i(y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $i$
+\end_inset
+
+ ist Isometrie.
+ Es ist für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $y'\in X$
+\end_inset
+
+ 
+\begin_inset Formula $|i(x)(y')|\leq\|x\|_{X}\|y'\|$
+\end_inset
+
+, also 
+\begin_inset Formula $\|i(x)\|\leq\|x\|_{X}$
+\end_inset
+
+.
+ Nach Korollar 3 (TODO) gibt es zu 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ ein 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|x'\|=1$
+\end_inset
+
+ und 
+\begin_inset Formula $|x'(x)|=\|x\|_{X}$
+\end_inset
+
+.
+ Somit 
+\begin_inset Formula $\|i(x)\|=\|x\|_{X}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+ Damit ist 
+\begin_inset Formula $i$
+\end_inset
+
+ eine Isometrie.
+\end_layout
+
+\end_deeper
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:8"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum.
+ Dann ist 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ isometrisch isomorph zu einem dichten Unterraum eines Banachraums 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+.
+ Dieser Banachraum ist bis auf Isomorphismen eindeutig.
+\end_layout
+
+\begin_layout Proof
+Die Abbildung 
+\begin_inset Formula $i$
+\end_inset
+
+ aus Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:30"
+
+\end_inset
+
+ liefert eine bijektive, lineare Isometrie auf den Unterraum 
+\begin_inset Formula $U=i(x)$
+\end_inset
+
+ von 
+\begin_inset Formula $X''$
+\end_inset
+
+.
+ 
+\begin_inset Formula $U$
+\end_inset
+
+ ist per Definition dicht in 
+\begin_inset Formula $\overline{U}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $X''$
+\end_inset
+
+ ein Banachraum ist, ist 
+\begin_inset Formula $\overline{U}$
+\end_inset
+
+ auch ein Banachraum.
+ Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ isomorph zu einem Unterraum 
+\begin_inset Formula $V$
+\end_inset
+
+ eines Banachraums 
+\begin_inset Formula $(Z,\|\cdot\|_{Z})$
+\end_inset
+
+ mit 
+\begin_inset Formula $\overline{V}=Z$
+\end_inset
+
+.
+ Dann haben wir Isomorphismus 
+\begin_inset Formula $V\to U$
+\end_inset
+
+.
+ Nach Übungsaufgabe 8.1(b) sind dann 
+\begin_inset Formula $(\overline{U},\|\cdot\|)$
+\end_inset
+
+ und 
+\begin_inset Formula $(Z,\|\cdot\|_{Z})$
+\end_inset
+
+ isomorph.
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:15"
+
+\end_inset
+
+Ein normierter Raum 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ heißt 
+\emph on
+reflexiv
+\emph default
+, falls die kanonische Abbildung 
+\begin_inset Formula $i:X\to X''$
+\end_inset
+
+ surjektiv ist.
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset label
+LatexCommand label
+name "ex:8"
+
+\end_inset
+
+Ein paar Beispiele.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Jeder endlich-dimensionale normierte Raum ist reflexiv.
+\end_layout
+
+\begin_layout Enumerate
+Die Räume 
+\begin_inset Formula $(l^{p},\|\cdot\|_{p})$
+\end_inset
+
+ sind für 
+\begin_inset Formula $1<p<\infty$
+\end_inset
+
+ reflexiv.
+\end_layout
+
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+ messbar, 
+\begin_inset Formula $M\neq\emptyset$
+\end_inset
+
+, so sind die Räume 
+\begin_inset Formula $(L^{p}(M),\|\cdot\|_{p})$
+\end_inset
+
+ für 
+\begin_inset Formula $1<p<\infty$
+\end_inset
+
+ reflexiv.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(l^{1},\|\cdot\|_{1})$
+\end_inset
+
+, 
+\begin_inset Formula $(l^{\infty},\|\cdot\|_{\infty})$
+\end_inset
+
+ sind nicht reflexiv.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+ messbar, 
+\begin_inset Formula $M\neq\emptyset$
+\end_inset
+
+.
+ Dann sind 
+\begin_inset Formula $(L^{1}(M),\|\cdot\|_{1})$
+\end_inset
+
+ und 
+\begin_inset Formula $(L^{\infty}(M),\|\cdot\|_{\infty})$
+\end_inset
+
+ nicht reflexiv.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:31"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ reflexiv.
+ Dann ist jeder abgeschlossene Unterraum von 
+\begin_inset Formula $X$
+\end_inset
+
+ reflexiv.
+\end_layout
+
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Banachraum, so ist 
+\begin_inset Formula $X$
+\end_inset
+
+ genau dann reflexiv, wenn 
+\begin_inset Formula $X'$
+\end_inset
+
+ reflexiv ist.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+In zwei Teilen.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $U$
+\end_inset
+
+ ein abgeschlossener Unterraum von 
+\begin_inset Formula $X$
+\end_inset
+
+ und 
+\begin_inset Formula $X$
+\end_inset
+
+ reflexiv.
+ Wähle 
+\begin_inset Formula $u''\in U''$
+\end_inset
+
+.
+ Die Abbildung 
+\begin_inset Formula $f:X'\to\mathbb{K},$
+\end_inset
+
+ 
+\begin_inset Formula $f(x')=u''(x'|_{U})$
+\end_inset
+
+ ist linear und wohldefiniert.
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ ist stetig, da 
+\begin_inset Formula $|f(x')|=|u''(x'|_{U})|\leq\|u''\|\|x'|_{U}\|\leq\|u''\|\|x'\|$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $f\in X''$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $X$
+\end_inset
+
+ reflexiv ist, gibt es 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ mit 
+\begin_inset Formula $i(x)=f$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula $\forall_{x'\in X'}$
+\end_inset
+
+ 
+\begin_inset Formula $f(x')=x'(x)$
+\end_inset
+
+.
+ Angenommen 
+\begin_inset Formula $x\notin U$
+\end_inset
+
+.
+ Dann gibt es nach Korollar 5 (TODO) ein 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+ mit 
+\begin_inset Formula $x'|_{U}=0$
+\end_inset
+
+ und 
+\begin_inset Formula $x'(x)=0$
+\end_inset
+
+.
+ Also, 
+\begin_inset Formula $0\neq x'(x)=f(x')=u''(x'|_{U})=u''(0)=0$
+\end_inset
+
+.
+ Somit 
+\begin_inset Formula $x\in U$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sei nun 
+\begin_inset Formula $u'\in U'$
+\end_inset
+
+ und 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+ mit 
+\begin_inset Formula $x'|_{U}=u'$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x'$
+\end_inset
+
+ existiert nach Satz 26 (TODO).
+ Dann gilt 
+\begin_inset Formula $u''(u')=u''(x'|_{U})=f(x')=x'(x)=u'(x)$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $u''=i_{U}(x)$
+\end_inset
+
+ mit 
+\begin_inset Formula $i_{U}:U\to U''$
+\end_inset
+
+ kanonische Abbildung.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ reflexiv und Banachraum.
+ Wähle 
+\begin_inset Formula $x'''\in X'''$
+\end_inset
+
+.
+ Die Abbildung 
+\begin_inset Formula $x':X\to\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $x'(x):=x'''(i(x))$
+\end_inset
+
+ ist wohldefiniert, linear und stetig.
+ Also 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $y''\in X''$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $X$
+\end_inset
+
+ reflexiv ist, gibt es 
+\begin_inset Formula $y\in X$
+\end_inset
+
+ mit 
+\begin_inset Formula $i(y)=y''$
+\end_inset
+
+.
+ Es gilt 
+\begin_inset Formula $x'''(y'')=x'''(i(y))=x'(y)=i(y)(x')=y''(x')$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $x'''=i_{X'}(x')$
+\end_inset
+
+ mit 
+\begin_inset Formula $i_{X'}:X'\to X'''$
+\end_inset
+
+ kanonische Abbildung.
+ Somit 
+\begin_inset Formula $i_{X'}$
+\end_inset
+
+ surjektiv und 
+\begin_inset Formula $X'$
+\end_inset
+
+ reflexiv.
+ Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Banachraum und 
+\begin_inset Formula $X'$
+\end_inset
+
+ reflexiv.
+ Nach obigen Argument ist 
+\begin_inset Formula $X''$
+\end_inset
+
+ reflexiv.
+ 
+\begin_inset Formula $i(x)\subset X''$
+\end_inset
+
+ ist abgeschlossen, da 
+\begin_inset Formula $X$
+\end_inset
+
+ vollständig ist.
+ Nach (1) ist 
+\begin_inset Formula $i(x)$
+\end_inset
+
+ dann auch reflexiv und somit 
+\begin_inset Formula $X$
+\end_inset
+
+ reflexiv.
+\end_layout
+
+\end_deeper
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:9"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter reflexiver Raum.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ ist genau dann separabel, wenn 
+\begin_inset Formula $X'$
+\end_inset
+
+ separabel ist.
+\end_layout
+
+\begin_layout Proof
+Satz 29 (TODO)
+\end_layout
+
 \begin_layout Section
 Übungsblätter
 \end_layout

@@ -7774,6 +7774,751 @@ Sei
 Satz 29 (TODO)
 \end_layout
 
+\begin_layout Definition
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+11.12.13
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "def:16"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum und 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ eine Folge in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ heißt 
+\emph on
+schwach konvergent
+\emph default
+ gegen ein 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, falls gilt:
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\forall_{y'\in X'}:\,\lim_{n\to\infty}y'(x_{n})=y'(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+In diesem Zusammenhang spricht man von der Konvergenz in 
+\begin_inset Formula $X$
+\end_inset
+
+ bzgl.
+ 
+\begin_inset Formula $\|\cdot\|_{X}$
+\end_inset
+
+ dann oft auch von 
+\emph on
+starker Konvergenz
+\emph default
+ oder 
+\emph on
+Konvergenz in der Norm
+\emph default
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:32"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum und 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ eine Folge in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Konvergiert 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ schwach gegen 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ und 
+\begin_inset Formula $y\in X$
+\end_inset
+
+, so gilt 
+\begin_inset Formula $x=y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ konvergent gegen 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, so konvergiert 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ auch schwach gegen 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $\dim X<\infty$
+\end_inset
+
+ und konvergiert 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ schwach gegen 
+\begin_inset Formula $x$
+\end_inset
+
+, so konvergiert 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ gegen 
+\begin_inset Formula $x$
+\end_inset
+
+ (bezüglich 
+\begin_inset Formula $\|\cdot\|_{X}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Konvergiere 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ schwach gegen 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ und 
+\begin_inset Formula $y\in X$
+\end_inset
+
+, 
+\begin_inset Formula $x\neq y$
+\end_inset
+
+.
+ Nach Korollar 3 (TODO) gibt es 
+\begin_inset Formula $f'\in X'$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|f'\|=1$
+\end_inset
+
+ und 
+\begin_inset Formula $|f(x-y)|=\|x-y\|_{X}\neq0$
+\end_inset
+
+.
+ Somit ist 
+\begin_inset Formula $0=\lim_{n\to\infty}(f'(x_{n})-f'(x_{n}))=\lim_{n\to\infty}f'(x_{n})-\lim_{n\to\infty}f'(x_{n})=f'(x)-f'(y)=f'(x-y)\neq0$
+\end_inset
+
+, Widerspruch.
+\end_layout
+
+\begin_layout Enumerate
+Folgt aus der Stetigkeit von 
+\begin_inset Formula $f'\in X'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Übungsaufgabe 9.1: Wähle endliche Basis, Folge 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ in Basis darstellen.
+ Koeffizienten konvergieren dann einzlen (Zeigen durch clevere Wahl der
+ Funktionale; Korollare von Hahn-Banach verwenden).
+\end_layout
+
+\end_deeper
+\begin_layout Example
+\begin_inset CommandInset label
+LatexCommand label
+name "ex:9"
+
+\end_inset
+
+ Betrachte 
+\begin_inset Formula $(l^{p},\|\cdot\|_{p})$
+\end_inset
+
+ für 
+\begin_inset Formula $1<p<\infty$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $e_{n}:\mathbb{N}\to\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $e_{n}(m)=1$
+\end_inset
+
+ für 
+\begin_inset Formula $n=m$
+\end_inset
+
+, sonst 
+\begin_inset Formula $e_{n}(m)=0$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $f'\in(l^{p})'$
+\end_inset
+
+.
+ Wir können 
+\begin_inset Formula $f'(g)$
+\end_inset
+
+ schreiben als 
+\begin_inset Formula $f'(g)=\sum_{m=1}^{\infty}f(m)g(m)$
+\end_inset
+
+ mit 
+\begin_inset Formula $f\in l^{q}$
+\end_inset
+
+ mit 
+\begin_inset Formula $q=\frac{p}{p-1}$
+\end_inset
+
+.
+ Es ist 
+\begin_inset Formula $f'(e_{n})=f(n)$
+\end_inset
+
+.
+ Somit 
+\begin_inset Formula $\lim_{n\to\infty}f'(e_{n})=\lim_{n\to\infty}f(n)=0$
+\end_inset
+
+, da 
+\begin_inset Formula $f\in l^{q}$
+\end_inset
+
+ mit 
+\begin_inset Formula $q<\infty$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula 
+\[
+\forall_{f'\in X'}:\lim_{n\to\infty}f'(e_{n})=0=f'(\underbrace{0}_{\in l^{p}})
+\]
+
+\end_inset
+
+und damit ist 
+\begin_inset Formula $(e_{n})$
+\end_inset
+
+ schwach konvergent gegen 
+\begin_inset Formula $0\in l^{p}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $\forall_{n\in\mathbb{N}}:\|e_{n}\|_{p}=1$
+\end_inset
+
+ ist 
+\begin_inset Formula $(e_{n})$
+\end_inset
+
+ nicht konvergent gegen 0 bezüglich 
+\begin_inset Formula $\|\cdot\|_{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:33"
+
+\end_inset
+
+Ist 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein reflexiver, normierter Raum, so besitzt jede beschränkte Folge eine
+ schwach konvergente Teilfolge.
+\end_layout
+
+\begin_layout Proof
+Falls 
+\begin_inset Formula $X$
+\end_inset
+
+ separabel: Nach Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:9"
+
+\end_inset
+
+ ist 
+\begin_inset Formula $X'$
+\end_inset
+
+ separabel.
+ Also 
+\begin_inset Formula $X'=\overline{\{f_{m}'\in X'\,|\, m\in\mathbb{N}\}}$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ beschränkte Folge in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Es gibt Teilfolge 
+\begin_inset Formula $(x_{n_{1,j}})_{j\in\mathbb{N}}$
+\end_inset
+
+ von 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ so dass 
+\begin_inset Formula $(f'_{1}(x_{n_{1,j}}))_{j\in\mathbb{N}}$
+\end_inset
+
+ konvergiert, da 
+\begin_inset Formula $(f_{1}'(x_{n}))_{n\in\mathbb{N}}$
+\end_inset
+
+ beschränkt.
+ Ist 
+\begin_inset Formula $(x_{n_{k,j}})_{j\in\mathbb{N}}$
+\end_inset
+
+ Teilfolge von 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ so dass für 
+\begin_inset Formula $l=1,...,k$
+\end_inset
+
+ die Folgen 
+\begin_inset Formula $(f_{l}'(x_{k,j}))_{j\in\mathbb{N}}$
+\end_inset
+
+ konvergieren, so gibt es Teilfolgen 
+\begin_inset Formula $(x_{n_{k+1,j}})_{j\in\mathbb{N}}$
+\end_inset
+
+ von 
+\begin_inset Formula $(x_{n_{k,j}})_{j\in\mathbb{N}}$
+\end_inset
+
+ so dass 
+\begin_inset Formula $(f_{k+1}'(x_{n_{k+1,j}}))_{j\in\mathbb{N}}$
+\end_inset
+
+ konvergiert.
+ Definiert man die Folge 
+\begin_inset Formula $(y_{k})$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ durch 
+\begin_inset Formula $y_{k}=x_{n_{k,k}}$
+\end_inset
+
+, so konvergiert per Definition 
+\begin_inset Formula $(f'_{m}(y_{k}))_{k\in\mathbb{N}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Sei 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+ und 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ gegeben.
+ Definiere 
+\begin_inset Formula $M=\sup_{n\in\mathbb{N}}\|x_{n}\|_{X}$
+\end_inset
+
+.
+ Fall 
+\begin_inset Formula $M=0$
+\end_inset
+
+ impliziert, dass 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ Nullfolge ist.
+ Sei 
+\begin_inset Formula $M>0$
+\end_inset
+
+.
+ Wähle 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|f_{k}'-x'\|<\frac{1}{4M}\varepsilon$
+\end_inset
+
+ und 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ so dass für alle 
+\begin_inset Formula $n,m>N$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\|f'_{k}(y_{n})-f'_{k}(y_{m})\|<\frac{\varepsilon}{2}$
+\end_inset
+
+.
+ Dann gilt für alle 
+\begin_inset Formula $n,m>N$
+\end_inset
+
+ dass 
+\begin_inset Formula $|x'(y_{n})-x'(y_{m})|\leq|x'(y_{n})-f'_{k}(y_{n})|+|f'_{k}(y_{n})-f'_{k}(y_{m})|+|x'(y_{m})+f'_{k}(y_{n})|$
+\end_inset
+
+ 
+\begin_inset Formula $\leq\|x'-f'_{k}\|\cdot\|y_{n}\|_{X}+|f'_{k}(y_{n})-f'_{k}(y_{m})|+\|x'-f'_{k}\|\cdot\|y_{m}\|_{X}$
+\end_inset
+
+ 
+\begin_inset Formula $\leq\frac{1}{2M}M\varepsilon+\frac{\varepsilon}{2}=\varepsilon$
+\end_inset
+
+.
+ Also ist 
+\begin_inset Formula $(x'(y_{n}))_{n\in\mathbb{N}}$
+\end_inset
+
+ Cauchy-Folge in 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ und somit konvergent.
+\end_layout
+
+\begin_layout Proof
+Setze 
+\begin_inset Formula $X'\to\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $l(x')=\lim_{n\to\mathbb{N}}x'(y_{n})$
+\end_inset
+
+.
+ 
+\begin_inset Formula $l$
+\end_inset
+
+ ist wohldefiniert und linear.
+ Es ist 
+\begin_inset Formula $|l(x')|=|\lim_{n\to\infty}x'(y_{n})|=\lim_{n\to\infty}|x'(y_{n})|\leq\lim_{n\to\infty}\|x'\|\|y_{n}\|_{X}\leq\|x'\|\cdot M$
+\end_inset
+
+.
+ Also ist 
+\begin_inset Formula $l$
+\end_inset
+
+ stetig und 
+\begin_inset Formula $l\in X''$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $X$
+\end_inset
+
+ reflexiv ist, gibt es 
+\begin_inset Formula $y\in X$
+\end_inset
+
+ mit 
+\begin_inset Formula $l=i(x)$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula 
+\[
+\forall_{x'\in X'}:\, x'(y)=i(y)(x')=l(x')=\lim_{n\to\infty}x'(y_{n}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Falls 
+\begin_inset Formula $X$
+\end_inset
+
+ nicht separabel: 
+\begin_inset Formula $Y=\overline{\text{span}\{x_{n}\,|\, n\in\mathbb{N}\}}$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $Y$
+\end_inset
+
+ ist separabel und reflexiv (Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:31"
+
+\end_inset
+
+).
+ Nach obigen Argument gibt es Teilfolge 
+\begin_inset Formula $(y_{k})$
+\end_inset
+
+ von 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ und 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+ mit 
+\begin_inset Formula $\forall_{y'\in Y'}:\,\lim_{k\to\infty}y'(y_{k})=y'(y)$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $x'|_{Y}\in Y'$
+\end_inset
+
+ und somit 
+\begin_inset Formula $\lim_{n\to\infty}x'(y_{n})=\lim_{n\to\infty}x'|_{Y}(y_{n})=x'|_{Y}(y)=x'(y)$
+\end_inset
+
+.
+ Also konvergiert 
+\begin_inset Formula $(y_{n})$
+\end_inset
+
+ schwach gegen 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:17"
+
+\end_inset
+
+Seien 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+,
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ normierte Räume und 
+\begin_inset Formula $T\in L(X,Y)$
+\end_inset
+
+.
+ Wir nennen den stetigen linearen Operator 
+\begin_inset Formula $T':Y'\to X'$
+\end_inset
+
+, definiert durch 
+\begin_inset Formula $(T'y')(x)=y'(Tx)$
+\end_inset
+
+ den 
+\emph on
+adjungierten Operator zu 
+\begin_inset Formula $T$
+\end_inset
+
+
+\emph default
+.
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula $T'$
+\end_inset
+
+ ist stetig da für alle 
+\begin_inset Formula $y'\in Y'$
+\end_inset
+
+, 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ gilt 
+\begin_inset Formula $|(T'y')(x)|\leq\|y'\|\|T\|\|x\|_{X}$
+\end_inset
+
+.
+ Also gilt für alle 
+\begin_inset Formula $y'\in Y'$
+\end_inset
+
+ dass 
+\begin_inset Formula $\|T'y'\|\leq\|y'\|\|T\|.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:34"
+
+\end_inset
+
+Seien 
+\begin_inset Formula $(X,\|\cdot\|_{X}),(Y,\|\cdot\|_{Y}),(Z,\|\cdot\|_{Z})$
+\end_inset
+
+ normierte Räume.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Die Abbildung 
+\begin_inset Formula $\varphi:L(X,Y)\to L(Y',X')$
+\end_inset
+
+ mit 
+\begin_inset Formula $\varphi(T)=T'$
+\end_inset
+
+ ist linear und isometrisch.
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Übungsblätter
 \end_layout

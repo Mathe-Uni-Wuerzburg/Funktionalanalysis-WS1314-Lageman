@@ -8518,6 +8518,22 @@ Die Abbildung
  ist linear und isometrisch.
 \end_layout
 
+\begin_layout Enumerate
+Für 
+\begin_inset Formula $T\in L(X,Y),$
+\end_inset
+
+ 
+\begin_inset Formula $S\in L(Y,Z)$
+\end_inset
+
+ ist 
+\begin_inset Formula $(S\circ T)'=T'\circ S'$
+\end_inset
+
+.
+\end_layout
+
 \end_deeper
 \begin_layout Section
 Übungsblätter
@@ -10203,5 +10219,1043 @@ Also
 .
 \end_layout
 
+\begin_layout Subsection
+Übungsblatt 8
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 8.1(a)
+\end_layout
+
+\begin_layout Standard
+Wir definieren 
+\begin_inset Formula $\widetilde{T}:X\to Y$
+\end_inset
+
+ wie folgt.
+ Für 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ sei 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $U$
+\end_inset
+
+ mit 
+\begin_inset Formula $x_{n}\to x$
+\end_inset
+
+ für 
+\begin_inset Formula $x\to\infty$
+\end_inset
+
+ (existiert, da 
+\begin_inset Formula $X=\overline{U}$
+\end_inset
+
+).
+ Zeige, dass 
+\begin_inset Formula $(Tx_{n})_{n\in\mathbb{N}}$
+\end_inset
+
+Cauchy-Folge ist.
+ Sei 
+\begin_inset Formula $M=\max\{\|T\|,1\}$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ gegeben.
+ 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ ist konvergent, also Cauchy-Folge.
+ Dann gibt es 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\forall_{n,m>N}:$
+\end_inset
+
+ 
+\begin_inset Formula $\|x_{n}-x_{m}\|<\frac{1}{M}\varepsilon$
+\end_inset
+
+.
+ Somit gilt für alle 
+\begin_inset Formula $n,m>N$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\|Tx_{n}-Tx_{m}\|_{Y}\leq\|T\|\cdot\|x_{n}-x_{m}\|_{X}\leq M\frac{1}{M}\varepsilon=\varepsilon.
+\]
+
+\end_inset
+
+Somit 
+\begin_inset Formula $(Tx_{n})$
+\end_inset
+
+ Cauchy-Folge.
+ Da 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ vollständig ist, ist 
+\begin_inset Formula $(Tx_{n})$
+\end_inset
+
+ konvergent gegen ein 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ Setze 
+\begin_inset Formula $\widetilde{T}x:=\lim_{n\to\infty}Tx_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\widetilde{T}$
+\end_inset
+
+ ist wohldefiniert: Sei 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ und 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+, 
+\begin_inset Formula $(y_{n})$
+\end_inset
+
+ Folgen in 
+\begin_inset Formula $U$
+\end_inset
+
+ mit 
+\begin_inset Formula $x_{n}\to x$
+\end_inset
+
+ und 
+\begin_inset Formula $y_{n}\to x$
+\end_inset
+
+ für 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $\|\lim_{n\to\infty}Tx_{n}-\lim_{n\to\infty}Ty_{n}\|_{Y}=\|\lim_{n\to\infty}T(x_{n}-y_{n})\|_{Y}=\lim_{n\to\infty}\|T(x_{n}-y_{n})\|_{Y}\leq\lim_{n\to\infty}\|T\|\|x_{n}-y_{n}\|_{X}=0$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $\lim_{n\to\infty}Tx_{n}=\lim_{n\to\infty}Ty_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\widetilde{T}$
+\end_inset
+
+ ist linear: Sei 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha,\beta\in\mathbb{K}$
+\end_inset
+
+.
+ Dann gibt es Folgen 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+, 
+\begin_inset Formula $(y_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $U$
+\end_inset
+
+ mit 
+\begin_inset Formula $x_{n}\to x$
+\end_inset
+
+ und 
+\begin_inset Formula $y_{n}\to y$
+\end_inset
+
+ für 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+.
+ Es gilt 
+\begin_inset Formula $\widetilde{T}(\alpha x+\beta x)=\lim_{n\to\infty}T(\alpha x_{n}+\beta x_{n})=\lim_{n\to\infty}\alpha Tx_{n}+\beta Ty_{n}=\alpha\lim_{n\to\infty}Tx_{n}+\beta\lim_{n\to\infty}Ty_{n}=\alpha\widetilde{T}x+\beta\widetilde{T}y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\widetilde{T}$
+\end_inset
+
+ ist stetig: Sei 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ und 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $U$
+\end_inset
+
+ mit 
+\begin_inset Formula $x_{n}\to x$
+\end_inset
+
+, 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+.
+ Dann gilt 
+\begin_inset Formula $\|\widetilde{T}x\|_{Y}=\|\lim_{n\to\infty}Tx_{n}\|_{Y}=\lim_{n\to\infty}\|Tx_{n}\|_{Y}\leq\lim_{n\to\infty}\|T\|\cdot\|x_{n}\|_{X}\leq\|T\|\|x\|_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\widetilde{T}|_{U}=T$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $x\in U$
+\end_inset
+
+ und 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $U$
+\end_inset
+
+ mit 
+\begin_inset Formula $x_{n}\to x$
+\end_inset
+
+ für 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+.
+ Dann gilt 
+\begin_inset Formula $\widetilde{T}x=\lim_{n\to\infty}Tx_{n}=Tx.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\widetilde{T}$
+\end_inset
+
+ ist eindeutig festgelegt: Seien 
+\begin_inset Formula $\widetilde{T}_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\widetilde{T}_{2}\in L(X,Y)$
+\end_inset
+
+ mit 
+\begin_inset Formula $\widetilde{T}_{1}|_{U}=\widetilde{T}_{2}|_{U}=T$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $(\widetilde{T}_{1}-\widetilde{T}_{2})|_{U}=0\in L(X,Y)$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $x\in X\setminus U$
+\end_inset
+
+ und 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $U$
+\end_inset
+
+ mit 
+\begin_inset Formula $x_{n}\to x$
+\end_inset
+
+ für 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $(\widetilde{T}_{1}-\widetilde{T}_{2})x=\lim_{n\to\infty}((\widetilde{T}_{1}-\widetilde{T}_{2})x_{n})=\lim_{n\to\infty}((\widetilde{T}_{1}-\widetilde{T}_{2})0)=0$
+\end_inset
+
+.
+ Somit 
+\begin_inset Formula $\widetilde{T}_{1}=\widetilde{T}_{2}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Ohne Vollständigkeit von 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ ist die Aussage von Aufgabe 8.1(a) falsch.
+ Gegenbeispiel: 
+\begin_inset Formula $X=l^{1}$
+\end_inset
+
+, 
+\begin_inset Formula $Y=d$
+\end_inset
+
+, beide versehen mit der Norm 
+\begin_inset Formula $\|\cdot\|_{1}$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $\overline{d}=l^{1}$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $T:d\to d$
+\end_inset
+
+, 
+\begin_inset Formula $Tf=f$
+\end_inset
+
+.
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ ist linear und stetig.
+ Für eine Folge 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ mit 
+\begin_inset Formula $\lim_{n\to\infty}f_{n}=f\in l^{1}\setminus d$
+\end_inset
+
+ hat die Folge 
+\begin_inset Formula $(Tf_{n})=(f_{n})$
+\end_inset
+
+ keinen Grenzwert in 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ Gäbe es eine Fortsetzung 
+\begin_inset Formula $\widetilde{T}\in L(l^{1},d)$
+\end_inset
+
+ von 
+\begin_inset Formula $T$
+\end_inset
+
+, so müsste aber 
+\begin_inset Formula $(f_{n})=(Tf_{n})$
+\end_inset
+
+ gegen 
+\begin_inset Formula $\widetilde{T}f\in d$
+\end_inset
+
+ konvergieren.
+ Widerspruch.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 8.1(b)
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $\widetilde{T}:X\to Y$
+\end_inset
+
+, 
+\begin_inset Formula $\widetilde{T}\in L(X,Y)$
+\end_inset
+
+.
+ Fortsetzung von 
+\begin_inset Formula $T$
+\end_inset
+
+ nach (a) und 
+\begin_inset Formula $\hat{T}\in L(Y,X)$
+\end_inset
+
+ Fortsetzung von 
+\begin_inset Formula $T^{-1}$
+\end_inset
+
+ nach (a).
+ Es gilt 
+\begin_inset Formula $\widetilde{T}\circ\hat{T}|_{V}=1_{V}$
+\end_inset
+
+ und 
+\begin_inset Formula $\hat{T}\circ\widetilde{T}|_{U}=1_{U}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\widetilde{T}\circ\hat{T}$
+\end_inset
+
+ ist Fortsetzung von 
+\begin_inset Formula $1_{V}$
+\end_inset
+
+ auf 
+\begin_inset Formula $Y$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{T}\circ\widetilde{T}$
+\end_inset
+
+ ist Fortsetzung von 
+\begin_inset Formula $1_{U}$
+\end_inset
+
+ auf 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Andererseits ist 
+\begin_inset Formula $1_{Y}$
+\end_inset
+
+ Fortsetzung von 
+\begin_inset Formula $1_{V}:V\to Y$
+\end_inset
+
+ und 
+\begin_inset Formula $1_{X}$
+\end_inset
+
+ Fortsetzung von 
+\begin_inset Formula $1_{U}:U\to X$
+\end_inset
+
+.
+ Nach der Eindeutigkeit aus (a) folgt 
+\begin_inset Formula $\widetilde{T}\circ\hat{T}=1_{Y}$
+\end_inset
+
+ und 
+\begin_inset Formula $\hat{T}\circ\widetilde{T}=1_{X}$
+\end_inset
+
+.
+ Somit 
+\begin_inset Formula $\hat{T}=\widetilde{T}^{-1}$
+\end_inset
+
+, also 
+\begin_inset Formula $\widetilde{T}$
+\end_inset
+
+ Isomorphismus.
+ 
+\end_layout
+
+\begin_layout Standard
+Aussage ohne Vollständigkeit von 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ im allgemeinen nicht richtig.
+ Sei z.B.
+ 
+\begin_inset Formula $X=d$
+\end_inset
+
+, 
+\begin_inset Formula $Y=l^{1}$
+\end_inset
+
+ beide mit 
+\begin_inset Formula $\|\cdot\|_{1}$
+\end_inset
+
+-Norm.
+ Dann ist 
+\begin_inset Formula $T:d\to l^{1}$
+\end_inset
+
+, 
+\begin_inset Formula $Tf=f$
+\end_inset
+
+ stetig und linear.
+ Dann ist das Bild von 
+\begin_inset Formula $T$
+\end_inset
+
+ dicht in 
+\begin_inset Formula $l^{1}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $T:d\to\text{Bild }T$
+\end_inset
+
+ ist Isomorphismus, Aber 
+\begin_inset Formula $d$
+\end_inset
+
+ und 
+\begin_inset Formula $l^{1}$
+\end_inset
+
+ nicht isomorph.
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 8.2
+\end_layout
+
+\begin_layout Enumerate
+Aus der linearen Algebra ist bekannt, dass 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ linear ist.
+ Für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ ist 
+\begin_inset Formula $\|\Pi(x)\|_{q}=\|x+U\|_{q}=\inf\{\|x-v\|_{X}\,|\, v\in U\}\leq\|x-0\|_{X}=\|x\|_{X}$
+\end_inset
+
+.
+ Also ist 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ stetig.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $U\neq X$
+\end_inset
+
+ und 
+\begin_inset Formula $x\in X\setminus U$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $\Pi(x)=x+U\neq U$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $\Pi(x)\neq0+U$
+\end_inset
+
+.
+ Nach Korollar 3 gibt es 
+\begin_inset Formula $g'\in(X/U)'$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|g'\|=1$
+\end_inset
+
+ und 
+\begin_inset Formula $g'(x+U)\neq0$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $f'\neq g'\circ\Pi$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $f'$
+\end_inset
+
+ linear (denn 
+\begin_inset Formula $g'$
+\end_inset
+
+ und 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ linear) und stetig da 
+\begin_inset Formula $g'$
+\end_inset
+
+ und 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ stetig.
+ Also 
+\begin_inset Formula $f'\in X'$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $u\in U$
+\end_inset
+
+ ist 
+\begin_inset Formula $\Pi(u)=U$
+\end_inset
+
+, also 
+\begin_inset Formula $f'(u)=g'(U)=0$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $f'|_{U}=0$
+\end_inset
+
+.
+ Per Konstruktion ist 
+\begin_inset Formula $f'(x)=g'(x+U)\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 8.3
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $f:X\to\mathbb{R}$
+\end_inset
+
+ linear und 
+\begin_inset Formula $\ker f\neq X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $(a)\implies(b)$
+\end_inset
+
+ Ist 
+\begin_inset Formula $f$
+\end_inset
+
+ stetig, so ist 
+\begin_inset Formula $\ker f=f^{-1}(\{0\})$
+\end_inset
+
+ abgeschlossen.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $(b)\implies(c)$
+\end_inset
+
+ Ist 
+\begin_inset Formula $\ker f$
+\end_inset
+
+ abgeschlossen, so ist 
+\begin_inset Formula $\ker f=\overline{\ker f}$
+\end_inset
+
+.
+ Wäre 
+\begin_inset Formula $\ker f$
+\end_inset
+
+ dicht in 
+\begin_inset Formula $X$
+\end_inset
+
+, so wäre 
+\begin_inset Formula $\ker f=\overline{\ker f}=X$
+\end_inset
+
+ im Widerspruch zu 
+\begin_inset Formula $\ker f\neq X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $(c)\implies(a)$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $\Pi:X\to X/\ker f$
+\end_inset
+
+, 
+\begin_inset Formula $\Pi(x)=x+\ker f$
+\end_inset
+
+.
+ Es existiert ein 
+\begin_inset Formula $g:X/\ker f\to\mathbb{R}$
+\end_inset
+
+ mit 
+\begin_inset Formula $g\circ\Pi=f$
+\end_inset
+
+ da für alle 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $f^{-1}(c)=v_{c}+\ker f$
+\end_inset
+
+ mit 
+\begin_inset Formula $v_{c}\in X$
+\end_inset
+
+ (
+\begin_inset Formula $v_{c}$
+\end_inset
+
+ existiert, da 
+\begin_inset Formula $f\neq0$
+\end_inset
+
+).
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Für 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+, 
+\begin_inset Formula $w,v\in\ker f$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha,\beta\in\mathbb{R}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $f(\alpha x+v+\beta y+w)=\alpha f(x)+\beta f(y)=\alpha f(x+v)+\beta f(y+w)$
+\end_inset
+
+.
+ Somit nimmt 
+\begin_inset Formula $f$
+\end_inset
+
+ auf 
+\begin_inset Formula $\alpha(x+\ker f)+\beta(y+\ker f)$
+\end_inset
+
+ den Wert 
+\begin_inset Formula $\alpha f(x)+\beta f(y)$
+\end_inset
+
+ an.
+ Damit ist 
+\begin_inset Formula $g(\alpha(x+\ker f)+\beta(y+\ker f))=\alpha f(x)+\beta f(x)=\alpha g(x+\ker f)+\beta g(y+\ker f)$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $g$
+\end_inset
+
+ linear.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $x\in X\setminus\overline{\ker f}$
+\end_inset
+
+ (existiert da 
+\begin_inset Formula $\overline{\ker f}\neq X$
+\end_inset
+
+).
+ Setze 
+\begin_inset Formula $U=\span\{x\}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $\dim U=1$
+\end_inset
+
+ ist 
+\begin_inset Formula $f|_{U}$
+\end_inset
+
+ stetig.
+ Sei 
+\begin_inset Formula $M=\|f|_{U}\|$
+\end_inset
+
+ (beachte 
+\begin_inset Formula $M>0$
+\end_inset
+
+).
+ Definiere 
+\begin_inset Formula $p:X\to\mathbb{R}$
+\end_inset
+
+ mit 
+\begin_inset Formula $p(x)=M\cdot\inf\{\|x-v\|_{X}\,|\, v\in\overline{\ker f}\}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ ist Halbnorm (Vorlesung), also sublinear.
+ Per Definition von 
+\begin_inset Formula $M$
+\end_inset
+
+ ist für alle 
+\begin_inset Formula $u\in U$
+\end_inset
+
+ dass 
+\begin_inset Formula $|f(u)|\leq p(u)$
+\end_inset
+
+.
+ Nach dem Satz von Hahn-Banach gibt es 
+\begin_inset Formula $h:X\to\mathbb{R}$
+\end_inset
+
+ mit 
+\begin_inset Formula $h|_{U}=f|_{U}$
+\end_inset
+
+ und 
+\begin_inset Formula $\forall_{x\in X}:$
+\end_inset
+
+ 
+\begin_inset Formula $h(x)\leq p(x)$
+\end_inset
+
+, 
+\begin_inset Formula $h$
+\end_inset
+
+ linear.
+ Insbesondere 
+\begin_inset Formula $\forall_{x\in X}:$
+\end_inset
+
+ 
+\begin_inset Formula $-h(x)=h(-x)\leq p(-x)=p(x)$
+\end_inset
+
+, also 
+\begin_inset Formula $\forall_{x\in X}:$
+\end_inset
+
+ 
+\begin_inset Formula $|h(x)|\leq p(x)\leq M\|x-0\|_{X}=M\|x\|_{X}$
+\end_inset
+
+.
+ Damit ist 
+\begin_inset Formula $h$
+\end_inset
+
+ stetig.
+ Da für 
+\begin_inset Formula $x\in\overline{\ker f}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $p(x)=0$
+\end_inset
+
+ folgt für 
+\begin_inset Formula $x\in\overline{\ker f}$
+\end_inset
+
+: 
+\begin_inset Formula $|h(x)|=0$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $\overline{\ker f}\subset\ker h$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Insbesondere ist für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ 
+\begin_inset Formula $h$
+\end_inset
+
+ auf 
+\begin_inset Formula $x+\ker f\subset x+\ker h$
+\end_inset
+
+ konstant.
+ Analog zu (1) gibt es 
+\begin_inset Formula $q:X/\ker f\to\mathbb{R}$
+\end_inset
+
+ mit 
+\begin_inset Formula $q\circ\Pi=h$
+\end_inset
+
+ und 
+\begin_inset Formula $q$
+\end_inset
+
+ linear.
+\end_layout
+
+\begin_layout Standard
+Per Konstruktion ist 
+\begin_inset Formula $q\circ\Pi|_{U}=h|_{U}=f|_{U}=g\circ\Pi|_{U}$
+\end_inset
+
+.
+ Also ist 
+\begin_inset Formula $\text{rang }q\circ\Pi|_{U}=1=\text{rang }g\circ\Pi|_{U}$
+\end_inset
+
+.
+ Per Konstruktion ist 
+\begin_inset Formula $\ker g=\{0\}$
+\end_inset
+
+ somit 
+\begin_inset Formula $\dim X/\ker f=1$
+\end_inset
+
+.
+ Damit ist 
+\begin_inset Formula $\text{rang }\Pi|_{U}=1$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $\Pi|_{U}:U\to X/\ker f$
+\end_inset
+
+ linear und bijektiv.
+ Somit 
+\begin_inset Formula $g=q$
+\end_inset
+
+ und 
+\begin_inset Formula $f=h$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $f$
+\end_inset
+
+ stetig, falls 
+\begin_inset Formula $\overline{\ker f}\neq X$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
 \end_body
 \end_document

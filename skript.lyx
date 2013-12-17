@@ -113,6 +113,12 @@ Organisatorisches
 \end_inset
 
 
+\begin_inset FormulaMacro
+\newcommand{\Bild}{\operatorname{Bild}}
+{\mathrm{Bild}}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -8535,6 +8541,722 @@ Für
 \end_layout
 
 \end_deeper
+\begin_layout Proof
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+17.12.13
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ist linear: Seien 
+\begin_inset Formula $T,S\in L(X,Y)$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha,\beta\in\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $y\in Y'$
+\end_inset
+
+, 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+ Dann gilt 
+\begin_inset Formula $\varphi(\alpha T+\beta S)(y')=y'((\alpha T+\beta S)x)=\alpha y'(Tx)+\beta y'(Sx)=\alpha\varphi(T)(y')(x)+\beta\varphi(S)(y')(x)$
+\end_inset
+
+.
+ Für alle 
+\begin_inset Formula $T\in L(X,Y),y'\in Y'$
+\end_inset
+
+ ist 
+\begin_inset Formula $\|\varphi(T)(y')\|=\|y'\circ T\|\leq\|T\|\cdot\|y'\|$
+\end_inset
+
+ und somit 
+\begin_inset Formula $\sup\{\|\varphi(T)(y')\|\,|\, y'\in Y',\|y'\|\leq1\}\leq\|T\|$
+\end_inset
+
+, also 
+\begin_inset Formula $\|T'\|\leq\|T\|$
+\end_inset
+
+.
+ Somit ist 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ stetig mit 
+\begin_inset Formula $\|\varphi\|\leq1$
+\end_inset
+
+.
+ Desweiteren ist für 
+\begin_inset Formula $T\in L(X,Y)$
+\end_inset
+
+ mit Korollar 4 (TODO) 
+\begin_inset Formula 
+\begin{eqnarray*}
+\|T\| & = & \sup\{\|Tx\|_{Y}\,|\,\|x\|\leq1\}\\
+ & = & \sup\{\sup\{|y'(Tx)\,|\,\|y'\|\leq1,y'\in>'\}\,|\,\|x\|_{X}\leq1\}\\
+ & = & \sup\{\sup\{|y'(Tx)\,|\,\|x\|_{X}\leq1,x\in X\}\,|\, y'\in Y',\|y'\|\leq1\}\\
+ & = & \sup\{\|T'y'\|\,|\, y'\in Y',\|y'\|\leq1\}\\
+ & = & \|T'\|=\|\varphi(T)\|
+\end{eqnarray*}
+
+\end_inset
+
+also ist 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ Isometrie.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $z'\in Z'$
+\end_inset
+
+, 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $T\in L(X,Y),S\in L(Y,Z)$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula 
+\begin{eqnarray*}
+(S\circ T)'(z')(x) & = & z'((S\circ T)(x))\\
+ & = & z'(S(Tx))\\
+ & = & (z'\circ S)(Tx)\\
+ & = & (S'z')(Tx)\\
+ & = & (T'(S'z'))(x)\\
+ & = & (T'\circ S')(z')(x).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+\begin_inset CommandInset label
+LatexCommand label
+name "ex:10"
+
+\end_inset
+
+Wir betrachten für 
+\begin_inset Formula $1<p<\infty$
+\end_inset
+
+ den Linkshift-Operator auf 
+\begin_inset Formula $(l^{p},\|\cdot\|_{p})$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma^{+}:l^{p}\to l^{p}$
+\end_inset
+
+, 
+\begin_inset Formula $(\sigma^{+}f)(m)=f(m+1)$
+\end_inset
+
+.
+ Es ergibt sich also:
+\begin_inset Formula 
+\[
+(f(1),f(2),f(3),f(4),...)\to_{\sigma^{+}}(f(2),f(3),f(4),f(5),...)
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\sigma^{+}$
+\end_inset
+
+ ist linear und stetig.
+ Wir können 
+\begin_inset Formula $f'\in(l^{p})'$
+\end_inset
+
+ schreiben als 
+\begin_inset Formula $f'(g)=\sum_{m=1}^{\infty}f(m)g(m)$
+\end_inset
+
+ mit 
+\begin_inset Formula $f\in l^{q}$
+\end_inset
+
+, 
+\begin_inset Formula $q=\frac{p}{p-1}$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula 
+\begin{eqnarray*}
+f'(\sigma^{+}(g)) & = & \sum_{m=1}^{\infty}f(m)g(m+1)\\
+ & = & \sum_{m=2}^{\infty}f(m-1)g(m)+0\cdot g(1)\\
+ & = & \sum_{m=1}^{\infty}\widetilde{f}(m)g(m)
+\end{eqnarray*}
+
+\end_inset
+
+mit 
+\begin_inset Formula 
+\[
+\widetilde{f}(m)=\begin{cases}
+0 & (m=1)\\
+f(m-1) & (m\geq2)
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\widetilde{f}\in l^{q}$
+\end_inset
+
+.
+ Wir erhalten also:
+\begin_inset Formula 
+\[
+(f(1),f(2),f(3),f(4),...)\to_{\sigma^{-}}(0,f(1),f(2),f(3),...)
+\]
+
+\end_inset
+
+Definieren wir also den Rechtsshift 
+\begin_inset Formula $\sigma^{-}:l^{q}\to l^{q}$
+\end_inset
+
+ durch 
+\begin_inset Formula 
+\[
+(\sigma^{-}f)(m)=\begin{cases}
+0 & (m=1)\\
+f(m-1) & (m>1)
+\end{cases}und
+\]
+
+\end_inset
+
+sei 
+\begin_inset Formula $\varphi:l^{q}\to(l^{p})'$
+\end_inset
+
+ der isometrische Isomorphismus 
+\begin_inset Formula $\varphi(f)(g)=\sum_{m=1}^{\infty}f(m)g(m)$
+\end_inset
+
+, so gilt 
+\begin_inset Formula $\varphi(f)(\sigma^{+}(g))=\varphi(\sigma^{-}f)(g)$
+\end_inset
+
+.
+ Damit kommutiert das Diagramm
+\end_layout
+
+\begin_layout Example
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fig1.eps
+	width 40text%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Das Diagramm kommutiert.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:18"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum, 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ und 
+\begin_inset Formula $V\subset X'$
+\end_inset
+
+ Teilmengen.
+ Wir definieren den 
+\emph on
+Annihilator
+\emph default
+ von 
+\begin_inset Formula $U$
+\end_inset
+
+ in 
+\begin_inset Formula $X'$
+\end_inset
+
+ durch 
+\begin_inset Formula 
+\[
+U^{\perp}=\{x'\in X'\,|\,\forall_{x\in U}:x'(x)=0\}
+\]
+
+\end_inset
+
+und den 
+\emph on
+Annihilator
+\emph default
+ von 
+\begin_inset Formula $V$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ durch 
+\begin_inset Formula 
+\[
+V_{\perp}=\{x\in X\,|\,\forall_{y'\in V}:y'(x)=0\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:35"
+
+\end_inset
+
+Seien 
+\begin_inset Formula $(X,\|\cdot\|_{X}),(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ normierte Räume und 
+\begin_inset Formula $T\in L(X,Y)$
+\end_inset
+
+.
+ Dann gilt 
+\begin_inset Formula 
+\[
+\overline{\Bild T}=(\ker T')_{\perp}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Sei 
+\begin_inset Formula $y\in\Bild T$
+\end_inset
+
+, 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ mit 
+\begin_inset Formula $y=Tx$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $z'\in\ker T'$
+\end_inset
+
+ ist 
+\begin_inset Formula $z'(y)=z'(Tx)=(T'z')(x)=0$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $y\in(\ker T')_{\perp}.$
+\end_inset
+
+ Also 
+\begin_inset Formula $y\in(\ker T')_{\perp}$
+\end_inset
+
+und 
+\begin_inset Formula $\Bild T\subset(\ker T')_{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Da 
+\begin_inset Formula $(\ker T')_{\perp}$
+\end_inset
+
+ abgeschlossen ist, ist 
+\begin_inset Formula $\overline{\Bild T}\subset(\ker T')_{\perp}.$
+\end_inset
+
+ Sei 
+\begin_inset Formula $U=\overline{\Bild T}$
+\end_inset
+
+ und 
+\begin_inset Formula $y\in Y\setminus U$
+\end_inset
+
+.
+ Nach Korollar 5 (TODO) gibt es 
+\begin_inset Formula $y'\in Y'$
+\end_inset
+
+ mit 
+\begin_inset Formula $y'|_{U}=0$
+\end_inset
+
+ und 
+\begin_inset Formula $y'(y)\neq0$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $y'(Tx)=0$
+\end_inset
+
+ für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+ Somit 
+\begin_inset Formula $y'\in\ker T'$
+\end_inset
+
+.
+ Wäre 
+\begin_inset Formula $y\in(\ker T')_{\perp}$
+\end_inset
+
+ so müsste 
+\begin_inset Formula $y'(y)\neq0$
+\end_inset
+
+, im Widerspruch zur Konstruktion.
+ Mithin 
+\begin_inset Formula $(\ker T')_{\perp}\subset\overline{\Bild T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:10"
+
+\end_inset
+
+Seien 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+, 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ normierte Räume, 
+\begin_inset Formula $T\in L(X,Y)$
+\end_inset
+
+ mit 
+\begin_inset Formula $\Bild T$
+\end_inset
+
+ abgeschlossen.
+ Die Gleichung 
+\begin_inset Formula $Tx=y$
+\end_inset
+
+ ist genau dann lösbar (nach 
+\begin_inset Formula $x$
+\end_inset
+
+), wenn für alle 
+\begin_inset Formula $y'\in Y'$
+\end_inset
+
+ gilt: 
+\begin_inset Formula $T'y'=0\implies y'(y)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+3 (TODO) Hauptsätze für lineare Operatoren auf Banachräumen
+\end_layout
+
+\begin_layout Subsection
+3.1 (TODO) Bairesche Kategoriensatz
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:19"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein metrischer Raum und 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+ Teilmenge.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M$
+\end_inset
+
+ heißt 
+\emph on
+nirgends dicht
+\emph default
+, falls 
+\begin_inset Formula $\overline{M}$
+\end_inset
+
+ keine inneren Punkte enthält.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M$
+\end_inset
+
+ heißt 
+\emph on
+von 1.
+ Kategorie
+\emph default
+ (englisch 
+\emph on
+first category
+\emph default
+ oder 
+\emph on
+meager
+\emph default
+), falls 
+\begin_inset Formula $M$
+\end_inset
+
+ abzählbare Vereinigung nirgends dichter Mengen ist.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M$
+\end_inset
+
+ heißt 
+\emph on
+von 2.
+ Kategorie
+\emph default
+ (englisch 
+\emph on
+second category
+\emph default
+ oder 
+\emph on
+nonmeager
+\emph default
+), falls 
+\begin_inset Formula $M$
+\end_inset
+
+ nicht von 1.
+ Kategorie ist.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+Satz von Baire
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:36"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:baire"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein vollständiger metrischer Raum und 
+\begin_inset Formula $(U_{n})_{n\in\mathbb{N}}$
+\end_inset
+
+ eine Folge offener, dichter Teilmengen.
+ Dann ist 
+\begin_inset Formula $\bigcap_{n\in\mathbb{N}}U_{n}$
+\end_inset
+
+ dicht in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Beweis siehe 
+\begin_inset Quotes eld
+\end_inset
+
+Funktionalanalysis
+\begin_inset Quotes erd
+\end_inset
+
+ von Werner.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:11"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein vollständiger, metrischer Raum.
+ Ist 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+ von erster Kategorie, so ist 
+\begin_inset Formula $X\setminus M$
+\end_inset
+
+ dicht in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Es gilt für eine Folge von Mengen 
+\begin_inset Formula $(M_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ dass 
+\begin_inset Formula $X\setminus\bigcup_{n\in\mathbb{N}}M_{n}=\bigcap_{n\in\mathbb{N}}(X\setminus M_{n})\supset\bigcap_{n\in\mathbb{N}}(X\setminus\overline{M_{n}})$
+\end_inset
+
+.
+ Da das Komplement des Abschlusses einer nirgends dichten eine dichte, offene
+ Menge ist, folgt mit dem Satz von Baire 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:baire"
+
+\end_inset
+
+ die Behauptung.
+\end_layout
+
 \begin_layout Section
 Übungsblätter
 \end_layout

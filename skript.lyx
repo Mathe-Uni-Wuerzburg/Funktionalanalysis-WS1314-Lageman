@@ -9257,6 +9257,920 @@ reference "thm:baire"
  die Behauptung.
 \end_layout
 
+\begin_layout Corollary
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+18.12.13
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:12"
+
+\end_inset
+
+Ist 
+\begin_inset Formula $X$
+\end_inset
+
+ ein vollständiger Raum, 
+\begin_inset Formula $X\neq\emptyset$
+\end_inset
+
+, so ist 
+\begin_inset Formula $X$
+\end_inset
+
+ von 2.
+ Kategorie (in sich selbst).
+\end_layout
+
+\begin_layout Proof
+Wäre 
+\begin_inset Formula $X$
+\end_inset
+
+ von 1.
+ Kategorie, so wäre nach Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:11"
+
+\end_inset
+
+ 
+\begin_inset Formula $X\setminus X$
+\end_inset
+
+ dicht in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+3.2 (TODO) Prinzip der gleichmäßigen Beschränktheit
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+Prinzip der gleichmäßigen Beschränktheit
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:37"
+
+\end_inset
+
+ Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein Banachraum, 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ normierter Raum, 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ eine Indexmenge und 
+\begin_inset Formula $\{T_{j}\,|\, j\in\Lambda\}\subset L(X,Y)$
+\end_inset
+
+.
+ Ist für jedes 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ die Menge 
+\begin_inset Formula 
+\[
+N_{x}=\{\|T_{j}x\|_{Y}\,|\, j\in\Lambda\}
+\]
+
+\end_inset
+
+beschränkt, dann ist die Menge 
+\begin_inset Formula 
+\[
+\{\|T_{j}\|\,|\, j\in\Lambda\}
+\]
+
+\end_inset
+
+beschränkt.
+\end_layout
+
+\begin_layout Proof
+Sei für jedes 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ die Menge 
+\begin_inset Formula $N_{x}$
+\end_inset
+
+ beschränkt.
+ Für 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ sei 
+\begin_inset Formula $A_{n}=\{x\in X\,|\,\sup_{j\in\Lambda}\|T_{j}x\|_{Y}\leq n\}$
+\end_inset
+
+.
+ Da alle 
+\begin_inset Formula $N_{x}$
+\end_inset
+
+ beschränkt sind, ist jedes 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ in einem 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+ enthalten für ein 
+\begin_inset Formula $n$
+\end_inset
+
+ hinreichend groß (abhängig von 
+\begin_inset Formula $x$
+\end_inset
+
+).
+ Also 
+\begin_inset Formula $X=\bigcup_{n\in\mathbb{N}}A_{n}$
+\end_inset
+
+.
+ Die Abbildungen 
+\begin_inset Formula $g_{j}:X\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $g_{j}(x)=\|T_{j}x\|_{Y}$
+\end_inset
+
+ sind stetig und damit 
+\begin_inset Formula $g_{j}^{-1}([0,n])$
+\end_inset
+
+ abgeschlossen.
+ Da 
+\begin_inset Formula $A_{n}=\bigcap_{j\in\Lambda}g_{j}^{-1}([0,n])$
+\end_inset
+
+ sind alle 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+ abgeschlossen.
+ Nach Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:12"
+
+\end_inset
+
+ ist 
+\begin_inset Formula $X$
+\end_inset
+
+ von 2.
+ Kategorie und somit ist eines der 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+ nicht nirgends dicht.
+ Also enthält eines der 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+ einen inneren Punkt.
+\end_layout
+
+\begin_layout Proof
+Es gibt also 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $x\in A_{N}$
+\end_inset
+
+, 
+\begin_inset Formula $r>0$
+\end_inset
+
+ mit 
+\begin_inset Formula $U_{2r}(x)\subset A_{N}$
+\end_inset
+
+.
+ Dann gilt für 
+\begin_inset Formula $j\in\Lambda$
+\end_inset
+
+, 
+\begin_inset Formula $y\in X$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|y\|_{X}=1$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\|T_{j}y\|=\frac{1}{r}\|T_{j}(ry)\|_{Y}=\frac{1}{r}\|T_{j}(ry+x-x)\|_{Y}\leq\frac{1}{r}\underbrace{\|T_{j}(\underbrace{ry+x}_{\in U_{2r}(x)})\|_{Y}}_{\leq N}+\frac{1}{r}\underbrace{\|T_{j}x\|_{Y}}_{\leq N}\leq\frac{2N}{r}.
+\]
+
+\end_inset
+
+Somit gilt für alle 
+\begin_inset Formula $j\in\Lambda$
+\end_inset
+
+: 
+\begin_inset Formula $\|T_{j}\|\leq2\frac{N}{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:13"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum und 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+ Teilmenge.
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ ist genau dann beschränkt, wenn für alle 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+ die Menge 
+\begin_inset Formula $\{x'(y)\,|\, y\in M\}$
+\end_inset
+
+ beschränkt ist.
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\implies$
+\end_inset
+
+ 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+ ist stetige lineare Abbildung (
+\begin_inset Formula $|x'(y)|\leq\|x'\|\cdot\|y\|_{X}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\Longleftarrow$
+\end_inset
+
+ 
+\begin_inset Formula $X'$
+\end_inset
+
+ ist Banachraum.
+ Sei 
+\begin_inset Formula $\mathcal{N}=\{i(x)\,|\, x\in M\}\subset X''$
+\end_inset
+
+ mit 
+\begin_inset Formula $i:X\to X''$
+\end_inset
+
+ kanonische Abbildung.
+ Nach Voraussetzung ist für alle 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+N_{x'}=\{|i(x)(x')|\,|\, x\in M\}=\{|x'(x)|\,|\, x\in M\}
+\]
+
+\end_inset
+
+beschränkt.
+ Nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:37"
+
+\end_inset
+
+ und mit Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:30"
+
+\end_inset
+
+ ist 
+\begin_inset Formula $\{\|i(x)\|\,|\, x\in M\}=\{\|x\|_{X}\,|\, x\in M\}$
+\end_inset
+
+ beschränkt.
+\end_layout
+
+\end_deeper
+\begin_layout Corollary
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ normierter Raum und 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ schwach konvergente Folge in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ beschränkt.
+\end_layout
+
+\begin_layout Proof
+Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:13"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:15"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein Banachraum und 
+\begin_inset Formula $M\subset X'$
+\end_inset
+
+ Teilmenge.
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ ist genau dann beschränkt, wenn für alle 
+\begin_inset Formula $y\in X$
+\end_inset
+
+ die Menge 
+\begin_inset Formula $\{x'(y)\,|\, x'\in M\}$
+\end_inset
+
+ beschränkt ist.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\implies"$
+\end_inset
+
+ klar, 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\Longleftarrow$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:37"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:16"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein Banachraum, 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ ein normierter Raum und 
+\begin_inset Formula $(T_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $L(X,Y)$
+\end_inset
+
+.
+ Existiert für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ der Grenzwert 
+\begin_inset Formula $\lim_{n\to\infty}T_{n}x$
+\end_inset
+
+, so definiert 
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+, 
+\begin_inset Formula $Tx=\lim_{n\to\infty}T_{n}x$
+\end_inset
+
+ ein 
+\begin_inset Formula $T\in L(X,Y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Wir haben schon mehrfach gezeigt, dass ein solches 
+\begin_inset Formula $T$
+\end_inset
+
+ linear ist.
+ Da 
+\begin_inset Formula $\lim_{n\to\infty}T_{n}x$
+\end_inset
+
+ existiert, für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, ist für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ die Menge 
+\begin_inset Formula $\{\|T_{n}x\|_{Y}\,|\, n\in\mathbb{N}\}$
+\end_inset
+
+ beschränkt.
+ Nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:37"
+
+\end_inset
+
+ gibt es 
+\begin_inset Formula $M>0$
+\end_inset
+
+ so dass für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+: 
+\begin_inset Formula $\|T_{n}\|<M$
+\end_inset
+
+.
+ Somit gilt für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\|Tx\|_{Y}=\lim_{n\to\infty}\|T_{n}x\|_{Y}\leq M\cdot\|x\|_{Y}.
+\]
+
+\end_inset
+
+Also ist 
+\begin_inset Formula $T$
+\end_inset
+
+ stetig.
+\end_layout
+
+\begin_layout Subsection
+Satz von der offenen Abbildung
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:20"
+
+\end_inset
+
+Seien 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+, 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ normierte Räume.
+ Eine Abbildung 
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+ heißt 
+\emph on
+offen
+\emph default
+, wenn sie offene Mengen auf offene Mengen abbildet.
+\end_layout
+
+\begin_layout Remark
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Stetige Abbildungen sind 
+\emph on
+nicht
+\emph default
+ unbedingt offen, beispielsweise 
+\begin_inset Formula $f:\mathbb{R}\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $f(x)=x^{2}$
+\end_inset
+
+ bildet 
+\begin_inset Formula $(-1,1)$
+\end_inset
+
+ auf 
+\begin_inset Formula $[0,1)$
+\end_inset
+
+ ab.
+\end_layout
+
+\begin_layout Enumerate
+Offene Abbildungen bilden abgeschlossene Mengen 
+\emph on
+nicht
+\emph default
+ unbedingt auf abgeschlossene Mengen ab, beispielsweise 
+\begin_inset Formula $f:\mathbb{R}^{2}\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $f(x,y)=x$
+\end_inset
+
+ ist offen.
+ 
+\begin_inset Formula $M=\{(x,y)\in\mathbb{R}^{2}\,|\, x\cdot y\geq1\}$
+\end_inset
+
+ abgeschlossen aber 
+\begin_inset Formula $f(M)=\mathbb{R}\setminus\{0\}$
+\end_inset
+
+ ist offen und 
+\begin_inset Formula $\neq\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Eine offene lineare Abbildung 
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+ ist surjektiv, da 
+\begin_inset Formula $\Bild T$
+\end_inset
+
+ einen offenen Ball 
+\begin_inset Formula $U_{\varepsilon}(0)$
+\end_inset
+
+ enthält (Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:5"
+
+\end_inset
+
+, folgt) und dieser ganz 
+\begin_inset Formula $Y$
+\end_inset
+
+ erzeugt.
+ Der Satz von der offenen Abbildung liefert die Umkehrung für Banachräume.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:5"
+
+\end_inset
+
+Seien 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+, 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ normierte Räume und 
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+ linear.
+ Dann sind äquivalent:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ ist offen
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ bildet für alle 
+\begin_inset Formula $r>0$
+\end_inset
+
+ 
+\begin_inset Formula $U_{r}(0)$
+\end_inset
+
+ auf eine Umgebung von 
+\begin_inset Formula $0$
+\end_inset
+
+ ab, d.h.
+ 
+\begin_inset Formula $\forall_{r>0}\exists_{\delta>0}:$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\underbrace{U_{\delta}(0)}_{\subset Y}\subset T(\underbrace{U_{r}(0)}_{\subset X})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ bildet 
+\begin_inset Formula $U_{1}(0)$
+\end_inset
+
+ auf Umgebung von 
+\begin_inset Formula $0$
+\end_inset
+
+ ab, d.h.
+ 
+\begin_inset Formula $\exists_{\delta>0}:$
+\end_inset
+
+ 
+\begin_inset Formula $U_{\delta}(0)\subset T(U_{1}(0))$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+(1)
+\begin_inset Formula $\implies$
+\end_inset
+
+(2) klar
+\end_layout
+
+\begin_layout Description
+(2)
+\begin_inset Formula $\implies$
+\end_inset
+
+(3) klar
+\end_layout
+
+\begin_layout Description
+(3)
+\begin_inset Formula $\implies$
+\end_inset
+
+(1) Sei 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+ offen.
+ Sei 
+\begin_inset Formula $x\in M$
+\end_inset
+
+.
+ Es gibt 
+\begin_inset Formula $r>0$
+\end_inset
+
+ mit 
+\begin_inset Formula $U_{r}(x)\subset M$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $U_{r}(x)=rU_{1}(0)+x$
+\end_inset
+
+ und 
+\begin_inset Formula $T$
+\end_inset
+
+ linear folgt
+\begin_inset Formula $U_{r\delta}(Tx)=rU_{\delta}(0)+Tx\subset T(U_{1}(0))+Tx=T(rU_{1}(0)+x)=T(U_{r}(x))$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $U_{r\delta}(Tx)\subset T(M)$
+\end_inset
+
+.
+ Damit ist 
+\begin_inset Formula $T(M)$
+\end_inset
+
+ offen.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+Satz von der offenen Abbildung
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:38"
+
+\end_inset
+
+ Seien 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+, 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ Banachräume und 
+\begin_inset Formula $T\in L(X,Y)$
+\end_inset
+
+ surjektiv.
+ Dann ist 
+\begin_inset Formula $T$
+\end_inset
+
+ offen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Übungsblätter
 \end_layout

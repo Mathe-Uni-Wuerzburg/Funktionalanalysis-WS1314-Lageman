@@ -8773,7 +8773,743 @@ Sei
 \begin_inset Formula $x\in X$
 \end_inset
 
+ und 
+\begin_inset Formula $\inf_{x\in M}f(x)=\inf_{x\in M}p(x)$
+\end_inset
+
 .
+\end_layout
+
+\begin_layout Proof
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+4.12.13
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Falls 
+\begin_inset Formula $\inf_{x\in M}p(x)=-\infty$
+\end_inset
+
+, folgt aus Satz 24 mit 
+\begin_inset Formula $U=\{0\}$
+\end_inset
+
+ die Aussage, denn 
+\begin_inset Formula $p$
+\end_inset
+
+ sublinear impliziert dass 
+\begin_inset Formula $p(0)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Falls 
+\begin_inset Formula $\inf_{x\in M}p(x)=c\in\mathbb{R}$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $x\in X,$
+\end_inset
+
+
+\begin_inset Formula $y\in M$
+\end_inset
+
+ und 
+\begin_inset Formula $t\in[0,\infty)$
+\end_inset
+
+ ist 
+\begin_inset Formula 
+\begin{eqnarray*}
+p(x+ty)-tc & = & p(-(-x)+ty)-tc\geq p(ty)-p(-x)-tc\\
+ & = & t(p(y)-c)-p(-x)\geq-p(-x)
+\end{eqnarray*}
+
+\end_inset
+
+Also ist 
+\begin_inset Formula $\widetilde{p}:X\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $\widetilde{p}(x)=\inf\{p(x+ty)-tc\,|\, y\in M$
+\end_inset
+
+, 
+\begin_inset Formula $t\in[0,\infty)\}$
+\end_inset
+
+ wohldefiniert.
+ Für 
+\begin_inset Formula $\lambda\in(0,\infty)$
+\end_inset
+
+, 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ ist 
+\begin_inset Formula 
+\begin{eqnarray*}
+\widetilde{p}(\lambda x) & = & \inf\{p(\lambda x+ty)-tc\,|\, y\in M,t\in[0,\infty)\}\\
+ & = & \inf\{\lambda p(x+\frac{t}{\lambda}y)-tc\,|\, y\in M,t\in[0,\infty)\}\\
+ & = & \inf\{\lambda(p(x+\frac{t}{\lambda}y)-\frac{t}{\lambda}c)\,|\, y\in M,t\in[0,\infty)\}\\
+ & = & \lambda\inf\{p(x+\widetilde{t}y)-\widetilde{t}c\,|\, y\in M,\widetilde{t}\in[0,\infty)\}=\lambda\widetilde{p}(x).
+\end{eqnarray*}
+
+\end_inset
+
+Sei 
+\begin_inset Formula $x_{1},x_{2}\in X$
+\end_inset
+
+ und 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+.
+ Es gibt 
+\begin_inset Formula $t_{1},t_{2}\in[0,\infty)$
+\end_inset
+
+, 
+\begin_inset Formula $y_{1},y_{2}\in M$
+\end_inset
+
+ mit 
+\begin_inset Formula $\widetilde{p}(x_{1})\geq p(x+t_{1}y_{1})-t_{1}c-\frac{\varepsilon}{2}$
+\end_inset
+
+ und 
+\begin_inset Formula $\widetilde{p}(x_{2})\geq p(x_{2}+t_{2}y_{2})-t_{2}c-\frac{\varepsilon}{2}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $M$
+\end_inset
+
+ konvex ist, ist 
+\begin_inset Formula $\frac{t_{1}}{t_{1}+t_{2}}y_{1}+\frac{t_{2}}{t_{1}+t_{2}}y_{2}\in M$
+\end_inset
+
+ für 
+\begin_inset Formula $t_{1}+t_{2}\neq0$
+\end_inset
+
+.
+ Daher
+\begin_inset Formula 
+\begin{eqnarray*}
+\widetilde{p}(x_{1}+x_{2})-\varepsilon & \leq & p(x_{1}+x_{2}+(t_{1}+t_{2})(\frac{t_{1}}{t_{1}+t_{2}}y_{1}+\frac{t_{2}}{t_{1}+t_{2}}y_{2}))-(t_{1}+t_{2})c-\varepsilon\\
+ & \leq & p(x_{1}+t_{1}y_{1})-t_{1}c+p(x_{2}+t_{2}y_{2})-t_{2}c-\varepsilon\\
+ & \leq & \widetilde{p}(x_{1})+\widetilde{p}(x_{2}).
+\end{eqnarray*}
+
+\end_inset
+
+Also 
+\begin_inset Formula $\widetilde{p}(x_{1}+x_{2})\leq\widetilde{p}(x_{1})+\widetilde{p}(x_{2})$
+\end_inset
+
+, da 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ beliebig.
+ Also 
+\begin_inset Formula $\widetilde{p}$
+\end_inset
+
+ sublinear.
+ Durch Anwendung von Satz TODO für 
+\begin_inset Formula $U=\{0\}$
+\end_inset
+
+ erhalten wir eine lineare Abbildung 
+\begin_inset Formula $f:X\to\mathbb{R}$
+\end_inset
+
+ mit 
+\begin_inset Formula $f(x)\leq\widetilde{p}(x)\leq p(x)$
+\end_inset
+
+ für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+ Ist 
+\begin_inset Formula $x\in M$
+\end_inset
+
+ so gilt 
+\begin_inset Formula $f(-x)=-f(x)\leq\widetilde{p}(-x)\leq p(-x+x)-c$
+\end_inset
+
+ und somit für alle 
+\begin_inset Formula $x\in M$
+\end_inset
+
+: 
+\begin_inset Formula $c=\inf_{x\in M}p(x)\leq f(x)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:28"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+-Vektorraum, 
+\begin_inset Formula $A,B\in X$
+\end_inset
+
+ konvex, nicht-leer, mit 
+\begin_inset Formula 
+\[
+d(A,B)=\inf\{\|v-w\|_{X}\,|\, v\in A,w\in B\}>0.
+\]
+
+\end_inset
+
+Dann gibt es 
+\begin_inset Formula $f'\in X'$
+\end_inset
+
+ mit 
+\begin_inset Formula $f(A)\cap f(B)\neq\emptyset.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+TODO
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:3"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum.
+ Dann gibt es zu jedem 
+\begin_inset Formula $x\in X\setminus\{0\}$
+\end_inset
+
+ ein 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|x'\|=1$
+\end_inset
+
+ und 
+\begin_inset Formula $x'(x)=\|x\|_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Sei 
+\begin_inset Formula $U=\span\{x\}$
+\end_inset
+
+.
+ Definiere 
+\begin_inset Formula $u':U\to\mathbb{K}$
+\end_inset
+
+ durch 
+\begin_inset Formula $u'(\lambda x)=\lambda\|x\|_{X}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $u'$
+\end_inset
+
+ ist stetig da 
+\begin_inset Formula $\dim U=1$
+\end_inset
+
+.
+ Per Definition ist 
+\begin_inset Formula $\|u'\|=1$
+\end_inset
+
+.
+ Nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:26"
+
+\end_inset
+
+ gibt es 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|x'\|=\|u'\|$
+\end_inset
+
+ und 
+\begin_inset Formula $x'|_{U}=u'$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $x'(x)=u'(x)=\|x\|_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:4"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum.
+ Für 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\|x\|_{X}=\sup\{|x'(x)|\,|\, x'\in X',\|x'\|\leq1\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Da für alle 
+\begin_inset Formula $y'\in X'$
+\end_inset
+
+ gilt 
+\begin_inset Formula $|y'(x)|\leq\|y'\|\|x\|_{X}$
+\end_inset
+
+ folgt die Abschätzung 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\geq"$
+\end_inset
+
+.
+ Nach Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:3"
+
+\end_inset
+
+ gibt es 
+\begin_inset Formula $x'\in X$
+\end_inset
+
+ mit 
+\begin_inset Formula $|x'(x)|=\|x\|_{X}$
+\end_inset
+
+ und 
+\begin_inset Formula $\|x'\|=1$
+\end_inset
+
+.
+ Also folgt die Abschätzung 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\leq"$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:5"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum, 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ein abgeschlossener Unterraum mit 
+\begin_inset Formula $X\neq U$
+\end_inset
+
+ und 
+\begin_inset Formula $x\in X\setminus U$
+\end_inset
+
+.
+ Dann gibt es 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+ mit 
+\begin_inset Formula $x'|_{U}=0$
+\end_inset
+
+ und 
+\begin_inset Formula $x'(x)\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Übung.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:6"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum und 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ein Unterraum.
+ Dann sind äquivalent:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $X=\overline{U}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Für alle 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+ gilt: 
+\begin_inset Formula $x'|_{U}=0\implies x'=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+(1) 
+\begin_inset Formula $\implies$
+\end_inset
+
+(2): Übung
+\end_layout
+
+\begin_layout Proof
+(2) 
+\begin_inset Formula $\implies$
+\end_inset
+
+ (1): Beweis der Kontraposition.
+ Sei 
+\begin_inset Formula $\overline{U}\neq X$
+\end_inset
+
+.
+ Wähle 
+\begin_inset Formula $x\in X\setminus\overline{U}$
+\end_inset
+
+.
+ Nach Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:5"
+
+\end_inset
+
+ gibt es 
+\begin_inset Formula $x'\in X$
+\end_inset
+
+ mit 
+\begin_inset Formula $x'|_{\overline{U}}=0$
+\end_inset
+
+ und 
+\begin_inset Formula $x'\neq0$
+\end_inset
+
+ TODO
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:29"
+
+\end_inset
+
+ Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum.
+ Ist 
+\begin_inset Formula $X'$
+\end_inset
+
+ separabel, so ist auch 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ separabel.
+\end_layout
+
+\begin_layout Proof
+Sei 
+\begin_inset Formula $A'\subset X'$
+\end_inset
+
+ abzählbar mit 
+\begin_inset Formula $\overline{A'}=X'$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $B'=\{\frac{a'}{\|a'\|}\,|\, a'\in A',a'\neq0\}$
+\end_inset
+
+ dicht in 
+\begin_inset Formula $S'=\{x'\in X'\,|\,\|x'\|=1\}$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $U$
+\end_inset
+
+ abzählbar mit 
+\begin_inset Formula $\forall_{u\in U}\exists_{b'\in B}:$
+\end_inset
+
+ 
+\begin_inset Formula $|b'(u)|\geq\frac{1}{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $U$
+\end_inset
+
+ existiert, da 
+\begin_inset Formula $\forall_{b'\in B'}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $b'\neq0$
+\end_inset
+
+.
+ Wir können 
+\begin_inset Formula $U$
+\end_inset
+
+ so wählen, dass 
+\begin_inset Formula $\forall_{b'\in B'}\exists_{u\in U}:$
+\end_inset
+
+ 
+\begin_inset Formula $|b'(u)|\geq\frac{1}{2}$
+\end_inset
+
+.
+ Setze 
+\begin_inset Formula $V=\span U$
+\end_inset
+
+.
+ Angenommen 
+\begin_inset Formula $\overline{V}\neq X$
+\end_inset
+
+.
+ Nach Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:6"
+
+\end_inset
+
+ gibt es 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+ mit 
+\begin_inset Formula $x'|_{V}=0$
+\end_inset
+
+ und 
+\begin_inset Formula $x'\neq0$
+\end_inset
+
+.
+ O.B.d.A.
+ 
+\begin_inset Formula $\|x'\|=1$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $B'$
+\end_inset
+
+ dicht in 
+\begin_inset Formula $S'$
+\end_inset
+
+ gibt es 
+\begin_inset Formula $b'\in B'$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|x'-b'\|\leq\frac{1}{4}$
+\end_inset
+
+.
+ Weiterhin gibt es 
+\begin_inset Formula $u\in U$
+\end_inset
+
+ mit 
+\begin_inset Formula $|b'(u)|\geq\frac{1}{2}$
+\end_inset
+
+ und 
+\begin_inset Formula $\|u\|_{X}=1$
+\end_inset
+
+.
+ Es gilt
+\begin_inset Formula 
+\[
+\frac{1}{2}\leq|b'(u)|=|b'(u)-x'(u)|\leq\|b'-x'\|\cdot\|u\|_{X}\leq\frac{1}{4},
+\]
+
+\end_inset
+
+also Widerspruch.
+ Somit 
+\begin_inset Formula $\overline{V}=X$
+\end_inset
+
+, und 
+\begin_inset Formula $X$
+\end_inset
+
+ separabel.
+\end_layout
+
+\begin_layout Corollary
+
+\emph on
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:7"
+
+\end_inset
+
+
+\emph default
+Der Dualraum von 
+\begin_inset Formula $(l^{\infty},\|\cdot\|_{\infty})$
+\end_inset
+
+ ist 
+\emph on
+nicht 
+\emph default
+isomorph zu 
+\begin_inset Formula $(l^{1},\|\cdot\|_{1})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(l^{\infty},\|\cdot\|_{\infty})$
+\end_inset
+
+ ist nicht separabel, also 
+\begin_inset Formula $(l^{\infty})'$
+\end_inset
+
+ nicht separabel.
+ Aber 
+\begin_inset Formula $(l^{1},\|\cdot\|_{1})$
+\end_inset
+
+ separabel.
 \end_layout
 
 \begin_layout Definition

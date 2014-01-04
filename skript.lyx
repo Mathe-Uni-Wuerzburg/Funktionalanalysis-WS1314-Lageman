@@ -7011,6 +7011,12 @@ Seien
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:20"
+
+\end_inset
+
 Seien 
 \begin_inset Formula $(X,\|\cdot\|_{X})$
 \end_inset
@@ -8496,7 +8502,14 @@ genau eine
 \end_inset
 
 .
- Die Aussagen von Satz 20 (TODO) (2), (3), (4), (5) gelten auch für 
+ Die Aussagen von Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:20"
+
+\end_inset
+
+ (2), (3), (4), (5) gelten auch für 
 \begin_inset Formula $X=\{0\}$
 \end_inset
 
@@ -9691,7 +9704,14 @@ Somit
 \end_inset
 
 .
- Nach Korollar 3 (TODO) gibt es zu 
+ Nach Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:3"
+
+\end_inset
+
+ gibt es zu 
 \begin_inset Formula $x\in X$
 \end_inset
 
@@ -10042,7 +10062,14 @@ Sei
 \end_inset
 
 .
- Dann gibt es nach Korollar 5 (TODO) ein 
+ Dann gibt es nach Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:5"
+
+\end_inset
+
+ ein 
 \begin_inset Formula $x'\in X'$
 \end_inset
 
@@ -10087,7 +10114,14 @@ Sei nun
 \begin_inset Formula $x'$
 \end_inset
 
- existiert nach Satz 26 (TODO).
+ existiert nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:26"
+
+\end_inset
+
+.
  Dann gilt 
 \begin_inset Formula $u''(u')=u''(x'|_{U})=f(x')=x'(x)=u'(x)$
 \end_inset
@@ -10230,7 +10264,14 @@ Sei
 \end_layout
 
 \begin_layout Proof
-Satz 29 (TODO)
+Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:29"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition
@@ -10432,7 +10473,14 @@ Konvergiere
 \end_inset
 
 .
- Nach Korollar 3 (TODO) gibt es 
+ Nach Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:3"
+
+\end_inset
+
+ gibt es 
 \begin_inset Formula $f'\in X'$
 \end_inset
 
@@ -11074,7 +11122,14 @@ status open
 \begin_inset Formula $T\in L(X,Y)$
 \end_inset
 
- mit Korollar 4 (TODO) 
+ mit Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:4"
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{eqnarray*}
 \|T\| & = & \sup\{\|Tx\|_{Y}\,|\,\|x\|\leq1\}\\
@@ -11424,7 +11479,14 @@ Da
 \end_inset
 
 .
- Nach Korollar 5 (TODO) gibt es 
+ Nach Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:5"
+
+\end_inset
+
+ gibt es 
 \begin_inset Formula $y'\in Y'$
 \end_inset
 
@@ -11511,11 +11573,11 @@ Seien
 \end_layout
 
 \begin_layout Section
-3 (TODO) Hauptsätze für lineare Operatoren auf Banachräumen
+Hauptsätze für lineare Operatoren auf Banachräumen
 \end_layout
 
 \begin_layout Subsection
-3.1 (TODO) Bairesche Kategoriensatz
+Bairesche Kategoriensatz
 \end_layout
 
 \begin_layout Definition
@@ -11768,7 +11830,7 @@ reference "cor:11"
 \end_layout
 
 \begin_layout Subsection
-3.2 (TODO) Prinzip der gleichmäßigen Beschränktheit
+Prinzip der gleichmäßigen Beschränktheit
 \end_layout
 
 \begin_layout Theorem

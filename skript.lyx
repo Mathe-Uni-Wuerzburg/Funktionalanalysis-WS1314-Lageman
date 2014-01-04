@@ -6794,8 +6794,26 @@ reference "thm:12"
  Banachraum.
 \end_layout
 
+\begin_layout Section
+Beschränkte lineare Operatoren
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+14.11.13
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Definition
 TODO
+\end_layout
+
+\begin_layout Standard
+Wir wollen uns nun mit stetigen linearen Abbildungen beschäftigen.
 \end_layout
 
 \begin_layout Theorem
@@ -6813,7 +6831,7 @@ Seien
 \begin_inset Formula $(Y,\|\cdot\|_{Y})$
 \end_inset
 
- metrische Räume.
+ normierte Räume.
  Sei 
 \begin_inset Formula $T$
 \end_inset
@@ -6855,7 +6873,7 @@ Es existiert ein
 \end_inset
 
  gilt 
-\begin_inset Formula $\|Tx\|_{Y}\leq\|x\|_{X}$
+\begin_inset Formula $\|Tx\|_{Y}\leq M\|x\|_{X}$
 \end_inset
 
 .
@@ -6874,8 +6892,15 @@ TODO
 \end_layout
 
 \begin_layout Remark
-Man bezeichnet lineare Operatoren/Funktionale auch als beschränkte Operatoren/Fu
-nktionale.
+Wegen Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:19"
+
+\end_inset
+
+ bezeichnet man stetige lineare Operatoen/Funktionale als beschränkte lineare
+ Operatoren/Funktionale.
 \end_layout
 
 \begin_layout Definition
@@ -6919,8 +6944,19 @@ Seien
 
 \end_layout
 
-\begin_layout --Separator--
+\begin_layout Standard
+Wegen Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:19"
 
+\end_inset
+
+ ist 
+\begin_inset Formula $\|T\|$
+\end_inset
+
+ wohldefiniert.
 \end_layout
 
 \begin_layout Definition
@@ -6955,7 +6991,11 @@ Seien
 \begin_inset Formula $Y$
 \end_inset
 
- ab.
+ ab (falls 
+\begin_inset Formula $X$
+\end_inset
+
+ unendlich-dimensional).
 \end_layout
 
 \begin_layout Theorem
@@ -6971,7 +7011,7 @@ Seien
 \begin_inset Formula $(Z,\|\cdot\|_{Z})$
 \end_inset
 
- metrische Räume.
+ normierte Räume.
  Es gilt
 \end_layout
 
@@ -7055,8 +7095,296 @@ Für
 \end_layout
 
 \end_deeper
-\begin_layout Standard
-TODO
+\begin_layout Proof
+Beweis von (1), (2) und (5) in der Übung.
+ Beweis von (3): 
+\begin_inset Formula $L(X,Y)$
+\end_inset
+
+ ist ein 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum.
+ Wir zeigen, dass 
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+ Norm auf 
+\begin_inset Formula $L(X,Y)$
+\end_inset
+
+ ist.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $\lambda\in\mathbb{K},$
+\end_inset
+
+ 
+\begin_inset Formula $T\in L(X,Y)$
+\end_inset
+
+.
+ Damit 
+\begin_inset Formula 
+\begin{eqnarray*}
+\|\lambda T\| & = & \sup\{\|(\lambda T)x\|_{Y}\,|\, x\in X,\|x\|_{X}=1\}\\
+ & = & \sup\{\|\lambda(Tx)\|_{Y}\,|\, x\in X,\|x\|_{X}=1\}=|\lambda|\|T\|.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $S,T\in L(X,Y)$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\|S+T\| & = & \sup\{\|(S+T)x\|_{Y}\,|\, x\in X,\|x\|_{X}=1\}\\
+ & = & \sup\{\|Sx+Tx\|_{Y}\,|\, x\in X,\|x\|_{X}=1\}\\
+ & \leq & \sup\{\|Sx\|_{Y}+\|Tx\|_{Y}\,|\, x\in X,\|x\|_{Y}=1\}\leq\|S\|+\|T\|
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $T\in L(X,Y)$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|T\|=0$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula 
+\[
+\sup\left\{ \frac{\|Tx\|_{Y}}{\|x\|_{X}}\,|\, x\in X,x\neq0\right\} =0.
+\]
+
+\end_inset
+
+Also für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $x\neq0$
+\end_inset
+
+ ist 
+\begin_inset Formula $\|Tx\|_{Y}=0$
+\end_inset
+
+.
+ Also ist 
+\begin_inset Formula $T$
+\end_inset
+
+ konstant 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Beweis von (4): Sei 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ vollständig und 
+\begin_inset Formula $(T_{n})$
+\end_inset
+
+ Cauchy-Folge in 
+\begin_inset Formula $(L(X,Y),\|\cdot\|)$
+\end_inset
+
+.
+ Für jedes 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ ist 
+\begin_inset Formula $(T_{n}x)_{n\in\mathbb{N}}$
+\end_inset
+
+ Cauchy-Folge in 
+\begin_inset Formula $Y$
+\end_inset
+
+, da für alle 
+\begin_inset Formula $n,m\in\mathbb{N}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\|T_{n}x-T_{m}x\|=\|(T_{n}-T_{m})x\|\leq\|T_{n}-T_{m}\|\cdot\|x\|_{X}.$
+\end_inset
+
+ Da 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ vollständig ist, konvergiert 
+\begin_inset Formula $(T_{n}x)$
+\end_inset
+
+.
+ Definiere 
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+ durch 
+\begin_inset Formula $Tx:=\lim_{n\to\infty}(T_{n}x)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ ist linear, da für 
+\begin_inset Formula $a,b\in\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{1},x_{2}\in X$
+\end_inset
+
+ gilt 
+\begin_inset Formula $T(ax_{1}+bx_{2})=\lim_{n\to\infty}T_{n}(ax_{1}+bx_{2})=\lim_{n\to\infty}(aT_{n}x_{1}+bT_{n}x_{2})=a\lim_{n\to\infty}T_{n}x_{1}+b\lim_{n\to\infty}T_{n}x_{2}=aTx_{1}+bTx_{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $(\|T_{n}\|)_{n\in\mathbb{N}}$
+\end_inset
+
+ ist Cauchy-Folge in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+, da für alle 
+\begin_inset Formula $n,m\in\mathbb{N}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $|\|T_{n}\|-\|T_{m}\||\leq\|T_{n}-T_{m}\|$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $(\|T_{n}\|)$
+\end_inset
+
+ konvergent gegen 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+.
+ Für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\|Tx\|_{Y}=\lim_{n\to\infty}\|T_{n}x\|_{Y}\leq\lim_{n\to\infty}\|T_{n}\|\|x\|_{X}=c\|x\|_{X}$
+\end_inset
+
+.
+ Nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:19"
+
+\end_inset
+
+ ist 
+\begin_inset Formula $T$
+\end_inset
+
+ daher stetig.
+ Sei 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ gegeben.
+ Wähle 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+, so dass für alle 
+\begin_inset Formula $n,m\in\mathbb{N}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\|T_{n}-T_{m}\|<\frac{\varepsilon}{2}$
+\end_inset
+
+ gilt.
+ Sei 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+ Wähle 
+\begin_inset Formula $M_{x}\in\mathbb{N}$
+\end_inset
+
+ mit 
+\begin_inset Formula $M_{x}>N$
+\end_inset
+
+ und 
+\begin_inset Formula $\forall_{m\geq M_{x}}:$
+\end_inset
+
+ 
+\begin_inset Formula $\|Tx-T_{m}x\|_{Y}<\frac{\varepsilon}{2}$
+\end_inset
+
+.
+ Für alle 
+\begin_inset Formula $n>N$
+\end_inset
+
+ und 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ ist 
+\begin_inset Formula $\|x\|_{X}=1$
+\end_inset
+
+.
+ Es gilt 
+\begin_inset Formula $\|Tx-T_{n}x\|_{Y}\leq\|Tx-T_{M_{X}}x\|_{Y}+\|T_{M_{x}}x-T_{n}x\|_{Y}<\frac{\varepsilon}{2}+\|T_{M_{x}}-T_{n}\|\|x\|_{X}<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon$
+\end_inset
+
+.
+ Also für alle 
+\begin_inset Formula $n>N$
+\end_inset
+
+: 
+\begin_inset Formula $\|T-T_{n}\|=\sup\{\|Tx-T_{n}x\|_{Y}\,|\, x\in X,\|x\|_{X}=1\}\leq\varepsilon$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Definition

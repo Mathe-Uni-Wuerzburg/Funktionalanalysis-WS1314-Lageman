@@ -7387,6 +7387,538 @@ reference "thm:19"
 .
 \end_layout
 
+\begin_layout Example
+TODO(Beispiele 6).
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+20.11.13
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum.
+ Der identische Operator 
+\begin_inset Formula $1:X\to X$
+\end_inset
+
+, 
+\begin_inset Formula $\|x\|=1$
+\end_inset
+
+ TODO
+\end_layout
+
+\begin_layout Enumerate
+Betrachte 
+\begin_inset Formula $(C([0,1]),\|\cdot\|_{\infty})$
+\end_inset
+
+, 
+\begin_inset Formula $p\in[0,1]$
+\end_inset
+
+ und 
+\begin_inset Formula $T_{p}:C([0,1])\to\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $T_{p}f:=f(p)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $T_{p}$
+\end_inset
+
+ ist linear, 
+\begin_inset Formula $T_{p}$
+\end_inset
+
+ ist stetig, den für 
+\begin_inset Formula $f\in C[0,1]$
+\end_inset
+
+ gilt 
+\begin_inset Formula $|T_{p}f|=|f(p)|\leq\|f\|_{\infty}$
+\end_inset
+
+.
+ Da es 
+\begin_inset Formula $f\in C([0,1])$
+\end_inset
+
+ gibt mit 
+\begin_inset Formula $|f(p)|=\|f\|_{\infty}\neq0$
+\end_inset
+
+ ist 
+\begin_inset Formula 
+\[
+\sup\left\{ \frac{|T_{p}f|}{\|f\|_{\infty}}\,|\, f\in C([0,1]),f\neq0\right\} \geq1.
+\]
+
+\end_inset
+
+Somit 
+\begin_inset Formula $\|T_{p}\|=1$
+\end_inset
+
+.
+ Betrachten wir 
+\begin_inset Formula $\|f\|_{1}=\int_{0}^{1}|f(s)|\, ds$
+\end_inset
+
+ auf 
+\begin_inset Formula $C([0,1])$
+\end_inset
+
+, so ist 
+\begin_inset Formula $T_{p}:(C([0,1]),\|\cdot\|_{1})\to\mathbb{K}$
+\end_inset
+
+ unstetig, denn es gibt Folge 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $C([0,1])$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|f_{n}\|_{1}=1$
+\end_inset
+
+ für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+und 
+\begin_inset Formula $|f_{n}(p)|\to\infty$
+\end_inset
+
+ für 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Betrachte 
+\begin_inset Formula $(C([0,1]),\|\cdot\|_{\infty})$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $k\in C([0,1]\times[0,1])$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $f\in C([0,1])$
+\end_inset
+
+ ist die Abbildung 
+\begin_inset Formula $[0,1]\to\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $t\mapsto\int_{0}^{1}k(t,s)f(s)\, ds$
+\end_inset
+
+ wohldefiniert und stetig, da 
+\begin_inset Formula $(t,s)\mapsto k(t,s)f(s)$
+\end_inset
+
+ gleichmäßig stetig auf 
+\begin_inset Formula $[0,1]\times[0,1]$
+\end_inset
+
+ ist.
+ Wir erhalten eine Abbildung 
+\begin_inset Formula $T:C([0,1])\to C([0,1])$
+\end_inset
+
+, 
+\begin_inset Formula $(Tf)(t):=\int_{0}^{1}k(t,s)f(s)\, ds$
+\end_inset
+
+.
+ Man sieht, dass 
+\begin_inset Formula $T$
+\end_inset
+
+ linear ist.
+ Man spricht von einem Integraloperator und von 
+\begin_inset Formula $k$
+\end_inset
+
+ als den Kern von 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Da gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+|\int_{0}^{1}k(t,s)f(s)\, ds| & \leq & \int_{0}^{1}|k(t,s)|\cdot|f(s)|\, ds\\
+ & \leq & \|f\|_{\infty}\int_{0}^{1}|k(t,s)|\, ds
+\end{eqnarray*}
+
+\end_inset
+
+ist 
+\begin_inset Formula $\|\int_{0}^{1}k(t,s)f(s)\, ds\|_{\infty}\leq\|f\|_{\infty}\sup_{t\in[0,1]}\int_{0}^{1}|k(t,s)|\, ds$
+\end_inset
+
+, also 
+\begin_inset Formula $T$
+\end_inset
+
+ stetig und 
+\begin_inset Formula $\|T\|\leq\sup_{t\in[0,1]}\int_{0}^{1}|k(t,s)|\, ds$
+\end_inset
+
+.
+ Für alle 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+, 
+\begin_inset Formula $t\in[0,1]$
+\end_inset
+
+ fest gilt
+\begin_inset Formula 
+\begin{eqnarray*}
+\int_{0}^{1}k(t,s)\frac{\overline{k(t,s)}}{|k(t,s)|+\varepsilon}\, ds & = & \int_{0}^{1}\frac{|k(t,s)|^{2}}{|k(t,s)|+\varepsilon}\, ds\\
+ & \geq & \int_{0}^{1}\frac{|k(t,s)|^{2}-\varepsilon^{2}}{|k(t,s)|+\varepsilon}\, ds\\
+ & = & \int_{0}^{1}(|k(t,s)|-\varepsilon)\, ds\\
+ & = & \int_{0}^{1}|k(t,s)|\, ds-\varepsilon
+\end{eqnarray*}
+
+\end_inset
+
+und 
+\begin_inset Formula 
+\[
+\sup_{s\in[0,1]}\left|\frac{\overline{k(t,s)}}{|k(t,s)|+\varepsilon}\right|<1.
+\]
+
+\end_inset
+
+Also zu jedem 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+, 
+\begin_inset Formula $t\in[0,1]$
+\end_inset
+
+ gibt es 
+\begin_inset Formula $f_{t}\in C([0,1])$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|f_{t}\|_{\infty}<1$
+\end_inset
+
+ und 
+\begin_inset Formula $(Tf)(t)\geq\int_{0}^{1}|k(t,s)|\, ds-\varepsilon$
+\end_inset
+
+.
+ Also für 
+\begin_inset Formula $T\neq0$
+\end_inset
+
+ und 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ hinreichend klein, gibt es 
+\begin_inset Formula $t_{0}\in C([0,1])$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|Tf_{t_{0}}\|_{\infty}\geq\int_{0}^{1}|k(t,s)|\, ds-\varepsilon$
+\end_inset
+
+ und 
+\begin_inset Formula $\int_{0}^{1}|k(t_{0},s)|\, ds=\sup_{t\in[0,1]}\int_{0}^{1}|k(t,s)|\, ds$
+\end_inset
+
+.
+ Da dies für alle 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ hinreichend klein gilt, ist 
+\begin_inset Formula $\|T\|=\sup\{\|Tf\|_{\infty}\,|\, f\in C([0,1]),f\neq0,\|f\|_{\infty}\leq1\}\geq\sup_{t\in[0,1]}\int_{0}^{1}|k(t,s)|\, ds$
+\end_inset
+
+.
+ Somit 
+\begin_inset Formula $\|T\|=\sup_{t\in[0,1]}\int_{0}^{1}|k(t,s)|\, ds$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Wir betrachten 
+\begin_inset Formula $X=C^{1}([0,1])$
+\end_inset
+
+ und 
+\begin_inset Formula $Y=C([0,1])$
+\end_inset
+
+.
+ Wir definieren 
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+ durch 
+\begin_inset Formula $Tf=f'$
+\end_inset
+
+.
+ Versehen wir 
+\begin_inset Formula $X$
+\end_inset
+
+ und 
+\begin_inset Formula $Y$
+\end_inset
+
+ mit der Supremumsnorm, so ist 
+\begin_inset Formula $T$
+\end_inset
+
+ unstetig, denn für 
+\begin_inset Formula $f_{n}(x):=x^{n}$
+\end_inset
+
+ ist 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $X$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|f_{n}\|_{\infty}=1$
+\end_inset
+
+ für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ und 
+\begin_inset Formula $\|Tf_{n}\|_{\infty}=n$
+\end_inset
+
+ da 
+\begin_inset Formula $f_{n}'(x)=nx^{n-1}$
+\end_inset
+
+.
+ Also gibt es 
+\emph on
+kein 
+\emph default
+
+\begin_inset Formula $M>0$
+\end_inset
+
+ mit 
+\begin_inset Formula $\forall_{f\in X}:$
+\end_inset
+
+ 
+\begin_inset Formula $\|Tf\|_{\infty}\leq M\|f\|_{\infty}$
+\end_inset
+
+.
+ Versehen wir 
+\begin_inset Formula $X$
+\end_inset
+
+ mit der Norm 
+\begin_inset Formula $\|f\|=\|f\|_{\infty}+\|f'\|_{\infty}$
+\end_inset
+
+ und 
+\begin_inset Formula $Y$
+\end_inset
+
+ mit der Supremumsnorm, so ist 
+\begin_inset Formula $T$
+\end_inset
+
+ stetig, denn für alle 
+\begin_inset Formula $f\in X$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\|Tf\|_{\infty}=$
+\end_inset
+
+ TODO
+\end_layout
+
+\begin_layout Enumerate
+Wir betrachten 
+\begin_inset Formula $X=\{f\in C([0,1])\,|\, f(1)=0\}\subset C([0,1])$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+.
+ Wir definieren 
+\begin_inset Formula $T:X\to\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $Tf=\int_{0}^{1}f(s)\, ds$
+\end_inset
+
+.
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ ist linear und 
+\begin_inset Formula $T$
+\end_inset
+
+ ist stetig, da 
+\begin_inset Formula $|Tf|=|\int_{0}^{1}f(s)\, ds|\leq\int_{0}^{1}|f(s)|\, ds\leq\|f\|_{\infty}.$
+\end_inset
+
+ Insbesondere 
+\begin_inset Formula $\|T\|\leq1$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $f_{n}(x)=1-x^{n}$
+\end_inset
+
+ ist 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $X$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|f_{n}\|_{\infty}=1$
+\end_inset
+
+ für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ und es gilt 
+\begin_inset Formula $|Tf_{n}|=|\int_{0}^{1}(1-x^{n})\, dx|=|1-\frac{1}{n+1}|$
+\end_inset
+
+.
+ Somit 
+\begin_inset Formula $\|T\|\geq1-\frac{1}{n+1}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $\|T\|=1$
+\end_inset
+
+.
+ Angenommen es gäbe 
+\begin_inset Formula $f\in X$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|f\|_{\infty}=1$
+\end_inset
+
+ und 
+\begin_inset Formula $|Tf|=1$
+\end_inset
+
+.
+ O.B.d.A.
+ 
+\begin_inset Formula $Tf=1$
+\end_inset
+
+.
+ Dann gilt 
+\begin_inset Formula $0=\int_{0}^{1}f(s)\, ds-1=\int_{0}^{1}(f(s)-1)\, ds$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $|f(s)|\leq1$
+\end_inset
+
+ für alle 
+\begin_inset Formula $s\in[0,1]$
+\end_inset
+
+ ist 
+\begin_inset Formula $\Re g(s)\leq0$
+\end_inset
+
+ für alle 
+\begin_inset Formula $s\in[0,1]$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $g(s)$
+\end_inset
+
+ stetig ist 
+\begin_inset Formula $\Re g(s)=0$
+\end_inset
+
+ für alle 
+\begin_inset Formula $s\in[0,1]$
+\end_inset
+
+.
+ Somit 
+\begin_inset Formula $\Re f(1)=\Re g(1)+1=0+1$
+\end_inset
+
+, im Widerspruch zu 
+\begin_inset Formula $f(1)=0$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label

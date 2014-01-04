@@ -10,7 +10,7 @@ theorems-ams
 \begin_modules
 eqs-within-sections
 figs-within-sections
-theorems-bytype
+theorems-ams-bytype
 \end_modules
 \maintain_unincluded_children false
 \language ngerman
@@ -6904,6 +6904,12 @@ reference "thm:19"
 \end_layout
 
 \begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:9"
+
+\end_inset
+
 Seien 
 \begin_inset Formula $(X,\|\cdot\|_{X})$
 \end_inset
@@ -6960,6 +6966,12 @@ reference "thm:19"
 \end_layout
 
 \begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:10"
+
+\end_inset
+
 Seien 
 \begin_inset Formula $(X,\|\cdot\|_{X})$
 \end_inset
@@ -7914,6 +7926,851 @@ Wir betrachten
 
 , im Widerspruch zu 
 \begin_inset Formula $f(1)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:23"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $M\subset\mathbb{R}^{n}$
+\end_inset
+
+ messbar, 
+\begin_inset Formula $M\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Betrachte 
+\begin_inset Formula $(L^{p}(M),\|\cdot\|_{p})$
+\end_inset
+
+ für 
+\begin_inset Formula $p\in(1,\infty)$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $((L^{p}(M)',\|\cdot\|)$
+\end_inset
+
+ isometrisch isomorph zu 
+\begin_inset Formula $(L^{q}(M),\|\cdot\|_{q})$
+\end_inset
+
+ für 
+\begin_inset Formula $q=\frac{p}{p-1}$
+\end_inset
+
+ vermöge der Abbildung 
+\begin_inset Formula $T:L^{q}(M)\to(L^{p}(M))'$
+\end_inset
+
+, 
+\begin_inset Formula $(Tf)(g):=\int_{M}f\cdot g\, d\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Betrachte 
+\begin_inset Formula $(L^{1}(M),\|\cdot\|_{1}).$
+\end_inset
+
+Dann ist 
+\begin_inset Formula $((L^{1}(M))',\|\cdot\|)$
+\end_inset
+
+ isometrisch isomorph zu 
+\begin_inset Formula $(L^{\infty}(M),\|\cdot\|_{\infty})$
+\end_inset
+
+ vermöge der Abbildung 
+\begin_inset Formula $T:L^{\infty}(M)\to(L^{1}(M))'$
+\end_inset
+
+, 
+\begin_inset Formula $(Tf)(g)=\int_{M}f\cdot g\, d\lambda$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+Dabei ist jeweils mit 
+\begin_inset Formula $\int_{M}f\cdot g\, d\lambda$
+\end_inset
+
+ gemeint, dass ein Repräsentant 
+\begin_inset Formula $\widetilde{f}$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $\widetilde{g}$
+\end_inset
+
+ aus der Äquivalenzklasse 
+\begin_inset Formula $f$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $g$
+\end_inset
+
+ gewählt wird und man 
+\begin_inset Formula $\int_{M}\widetilde{f}\cdot\widetilde{g}\, d\lambda$
+\end_inset
+
+ berechnet.
+ Der Wert von 
+\begin_inset Formula $\int_{M}\widetilde{f}\cdot\widetilde{g}\, d\lambda$
+\end_inset
+
+ hängt nicht von der Wahl der Repräsentanten ab und 
+\begin_inset Formula $Tf:L^{p}(M)\to\mathbb{K}$
+\end_inset
+
+ ist wohldefiniert.
+\end_layout
+
+\begin_layout Remark
+Für 
+\begin_inset Formula $(l^{\infty},\|\cdot\|_{\infty})$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $(L^{\infty}(M),\|\cdot\|_{\infty})$
+\end_inset
+
+ ist 
+\begin_inset Formula $(l^{\infty})'$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $(L^{\infty}(M))'$
+\end_inset
+
+ nicht isomorph zu 
+\begin_inset Formula $l^{1}$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $L^{1}(M)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Satz von Hahn-Banach
+\end_layout
+
+\begin_layout Standard
+Wir wiederholen das Lemma von Zorn.
+ Sei dazu 
+\begin_inset Formula $M$
+\end_inset
+
+ eine nicht-leere Menge.
+ Eine Relation 
+\begin_inset Formula $\leq$
+\end_inset
+
+ heißt 
+\emph on
+Ordnungsrelation
+\emph default
+, falls für alle 
+\begin_inset Formula $x,y\in M$
+\end_inset
+
+ gilt 
+\begin_inset Formula $x\leq x$
+\end_inset
+
+, 
+\begin_inset Formula $(x\leq y\wedge y\leq z)\implies x\leq z$
+\end_inset
+
+ und 
+\begin_inset Formula $(x\leq y\wedge y\leq x)\implies x=y$
+\end_inset
+
+.
+ Wir nennen 
+\begin_inset Formula $(M,\leq)$
+\end_inset
+
+ eine 
+\emph on
+geordnete Menge
+\emph default
+.
+ Sei 
+\begin_inset Formula $(M,\leq)$
+\end_inset
+
+ eine geordnete Menge.
+ Wir nennen 
+\begin_inset Formula $m\in M$
+\end_inset
+
+ 
+\emph on
+maximal
+\emph default
+, falls 
+\begin_inset Formula $\forall_{x\in M}:$
+\end_inset
+
+ 
+\begin_inset Formula $x\leq m$
+\end_inset
+
+.
+ Ist 
+\begin_inset Formula $A\subset M$
+\end_inset
+
+, so nennen wir 
+\begin_inset Formula $s\in M$
+\end_inset
+
+ 
+\emph on
+obere Schranke
+\emph default
+, falls 
+\begin_inset Formula $\forall_{x\in A}:$
+\end_inset
+
+ 
+\begin_inset Formula $x\leq s$
+\end_inset
+
+.
+ 
+\begin_inset Formula $A\subset M$
+\end_inset
+
+ heißt 
+\emph on
+Kette
+\emph default
+, falls für alle 
+\begin_inset Formula $x,y\in A$
+\end_inset
+
+ gilt: 
+\begin_inset Formula $x\leq y$
+\end_inset
+
+ oder 
+\begin_inset Formula $y\leq x$
+\end_inset
+
+.
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ heißt 
+\emph on
+induktiv geordnet
+\emph default
+, falls jede Kette eine obere Schranke besitzt.
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+Das Lemma von Zorn
+\end_layout
+
+\end_inset
+
+ Eine induktiv geordnete Menge besitzt (mindestens) ein maximales Element.
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:13"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum.
+ Wir nennen 
+\begin_inset Formula $p:X\to\mathbb{R}$
+\end_inset
+
+ sublinear, falls gilt
+\end_layout
+
+\begin_layout Enumerate
+Für alle 
+\begin_inset Formula $x\in X,\lambda\in\mathbb{R}^{+}$
+\end_inset
+
+: 
+\begin_inset Formula $p(\lambda x)=\lambda p(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Für alle 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+: 
+\begin_inset Formula $p(x+y)\leq p(x)+p(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ex:8-1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Jede Halbnorm ist sublinear.
+\end_layout
+
+\begin_layout Enumerate
+Lineare Funktionale auf einem 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+-Vektorraum sind sublinear.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+Satz von Hahn-Banach
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:24"
+
+\end_inset
+
+ Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+-Vektorraum, 
+\begin_inset Formula $p:X\to\mathbb{R}$
+\end_inset
+
+ sublinear, 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ein Unterraum und 
+\begin_inset Formula $f:U\to\mathbb{R}$
+\end_inset
+
+ linear mit 
+\begin_inset Formula $f(x)\leq p(x)$
+\end_inset
+
+ für alle 
+\begin_inset Formula $x\in U$
+\end_inset
+
+.
+ Dann gibt es eine lineare Abbildung 
+\begin_inset Formula $F:X\to\mathbb{R}$
+\end_inset
+
+ mit 
+\begin_inset Formula $F|_{U}=f$
+\end_inset
+
+ und 
+\begin_inset Formula $F(x)\leq p(x)$
+\end_inset
+
+ für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+TODO
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+Hahn-Banach für 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+-Vektorräume
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:25"
+
+\end_inset
+
+ Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+-Vektorraum, 
+\begin_inset Formula $p:X\to\mathbb{R}$
+\end_inset
+
+ sublinear, 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ein Unterraum und 
+\begin_inset Formula $f:U\to\mathbb{C}$
+\end_inset
+
+ linear mit 
+\begin_inset Formula $\Re f(x)\leq p(x)$
+\end_inset
+
+ für alle 
+\begin_inset Formula $x\in U$
+\end_inset
+
+.
+ Dann gibt es eine lineare Abbildung 
+\begin_inset Formula $F:X\to\mathbb{C}$
+\end_inset
+
+ mit 
+\begin_inset Formula $F(x)=f(x)$
+\end_inset
+
+ für alle 
+\begin_inset Formula $x\in U$
+\end_inset
+
+ und 
+\begin_inset Formula $\Re F(x)\leq p(x)$
+\end_inset
+
+ für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+TODO
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+Nachtrag zu Definition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "def:9"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+3.12.13
+\end_layout
+
+\end_inset
+
+Seien 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+, 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ normierte Räume.
+ Ist 
+\begin_inset Formula $X=\{0\}$
+\end_inset
+
+ so gibt es 
+\emph on
+genau eine
+\emph default
+ lineare Abbildung 
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+ und zwar die konstante Abbildung 
+\begin_inset Formula $Tx=0$
+\end_inset
+
+.
+ Diese Abbildung ist stetig, man setzt in diesem Fall 
+\begin_inset Formula $\|T\|=0$
+\end_inset
+
+.
+ Die Aussagen von Satz 20 (TODO) (2), (3), (4), (5) gelten auch für 
+\begin_inset Formula $X=\{0\}$
+\end_inset
+
+.
+ Im Folgenden sind normierte Räume stets nicht trivial, d.h.
+ ungleich 
+\begin_inset Formula $\{0\}$
+\end_inset
+
+, sofern nicht anders vermerkt.
+ Definitionen 11 (TODO) und 12 (TODO) gelten auch für den Fall, dass einer
+ der Räume 
+\begin_inset Formula $\{0\}$
+\end_inset
+
+ ist.
+ Ebenso darf in den Sätzen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:24"
+
+\end_inset
+
+ und 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:25"
+
+\end_inset
+
+ 
+\begin_inset Formula $U=\{0\}$
+\end_inset
+
+ sein.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:26"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum, 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ein Unterraum und 
+\begin_inset Formula $u'\in U'$
+\end_inset
+
+.
+ Dann gibt es 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|u'\|=\|x'\|$
+\end_inset
+
+ und 
+\begin_inset Formula $u'(v)=x'(v)$
+\end_inset
+
+ für alle 
+\begin_inset Formula $v\in U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Setze 
+\begin_inset Formula $p(x)=\|u'\|\cdot\|x\|_{X}$
+\end_inset
+
+, 
+\begin_inset Formula $p:X\to\mathbb{R}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ ist sublinear.
+\end_layout
+
+\begin_layout Enumerate
+Falls 
+\begin_inset Formula $X$
+\end_inset
+
+ 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+-Vektorraum.
+ Für alle 
+\begin_inset Formula $v\in U$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+|\Re u'(v)|\leq|u'(v)|\leq\|u'\|\cdot\|v\|_{X}=p(v)
+\]
+
+\end_inset
+
+denn 
+\begin_inset Formula $|z|=\sqrt{(\Re z)^{2}+(\Im z)^{^{2}}}\geq|\Re z|$
+\end_inset
+
+.
+ Nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:25"
+
+\end_inset
+
+ gibt es lineare Abbildung 
+\begin_inset Formula $x':X\to\mathbb{C}$
+\end_inset
+
+ mit 
+\begin_inset Formula $x'|_{U}=u'$
+\end_inset
+
+ und 
+\begin_inset Formula $\Re x'(y)\leq p(y)$
+\end_inset
+
+ für alle 
+\begin_inset Formula $y\in X$
+\end_inset
+
+.
+ Damit für 
+\begin_inset Formula $y\in X$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+-\Re x'(y)=\Re x'(-y)\leq p(-y)=\|u'\|\cdot\|-y\|_{X}=\|u'\|\cdot\|y\|_{X}=p(y).
+\]
+
+\end_inset
+
+Also 
+\begin_inset Formula $|\Re x'(y)|\leq p(y)$
+\end_inset
+
+ für alle 
+\begin_inset Formula $y\in X$
+\end_inset
+
+.
+ Zu jedem 
+\begin_inset Formula $y\in X$
+\end_inset
+
+ gibt es 
+\begin_inset Formula $\lambda_{y}\in\mathbb{C}$
+\end_inset
+
+ mit 
+\begin_inset Formula $|\lambda_{y}|=1$
+\end_inset
+
+ und 
+\begin_inset Formula $\lambda_{y}\cdot x'(y)=|x'(y)|$
+\end_inset
+
+.
+ Somit gilt für alle 
+\begin_inset Formula $y\in X$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+|x'(y)| & = & \lambda_{y}\cdot x'(y)=x'(\lambda_{y}\cdot y)=\Re x'(\lambda_{y}\cdot y)\\
+ & \leq & p(\lambda_{y}\cdot y)=\|u'\|\cdot\|\lambda_{y}\cdot y\|_{X}=\|u'\||\lambda_{y}|\|y\|_{X}=\|u'\|\|y\|_{X}
+\end{eqnarray*}
+
+\end_inset
+
+Also ist 
+\begin_inset Formula $x'$
+\end_inset
+
+ stetig und 
+\begin_inset Formula $\|x'\|\leq\|u'\|$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $x'|_{U}=u'$
+\end_inset
+
+ folgt 
+\begin_inset Formula $\|x'\|\geq\|u'\|$
+\end_inset
+
+, also 
+\begin_inset Formula $\|x'\|=\|u'\|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Falls 
+\begin_inset Formula $X$
+\end_inset
+
+ 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+-Vektorraum, analog.
+\end_layout
+
+\begin_layout Subsection
+Trennungssatz für konvexe Mengen
+\end_layout
+
+\begin_layout Standard
+Zunächst beweisen wir
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:27"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+-Vektorraum, 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+ konvex und nicht-leer.
+ Desweiteren sei 
+\begin_inset Formula $p:X\to\mathbb{R}$
+\end_inset
+
+ sublinear.
+ Dann existiert eine lineare Abbildung 
+\begin_inset Formula $f:X\to\mathbb{R}$
+\end_inset
+
+ mit 
+\begin_inset Formula $f(x)\leq p(x)$
+\end_inset
+
+ für alle 
+\begin_inset Formula $x\in X$
 \end_inset
 
 .

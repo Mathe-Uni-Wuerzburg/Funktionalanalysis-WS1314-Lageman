@@ -12679,6 +12679,539 @@ name "thm:38"
  offen.
 \end_layout
 
+\begin_layout Proof
+Betrachte die Mengen 
+\begin_inset Formula $W_{n}=\overline{T(U_{n}(0))}$
+\end_inset
+
+.
+ Dann gilt 
+\begin_inset Formula $Y=T(X)=T(\bigcup_{n\in\mathbb{N}}U_{n}(0))=\bigcup_{n\in\mathbb{N}}T(U_{n}(0))$
+\end_inset
+
+, also insbesondere 
+\begin_inset Formula $Y=\bigcup_{n\in\mathbb{N}}\overline{T(U_{n}(0))}=\bigcup_{n\in\mathbb{N}}W_{n}$
+\end_inset
+
+.
+ Nach dem Baireschen Kategoriensatz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:baire"
+
+\end_inset
+
+ (angewandt auf 
+\begin_inset Formula $Y$
+\end_inset
+
+) folgt, dass 
+\begin_inset Formula $W_{n}$
+\end_inset
+
+ für mindestens ein 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ innere Punkte besitzt.
+ Sei also 
+\begin_inset Formula $y$
+\end_inset
+
+ innerer Punkt von 
+\begin_inset Formula $W_{n_{0}}=\overline{T(U_{n_{0}}(0))}$
+\end_inset
+
+, d.h.
+ es existiert ein 
+\begin_inset Formula $r>0$
+\end_inset
+
+ mit 
+\begin_inset Formula $y+U_{r}(0)\subset\overline{T(U_{n_{0}}(0))}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Wir zeigen dass 
+\begin_inset Formula $0\in Y$
+\end_inset
+
+ innerer Punkt von 
+\begin_inset Formula $\overline{T(U_{n_{0}}(0))}$
+\end_inset
+
+ ist.
+ Dann sieht man leicht, dass auch 
+\begin_inset Formula $-(y+U_{r}(0))=-y+(-U_{r}(0))=-y+U_{r}(0)\subset\overline{T(U_{n_{0}}(0))}$
+\end_inset
+
+.
+ Beachte, da 
+\begin_inset Formula $U_{n_{0}}(0)$
+\end_inset
+
+ konvex ist, ist auch 
+\begin_inset Formula $T(U_{n_{0}}(0))$
+\end_inset
+
+ konvex und somit auch 
+\begin_inset Formula $\overline{T(U_{n_{0}}(0))}$
+\end_inset
+
+.
+ Sei nun 
+\begin_inset Formula $\|\Delta\|<r$
+\end_inset
+
+.
+ Dann gilt 
+\begin_inset Formula 
+\begin{equation}
+\Delta=\frac{1}{2}(\underbrace{y+\Delta}_{\overline{T(U_{n_{0}}(0))}})+\frac{1}{2}(\underbrace{-y+\Delta}_{\overline{T(U_{n_{0}}(0))}})\in\overline{T(U_{n_{0}}(0))}.\label{eq:thm-38-star}
+\end{equation}
+
+\end_inset
+
+Also gilt 
+\begin_inset Formula $U_{r}(0)\subset\overline{T(U_{n_{0}}(0))}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Aus Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:thm-38-star"
+
+\end_inset
+
+ folgt, dass 
+\begin_inset Formula $U_{\alpha r}(0)\subset\overline{T(U_{\alpha n_{0}}(0))}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+.
+ Somit können wir o.B.d.A.
+ 
+\begin_inset Formula $n_{0}=1$
+\end_inset
+
+ annehmen.
+ Dann erhalten wir 
+\begin_inset Formula 
+\begin{equation}
+U_{\alpha r'}(0)\subset\overline{T(U_{\alpha}(0))}\label{eq:thm-38-double-star}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+mit 
+\begin_inset Formula $r'=\frac{r}{n_{0}}$
+\end_inset
+
+.
+ Wir wollen zeigen, dass 
+\begin_inset Formula $U_{r'}(0)\subset T(U_{2}(0))$
+\end_inset
+
+.
+ Falls dies gezeigt ist, folgt die Behauptung unmittelbar aus Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:5"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Sei nun 
+\begin_inset Formula $y_{0}\in U_{r}(0)$
+\end_inset
+
+.
+ Dann existiert nach Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:thm-38-double-star"
+
+\end_inset
+
+ (für 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+) ein 
+\begin_inset Formula $x_{0}\in B_{1}(0)$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|y_{0}-Tx_{0}\|<\frac{r'}{2}$
+\end_inset
+
+.
+ Setze nun 
+\begin_inset Formula $y_{1}=y_{0}-Tx_{0}$
+\end_inset
+
+.
+ Dann existiert nach Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:thm-38-double-star"
+
+\end_inset
+
+ (für 
+\begin_inset Formula $\alpha=\frac{1}{2}$
+\end_inset
+
+) ein 
+\begin_inset Formula $x_{1}\in B_{\frac{1}{2}}(0)$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|y_{1}-Tx_{1}\|<\frac{r'}{4}$
+\end_inset
+
+.
+ Setze nun 
+\begin_inset Formula $y_{2}:=y_{1}-Tx_{1}$
+\end_inset
+
+ und wiederhole die obige Konstruktion.
+ Dies liefert uns rekursiv eine Folge 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ mit folgenden Eigenschaften
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\|x_{n}\|=\left(\frac{1}{2}\right)^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\|y_{n}-Tx_{n}\|<\left(\frac{1}{2}\right)^{n+1}r'$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Daraus folgt, dass die Reihe 
+\begin_inset Formula $x:=\sum_{n=0}^{\infty}x_{n}$
+\end_inset
+
+ existiert (da Cauchy-Folge, benutze die geometrische Reihe als Majorante)
+ und ferner erhalten wir 
+\begin_inset Formula 
+\[
+\|y_{0}-T(\sum_{k=0}^{\infty}x_{k})\|=\lim_{n\to\infty}\|y_{0}-\sum_{k=0}^{n}T(x_{k})\|=\lim_{n\to\infty}\|y_{n+1}\|=0,
+\]
+
+\end_inset
+
+d.h.
+ 
+\begin_inset Formula $y_{0}=Tx$
+\end_inset
+
+.
+ Ferner gilt 
+\begin_inset Formula 
+\[
+\|x\|\leq\sum_{n=0}^{\infty}\|x_{n}\|<\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}=2.
+\]
+
+\end_inset
+
+Damit 
+\begin_inset Formula $x\in B_{2}(0)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+Satz von der stetigen Inversen
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:17"
+
+\end_inset
+
+ Seien 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+, 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ Banachräume und sei 
+\begin_inset Formula $T\in L(X,Y)$
+\end_inset
+
+.
+ Dann gilt
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $T$
+\end_inset
+
+ bijektiv, so ist 
+\begin_inset Formula $T^{-1}$
+\end_inset
+
+ stetig.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $T$
+\end_inset
+
+ injektiv.
+ Die lineare Abbildung 
+\begin_inset Formula $T^{-1}$
+\end_inset
+
+: 
+\begin_inset Formula $\Bild T\to X$
+\end_inset
+
+ ist genau dann stetig, wenn das Bild von 
+\begin_inset Formula $T$
+\end_inset
+
+ abgeschlossen ist.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Da 
+\begin_inset Formula $T$
+\end_inset
+
+ bijektiv ist, ist 
+\begin_inset Formula $T$
+\end_inset
+
+ insbesondere surjektiv und somit nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:38"
+
+\end_inset
+
+ offen.
+ Aus der Offenheit folgt nun umittelbar die Stetigkeit von 
+\begin_inset Formula $T^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $\Bild T$
+\end_inset
+
+ abgeschlossen.
+ Dann ist 
+\begin_inset Formula $W:=\Bild T$
+\end_inset
+
+ ein Banachraum und somit 
+\begin_inset Formula $T:X\to W$
+\end_inset
+
+ stetig und bijektiv, also ist 
+\begin_inset Formula $T^{-1}:W\to X$
+\end_inset
+
+ nach (1) stetig.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sei 
+\begin_inset Formula $T^{-1}:\Bild T\to X$
+\end_inset
+
+ stetig.
+ Dann ist 
+\begin_inset Formula $T$
+\end_inset
+
+ ein Isomorphismus von 
+\begin_inset Formula $X$
+\end_inset
+
+ nach 
+\begin_inset Formula $W:=\Bild T$
+\end_inset
+
+, und somit auch von 
+\begin_inset Formula $W$
+\end_inset
+
+ vollständig, also abgeschlossen in 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Remark*
+Sei 
+\begin_inset Formula $T:X\to W$
+\end_inset
+
+ Isomorphismus und sei 
+\begin_inset Formula $X$
+\end_inset
+
+ vollständig.
+ Dann ist auch 
+\begin_inset Formula $W$
+\end_inset
+
+ vollständig, denn es gilt: Sei 
+\begin_inset Formula $(w_{n})$
+\end_inset
+
+ eine Cauchy-Folge in 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $(T^{-1}w_{n})$
+\end_inset
+
+ eine Cauchy-Folge in 
+\begin_inset Formula $X$
+\end_inset
+
+ und somit gilt 
+\begin_inset Formula $\lim_{n\to\infty}T^{-1}w_{n}=:x$
+\end_inset
+
+ (da 
+\begin_inset Formula $X$
+\end_inset
+
+ vollständig).
+ Setze nun 
+\begin_inset Formula $W=TX$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Der Satz von abgeschlossenen Graphen
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:21"
+
+\end_inset
+
+Seien 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ und 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ normierte Räume und sei 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ein Unterraum.
+ Wir bezeichnen eine lineare Abbildung 
+\begin_inset Formula $T:U\to Y$
+\end_inset
+
+ als abgeschlossen, falls für jede Folge 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $U$
+\end_inset
+
+ mit 
+\begin_inset Formula $x_{n}\to x\in X$
+\end_inset
+
+ und 
+\begin_inset Formula $Tx_{n}\to y\in Y$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula $x\in U$
+\end_inset
+
+ und 
+\begin_inset Formula $Tx=y$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Newpage cleardoublepage
 \end_inset

@@ -13157,7 +13157,7 @@ Sei
 .
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Der Satz von abgeschlossenen Graphen
 \end_layout
 
@@ -13210,6 +13210,900 @@ Seien
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset label
+LatexCommand label
+name "ex:11"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Seien 
+\begin_inset Formula $X=d$
+\end_inset
+
+ und 
+\begin_inset Formula $Y=l^{\infty}$
+\end_inset
+
+ beide versehen mit der Supremumsnorm 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+.
+ Betrachte 
+\begin_inset Formula $T:d\to l^{\infty}$
+\end_inset
+
+, 
+\begin_inset Formula $Tf=f$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula $U=d=X$
+\end_inset
+
+.
+ Klar ist 
+\begin_inset Formula $T$
+\end_inset
+
+ stetig.
+ Ist 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $d$
+\end_inset
+
+, die gegen 
+\begin_inset Formula $f\in d$
+\end_inset
+
+ konvergiert, so konvergiert 
+\begin_inset Formula $(Tf_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $l^{\infty}$
+\end_inset
+
+ gegen 
+\begin_inset Formula $f=Tf$
+\end_inset
+
+.
+ Also ist 
+\begin_inset Formula $T$
+\end_inset
+
+ gemäß Definition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "def:21"
+
+\end_inset
+
+ abgeschlossen.
+ Aber 
+\begin_inset Formula $\Bild T=T(d)=d$
+\end_inset
+
+ ist keine abgeschlossene Menge von 
+\begin_inset Formula $l^{\infty}$
+\end_inset
+
+, da 
+\begin_inset Formula $d$
+\end_inset
+
+ dicht in 
+\begin_inset Formula $c_{0}\subsetneq l^{\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Setzten wir 
+\begin_inset Formula $X=Y=l^{\infty}$
+\end_inset
+
+ versehen mit der Supremumsnorm 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+ und 
+\begin_inset Formula $U=d$
+\end_inset
+
+, so ist die lineare Abbildung 
+\begin_inset Formula $T:d\to l^{\infty}$
+\end_inset
+
+, 
+\begin_inset Formula $Tf=f$
+\end_inset
+
+, nicht abgeschlossen im Sinne von Definition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "def:21"
+
+\end_inset
+
+.
+ Es gibt Folge 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $d$
+\end_inset
+
+ die gegen ein 
+\begin_inset Formula $f\in c_{0}\setminus d$
+\end_inset
+
+ konvergiert.
+ Für diese Folge konvergieren 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ und 
+\begin_inset Formula $(Tf_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $l^{\infty}$
+\end_inset
+
+ gegen 
+\begin_inset Formula $f\in l^{\infty}\setminus d$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Aus Beispiel 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ex:11"
+
+\end_inset
+
+ folgt, dass
+\end_layout
+
+\begin_layout Itemize
+stetige Abbildungen sind nicht unbedingt abgeschlossen sind,
+\end_layout
+
+\begin_layout Itemize
+die Abgeschlossenheit einer linearen Abbildung von der Wahl des Raumes 
+\begin_inset Formula $X$
+\end_inset
+
+ ab, der 
+\begin_inset Formula $U$
+\end_inset
+
+ enthält.
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset label
+LatexCommand label
+name "ex:12"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X=Y=C([0,1])$
+\end_inset
+
+ versehen mit der Supremumsnorm 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+ und sei 
+\begin_inset Formula $T$
+\end_inset
+
+ lineare Abbildung 
+\begin_inset Formula $T:C^{1}([0,1])\to C([0,1])$
+\end_inset
+
+, 
+\begin_inset Formula $(Tf)(t)=\frac{d}{dt}f(t)$
+\end_inset
+
+.
+ Diese lineare Abbildung ist nicht stetig (betrachte 
+\begin_inset Formula $f_{n}(t)=t^{n}$
+\end_inset
+
+).
+ Sei 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $C^{1}([0,1])$
+\end_inset
+
+ die gegen ein 
+\begin_inset Formula $f\in C([0,1])$
+\end_inset
+
+ und für die 
+\begin_inset Formula $(Tf_{n})$
+\end_inset
+
+ gegen 
+\begin_inset Formula $g\in C([0,1])$
+\end_inset
+
+ konvergieren.
+ Aus der Analysis wissen wir, dass damit 
+\begin_inset Formula $f\in C^{1}([0,1])$
+\end_inset
+
+ und 
+\begin_inset Formula $g=Tf$
+\end_inset
+
+ gilt.
+ Somit ist 
+\begin_inset Formula $T$
+\end_inset
+
+ abgeschlossen.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:39"
+
+\end_inset
+
+Seien 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ und 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ normierte Räume, 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ein Unterraum und 
+\begin_inset Formula $T:U\to Y$
+\end_inset
+
+ eine lineare Abbildung.
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ ist genau dann abgeschlossen, wenn der Graph von 
+\begin_inset Formula $T$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\Gamma_{T}=\{(x,Tx)\in X\times Y\,|\, x\in U\}
+\]
+
+\end_inset
+
+in 
+\begin_inset Formula $X\times Y$
+\end_inset
+
+ abgeschlossen bzgl.
+ der Norm 
+\begin_inset Formula $\|\cdot\|_{1}$
+\end_inset
+
+ definiert durch 
+\begin_inset Formula $\|(x,y)\|_{1}=\|x\|_{X}+\|y\|_{Y}$
+\end_inset
+
+ für 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+ ist.
+\end_layout
+
+\begin_layout Proof
+Nach Übungsaufgabe 4.1 ist 
+\begin_inset Formula $\|\cdot\|_{1}$
+\end_inset
+
+ auf 
+\begin_inset Formula $X\times Y$
+\end_inset
+
+ äquivalent zur Norm 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+ definiert durch 
+\begin_inset Formula $\|(x,y)\|=\max\{\|x\|_{X},\|y\|_{Y}\}$
+\end_inset
+
+ für 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $\Gamma_{T}$
+\end_inset
+
+ genau dann abgeschlossen in 
+\begin_inset Formula $X\times Y$
+\end_inset
+
+ bzgl.
+ 
+\begin_inset Formula $\|\cdot\|_{1}$
+\end_inset
+
+, wenn 
+\begin_inset Formula $\Gamma_{T}$
+\end_inset
+
+ abgeschlossen in 
+\begin_inset Formula $X\times Y$
+\end_inset
+
+ bzgl.
+ 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+, genau dann wenn für Folge 
+\begin_inset Formula $((x_{n},Tx_{n}))_{n\in\mathbb{N}}$
+\end_inset
+
+ die in 
+\begin_inset Formula $U\times Y$
+\end_inset
+
+ bzgl.
+ 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+ gegen 
+\begin_inset Formula $(x,y)\in X\times Y$
+\end_inset
+
+ konvergiert, gilt dass 
+\begin_inset Formula $(x,y)\in\Gamma_{T}$
+\end_inset
+
+ (d.h.
+ 
+\begin_inset Formula $y=Tx$
+\end_inset
+
+ und 
+\begin_inset Formula $x\in U$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+Konvergenz einer Folge in 
+\begin_inset Formula $X\times Y$
+\end_inset
+
+ bzgl.
+ 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+ ist äquivalent zur Konvergenz in der 
+\begin_inset Formula $X$
+\end_inset
+
+- und 
+\begin_inset Formula $Y$
+\end_inset
+
+-Komponente.
+ Damit ist 
+\begin_inset Formula $\Gamma_{T}$
+\end_inset
+
+ genau dann abgeschlossen,w enn für jede Folge 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $U$
+\end_inset
+
+, so dass 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ gegen 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ und 
+\begin_inset Formula $(Tx_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $Y$
+\end_inset
+
+ gegen 
+\begin_inset Formula $y$
+\end_inset
+
+ konvergiert, gilt 
+\begin_inset Formula $x\in U$
+\end_inset
+
+ und 
+\begin_inset Formula $y=Tx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+Satz vom abgeschlossenen Graphen
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:40"
+
+\end_inset
+
+ Seien 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ und 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ Banachräume, 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ein Unterraum und 
+\begin_inset Formula $T:U\to Y$
+\end_inset
+
+ eine abgeschlossene, lineare Abbildung.
+ Ist 
+\begin_inset Formula $U$
+\end_inset
+
+ abgeschlossen, so ist 
+\begin_inset Formula $T$
+\end_inset
+
+ stetig.
+\end_layout
+
+\begin_layout Proof
+Wir versehen 
+\begin_inset Formula $X\times Y$
+\end_inset
+
+ mit der Norm 
+\begin_inset Formula $\|\cdot\|_{1}$
+\end_inset
+
+ wie im Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:39"
+
+\end_inset
+
+.
+ Nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:39"
+
+\end_inset
+
+ ist 
+\begin_inset Formula $\Gamma_{T}$
+\end_inset
+
+ abgeschlossen in 
+\begin_inset Formula $X\times Y$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Gamma_{T}$
+\end_inset
+
+ ist ein Unterraum von 
+\begin_inset Formula $X\times Y$
+\end_inset
+
+.
+ Nach Übungsaufgabe 4.1 ist 
+\begin_inset Formula $(X\times Y,\|\cdot\|_{1})$
+\end_inset
+
+ vollständig.
+ Damit ist 
+\begin_inset Formula $(\Gamma_{T},\|\cdot\|_{1})$
+\end_inset
+
+ ein Banachraum.
+ Da 
+\begin_inset Formula $U$
+\end_inset
+
+ abgeschlossen ist, ist 
+\begin_inset Formula $(U,\|\cdot\|_{X})$
+\end_inset
+
+ ein Banachraum.
+ Die Abbildungen 
+\begin_inset Formula $\pi_{1}:\Gamma_{T}\to U$
+\end_inset
+
+, 
+\begin_inset Formula $\pi_{2}:\Gamma_{T}\to Y$
+\end_inset
+
+, 
+\begin_inset Formula $\pi_{1}(x,y)=x$
+\end_inset
+
+, 
+\begin_inset Formula $\pi_{2}(x,y)=y$
+\end_inset
+
+ sind linear und stetig.
+ 
+\begin_inset Formula $\pi_{1}$
+\end_inset
+
+ ist nach Konstruktion eine Bijektion.
+ Nach Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:17"
+
+\end_inset
+
+ ist 
+\begin_inset Formula $\pi_{1}^{-1}$
+\end_inset
+
+ stetig.
+\begin_inset Formula 
+\[
+x\mapsto_{\pi_{1}^{-1}}(x,Tx)\mapsto_{\pi_{2}}Tx
+\]
+
+\end_inset
+
+Da 
+\begin_inset Formula $T=\pi_{2}\circ\pi_{1}^{-1}$
+\end_inset
+
+ ist 
+\begin_inset Formula $T$
+\end_inset
+
+ stetig.
+\end_layout
+
+\begin_layout Section
+Hilberträume
+\end_layout
+
+\begin_layout Subsection
+Grundlegendes
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:22"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum.
+ Wir nennen eine Abbildung 
+\begin_inset Formula $\langle\cdot,\cdot\rangle:X\times X\to\mathbb{K}$
+\end_inset
+
+ ein 
+\emph on
+Skalarprodukt
+\emph default
+ falls 
+\begin_inset Formula $\langle\cdot,\cdot\rangle$
+\end_inset
+
+ die folgenden Eigenschaften hat:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Für alle 
+\begin_inset Formula $x,y,z\in X$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\langle x+y,z\rangle=\langle x,z\rangle+\langle y,z\rangle$
+\end_inset
+
+ und 
+\begin_inset Formula $\langle x,y+z\rangle=\langle x,y\rangle+\langle x,z\rangle$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+Für alle 
+\begin_inset Formula $\lambda\in\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\langle\lambda x,y\rangle=\lambda\langle x,y\rangle$
+\end_inset
+
+ und 
+\begin_inset Formula $\langle x,\lambda y\rangle=\overline{\lambda}\langle x,y\rangle$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+Für alle 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\langle x,y\rangle=\overline{\langle y,x\rangle}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+Für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\langle x,x\rangle\geq0$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+Für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\langle x,x\rangle\iff x=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:41"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+-Vektorraum und 
+\begin_inset Formula $\langle\cdot,\cdot\rangle$
+\end_inset
+
+ ein Skalarprodukt auf 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Es gilt
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\|\cdot\|:X\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $\|x\|:=\langle x,x\rangle^{\frac{1}{2}}$
+\end_inset
+
+ definiert eine Norm auf 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+für die Norm aus (1) gilt die Cauchy-Schwarzsche Ungleichung für alle 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+|\langle x,y\rangle|\leq\|x\|^{2}\cdot\|y\|^{2}
+\]
+
+\end_inset
+
+Gleichheit gilt genau dann wenn 
+\begin_inset Formula $x$
+\end_inset
+
+ und 
+\begin_inset Formula $y$
+\end_inset
+
+ linear abhängig.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:23"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum.
+ Gibt es ein Skalarprodukt 
+\begin_inset Formula $\langle\cdot,\cdot\rangle$
+\end_inset
+
+ auf 
+\begin_inset Formula $X$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|x\|_{X}=\langle x,x\rangle^{\frac{1}{2}}$
+\end_inset
+
+ so nennen wir 
+\begin_inset Formula $X$
+\end_inset
+
+ einen 
+\emph on
+Prähilbertraum
+\emph default
+.
+ Ist 
+\begin_inset Formula $X$
+\end_inset
+
+ zusätzlich vollständig, so nennen wir 
+\begin_inset Formula $X$
+\end_inset
+
+ einen 
+\emph on
+Hilbertraum
+\emph default
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:42"
+
+\end_inset
+
+Ein normierter Raum 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ist genau dann ein Prähilbertraum, wenn die Norm die Parallelogrammgleichung
+ 
+\begin_inset Formula 
+\[
+\forall_{x,y\in X}:\,\|x+y\|^{2}+\|x-y\|^{2}=2\|x\|^{2}+2\|y\|^{2}
+\]
+
+\end_inset
+
+erfüllt.
 \end_layout
 
 \begin_layout Standard

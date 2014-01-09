@@ -16835,5 +16835,685 @@ Per Konstruktion ist
 
 \end_deeper
 \end_deeper
+\begin_layout Subsection
+Übungsblatt 10
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 1
+\end_layout
+
+\begin_layout Standard
+Angenommen 
+\begin_inset Formula $X\setminus\overline{M}$
+\end_inset
+
+ nicht dicht in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Dann gibt es 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ und 
+\begin_inset Formula $x\in X\setminus(X\setminus\overline{M})=\overline{M}$
+\end_inset
+
+ so dass für alle 
+\begin_inset Formula $y\in X\setminus\overline{M}$
+\end_inset
+
+ so dass 
+\begin_inset Formula $\delta(x,y)>\varepsilon$
+\end_inset
+
+.
+ Also ist der offene Ball 
+\begin_inset Formula $B=\{y\in X\,|\,\delta(x,y)<\varepsilon\}$
+\end_inset
+
+ Teilmenge von 
+\begin_inset Formula $\overline{M}$
+\end_inset
+
+ und wegen 
+\begin_inset Formula $x\in B$
+\end_inset
+
+ nicht leer.
+ Also ist 
+\begin_inset Formula $x$
+\end_inset
+
+ ein innere Punkt von 
+\begin_inset Formula $\overline{M}$
+\end_inset
+
+.
+ Damit ist 
+\begin_inset Formula $M$
+\end_inset
+
+ nicht nirgends dicht.
+ Widerspruch.
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 2
+\end_layout
+
+\begin_layout Standard
+Sei für 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ die Menge 
+\begin_inset Formula $B_{n}^{p}(0)=\{f\in l^{p}\,|\,\|f\|_{p}\leq n\}$
+\end_inset
+
+ definiert.
+ Sei 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ fest und 
+\begin_inset Formula $(f_{k})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $B_{n}^{p}(0)$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|f_{k}-f\|_{q}\to0$
+\end_inset
+
+ für 
+\begin_inset Formula $k\to\infty$
+\end_inset
+
+ für ein 
+\begin_inset Formula $f\in l^{q}$
+\end_inset
+
+.
+ Für alle 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $|f_{k}(m)-f(m)|=(|f_{k}(m)-f(m)|^{q})^{\frac{1}{q}}\leq\|f_{k}-f\|_{q}\to0$
+\end_inset
+
+ für 
+\begin_inset Formula $k\to\infty$
+\end_inset
+
+.
+ Weiterhin ist für alle 
+\begin_inset Formula $M\in\mathbb{N}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum_{m=1}^{M}|\widetilde{f}(m)|^{p}\leq\|\widetilde{f}\|_{p}^{p}\leq n^{p}
+\]
+
+\end_inset
+
+für alle 
+\begin_inset Formula $\widetilde{f}\in B_{n}^{p}(0)$
+\end_inset
+
+.
+ Somit ist für alle 
+\begin_inset Formula $M,k\in\mathbb{N}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\sum_{m=1}^{M}|f_{k}(m)|^{p}\leq n^{p}.
+\]
+
+\end_inset
+
+Also gilt für alle 
+\begin_inset Formula $M\in\mathbb{N}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum_{m=1}^{M}|f(m)|^{p}\leq n^{p}.
+\]
+
+\end_inset
+
+Somit gilt 
+\begin_inset Formula $\sum_{m=1}^{\infty}|f(m)|^{p}\leq n^{p}$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $f\in l^{p}$
+\end_inset
+
+ und 
+\begin_inset Formula $\|f\|_{p}=\left(\sum_{m=1}^{\infty}|f(m)|^{p}\right)^{\frac{1}{p}}\leq n$
+\end_inset
+
+.
+ Somit 
+\begin_inset Formula $f\in B_{n}^{p}(0)$
+\end_inset
+
+.
+ Damit sind die Mengen 
+\begin_inset Formula $B_{n}^{p}(0)$
+\end_inset
+
+ abgeschlossen in 
+\begin_inset Formula $l^{q}$
+\end_inset
+
+ bzgl.
+ 
+\begin_inset Formula $\|\cdot\|_{q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $f\in B_{n}^{p}(0)$
+\end_inset
+
+.
+ Wähle 
+\begin_inset Formula $g\in l^{q}\setminus l^{p}$
+\end_inset
+
+ (Übungsaufgabe 1.3).
+ Definiere Folge 
+\begin_inset Formula $(g_{k})$
+\end_inset
+
+ in 
+\begin_inset Formula $l^{q}\setminus l^{p}$
+\end_inset
+
+ durch 
+\begin_inset Formula 
+\[
+g_{k}(m)=\begin{cases}
+f(m) & (k\geq m)\\
+g(m) & (k<m)
+\end{cases}
+\]
+
+\end_inset
+
+Alle 
+\begin_inset Formula $g_{k}\in l^{q}\setminus l^{p}$
+\end_inset
+
+ da sonst 
+\begin_inset Formula $g\in l^{p}$
+\end_inset
+
+ wäre.
+ Da 
+\begin_inset Formula 
+\[
+\|f-g_{k}\|_{q}^{q}=\sum_{m=k+1}^{\infty}|f(m)-g(m)|^{q}\to0
+\]
+
+\end_inset
+
+für 
+\begin_inset Formula $k\to\infty$
+\end_inset
+
+ (da 
+\begin_inset Formula $f-g\in l^{q}$
+\end_inset
+
+) konvergiert 
+\begin_inset Formula $(g_{k})$
+\end_inset
+
+ gegen 
+\begin_inset Formula $f$
+\end_inset
+
+ bzgl.
+ 
+\begin_inset Formula $\|\cdot\|_{q}$
+\end_inset
+
+.
+ Damit ist 
+\begin_inset Formula $f$
+\end_inset
+
+ kein innerer Punkt von 
+\begin_inset Formula $B_{n}^{p}(0)$
+\end_inset
+
+.
+ Somit ist für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ die Menge 
+\begin_inset Formula $B_{n}^{p}(0)$
+\end_inset
+
+ nirgends dicht in 
+\begin_inset Formula $l^{q}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $l^{p}=\bigcup_{n\in\mathbb{N}}B_{n}^{p}(0)$
+\end_inset
+
+ ist 
+\begin_inset Formula $l^{p}$
+\end_inset
+
+ von erster Kategorie in 
+\begin_inset Formula $l^{q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 3
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $f\in d$
+\end_inset
+
+.
+ Definiere 
+\begin_inset Formula $g\in d$
+\end_inset
+
+ durch 
+\begin_inset Formula $g(m)=mf(m)$
+\end_inset
+
+ für 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+.
+ Per Konstruktion ist 
+\begin_inset Formula $Sg=f$
+\end_inset
+
+.
+ Somit ist 
+\begin_inset Formula $S$
+\end_inset
+
+ surjektiv.
+ Angenommen 
+\begin_inset Formula $S$
+\end_inset
+
+ wäre offen.
+ Dann gibt es 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ mit 
+\begin_inset Formula $U_{\varepsilon}(0)\subset S(U_{1}(0))$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $M>\frac{2}{\varepsilon}$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $g\in d$
+\end_inset
+
+ definiert durch 
+\begin_inset Formula 
+\[
+g(m)=\begin{cases}
+\varepsilon/2 & (m=M)\\
+0 & \text{sonst}
+\end{cases}
+\]
+
+\end_inset
+
+Element von 
+\begin_inset Formula $U_{\varepsilon}(0)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ ist injektiv, da 
+\begin_inset Formula $\ker S=\{0\}$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $f=S^{-1}g$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\|f\|_{\infty}=|f(M)|=M|g(M)|=M\cdot\frac{\varepsilon}{2}>\frac{2}{\varepsilon}\cdot\frac{\varepsilon}{2}=1$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $f\notin U_{1}(0)$
+\end_inset
+
+.
+ Damit 
+\begin_inset Formula $U_{\varepsilon}(0)\nsubseteq S(U_{1}(0))$
+\end_inset
+
+.
+ Widerspruch.
+ Also 
+\begin_inset Formula $S$
+\end_inset
+
+ nicht offen.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $f\in l^{\infty}$
+\end_inset
+
+.
+ Dann gilt 
+\begin_inset Formula $|(Tf)(m)|=|\frac{1}{m}f(m)|\leq\frac{1}{m}\|f\|_{\infty}\to0$
+\end_inset
+
+ für 
+\begin_inset Formula $m\to\infty$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $Tf\in c_{0}$
+\end_inset
+
+ und 
+\begin_inset Formula $\Bild T\subset c_{0}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $c_{0}\neq l^{\infty}$
+\end_inset
+
+ ist 
+\begin_inset Formula $T$
+\end_inset
+
+ nicht surjektiv.
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 4
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $S_{1}=\{x\in X\,|\,\|x\|_{X}=1\}$
+\end_inset
+
+.
+ Es reicht zu zeigen, dass 
+\begin_inset Formula $M=\{Tx\,|\, x\in S_{1}\}$
+\end_inset
+
+ beschränkt ist.
+ Nach Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:13"
+
+\end_inset
+
+ ist 
+\begin_inset Formula $M$
+\end_inset
+
+ genau dann beschränkt, wenn für alle 
+\begin_inset Formula $y'\in Y'$
+\end_inset
+
+ die Menge 
+\begin_inset Formula $N_{y'}=\{y'(Tx)\,|\, x\in S_{1}\}$
+\end_inset
+
+ beschränkt ist.
+ Dann gibt es Folge 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+, so dass 
+\begin_inset Formula $|y'(Tx_{n})|\to\infty$
+\end_inset
+
+ für 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+.
+ Durch Übergang zur Teilfolge können wir o.B.d.A.
+ annehmen dass für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $n\leq|y'(Tx_{n})|$
+\end_inset
+
+.
+ Somit gilt für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ dass 
+\begin_inset Formula $1\leq|y'(T\frac{x_{n}}{n})|$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ konvergiert 
+\begin_inset Formula $\frac{x_{n}}{n}$
+\end_inset
+
+ gegen 0.
+ Nach Voraussetzung konvergiert 
+\begin_inset Formula $(T\frac{x_{n}}{n})$
+\end_inset
+
+ schwach gegen 0.
+ Somit ist 
+\begin_inset Formula $\lim_{n\to\infty}y'(T\frac{x_{n}}{n})=y'(0)=0$
+\end_inset
+
+, Widerspruch.
+ Somit für alle 
+\begin_inset Formula $y'\in Y'$
+\end_inset
+
+ ist 
+\begin_inset Formula $Ny'$
+\end_inset
+
+ beschränkt und damit 
+\begin_inset Formula $M$
+\end_inset
+
+ beschränkt.
+\end_layout
+
+\begin_layout Subsubsection
+Aufgabe 5
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $X=Y=d$
+\end_inset
+
+ versehen mit der Supremumsnorm 
+\begin_inset Formula $\|\cdot\|_{\infty}$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ definiere 
+\begin_inset Formula $T_{n}:d\to d$
+\end_inset
+
+ durch 
+\begin_inset Formula 
+\[
+(T_{n}f)(m)=\begin{cases}
+mf(m) & (m\leq n)\\
+f(m) & (m>n)
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Offensichtlich ist 
+\begin_inset Formula $T_{n}\in L(d,d)$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|T_{n}\|=n$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $f\in d\setminus\{0\}$
+\end_inset
+
+.
+ Dann gibt es 
+\begin_inset Formula $M\in\mathbb{N}$
+\end_inset
+
+ mit 
+\begin_inset Formula $f(M)\neq0$
+\end_inset
+
+ und 
+\begin_inset Formula $f(m)=0$
+\end_inset
+
+ für 
+\begin_inset Formula $m>M$
+\end_inset
+
+.
+ Es ist 
+\begin_inset Formula $\lim_{n\to\infty}T_{n}f=T_{M}f$
+\end_inset
+
+ (Existenz von 
+\begin_inset Formula $\lim_{n\to\infty}T_{n}0=0$
+\end_inset
+
+ trivial).
+ Definieren wir 
+\begin_inset Formula $T:d\to d$
+\end_inset
+
+ durch 
+\begin_inset Formula $Tf=\lim_{n\to\infty}T_{n}f$
+\end_inset
+
+ so erhalten wir 
+\begin_inset Formula $(Tf)(m)=mf(m)$
+\end_inset
+
+ für 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+.
+ Dann ist für 
+\begin_inset Formula $e_{n}\in d_{1}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+e_{n}(m)=\begin{cases}
+1 & m=n\\
+0 & \text{sonst}
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\|Te_{n}\|_{\infty}=n\cdot1=n$
+\end_inset
+
+.
+ Da für alle 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ 
+\begin_inset Formula $\|e_{n}\|_{\infty}=1$
+\end_inset
+
+ ist 
+\begin_inset Formula $T$
+\end_inset
+
+ unstetig.
+\end_layout
+
 \end_body
 \end_document

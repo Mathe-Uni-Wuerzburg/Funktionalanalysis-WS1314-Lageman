@@ -14106,6 +14106,797 @@ Ein normierter Raum
 erfüllt.
 \end_layout
 
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:43"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $X$
+\end_inset
+
+ ist genau dann ein Prähilbertraum wenn für alle Unterräume mit 
+\begin_inset Formula $\dim U=2$
+\end_inset
+
+ der normierte Raum 
+\begin_inset Formula $(U,\|\cdot\|_{X})$
+\end_inset
+
+ ein Prähilbertraum ist.
+\end_layout
+
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Prähilbertraum und 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ein Unterraum, so ist 
+\begin_inset Formula $U$
+\end_inset
+
+ ein Prähilbertraum.
+\end_layout
+
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Hilbertraum und 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ein abgeschlossener Unterraum, so ist 
+\begin_inset Formula $U$
+\end_inset
+
+ ein Hilbertraum.
+\end_layout
+
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ Banachraum, 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Prähilbertraum, 
+\begin_inset Formula $T\in L(X,Y)$
+\end_inset
+
+ eine Isometrie und das Bild vom 
+\begin_inset Formula $T$
+\end_inset
+
+ dicht in 
+\begin_inset Formula $Y$
+\end_inset
+
+, so ist 
+\begin_inset Formula $Y$
+\end_inset
+
+ ein Hilbertraum.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Folgt aus Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:42"
+
+\end_inset
+
+ (Parallelogrammgleichung)
+\end_layout
+
+\begin_layout Enumerate
+trivial (Einschränkung des Skalarprodukts auf 
+\begin_inset Formula $U\times U$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+abgeschlossene Unterräume von Banachräumen sind vollständig.
+\end_layout
+
+\begin_layout Enumerate
+Da 
+\begin_inset Formula $T$
+\end_inset
+
+ eine Isometrie ist, gilt auf 
+\begin_inset Formula $\Bild T$
+\end_inset
+
+ die Parallelogrammgleichung.
+ Da die Norm 
+\begin_inset Formula $\|\cdot\|_{Y}$
+\end_inset
+
+ auf 
+\begin_inset Formula $Y$
+\end_inset
+
+ stetig ist, gilt die Parallelogrammgleichung auf ganz 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ Also ist 
+\begin_inset Formula $Y$
+\end_inset
+
+ ein Prähilbertraum.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Auf dem 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ ist 
+\begin_inset Formula 
+\[
+\langle\left(x_{1},x_{2},...,x_{n}\right)^{T},(y_{1},y_{2},...,y_{n})^{T}\rangle:=\sum_{j=1}^{n}x_{j}y_{j}
+\]
+
+\end_inset
+
+ein Skalarprodukt.
+ Also ist 
+\begin_inset Formula $(\mathbb{R}^{n},\|\cdot\|_{2})$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|x\|_{2}=(\sum_{j=1}^{n}x_{j}^{2})^{\frac{1}{2}}$
+\end_inset
+
+ ein Hilbertraum, denn da 
+\begin_inset Formula $\dim\mathbb{R}^{n}<\infty$
+\end_inset
+
+ ist 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ vollständig.
+\end_layout
+
+\begin_layout Enumerate
+Auf dem 
+\begin_inset Formula $\mathbb{C}^{n}$
+\end_inset
+
+ ist
+\begin_inset Formula 
+\[
+\langle\left(x_{1},x_{2},...,x_{n}\right)^{T},(y_{1},y_{2},...,y_{n})^{T}\rangle:=\sum_{j=1}^{n}x_{j}\overline{y_{j}}
+\]
+
+\end_inset
+
+ein Skalarprodukt.
+ Also ist 
+\begin_inset Formula $(\mathbb{C}^{n},\|\cdot\|_{2})$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|x\|_{2}=\sum_{j=1}^{n}|x_{j}|^{2}$
+\end_inset
+
+ ein Hilbertraum.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(l^{2},\|\cdot\|_{2})$
+\end_inset
+
+ ist ein Hilbertraum mit dem Skalarprodukt 
+\begin_inset Formula 
+\[
+\langle f,g\rangle=\sum_{m=1}^{\infty}f(m)\overline{g(m)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $\Omega\subset\mathbb{R}^{n}$
+\end_inset
+
+ messbar, 
+\begin_inset Formula $\Omega\neq\emptyset$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $(L^{2}(\Omega),\|\cdot\|_{2})$
+\end_inset
+
+ ein Hilbertraum mit Skalarprodukt
+\begin_inset Formula 
+\[
+\langle f+\mathcal{N},g+\mathcal{N}\rangle=\int_{\Omega}f\cdot\overline{g}\, d\lambda,
+\]
+
+\end_inset
+
+Existenz folgt aus der Hölderungleichung, das Skalarprodukt ist unabhängig
+ von der Wahl der Repräsentanten.
+\end_layout
+
+\end_deeper
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:6"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Prähilbertraum.
+ Dann ist das Skalarprodukt stetig auf 
+\begin_inset Formula $X\times X$
+\end_inset
+
+ bezüglich der Norm 
+\begin_inset Formula $\|\cdot\|_{1}$
+\end_inset
+
+ (vgl.
+ Übungsaufgabe 4.1).
+ Weiterhin ist für alle 
+\begin_inset Formula $y\in X$
+\end_inset
+
+ die Abbildung 
+\begin_inset Formula $x\mapsto\langle x,y\rangle$
+\end_inset
+
+ stetig und linear.
+\end_layout
+
+\begin_layout Proof
+Übung.
+\end_layout
+
+\begin_layout Subsection
+Projektionen und der Rieszsche Darstellungssatz
+\end_layout
+
+\begin_layout Standard
+Im Folgenden bezeichnet 
+\begin_inset Formula $\langle\cdot,\cdot\rangle$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $\langle\cdot,\cdot\rangle_{X}$
+\end_inset
+
+ und 
+\begin_inset Formula $\langle\cdot,\cdot\rangle_{Y}$
+\end_inset
+
+ usw.
+ das Skalarprodukt eines Prähilbertraumes 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $Y$
+\end_inset
+
+ usw.
+ und 
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $\|\cdot\|_{X}$
+\end_inset
+
+, 
+\begin_inset Formula $\|\cdot\|_{Y}$
+\end_inset
+
+ die entsprechenden Normen.
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:24"
+
+\end_inset
+
+ Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Prähilbertraum.
+ Wir nennen 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+ 
+\emph on
+orthogonal
+\emph default
+, kurz 
+\begin_inset Formula $x\perp y$
+\end_inset
+
+, falls 
+\begin_inset Formula $\langle x,y\rangle=0$
+\end_inset
+
+.
+ Wir nennen Teilmengen 
+\begin_inset Formula $A,B\subset X$
+\end_inset
+
+ 
+\emph on
+orthogonal
+\emph default
+, kurz 
+\begin_inset Formula $A\perp B$
+\end_inset
+
+, falls für alle 
+\begin_inset Formula $x\in A$
+\end_inset
+
+, 
+\begin_inset Formula $y\in B$
+\end_inset
+
+ gilt 
+\begin_inset Formula $x\perp y$
+\end_inset
+
+.
+ Ist 
+\begin_inset Formula $A\subset X$
+\end_inset
+
+ Teilmenge, so nennen wir 
+\begin_inset Formula 
+\[
+A^{\perp}=\{y\in X\,|\,\forall_{x\in A}:x\perp y\}
+\]
+
+\end_inset
+
+das 
+\emph on
+orthogonale Komplement
+\emph default
+ von 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Prählibertraum und 
+\begin_inset Formula $A\subset X$
+\end_inset
+
+ eine Teilmenge.
+ Dann gilt
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A^{\perp}$
+\end_inset
+
+ ist ein abgeschlossener Unterraum von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\subset(A^{\perp})^{\perp}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A^{\perp}=(\overline{\span A})^{\perp}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Für 
+\begin_inset Formula $y\in X$
+\end_inset
+
+ sei 
+\begin_inset Formula $f_{y}:X\to\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $f_{y}(x)=\langle x,y\rangle$
+\end_inset
+
+.
+ Nach Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:6"
+
+\end_inset
+
+ ist 
+\begin_inset Formula $f_{y}\in X'$
+\end_inset
+
+ für alle 
+\begin_inset Formula $y\in X$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $y\in A$
+\end_inset
+
+ ist 
+\begin_inset Formula $A^{\perp}\subset\ker f_{y}$
+\end_inset
+
+ und 
+\begin_inset Formula $A^{\perp}=\bigcap_{y\in A}\ker f_{y}$
+\end_inset
+
+.
+ Da alle 
+\begin_inset Formula $\ker f_{y}$
+\end_inset
+
+ abgeschlossen (denn Urbild der abgeschlossenen Menge 
+\begin_inset Formula $\{0\}$
+\end_inset
+
+) und Unterräume von 
+\begin_inset Formula $X$
+\end_inset
+
+ sind, ist 
+\begin_inset Formula $A^{\perp}$
+\end_inset
+
+ ein abgeschlossener Unterraum von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+folgt aus Definition von 
+\begin_inset Formula $A^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Klar ist 
+\begin_inset Formula $(\overline{\span A})^{\perp}\subset A^{\perp}$
+\end_inset
+
+.
+ Sind 
+\begin_inset Formula $x_{1},x_{2}\in A$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha,\beta\in\mathbb{K}$
+\end_inset
+
+, so gilt für 
+\begin_inset Formula $y\in A^{\perp}$
+\end_inset
+
+ 
+\begin_inset Formula $\langle\alpha x_{1}+\beta x_{2},y\rangle=\alpha\langle x_{1},y\rangle+\beta\langle x_{2},y\rangle=0$
+\end_inset
+
+ und somit 
+\begin_inset Formula $y\perp\alpha x_{1}+\beta x_{2}$
+\end_inset
+
+.
+ Ist 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ Folge in 
+\begin_inset Formula $A$
+\end_inset
+
+ mit 
+\begin_inset Formula $x_{n}\to x\in X$
+\end_inset
+
+, und 
+\begin_inset Formula $y\in A^{\perp}$
+\end_inset
+
+, so gilt 
+\begin_inset Formula $\langle x,y\rangle=\langle\lim_{n\to\infty}x_{n},y\rangle=\lim_{n\to\infty}\langle x_{n},y\rangle=0$
+\end_inset
+
+ und 
+\begin_inset Formula $x\perp y$
+\end_inset
+
+.
+ Somit 
+\begin_inset Formula $A^{\perp}\subset(\overline{\span A})^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:45"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Hilbertraum, 
+\begin_inset Formula $K\subset X$
+\end_inset
+
+ eine abgeschlossene und konvexe Teilmenge, 
+\begin_inset Formula $K\neq\emptyset$
+\end_inset
+
+.
+ Für jedes 
+\begin_inset Formula $x_{0}\in X$
+\end_inset
+
+ existiert genau ein 
+\begin_inset Formula $x\in K$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|x-x_{0}\|=\inf_{y\in K}\|y-x_{0}\|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Die Behauptung ist für 
+\begin_inset Formula $x_{0}\in K$
+\end_inset
+
+ trivial.
+ Sei also 
+\begin_inset Formula $x_{0}\in X\setminus K$
+\end_inset
+
+.
+ O.B.d.A.
+ sei 
+\begin_inset Formula $x_{0}=0$
+\end_inset
+
+ (denn die Behauptung ist translationsinvariant).
+ Sei 
+\begin_inset Formula $d=\inf_{y\in K}\|y\|$
+\end_inset
+
+.
+ Es gibt Folge 
+\begin_inset Formula $(y_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $K$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|y_{n}\|\to d$
+\end_inset
+
+.
+ Da für 
+\begin_inset Formula $n,m\in\mathbb{N}$
+\end_inset
+
+ gilt mit der Parallelogrammgleichung 
+\begin_inset Formula 
+\begin{eqnarray*}
+\|\frac{1}{2}(y_{n}+y_{m})\|^{2}+\|\frac{1}{2}(y_{n}-y_{m})\|^{2} & = & 2\frac{1}{4}\|y_{n}\|^{2}+2\frac{1}{4}\|y_{m}\|^{2}\\
+ & = & \frac{1}{2}\|y_{n}\|^{2}+\frac{1}{2}\|y_{m}\|^{2}\to d^{2}
+\end{eqnarray*}
+
+\end_inset
+
+für 
+\begin_inset Formula $n,m\to\infty$
+\end_inset
+
+.
+ Weiterhin ist 
+\begin_inset Formula $\frac{1}{2}y_{n}+\frac{1}{2}y_{m}\in K$
+\end_inset
+
+, da eine Konvexkombination, also 
+\begin_inset Formula $\|\frac{1}{2}(y_{n}+y_{m})\|^{2}\geq d^{2}$
+\end_inset
+
+.
+ Es folgt 
+\begin_inset Formula $\|\frac{1}{2}(y_{n}+y_{m})\|^{2}\to0$
+\end_inset
+
+ für 
+\begin_inset Formula $m,n\to\infty$
+\end_inset
+
+.
+ Also ist 
+\begin_inset Formula $(y_{n})$
+\end_inset
+
+ eine Cauchy-Folge und da 
+\begin_inset Formula $X$
+\end_inset
+
+ vollständig ist konvergiert 
+\begin_inset Formula $(y_{n})$
+\end_inset
+
+ gegen ein 
+\begin_inset Formula $y\in K$
+\end_inset
+
+ (
+\begin_inset Formula $K$
+\end_inset
+
+ ist abgeschlossen).
+ Da 
+\begin_inset Formula $\|y_{n}\|\to d$
+\end_inset
+
+ ist 
+\begin_inset Formula $\|y\|=d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Seien 
+\begin_inset Formula $x_{1},x_{2}\in K$
+\end_inset
+
+ mit 
+\begin_inset Formula $\|x_{1}\|=\|x_{2}\|=d$
+\end_inset
+
+ und 
+\begin_inset Formula $x_{1}\neq x_{2}$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $\|\frac{1}{2}(x_{1}+x_{2})\|^{2}<\|\frac{1}{2}(x_{1}+x_{2})\|^{2}+\|\frac{1}{2}(x_{1}+x_{2})\|^{2}=2\|\frac{1}{2}x_{1}\|^{2}+2\|\frac{1}{2}x_{2}\|^{2}=d^{2}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $\frac{1}{2}(x_{1}+x_{2})\in K$
+\end_inset
+
+ erhalten wir einen Widerspruch zur Definition von 
+\begin_inset Formula $d$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Newpage cleardoublepage
 \end_inset

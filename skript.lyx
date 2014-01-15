@@ -346,7 +346,7 @@ Ein normierter Raum ist damit auch ein metrischer Raum.
  für normierte Räume aus den entsprechenden Begriffen für metrische Räume.
 \end_layout
 
-\begin_layout Example
+\begin_layout Standard
 Sei 
 \begin_inset Formula $(X,\|\cdot\|)$
 \end_inset
@@ -6349,7 +6349,7 @@ Setze
 \end_inset
 
 ....
- fehlt was ....
+ TODO ....
  Also 
 \begin_inset Formula $\forall_{m,k\in\mathbb{N}}:$
 \end_inset
@@ -7412,7 +7412,16 @@ reference "thm:19"
 \end_layout
 
 \begin_layout Example
-TODO(Beispiele 6).
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset Marginal
 status open
 
@@ -7432,14 +7441,18 @@ Sei
 
  ein normierter Raum.
  Der identische Operator 
-\begin_inset Formula $1:X\to X$
+\begin_inset Formula $\Id:X\to X$
 \end_inset
 
 , 
-\begin_inset Formula $\|x\|=1$
+\begin_inset Formula $\Id x:=x$
 \end_inset
 
- TODO
+ ist stetig und 
+\begin_inset Formula $\|\Id\|=1$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -7797,10 +7810,11 @@ kein
 \end_inset
 
  gilt 
-\begin_inset Formula $\|Tf\|_{\infty}=$
+\begin_inset Formula $\|Tf\|_{\infty}=\|f'\|_{\infty}\leq\|f\|_{\infty}+\|f\|_{\infty}=\|f\|$
 \end_inset
 
- TODO
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -7941,6 +7955,413 @@ Wir betrachten
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Definition
+Seien 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ und 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ normierte Räume.
+ Wir nennen eine lineare Abbildung 
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+ 
+\emph on
+Isometrie 
+\emph default
+oder 
+\emph on
+isometrisch
+\emph default
+ falls für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ gilt
+\begin_inset Formula 
+\[
+\|Tx\|_{Y}=\|x\|_{X}.
+\]
+
+\end_inset
+
+Wir nennen einen stetigen linearen Operator 
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+ einen 
+\emph on
+Isomorphismus
+\emph default
+, falls 
+\begin_inset Formula $T$
+\end_inset
+
+ eine Bijektion und 
+\begin_inset Formula $T^{-1}$
+\end_inset
+
+ stetig ist.
+\end_layout
+
+\begin_layout Definition
+Existiert ein Isomorphismus 
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+, so nennt man 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ und 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ 
+\emph on
+isomorph
+\emph default
+.
+ Ist der Isomorphismus auch eine Isometrie, so nennen wir 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ und 
+\begin_inset Formula $(Y,\|\cdot\|_{Y})$
+\end_inset
+
+ 
+\emph on
+isometrisch isomorph
+\emph default
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset label
+LatexCommand label
+name "ex:7"
+
+\end_inset
+
+
+\begin_inset Formula $(c,\|\cdot\|_{\infty})$
+\end_inset
+
+ ist isomorph zu 
+\begin_inset Formula $(c_{0},\|\cdot\|_{\infty})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Wir definieren 
+\begin_inset Formula $l:c\to\mathbb{K}$
+\end_inset
+
+ durch 
+\begin_inset Formula $l(f)=\lim_{m\to\infty}f(m)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $l$
+\end_inset
+
+ ist lineares Funktional, denn für 
+\begin_inset Formula $\alpha,\beta\in\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $f,g\in c$
+\end_inset
+
+ ist 
+\begin_inset Formula $l(\alpha f+\beta g)=\lim_{m\to\infty}\alpha f(m)+\beta g(m)=\alpha l(f)+\beta l(g)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $l$
+\end_inset
+
+ ist stetig, denn für 
+\begin_inset Formula $f\in c$
+\end_inset
+
+ ist 
+\begin_inset Formula $|l(f)|=|\lim_{m\to\infty}f(m)|=\lim_{m\to\infty}|f(m)|\leq\sup_{m\in\mathbb{N}}|f(m)|=\|f\|_{\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Wir definieren 
+\begin_inset Formula $T:c\to c_{0}$
+\end_inset
+
+ durch 
+\begin_inset Formula 
+\[
+(Tf)(m)=\begin{cases}
+l(f) & (m=1),\\
+f(m-1)-l(f) & (m>1).
+\end{cases}
+\]
+
+\end_inset
+
+Offensichtlich ist 
+\begin_inset Formula $T$
+\end_inset
+
+ linear und 
+\begin_inset Formula $Tf\in c_{0}$
+\end_inset
+
+ für 
+\begin_inset Formula $f\in c$
+\end_inset
+
+.
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ ist stetig denn für 
+\begin_inset Formula $f\in c$
+\end_inset
+
+ ist 
+\begin_inset Formula $\|Tf\|_{\infty}=\sup_{m\in\mathbb{N}}|Tf(m)|\leq|l(f)|+|l(f)|+\|f\|_{\infty}\leq3\|f\|_{\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Wir definieren 
+\begin_inset Formula $S:c_{0}\to c_{0}$
+\end_inset
+
+ durch 
+\begin_inset Formula 
+\[
+(Sf)(m)=f(m+1)+f(1).
+\]
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ ist linear und stetig denn für 
+\begin_inset Formula $f\in c_{0}$
+\end_inset
+
+ ist 
+\begin_inset Formula $\|Sf\|_{\infty}=\|f(m+1)+f(1)\|_{\infty}\leq2\|f\|_{\infty}$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $f\in c_{0}$
+\end_inset
+
+ ist 
+\begin_inset Formula $\lim_{m\to\infty}Sf(m)=f(1)$
+\end_inset
+
+.
+ Also ist 
+\begin_inset Formula $(T\circ S)f(m)=T(S(f))(m)$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{eqnarray*}
+T(f(m+1)+f(1)) & = & \begin{cases}
+l(sf) & (m=1),\\
+Sf(m-1)-l(Sf) & (m>1),
+\end{cases}\\
+ & = & \begin{cases}
+f(1) & (m=1),\\
+f(m)+f(1)-f(1) & (m>1).
+\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+Also 
+\begin_inset Formula $T\circ S=\Id_{c_{0}}$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $f\in c$
+\end_inset
+
+ ist 
+\begin_inset Formula $(S\circ T)f(m)=S(Tf)(m)=Tf(m+1)+Tf(1)=f(m)+l(f)-l(f)=f(m)$
+\end_inset
+
+ für alle 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+, also 
+\begin_inset Formula $S\circ T=\Id_{c}$
+\end_inset
+
+ und somit 
+\begin_inset Formula $S=T^{-1}$
+\end_inset
+
+ und 
+\begin_inset Formula $T$
+\end_inset
+
+ ist ein Isomorphismus.
+\end_layout
+
+\begin_layout Subsection
+Dualräume
+\end_layout
+
+\begin_layout Definition
+Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum.
+ Wir bezeichnen 
+\begin_inset Formula $L(X,\mathbb{K})$
+\end_inset
+
+ als 
+\emph on
+Dualraum
+\emph default
+ von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Wir verwenden die Notation 
+\begin_inset Formula $X'$
+\end_inset
+
+ für 
+\begin_inset Formula $L(X,\mathbb{K})$
+\end_inset
+
+ und bezeichnen die Elemente von 
+\begin_inset Formula $X'$
+\end_inset
+
+ mit 
+\begin_inset Formula $f',g',x',y'$
+\end_inset
+
+ usw.
+ Man beachte, dass 
+\begin_inset Formula $f'\in X'$
+\end_inset
+
+ stetig ist.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:2-1"
+
+\end_inset
+
+(TODO) Sei 
+\begin_inset Formula $(X,\|\cdot\|_{X})$
+\end_inset
+
+ ein normierter Raum.
+ Dann ist 
+\begin_inset Formula $X'$
+\end_inset
+
+ versehen mit der Operatornorm ein Banachraum.
+\end_layout
+
+\begin_layout Proof
+Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:20"
+
+\end_inset
+
+ (4).
+\end_layout
+
+\begin_layout Theorem
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:22"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Betrachte 
+\begin_inset Formula $(l^{p},\|\cdot\|_{p})$
+\end_inset
+
+ für 
+\begin_inset Formula $p\in(1,\infty)$
+\end_inset
+
+, dann ist 
+\begin_inset Formula $((l^{p})',\|\cdot\|)$
+\end_inset
+
+ isometrisch isomorph zu 
+\begin_inset Formula $(l^{q},\|\cdot\|_{q})$
+\end_inset
+
+ mit 
+\begin_inset Formula $q=\frac{p}{p-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+TODO
+\end_layout
+
+\end_deeper
+\begin_layout --Separator--
+
 \end_layout
 
 \begin_layout Theorem

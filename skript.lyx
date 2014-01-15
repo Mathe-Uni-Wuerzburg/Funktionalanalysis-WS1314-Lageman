@@ -119,6 +119,12 @@ Organisatorisches
 \end_inset
 
 
+\begin_inset FormulaMacro
+\newcommand{\Id}{\operatorname{Id}}
+{\mathrm{Id}}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -14542,6 +14548,12 @@ orthogonale Komplement
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:44"
+
+\end_inset
+
 Sei 
 \begin_inset Formula $X$
 \end_inset
@@ -14892,6 +14904,765 @@ Seien
 
  erhalten wir einen Widerspruch zur Definition von 
 \begin_inset Formula $d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:7"
+
+\end_inset
+
+TODO
+\end_layout
+
+\begin_layout Proof
+(1)
+\begin_inset Formula $\implies$
+\end_inset
+
+(2): Sei 
+\begin_inset Formula $d=\inf_{y\in U}\|y-x_{0}\|$
+\end_inset
+
+ und 
+\begin_inset Formula $y\in U$
+\end_inset
+
+.
+ Wähle 
+\begin_inset Formula $\alpha\in\mathbb{C}$
+\end_inset
+
+, 
+\begin_inset Formula $|\alpha|=1$
+\end_inset
+
+, so dass 
+\begin_inset Formula $\langle x-x_{0},\alpha y\rangle=-|\langle x-x_{0},y\rangle|$
+\end_inset
+
+.
+ Für alle 
+\begin_inset Formula $t>0$
+\end_inset
+
+ gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+d^{2} & \leq & \|x+t\alpha y-x_{0}\|^{2}=\|x-x_{0}\|^{2}+\langle x-x_{0},t\alpha y\rangle+\overline{\langle x-x_{0},t\alpha y\rangle}+\|t\alpha y\|^{2}\\
+ & = & \|x-x_{0}\|^{2}+2(-t|\langle x-x_{0},y\rangle|)+t^{2}\|y\|^{2}\\
+ & = & \underbrace{\|x-x_{0}\|}_{=d^{2}}-\underbrace{(2t|\langle x-x_{0},y\rangle|-t^{2}\|y\|^{2})}_{=t(2|\langle x-x_{0},y\rangle|-t\|y\|^{2})\leq0}
+\end{eqnarray*}
+
+\end_inset
+
+Also für alle 
+\begin_inset Formula $t>0$
+\end_inset
+
+: 
+\begin_inset Formula $2|\langle x-x_{0},y\rangle|-t\|y\|^{2}\leq0$
+\end_inset
+
+ und somit 
+\begin_inset Formula $\langle x-x_{0},y\rangle=0$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula $y\perp x-x_{0}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $y$
+\end_inset
+
+ beliebiges Element aus 
+\begin_inset Formula $U$
+\end_inset
+
+ ist 
+\begin_inset Formula $x-x_{0}\in U^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+(2)
+\begin_inset Formula $\implies$
+\end_inset
+
+(1): Sei 
+\begin_inset Formula $\widetilde{y}\in U$
+\end_inset
+
+.
+ Dann gilt 
+\begin_inset Formula 
+\[
+\|\underbrace{(x+\widetilde{y})}_{y\in U}-x_{0}\|^{2}=\|x-x_{0}+\widetilde{y}\|^{2}=\|x-x_{0}\|^{2}+\|\widetilde{y}\|^{2}.
+\]
+
+\end_inset
+
+Somit 
+\begin_inset Formula $\inf_{y\in U}\|y-x_{0}\|=\|x-x_{0}\|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+Orthogonalprojektionen
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:46"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:orthogonalprojektionen"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Hilbertraum und 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ein abgeschlossener Unterraum mit 
+\begin_inset Formula $U\neq\{0\}$
+\end_inset
+
+ und 
+\begin_inset Formula $U\neq X$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $P_{U}:X\to U$
+\end_inset
+
+, 
+\begin_inset Formula $P_{U}x$
+\end_inset
+
+ definiert durch 
+\begin_inset Formula 
+\[
+\|x-P_{U}x\|=\inf_{u\in U}\|x-u\|
+\]
+
+\end_inset
+
+eine stetige, lineare Abbildung mit
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\|P_{U}\|=1$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\ker P_{U}=U^{\perp}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P_{U}^{2}=P_{U}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+Wir nennen 
+\begin_inset Formula $P_{U}$
+\end_inset
+
+ die 
+\emph on
+Orthogonalprojektion
+\emph default
+ auf 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ Desweiteren ist 
+\begin_inset Formula $P_{U^{\perp}}=\Id_{X}-P_{U}$
+\end_inset
+
+ und 
+\begin_inset Formula $(X,\|\cdot\|)$
+\end_inset
+
+ ist isometrisch isomorph zu 
+\begin_inset Formula $(U\times U^{\perp},\|\cdot\|_{2})$
+\end_inset
+
+ wobei 
+\begin_inset Formula $\|(u,v)\|_{2}=(\|u\|^{2}+\|v\|^{2})^{\frac{1}{2}}$
+\end_inset
+
+ vermöge der Abbildung 
+\begin_inset Formula $x\mapsto(P_{U}x,P_{U^{\perp}}x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:45"
+
+\end_inset
+
+ ist 
+\begin_inset Formula $P_{U}$
+\end_inset
+
+ wohldefiniert.
+ Nach Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:7"
+
+\end_inset
+
+ ist 
+\begin_inset Formula $P_{U}(x)$
+\end_inset
+
+ eindeutig definiert durch 
+\begin_inset Formula 
+\[
+x-P_{U}(x)\in U^{\perp}.
+\]
+
+\end_inset
+
+Für 
+\begin_inset Formula $x_{1},x_{2}\in X$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda_{1},\lambda_{2}\in\mathbb{K}$
+\end_inset
+
+ gilt 
+\begin_inset Formula 
+\[
+\underbrace{\lambda_{1}x_{1}-\lambda_{1}P_{U}(x_{1})}_{\in U^{\perp}}+\underbrace{\lambda_{2}x_{2}-\lambda_{2}P_{U}(x_{2})}_{\in U^{\perp}}\in U^{\perp}
+\]
+
+\end_inset
+
+und 
+\begin_inset Formula 
+\[
+(\lambda_{1}x_{1}+\lambda_{2}x_{2})-(\underbrace{\lambda_{1}P_{U}(x_{1})+\lambda_{2}P_{U}(x_{2})}_{\in U})\in U^{\perp}.
+\]
+
+\end_inset
+
+Somit 
+\begin_inset Formula $P_{U}(\lambda_{1}x_{1}+\lambda_{2}x_{2})=\lambda_{1}P_{U}(x_{1})+\lambda_{2}P_{U}(x_{2})$
+\end_inset
+
+.
+ Also ist 
+\begin_inset Formula $P_{U}$
+\end_inset
+
+ linear.
+ 
+\end_layout
+
+\begin_layout Proof
+Das 
+\begin_inset Formula $\Bild P_{U}=U$
+\end_inset
+
+ und 
+\begin_inset Formula $P_{U}|_{U}=\Id_{U}$
+\end_inset
+
+, somit 
+\begin_inset Formula $P_{U}^{2}=P_{U}$
+\end_inset
+
+.
+ Ist 
+\begin_inset Formula $x\in U^{\perp}$
+\end_inset
+
+, so muss 
+\begin_inset Formula $P_{U}(x)\in U^{\perp}\cap U=\{0\}$
+\end_inset
+
+.
+ Ist 
+\begin_inset Formula $P_{U}(x)=0$
+\end_inset
+
+, so ist 
+\begin_inset Formula $x\in U^{\perp}$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $\ker P_{U}=U^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Bild(\Id-P_{U})\subset U^{\perp}$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $\ker P_{U}=U^{\perp}$
+\end_inset
+
+ ist 
+\begin_inset Formula $(\Id-P_{U})U^{\perp}=U^{\perp}$
+\end_inset
+
+ und somit 
+\begin_inset Formula $\Bild(\Id-P_{U})=U^{\perp}$
+\end_inset
+
+.
+ Für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ ist 
+\begin_inset Formula $x-(\Id-P_{U})(x)=P_{U}x\in U\subset(U^{\perp})^{\perp}$
+\end_inset
+
+ nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:44"
+
+\end_inset
+
+.
+ Somit ist nach Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:7"
+
+\end_inset
+
+ 
+\begin_inset Formula $P_{U^{\perp}}=\Id_{X}-P_{U}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ gilt
+\begin_inset Formula 
+\begin{equation}
+\|x\|^{2}=\|P_{U}x+(\Id-P_{U})x\|^{2}=\|P_{U}x\|^{2}+\|(\Id_{X}-P_{U})x\|^{2}\label{eq:thm:46-stern}
+\end{equation}
+
+\end_inset
+
+und somit 
+\begin_inset Formula $\|P_{U}x\|^{2}\leq\|x\|^{2}$
+\end_inset
+
+ und 
+\begin_inset Formula 
+\[
+\|\underbrace{(\Id_{X}-P_{U})}_{P_{U^{\perp}}}x\|^{2}\leq\|x\|^{2}.
+\]
+
+\end_inset
+
+Also sind 
+\begin_inset Formula $P_{U}$
+\end_inset
+
+ und 
+\begin_inset Formula $P_{U^{\perp}}$
+\end_inset
+
+ stetig mit 
+\begin_inset Formula $\|P_{U}\|,\|P_{U^{\perp}}\|\leq1$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $P_{U}|_{U}=\Id_{U}$
+\end_inset
+
+ und 
+\begin_inset Formula $U\neq\{0\}$
+\end_inset
+
+ folgt 
+\begin_inset Formula $\|P_{U}\|=1$
+\end_inset
+
+.
+ Die lineare Abbildung 
+\begin_inset Formula $T:X\to U\times U^{\perp}$
+\end_inset
+
+, 
+\begin_inset Formula $Tx=(P_{U}x,P_{U^{\perp}}x)$
+\end_inset
+
+ ist eine Isometrie bezüglich bzgl.
+ der 
+\begin_inset Formula $\|\cdot\|_{2}$
+\end_inset
+
+ Norm auf 
+\begin_inset Formula $U\times U^{\perp}$
+\end_inset
+
+ nach Gleichung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:thm:46-stern"
+
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $T$
+\end_inset
+
+ injektiv und stetig.
+ Da 
+\begin_inset Formula $\Bild T$
+\end_inset
+
+ die Unterräume 
+\begin_inset Formula $U\times\{0\}$
+\end_inset
+
+ und 
+\begin_inset Formula $\{0\}\times U^{\perp}$
+\end_inset
+
+ enthält, ist 
+\begin_inset Formula $T$
+\end_inset
+
+ surjektiv.
+ Da 
+\begin_inset Formula $T$
+\end_inset
+
+ eine bijektive, lineare Isometrie ist, ist 
+\begin_inset Formula $T$
+\end_inset
+
+ ein Isomorphismus.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:18"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Hilbertraum und 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ein abgeschlossener Unterraum.
+ Dann gilt 
+\begin_inset Formula $U=(U^{\perp})^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:46"
+
+\end_inset
+
+ ist für 
+\begin_inset Formula $U\neq X$
+\end_inset
+
+, 
+\begin_inset Formula $U\neq\{0\}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P_{U}=\Id-(\underbrace{\Id-P_{U}}_{=P_{U^{\perp}}})=\Id-P_{U^{\perp}}=P_{(U^{\perp})^{\perp}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Aussage von Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:18"
+
+\end_inset
+
+ ist falsch für nicht-vollständige Prähilberträume.
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset label
+LatexCommand label
+name "ex:14"
+
+\end_inset
+
+Wir betrachten den Prähilbertraum 
+\begin_inset Formula $d\subset l^{2}$
+\end_inset
+
+.
+ Wähle 
+\begin_inset Formula $f\in l^{2}\setminus d$
+\end_inset
+
+.
+ Dann definiert 
+\begin_inset Formula $h':l^{2}\to\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $h'(g)=\sum_{m=1}^{\infty}g(m)\overline{f(m)}$
+\end_inset
+
+ ein 
+\begin_inset Formula $h'\in(l^{2})'$
+\end_inset
+
+ und 
+\begin_inset Formula $h'|_{d}=:k'\in(d)'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Es ist 
+\begin_inset Formula $\ker k'\neq d$
+\end_inset
+
+ da 
+\begin_inset Formula $f\neq0$
+\end_inset
+
+ und somit existiert ein 
+\begin_inset Formula $e_{n}\in d$
+\end_inset
+
+ mit 
+\begin_inset Formula $\langle e_{n},f\rangle=k'(e_{n})=h'(e_{n})\neq0$
+\end_inset
+
+.
+ In 
+\begin_inset Formula $l^{2}$
+\end_inset
+
+ ist das orthogonale Komplement von 
+\begin_inset Formula $\ker h'$
+\end_inset
+
+ genau 
+\begin_inset Formula $\span\{f\}$
+\end_inset
+
+.
+ Damit ist das orthogonale Komplement von 
+\begin_inset Formula $\ker k'$
+\end_inset
+
+ in 
+\begin_inset Formula $d$
+\end_inset
+
+ gegeben durch 
+\begin_inset Formula $\span\{f\}\cap d=\{0\}$
+\end_inset
+
+ (da 
+\begin_inset Formula $d$
+\end_inset
+
+ dicht in 
+\begin_inset Formula $l^{2}$
+\end_inset
+
+).
+ Somit ist in 
+\begin_inset Formula $d$
+\end_inset
+
+ dass 
+\begin_inset Formula $((\ker k')^{\perp})^{\perp}=d\neq\ker k'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:8"
+
+\end_inset
+
+ Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Hilbertraum und 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ein Unterraum.
+ Ist 
+\begin_inset Formula $U^{\perp}=\{0\}$
+\end_inset
+
+, so ist 
+\begin_inset Formula $U$
+\end_inset
+
+ dicht in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Nach Korollar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:18"
+
+\end_inset
+
+ und Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:44"
+
+\end_inset
+
+ 
+\begin_inset Formula $\overline{U}=(\overline{U}^{\perp})^{\perp}=(U^{\perp})^{\perp}=(\{0\})^{\perp}=X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+Rieszscher Darstellungssatz
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:47"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:rieszscher-darstellungssatz"
+
+\end_inset
+
+ Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Hilbertraum und 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+.
+ Dann gibt es genau ein 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ mit 
+\begin_inset Formula 
+\[
+\forall_{y\in X}:x'(y)=\langle y,x\rangle.
+\]
+
+\end_inset
+
+Des weiteren ist 
+\begin_inset Formula $\|x\|=\|x'\|$
 \end_inset
 
 .

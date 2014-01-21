@@ -14445,7 +14445,7 @@ für die Norm aus (1) gilt die Cauchy-Schwarzsche Ungleichung für alle
 : 
 \begin_inset Formula 
 \[
-|\langle x,y\rangle|\leq\|x\|^{2}\cdot\|y\|^{2}
+|\langle x,y\rangle|\leq\|x\|\cdot\|y\|
 \]
 
 \end_inset
@@ -16089,6 +16089,307 @@ Des weiteren ist
 .
 \end_layout
 
+\begin_layout Proof
+TODO
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:19"
+
+\end_inset
+
+Jeder Hilbertraum ist reflexiv.
+\end_layout
+
+\begin_layout Proof
+Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:47"
+
+\end_inset
+
+ definiert eine bijektive Abbildung 
+\begin_inset Formula $A:X\to X'$
+\end_inset
+
+, 
+\begin_inset Formula $x\mapsto\langle\cdot,x\rangle$
+\end_inset
+
+.
+ Diese Abbildung ist konjugiert linear, d.h.
+ für 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+ und 
+\begin_inset Formula $\alpha,\beta\in\mathbb{K}$
+\end_inset
+
+ ist 
+\begin_inset Formula 
+\[
+A(\alpha x+\beta y)=\overline{\alpha}A(x)+\overline{\beta}A(y).
+\]
+
+\end_inset
+
+Desweiteren ist 
+\begin_inset Formula $A$
+\end_inset
+
+ isometrisch.
+ 
+\begin_inset Formula $X'$
+\end_inset
+
+ ist ein Hilbertraum mit dem Skalarprodukt 
+\begin_inset Formula $\langle x',y'\rangle=\langle A^{-1}y',A^{-1}x'\rangle$
+\end_inset
+
+ für 
+\begin_inset Formula $x',y'\in X'$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Remark*
+Ist 
+\begin_inset Formula $x'=\langle\cdot,x\rangle$
+\end_inset
+
+, so ist 
+\begin_inset Formula $\|x'\|^{2}=\|x\|^{2}=\langle x,x\rangle=\langle A^{-1}x',A^{-1}x'\rangle=\langle x',x'\rangle.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:47"
+
+\end_inset
+
+ liefert nun eine bijektive, konjugiert lineare, isometrische Abbildung
+ 
+\begin_inset Formula $B:X'\to X''$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $B\circ A$
+\end_inset
+
+ eine lineare Bijektion und für die kanonische Abbildung 
+\begin_inset Formula $i_{X}:X\to X''$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+i_{X}=B\circ A
+\]
+
+\end_inset
+
+denn für 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+, 
+\begin_inset Formula $x'=\langle\cdot,x\rangle=Ax$
+\end_inset
+
+, 
+\begin_inset Formula $y'=\langle\cdot,y\rangle=Ay$
+\end_inset
+
+ ist 
+\begin_inset Formula 
+\[
+(B\circ A)(x)=B(x')(y')=\langle y',x'\rangle=\langle Ay,Ax\rangle=\langle x,y\rangle=y'(x)=i_{X}(x)(y').
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Orthonormalsysteme
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:25"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Prähilbertraum.
+ Eine Teilmenge 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+ nennen wir 
+\emph on
+Orthonormalsystem
+\emph default
+, falls für alle 
+\begin_inset Formula $f,g\in M$
+\end_inset
+
+, 
+\begin_inset Formula $f\neq g$
+\end_inset
+
+ gilt 
+\begin_inset Formula $\|f\|=\|g\|=1$
+\end_inset
+
+ und 
+\begin_inset Formula $\langle f,g\rangle=0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ heißt 
+\emph on
+Orthonormalbasis
+\emph default
+ (oder 
+\emph on
+vollständiges Orthonormalsystem
+\emph default
+), falls 
+\begin_inset Formula $M$
+\end_inset
+
+ Orthonormalsystem ist und für jedes andere Orthonormalsystem 
+\begin_inset Formula $N\subset X$
+\end_inset
+
+ mit 
+\begin_inset Formula $M\subset N$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula $M=N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+Eine Orthonormalbasis im Sinne von Definition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "def:25"
+
+\end_inset
+
+ ist nicht unbedingt eine Vektorraumbasis im Sinne der linearen Algebra.
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ex:14-1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+In 
+\begin_inset Formula $(l^{2},\|\cdot\|_{2})$
+\end_inset
+
+ ist 
+\begin_inset Formula $M=\{e_{n}\,|\, n\in\mathbb{N}\}$
+\end_inset
+
+ mit Folge 
+\begin_inset Formula $e_{n}$
+\end_inset
+
+ überall 0 außer an Position 
+\begin_inset Formula $n$
+\end_inset
+
+ ein Orthonormalsystem.
+\end_layout
+
+\begin_layout Enumerate
+Im 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+-Vektorraum 
+\begin_inset Formula $L^{2}([0,2\pi])$
+\end_inset
+
+ (reellwertige Funktionen) ist 
+\begin_inset Formula 
+\begin{eqnarray*}
+M & = & \{x\mapsto\frac{1}{\sqrt{2\pi}}\}\cup\{x\mapsto\frac{1}{\sqrt{\pi}}\cos(nx)\,|\, n\in\mathbb{N}\}\\
+ &  & \cup\{x\mapsto\frac{1}{\sqrt{\pi}}\sin(nx)\,|\, n\in\mathbb{N}\}
+\end{eqnarray*}
+
+\end_inset
+
+ein Orthonormalsystem.
+\end_layout
+
+\begin_layout Enumerate
+Im 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+-Vektorraum 
+\begin_inset Formula $L^{2}([0,2\pi])$
+\end_inset
+
+ (komplexwertige Funktionen) ist 
+\begin_inset Formula 
+\[
+M=\{x\mapsto\frac{1}{\sqrt{2\pi}}e^{inx}\,|\, n\in\mathbb{Z}\}
+\]
+
+\end_inset
+
+ein Orthonormalsystem.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Newpage cleardoublepage
 \end_inset

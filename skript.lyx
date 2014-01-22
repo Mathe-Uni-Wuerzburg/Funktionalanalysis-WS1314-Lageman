@@ -16390,6 +16390,675 @@ ein Orthonormalsystem.
 \end_layout
 
 \end_deeper
+\begin_layout Remark
+In der Literatur wird Orthonormalbasis (oder vollständiges Orthonormalsystem)
+ definiert als Orthonormalsystem 
+\begin_inset Formula $M$
+\end_inset
+
+ mit 
+\begin_inset Formula $\overline{\span M}=X$
+\end_inset
+
+.
+ Wir werden sehen, dass in Hilberträumen beide Definitionen äquivalent sind.
+ In nicht vollständigen Prähilberträumen ist dies jedoch falsch (vgl.
+ Übung 13).
+ Wir verwenden den Begriff Orthonormalbasis nur für Hilberträume.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+Gram-Schmidt-Verfahren
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:48"
+
+\end_inset
+
+ Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Prähilbertraum und 
+\begin_inset Formula $M=\{x_{n}\,|\, n\in\mathbb{N}\}$
+\end_inset
+
+ eine abzählbare, linear unabhängige Teilmenge von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Dann existiert ein Orthonormalsystem 
+\begin_inset Formula $N\subset X$
+\end_inset
+
+ mit 
+\begin_inset Formula $\overline{\span N}=\overline{\span M}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Wir setzen 
+\begin_inset Formula $e_{1}=\frac{x_{1}}{\|x_{1}\|}$
+\end_inset
+
+ und 
+\begin_inset Formula $e_{j}=\frac{f_{j}}{\|f_{j}\|}$
+\end_inset
+
+ mit 
+\begin_inset Formula $f_{j}=x_{j}-\sum_{k=1}^{j-1}\langle x_{j},e_{k}\rangle e_{k}$
+\end_inset
+
+ für 
+\begin_inset Formula $j>1$
+\end_inset
+
+.
+ Per Konstruktion ist 
+\begin_inset Formula $\|e_{j}\|=1$
+\end_inset
+
+ und 
+\begin_inset Formula $e_{j}\perp e_{k}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $k,j\in\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $k\neq j$
+\end_inset
+
+.
+ Also ist 
+\begin_inset Formula $\{p_{j}\,|\, j\in\mathbb{N}\}$
+\end_inset
+
+ ein Orthonormalsystem.
+ Da 
+\begin_inset Formula $\span\{e_{1},...,e_{k}\}=\span\{x_{1},...,x_{k}\}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+ ist 
+\begin_inset Formula $\span N=\span M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+Besselsche Ungleichung
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:49"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Prähilbertraum, 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ und 
+\begin_inset Formula $\{e_{n}\,|\, n\in\mathbb{N}\}$
+\end_inset
+
+ ein abzählbares Orthonormalsystem.
+ Dann gilt 
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}|\langle x,e_{n}\rangle|^{2}\leq\|x\|.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Sei 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $y_{N}:=x-\sum_{n=1}^{N}\langle x,e_{n}\rangle e_{n}$
+\end_inset
+
+ gilt 
+\begin_inset Formula $y_{N}\perp e_{k}$
+\end_inset
+
+ für 
+\begin_inset Formula $k\in\{1,...,N\}$
+\end_inset
+
+, denn 
+\begin_inset Formula $\langle y_{N},e_{k}\rangle=\langle x,e_{k}\rangle-\langle\langle x,e_{k}\rangle e_{k},e_{k}\rangle=0$
+\end_inset
+
+.
+ Man erhält 
+\begin_inset Formula 
+\begin{eqnarray*}
+\|x\|^{2} & = & \|y_{N}+\sum_{n=1}^{N}\langle x,e_{n}\rangle e_{n}\|^{2}=\|y_{N}\|^{2}+\|\sum_{n=1}^{N}\langle x,e_{n}\rangle e_{n}\|^{2}\\
+ & = & \|y_{N}\|^{2}+\sum_{n=1}^{N}\|\langle x,e_{n}\rangle e_{n}\|^{2}=\|y_{N}\|^{2}+\sum_{n=1}^{N}|\langle x,e_{n}\rangle|^{2}
+\end{eqnarray*}
+
+\end_inset
+
+Also für alle 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+: 
+\begin_inset Formula $\|x\|^{2}\geq\sum_{n=1}^{N}|\langle x,e_{n}\rangle|^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:26"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein normierter Raum, 
+\begin_inset Formula $I$
+\end_inset
+
+ eine Indexmenge und 
+\begin_inset Formula $(x_{j}\,|\, j\in I)$
+\end_inset
+
+ eine Familie von Elementen aus 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Wir sagen die Reihe 
+\begin_inset Formula $\sum_{j\in I}x_{j}$
+\end_inset
+
+ konvergiert unbedingt gegen 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, falls für 
+\begin_inset Formula $I_{0}=\{j\in I\,|\, x_{j}\neq0\}$
+\end_inset
+
+ gilt:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $I$
+\end_inset
+
+ ist höchstens abzählbar
+\end_layout
+
+\begin_layout Enumerate
+Haben wir eine Aufzählung 
+\begin_inset Formula $\{j_{1},j_{2},...\}$
+\end_inset
+
+ von 
+\begin_inset Formula $I_{0}$
+\end_inset
+
+, so gilt
+\begin_inset Formula 
+\[
+\sum_{k=1}^{\infty}x_{j_{k}}=x.
+\]
+
+\end_inset
+
+Wir verwenden die Schreibweise 
+\begin_inset Formula $\sum_{j\in I}x_{j}=x$
+\end_inset
+
+ für eine gegen 
+\begin_inset Formula $x$
+\end_inset
+
+ unbedingt konvergente Reihe.
+\end_layout
+
+\end_deeper
+\begin_layout Remark
+Die Konvergenzbedingungen 
+\begin_inset Formula $\sum_{n=1}^{\infty}x_{n}$
+\end_inset
+
+ und 
+\begin_inset Formula $\sum_{n\in\mathbb{N}}x_{n}$
+\end_inset
+
+ sind nicht äquivalent.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+Besselsche Ungleichung, allgemeine Version
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:20"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Prähilbertraum, 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ und 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+ ein Orthonormalsystem.
+ Dann ist 
+\begin_inset Formula 
+\[
+\sum_{e\in M}|\langle x,e\rangle|^{2}\leq\|x\|^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Sei 
+\begin_inset Formula $M_{x}=\{e\in M\,|\,\langle x,e\rangle\neq0\}$
+\end_inset
+
+.
+ Nach der Besselschen Ungleichung ist 
+\begin_inset Formula 
+\[
+\hat{M}_{n}=\{e\in M\,|\,|\langle x,e\rangle|\geq\frac{1}{n}\}
+\]
+
+\end_inset
+
+endlich (andernfalls Widerspruch zur nochmaligen Anwendung der Besselschen
+ Ungleichung).
+ Somit 
+\begin_inset Formula $M_{x}=\bigcup_{n\in\mathbb{N}}\hat{M}_{n}$
+\end_inset
+
+ abzählbar.
+ Die unbedingte Konvergenz folgt aus der absoluten Konvergenz von 
+\begin_inset Formula $\sum_{j=1}^{\infty}|\langle x,e_{n}\rangle|^{2}$
+\end_inset
+
+ für 
+\begin_inset Formula $M_{x}=\{e_{1},e_{2},...\}$
+\end_inset
+
+ eine Aufzählung von 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ nach der Besselschen Ungleichung.
+ Die Ungleichung folgt wieder aus Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:49"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:50"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein unendlich-dimensionaler Hilbertraum und 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+ ein Orthonormalsystem.
+ Dann gilt 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Für alle 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ konvergiert 
+\begin_inset Formula $\sum_{e\in M}\langle x,e\rangle e$
+\end_inset
+
+ unbedingt.
+\end_layout
+
+\begin_layout Enumerate
+Die Abbildung 
+\begin_inset Formula $P:X\to\overline{\span M}$
+\end_inset
+
+, 
+\begin_inset Formula $P(x)=\sum_{e\in M}\langle x,e\rangle e$
+\end_inset
+
+ ist die Orthonormalprojektion auf 
+\begin_inset Formula $\overline{\span M}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+ Wie schon gezeigt ist 
+\begin_inset Formula $M_{x}=\{e\in M\,|\,\langle x,e\rangle\neq0\}$
+\end_inset
+
+ abzählbar.
+ Sei 
+\begin_inset Formula $\{e_{1},e_{2},...\}$
+\end_inset
+
+ Aufzählung von 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $n,m\in\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $n>m$
+\end_inset
+
+ ist 
+\begin_inset Formula 
+\[
+\|\sum_{j=m}^{n}\langle x,e_{j}\rangle e_{j}\|^{2}=\sum_{j=m}^{n}|\langle x,e_{j}\rangle|^{2}\|e_{j}\|^{2}\to_{n,m\to\infty}0
+\]
+
+\end_inset
+
+nach Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:49"
+
+\end_inset
+
+.
+ Somit ist die Folge der Partialsummen 
+\begin_inset Formula $(\sum_{j=1}^{n}\langle x,e_{j}\rangle e_{j})_{n\in\mathbb{N}}$
+\end_inset
+
+ eine Cauchy-Folge und da 
+\begin_inset Formula $X$
+\end_inset
+
+ vollständig konvergent gegen 
+\begin_inset Formula $y\in X$
+\end_inset
+
+.
+ Ist 
+\begin_inset Formula $\Pi:\mathbb{N}\to\mathbb{N}$
+\end_inset
+
+ eine Permutation, so konvergiert auch 
+\begin_inset Formula $\sum_{j=1}^{\infty}\langle x,e_{\Pi(j)}\rangle e_{\Pi(j)}$
+\end_inset
+
+ gegen 
+\begin_inset Formula $y_{\Pi}\in X$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $z\in X$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $z\in X$
+\end_inset
+
+.
+ Die Reihen 
+\begin_inset Formula $\sum_{j=1}^{\infty}\langle x,e_{j}\rangle\langle e_{j},z\rangle$
+\end_inset
+
+ und 
+\begin_inset Formula $\sum_{j=1}^{\infty}\langle x,e_{\Pi(j)}\rangle\langle e_{\Pi(j)},z\rangle$
+\end_inset
+
+ konvergieren absolut, denn die Besselschen Ungleichung liefert 
+\begin_inset Formula $(\langle x,e_{j}\rangle)_{j\in\mathbb{N}},(\langle z,e_{j}\rangle)_{j\in\mathbb{N}}\in l^{2}$
+\end_inset
+
+, und nach der Hölder-Ungleichung gilt 
+\begin_inset Formula $(\langle x,e_{j}\rangle\langle z,e_{j}\rangle)\in l^{1}$
+\end_inset
+
+ und die Abschätzung 
+\begin_inset Formula 
+\[
+\sum_{j=1}^{\infty}|\langle x,e_{j}\rangle\langle e_{j},z\rangle|\leq\left(\sum_{j=1}^{\infty}|\langle x,e_{j}\rangle|^{2}\right)^{\frac{1}{2}}\left(\sum_{j=1}^{\infty}|\langle z,e_{j}\rangle|^{2}\right)^{\frac{1}{2}}.
+\]
+
+\end_inset
+
+Somit 
+\begin_inset Formula 
+\begin{eqnarray*}
+\langle y,z\rangle & = & \langle\sum_{j=1}^{\infty}\langle x,e_{j}\rangle e_{j},z\rangle=\sum_{j=1}^{\infty}\langle x,e_{j}\rangle\langle e_{j},z\rangle=\sum_{j=1}^{\infty}\langle x,e_{\Pi(j)}\rangle\langle e_{\Pi(j)},z\rangle\\
+ & = & \langle\sum_{j=1}^{\infty}\langle x,e_{\Pi(j)}\rangle e_{\Pi(j)},z\rangle=\langle y_{\Pi},z\rangle
+\end{eqnarray*}
+
+\end_inset
+
+und also 
+\begin_inset Formula $\langle y-y_{\Pi},z\rangle=0$
+\end_inset
+
+.
+ Es folgt 
+\begin_inset Formula $y-y_{\Pi}\in X^{\perp}=\{0\}$
+\end_inset
+
+ und 
+\begin_inset Formula $y=y_{\Pi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Es reicht zu zeigen: 
+\begin_inset Formula $\forall_{x\in X}$
+\end_inset
+
+: 
+\begin_inset Formula $x-Px\in(\overline{\span M})^{\perp}=M^{\perp}$
+\end_inset
+
+ (Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:7"
+
+\end_inset
+
+, Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:46"
+
+\end_inset
+
+).
+ Sei 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $e\in M$
+\end_inset
+
+, 
+\begin_inset Formula $\{e_{1},e_{2},...\}$
+\end_inset
+
+ Aufzählung von 
+\begin_inset Formula $M_{x}=\{e\in M\,|\,\langle x,e\rangle\neq0\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $e\in M_{x}$
+\end_inset
+
+, das heißt 
+\begin_inset Formula $e=e_{N}$
+\end_inset
+
+ für 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+, dann 
+\begin_inset Formula 
+\begin{eqnarray*}
+\langle x-Px,e\rangle & = & \langle x-\sum_{j=1}^{\infty}\langle x,e_{j}\rangle e_{j},e_{N}\rangle\\
+ & = & \langle x,e_{N}\rangle-\langle x,e_{N}\rangle\|e_{N}\|^{2}=0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $e\notin M_{x}$
+\end_inset
+
+, dann 
+\begin_inset Formula 
+\begin{eqnarray*}
+\langle x-Px,e\rangle & = & \langle x-\sum_{j=1}^{\infty}\langle x,e_{j}\rangle e_{j},e\rangle\\
+ & = & \langle x,e\rangle=0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Remark
+Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:50"
+
+\end_inset
+
+ setzt voraus, dass 
+\begin_inset Formula $X$
+\end_inset
+
+ unendlich-dimensional ist, der Fall 
+\begin_inset Formula $\dim X<\infty$
+\end_inset
+
+ ist analog.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Newpage cleardoublepage
 \end_inset
